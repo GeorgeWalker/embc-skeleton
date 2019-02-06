@@ -100,7 +100,7 @@ import { VersionInfoDialog } from './version-info/version-info.component';
     FieldComponent,
     ProfileSummaryComponent,
     TermsAndConditionsComponent,
-    VersionInfoDialog,    
+    VersionInfoDialog,
   ],
   imports: [
     BrowserModule,
