@@ -7,7 +7,7 @@
 namespace Gov.Jag.Embc.Interfaces.Models
 {
     using Newtonsoft.Json;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// duplicaterecord
@@ -27,25 +27,27 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the
         /// MicrosoftDynamicsCRMduplicaterecord class.
         /// </summary>
-        public MicrosoftDynamicsCRMduplicaterecord(string duplicateid = default(string), string _baserecordidValue = default(string), string _duplicateruleidValue = default(string), string _asyncoperationidValue = default(string), string _duplicaterecordidValue = default(string), string owninguser = default(string), string owningbusinessunit = default(string), System.DateTimeOffset? createdon = default(System.DateTimeOffset?), string _owneridValue = default(string), MicrosoftDynamicsCRMknowledgearticle duplicaterecordidKnowledgearticle = default(MicrosoftDynamicsCRMknowledgearticle), MicrosoftDynamicsCRMknowledgearticle baserecordidKnowledgearticle = default(MicrosoftDynamicsCRMknowledgearticle), MicrosoftDynamicsCRMentitlement duplicaterecordidEntitlement = default(MicrosoftDynamicsCRMentitlement), MicrosoftDynamicsCRMentitlement baserecordidEntitlement = default(MicrosoftDynamicsCRMentitlement), MicrosoftDynamicsCRMentitlementchannel duplicaterecordidEntitlementchannel = default(MicrosoftDynamicsCRMentitlementchannel), MicrosoftDynamicsCRMentitlementchannel baserecordidEntitlementchannel = default(MicrosoftDynamicsCRMentitlementchannel), MicrosoftDynamicsCRMentitlementtemplate duplicaterecordidEntitlementtemplate = default(MicrosoftDynamicsCRMentitlementtemplate), MicrosoftDynamicsCRMentitlementtemplate baserecordidEntitlementtemplate = default(MicrosoftDynamicsCRMentitlementtemplate), MicrosoftDynamicsCRMbookableresource duplicaterecordidBookableresource = default(MicrosoftDynamicsCRMbookableresource), MicrosoftDynamicsCRMbookableresource baserecordidBookableresource = default(MicrosoftDynamicsCRMbookableresource), MicrosoftDynamicsCRMbookableresourcebooking duplicaterecordidBookableresourcebooking = default(MicrosoftDynamicsCRMbookableresourcebooking), MicrosoftDynamicsCRMbookableresourcebooking baserecordidBookableresourcebooking = default(MicrosoftDynamicsCRMbookableresourcebooking), MicrosoftDynamicsCRMbookableresourcebookingheader duplicaterecordidBookableresourcebookingheader = default(MicrosoftDynamicsCRMbookableresourcebookingheader), MicrosoftDynamicsCRMbookableresourcebookingheader baserecordidBookableresourcebookingheader = default(MicrosoftDynamicsCRMbookableresourcebookingheader), MicrosoftDynamicsCRMbookableresourcecategory duplicaterecordidBookableresourcecategory = default(MicrosoftDynamicsCRMbookableresourcecategory), MicrosoftDynamicsCRMbookableresourcecategory baserecordidBookableresourcecategory = default(MicrosoftDynamicsCRMbookableresourcecategory), MicrosoftDynamicsCRMbookableresourcecategoryassn duplicaterecordidBookableresourcecategoryassn = default(MicrosoftDynamicsCRMbookableresourcecategoryassn), MicrosoftDynamicsCRMbookableresourcecategoryassn baserecordidBookableresourcecategoryassn = default(MicrosoftDynamicsCRMbookableresourcecategoryassn), MicrosoftDynamicsCRMbookableresourcecharacteristic duplicaterecordidBookableresourcecharacteristic = default(MicrosoftDynamicsCRMbookableresourcecharacteristic), MicrosoftDynamicsCRMbookableresourcecharacteristic baserecordidBookableresourcecharacteristic = default(MicrosoftDynamicsCRMbookableresourcecharacteristic), MicrosoftDynamicsCRMbookableresourcegroup duplicaterecordidBookableresourcegroup = default(MicrosoftDynamicsCRMbookableresourcegroup), MicrosoftDynamicsCRMbookableresourcegroup baserecordidBookableresourcegroup = default(MicrosoftDynamicsCRMbookableresourcegroup), MicrosoftDynamicsCRMbookingstatus duplicaterecordidBookingstatus = default(MicrosoftDynamicsCRMbookingstatus), MicrosoftDynamicsCRMbookingstatus baserecordidBookingstatus = default(MicrosoftDynamicsCRMbookingstatus), MicrosoftDynamicsCRMcharacteristic duplicaterecordidCharacteristic = default(MicrosoftDynamicsCRMcharacteristic), MicrosoftDynamicsCRMcharacteristic baserecordidCharacteristic = default(MicrosoftDynamicsCRMcharacteristic), MicrosoftDynamicsCRMratingmodel duplicaterecordidRatingmodel = default(MicrosoftDynamicsCRMratingmodel), MicrosoftDynamicsCRMratingmodel baserecordidRatingmodel = default(MicrosoftDynamicsCRMratingmodel), MicrosoftDynamicsCRMratingvalue duplicaterecordidRatingvalue = default(MicrosoftDynamicsCRMratingvalue), MicrosoftDynamicsCRMratingvalue baserecordidRatingvalue = default(MicrosoftDynamicsCRMratingvalue), MicrosoftDynamicsCRMknowledgebaserecord duplicaterecordidKnowledgebaserecord = default(MicrosoftDynamicsCRMknowledgebaserecord), MicrosoftDynamicsCRMknowledgebaserecord baserecordidKnowledgebaserecord = default(MicrosoftDynamicsCRMknowledgebaserecord), MicrosoftDynamicsCRMgoalrollupquery baserecordidGoalrollupquery = default(MicrosoftDynamicsCRMgoalrollupquery), MicrosoftDynamicsCRMpublisher duplicaterecordidPublisher = default(MicrosoftDynamicsCRMpublisher), MicrosoftDynamicsCRMtransactioncurrency baserecordidTransactioncurrency = default(MicrosoftDynamicsCRMtransactioncurrency), MicrosoftDynamicsCRMcampaign baserecordidCampaign = default(MicrosoftDynamicsCRMcampaign), MicrosoftDynamicsCRMlead baserecordidLead = default(MicrosoftDynamicsCRMlead), MicrosoftDynamicsCRMrecurringappointmentmaster baserecordidRecurringappointmentmaster = default(MicrosoftDynamicsCRMrecurringappointmentmaster), MicrosoftDynamicsCRMgoal duplicaterecordidGoal = default(MicrosoftDynamicsCRMgoal), MicrosoftDynamicsCRMtransactioncurrency duplicaterecordidTransactioncurrency = default(MicrosoftDynamicsCRMtransactioncurrency), MicrosoftDynamicsCRMcompetitor baserecordidCompetitor = default(MicrosoftDynamicsCRMcompetitor), MicrosoftDynamicsCRMequipment baserecordidEquipment = default(MicrosoftDynamicsCRMequipment), MicrosoftDynamicsCRMtask baserecordidTask = default(MicrosoftDynamicsCRMtask), MicrosoftDynamicsCRMrecurringappointmentmaster duplicaterecordidRecurringappointmentmaster = default(MicrosoftDynamicsCRMrecurringappointmentmaster), MicrosoftDynamicsCRMasyncoperation asyncoperationid = default(MicrosoftDynamicsCRMasyncoperation), MicrosoftDynamicsCRMtask duplicaterecordidTask = default(MicrosoftDynamicsCRMtask), MicrosoftDynamicsCRMequipment duplicaterecordidEquipment = default(MicrosoftDynamicsCRMequipment), MicrosoftDynamicsCRMemail baserecordidEmail = default(MicrosoftDynamicsCRMemail), MicrosoftDynamicsCRMsocialprofile baserecordidSocialprofile = default(MicrosoftDynamicsCRMsocialprofile), MicrosoftDynamicsCRMteam baserecordidTeam = default(MicrosoftDynamicsCRMteam), MicrosoftDynamicsCRMsystemuser baserecordidSystemuser = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMaccount baserecordidAccount = default(MicrosoftDynamicsCRMaccount), MicrosoftDynamicsCRMappointment baserecordidAppointment = default(MicrosoftDynamicsCRMappointment), MicrosoftDynamicsCRMopportunity baserecordidOpportunity = default(MicrosoftDynamicsCRMopportunity), MicrosoftDynamicsCRMcampaign duplicaterecordidCampaign = default(MicrosoftDynamicsCRMcampaign), MicrosoftDynamicsCRMsharepointdocumentlocation baserecordidSharepointdocumentlocation = default(MicrosoftDynamicsCRMsharepointdocumentlocation), MicrosoftDynamicsCRMfax duplicaterecordidFax = default(MicrosoftDynamicsCRMfax), MicrosoftDynamicsCRMterritory duplicaterecordidTerritory = default(MicrosoftDynamicsCRMterritory), MicrosoftDynamicsCRMlist baserecordidList = default(MicrosoftDynamicsCRMlist), MicrosoftDynamicsCRMpublisher baserecordidPublisher = default(MicrosoftDynamicsCRMpublisher), MicrosoftDynamicsCRMsharepointsite duplicaterecordidSharepointsite = default(MicrosoftDynamicsCRMsharepointsite), MicrosoftDynamicsCRMkbarticle duplicaterecordidKbarticle = default(MicrosoftDynamicsCRMkbarticle), MicrosoftDynamicsCRMteam duplicaterecordidTeam = default(MicrosoftDynamicsCRMteam), MicrosoftDynamicsCRMappointment duplicaterecordidAppointment = default(MicrosoftDynamicsCRMappointment), MicrosoftDynamicsCRMcontract baserecordidContract = default(MicrosoftDynamicsCRMcontract), MicrosoftDynamicsCRMincident duplicaterecordidIncident = default(MicrosoftDynamicsCRMincident), MicrosoftDynamicsCRMopportunity duplicaterecordidOpportunity = default(MicrosoftDynamicsCRMopportunity), MicrosoftDynamicsCRMquote duplicaterecordidQuote = default(MicrosoftDynamicsCRMquote), MicrosoftDynamicsCRMphonecall duplicaterecordidPhonecall = default(MicrosoftDynamicsCRMphonecall), MicrosoftDynamicsCRMresourcegroup baserecordidResourcegroup = default(MicrosoftDynamicsCRMresourcegroup), MicrosoftDynamicsCRMterritory baserecordidTerritory = default(MicrosoftDynamicsCRMterritory), MicrosoftDynamicsCRMgoalrollupquery duplicaterecordidGoalrollupquery = default(MicrosoftDynamicsCRMgoalrollupquery), MicrosoftDynamicsCRMsharepointsite baserecordidSharepointsite = default(MicrosoftDynamicsCRMsharepointsite), MicrosoftDynamicsCRMphonecall baserecordidPhonecall = default(MicrosoftDynamicsCRMphonecall), MicrosoftDynamicsCRMcontact duplicaterecordidContact = default(MicrosoftDynamicsCRMcontact), MicrosoftDynamicsCRMcampaignresponse duplicaterecordidCampaignresponse = default(MicrosoftDynamicsCRMcampaignresponse), MicrosoftDynamicsCRMkbarticle baserecordidKbarticle = default(MicrosoftDynamicsCRMkbarticle), MicrosoftDynamicsCRMservice baserecordidService = default(MicrosoftDynamicsCRMservice), MicrosoftDynamicsCRMemail duplicaterecordidEmail = default(MicrosoftDynamicsCRMemail), MicrosoftDynamicsCRMcompetitor duplicaterecordidCompetitor = default(MicrosoftDynamicsCRMcompetitor), MicrosoftDynamicsCRMletter baserecordidLetter = default(MicrosoftDynamicsCRMletter), MicrosoftDynamicsCRMsocialactivity baserecordidSocialactivity = default(MicrosoftDynamicsCRMsocialactivity), MicrosoftDynamicsCRMsystemuser duplicaterecordidSystemuser = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMlead duplicaterecordidLead = default(MicrosoftDynamicsCRMlead), MicrosoftDynamicsCRMsocialactivity duplicaterecordidSocialactivity = default(MicrosoftDynamicsCRMsocialactivity), MicrosoftDynamicsCRMsharepointdocumentlocation duplicaterecordidSharepointdocumentlocation = default(MicrosoftDynamicsCRMsharepointdocumentlocation), MicrosoftDynamicsCRMsocialprofile duplicaterecordidSocialprofile = default(MicrosoftDynamicsCRMsocialprofile), MicrosoftDynamicsCRMgoal baserecordidGoal = default(MicrosoftDynamicsCRMgoal), MicrosoftDynamicsCRMaccount duplicaterecordidAccount = default(MicrosoftDynamicsCRMaccount), MicrosoftDynamicsCRMlist duplicaterecordidList = default(MicrosoftDynamicsCRMlist), MicrosoftDynamicsCRMresourcegroup duplicaterecordidResourcegroup = default(MicrosoftDynamicsCRMresourcegroup), MicrosoftDynamicsCRMcampaignresponse baserecordidCampaignresponse = default(MicrosoftDynamicsCRMcampaignresponse), MicrosoftDynamicsCRMcontract duplicaterecordidContract = default(MicrosoftDynamicsCRMcontract), MicrosoftDynamicsCRMservice duplicaterecordidService = default(MicrosoftDynamicsCRMservice), MicrosoftDynamicsCRMfax baserecordidFax = default(MicrosoftDynamicsCRMfax), MicrosoftDynamicsCRMqueue duplicaterecordidQueue = default(MicrosoftDynamicsCRMqueue), MicrosoftDynamicsCRMduplicaterule duplicateruleid = default(MicrosoftDynamicsCRMduplicaterule), MicrosoftDynamicsCRMcontact baserecordidContact = default(MicrosoftDynamicsCRMcontact), MicrosoftDynamicsCRMincident baserecordidIncident = default(MicrosoftDynamicsCRMincident), MicrosoftDynamicsCRMemailserverprofile duplicaterecordidEmailserverprofile = default(MicrosoftDynamicsCRMemailserverprofile), MicrosoftDynamicsCRMqueue baserecordidQueue = default(MicrosoftDynamicsCRMqueue), MicrosoftDynamicsCRMemailserverprofile baserecordidEmailserverprofile = default(MicrosoftDynamicsCRMemailserverprofile), MicrosoftDynamicsCRMletter duplicaterecordidLetter = default(MicrosoftDynamicsCRMletter), MicrosoftDynamicsCRMquote baserecordidQuote = default(MicrosoftDynamicsCRMquote), MicrosoftDynamicsCRMbcgovCustomaddress duplicaterecordidBcgovCustomaddress = default(MicrosoftDynamicsCRMbcgovCustomaddress), MicrosoftDynamicsCRMbcgovCustomaddress baserecordidBcgovCustomaddress = default(MicrosoftDynamicsCRMbcgovCustomaddress), MicrosoftDynamicsCRMbcgovTermsconditionspreset duplicaterecordidBcgovTermsconditionspreset = default(MicrosoftDynamicsCRMbcgovTermsconditionspreset), MicrosoftDynamicsCRMbcgovTermsconditionspreset baserecordidBcgovTermsconditionspreset = default(MicrosoftDynamicsCRMbcgovTermsconditionspreset), MicrosoftDynamicsCRMbcgovApplicationtype duplicaterecordidBcgovApplicationtype = default(MicrosoftDynamicsCRMbcgovApplicationtype), MicrosoftDynamicsCRMbcgovApplicationtype baserecordidBcgovApplicationtype = default(MicrosoftDynamicsCRMbcgovApplicationtype), MicrosoftDynamicsCRMbcgovBusinesscontact duplicaterecordidBcgovBusinesscontact = default(MicrosoftDynamicsCRMbcgovBusinesscontact), MicrosoftDynamicsCRMbcgovBusinesscontact baserecordidBcgovBusinesscontact = default(MicrosoftDynamicsCRMbcgovBusinesscontact), MicrosoftDynamicsCRMbcgovCustomproduct duplicaterecordidBcgovCustomproduct = default(MicrosoftDynamicsCRMbcgovCustomproduct), MicrosoftDynamicsCRMbcgovCustomproduct baserecordidBcgovCustomproduct = default(MicrosoftDynamicsCRMbcgovCustomproduct), MicrosoftDynamicsCRMbcgovCertificate duplicaterecordidBcgovCertificate = default(MicrosoftDynamicsCRMbcgovCertificate), MicrosoftDynamicsCRMbcgovCertificate baserecordidBcgovCertificate = default(MicrosoftDynamicsCRMbcgovCertificate), MicrosoftDynamicsCRMbcgovLocation duplicaterecordidBcgovLocation = default(MicrosoftDynamicsCRMbcgovLocation), MicrosoftDynamicsCRMbcgovLocation baserecordidBcgovLocation = default(MicrosoftDynamicsCRMbcgovLocation), MicrosoftDynamicsCRMbcgovEquipment duplicaterecordidBcgovEquipment = default(MicrosoftDynamicsCRMbcgovEquipment), MicrosoftDynamicsCRMbcgovEquipment baserecordidBcgovEquipment = default(MicrosoftDynamicsCRMbcgovEquipment), MicrosoftDynamicsCRMbcgovEquipmentlocation duplicaterecordidBcgovEquipmentlocation = default(MicrosoftDynamicsCRMbcgovEquipmentlocation), MicrosoftDynamicsCRMbcgovEquipmentlocation baserecordidBcgovEquipmentlocation = default(MicrosoftDynamicsCRMbcgovEquipmentlocation), MicrosoftDynamicsCRMbcgovCertificatetermsandconditions duplicaterecordidBcgovCertificatetermsandconditions = default(MicrosoftDynamicsCRMbcgovCertificatetermsandconditions), MicrosoftDynamicsCRMbcgovCertificatetermsandconditions baserecordidBcgovCertificatetermsandconditions = default(MicrosoftDynamicsCRMbcgovCertificatetermsandconditions), MicrosoftDynamicsCRMbcgovRiskassessment duplicaterecordidBcgovRiskassessment = default(MicrosoftDynamicsCRMbcgovRiskassessment), MicrosoftDynamicsCRMbcgovRiskassessment baserecordidBcgovRiskassessment = default(MicrosoftDynamicsCRMbcgovRiskassessment), MicrosoftDynamicsCRMabsAutonumberedentity duplicaterecordidAbsAutonumberedentity = default(MicrosoftDynamicsCRMabsAutonumberedentity), MicrosoftDynamicsCRMabsAutonumberedentity baserecordidAbsAutonumberedentity = default(MicrosoftDynamicsCRMabsAutonumberedentity), MicrosoftDynamicsCRMabsAutonumberingdefinition duplicaterecordidAbsAutonumberingdefinition = default(MicrosoftDynamicsCRMabsAutonumberingdefinition), MicrosoftDynamicsCRMabsAutonumberingdefinition baserecordidAbsAutonumberingdefinition = default(MicrosoftDynamicsCRMabsAutonumberingdefinition), MicrosoftDynamicsCRMcategory duplicaterecordidCategory = default(MicrosoftDynamicsCRMcategory), MicrosoftDynamicsCRMcategory baserecordidCategory = default(MicrosoftDynamicsCRMcategory))
+        public MicrosoftDynamicsCRMduplicaterecord(string owninguser = default(string), string _duplicateruleidValue = default(string), System.DateTimeOffset? createdon = default(System.DateTimeOffset?), string _owneridValue = default(string), string owningbusinessunit = default(string), string _asyncoperationidValue = default(string), string _baserecordidValue = default(string), string duplicateid = default(string), string _duplicaterecordidValue = default(string), MicrosoftDynamicsCRMgovCommunity duplicaterecordidGovCommunity = default(MicrosoftDynamicsCRMgovCommunity), MicrosoftDynamicsCRMgovCommunity baserecordidGovCommunity = default(MicrosoftDynamicsCRMgovCommunity), MicrosoftDynamicsCRMgovRegion duplicaterecordidGovRegion = default(MicrosoftDynamicsCRMgovRegion), MicrosoftDynamicsCRMgovRegion baserecordidGovRegion = default(MicrosoftDynamicsCRMgovRegion), MicrosoftDynamicsCRMgovIncidenttask duplicaterecordidGovIncidenttask = default(MicrosoftDynamicsCRMgovIncidenttask), MicrosoftDynamicsCRMgovIncidenttask baserecordidGovIncidenttask = default(MicrosoftDynamicsCRMgovIncidenttask), MicrosoftDynamicsCRMgovRegistration duplicaterecordidGovRegistration = default(MicrosoftDynamicsCRMgovRegistration), MicrosoftDynamicsCRMgovRegistration baserecordidGovRegistration = default(MicrosoftDynamicsCRMgovRegistration), MicrosoftDynamicsCRMlead duplicaterecordidLead = default(MicrosoftDynamicsCRMlead), MicrosoftDynamicsCRMlead baserecordidLead = default(MicrosoftDynamicsCRMlead), MicrosoftDynamicsCRMbookableresource duplicaterecordidBookableresource = default(MicrosoftDynamicsCRMbookableresource), MicrosoftDynamicsCRMbookableresource baserecordidBookableresource = default(MicrosoftDynamicsCRMbookableresource), MicrosoftDynamicsCRMbookableresourcebooking duplicaterecordidBookableresourcebooking = default(MicrosoftDynamicsCRMbookableresourcebooking), MicrosoftDynamicsCRMbookableresourcebooking baserecordidBookableresourcebooking = default(MicrosoftDynamicsCRMbookableresourcebooking), MicrosoftDynamicsCRMbookableresourcebookingheader duplicaterecordidBookableresourcebookingheader = default(MicrosoftDynamicsCRMbookableresourcebookingheader), MicrosoftDynamicsCRMbookableresourcebookingheader baserecordidBookableresourcebookingheader = default(MicrosoftDynamicsCRMbookableresourcebookingheader), MicrosoftDynamicsCRMbookableresourcecategory duplicaterecordidBookableresourcecategory = default(MicrosoftDynamicsCRMbookableresourcecategory), MicrosoftDynamicsCRMbookableresourcecategory baserecordidBookableresourcecategory = default(MicrosoftDynamicsCRMbookableresourcecategory), MicrosoftDynamicsCRMbookableresourcecategoryassn duplicaterecordidBookableresourcecategoryassn = default(MicrosoftDynamicsCRMbookableresourcecategoryassn), MicrosoftDynamicsCRMbookableresourcecategoryassn baserecordidBookableresourcecategoryassn = default(MicrosoftDynamicsCRMbookableresourcecategoryassn), MicrosoftDynamicsCRMbookableresourcecharacteristic duplicaterecordidBookableresourcecharacteristic = default(MicrosoftDynamicsCRMbookableresourcecharacteristic), MicrosoftDynamicsCRMbookableresourcecharacteristic baserecordidBookableresourcecharacteristic = default(MicrosoftDynamicsCRMbookableresourcecharacteristic), MicrosoftDynamicsCRMbookableresourcegroup duplicaterecordidBookableresourcegroup = default(MicrosoftDynamicsCRMbookableresourcegroup), MicrosoftDynamicsCRMbookableresourcegroup baserecordidBookableresourcegroup = default(MicrosoftDynamicsCRMbookableresourcegroup), MicrosoftDynamicsCRMbookingstatus duplicaterecordidBookingstatus = default(MicrosoftDynamicsCRMbookingstatus), MicrosoftDynamicsCRMbookingstatus baserecordidBookingstatus = default(MicrosoftDynamicsCRMbookingstatus), MicrosoftDynamicsCRMcharacteristic duplicaterecordidCharacteristic = default(MicrosoftDynamicsCRMcharacteristic), MicrosoftDynamicsCRMcharacteristic baserecordidCharacteristic = default(MicrosoftDynamicsCRMcharacteristic), MicrosoftDynamicsCRMratingmodel duplicaterecordidRatingmodel = default(MicrosoftDynamicsCRMratingmodel), MicrosoftDynamicsCRMratingmodel baserecordidRatingmodel = default(MicrosoftDynamicsCRMratingmodel), MicrosoftDynamicsCRMratingvalue duplicaterecordidRatingvalue = default(MicrosoftDynamicsCRMratingvalue), MicrosoftDynamicsCRMratingvalue baserecordidRatingvalue = default(MicrosoftDynamicsCRMratingvalue), MicrosoftDynamicsCRMcampaign duplicaterecordidCampaign = default(MicrosoftDynamicsCRMcampaign), MicrosoftDynamicsCRMcampaign baserecordidCampaign = default(MicrosoftDynamicsCRMcampaign), MicrosoftDynamicsCRMcampaignresponse duplicaterecordidCampaignresponse = default(MicrosoftDynamicsCRMcampaignresponse), MicrosoftDynamicsCRMcampaignresponse baserecordidCampaignresponse = default(MicrosoftDynamicsCRMcampaignresponse), MicrosoftDynamicsCRMlist duplicaterecordidList = default(MicrosoftDynamicsCRMlist), MicrosoftDynamicsCRMlist baserecordidList = default(MicrosoftDynamicsCRMlist), MicrosoftDynamicsCRMcontract duplicaterecordidContract = default(MicrosoftDynamicsCRMcontract), MicrosoftDynamicsCRMcontract baserecordidContract = default(MicrosoftDynamicsCRMcontract), MicrosoftDynamicsCRMequipment duplicaterecordidEquipment = default(MicrosoftDynamicsCRMequipment), MicrosoftDynamicsCRMequipment baserecordidEquipment = default(MicrosoftDynamicsCRMequipment), MicrosoftDynamicsCRMincident duplicaterecordidIncident = default(MicrosoftDynamicsCRMincident), MicrosoftDynamicsCRMincident baserecordidIncident = default(MicrosoftDynamicsCRMincident), MicrosoftDynamicsCRMentitlement baserecordidEntitlement = default(MicrosoftDynamicsCRMentitlement), MicrosoftDynamicsCRMentitlement duplicaterecordidEntitlement = default(MicrosoftDynamicsCRMentitlement), MicrosoftDynamicsCRMentitlementchannel baserecordidEntitlementchannel = default(MicrosoftDynamicsCRMentitlementchannel), MicrosoftDynamicsCRMentitlementchannel duplicaterecordidEntitlementchannel = default(MicrosoftDynamicsCRMentitlementchannel), MicrosoftDynamicsCRMentitlementtemplate duplicaterecordidEntitlementtemplate = default(MicrosoftDynamicsCRMentitlementtemplate), MicrosoftDynamicsCRMentitlementtemplate baserecordidEntitlementtemplate = default(MicrosoftDynamicsCRMentitlementtemplate), MicrosoftDynamicsCRMresourcegroup baserecordidResourcegroup = default(MicrosoftDynamicsCRMresourcegroup), MicrosoftDynamicsCRMresourcegroup duplicaterecordidResourcegroup = default(MicrosoftDynamicsCRMresourcegroup), MicrosoftDynamicsCRMservice baserecordidService = default(MicrosoftDynamicsCRMservice), MicrosoftDynamicsCRMservice duplicaterecordidService = default(MicrosoftDynamicsCRMservice), MicrosoftDynamicsCRMentitlemententityallocationtypemapping duplicaterecordidEntitlemententityallocationtypemapping = default(MicrosoftDynamicsCRMentitlemententityallocationtypemapping), MicrosoftDynamicsCRMentitlemententityallocationtypemapping baserecordidEntitlemententityallocationtypemapping = default(MicrosoftDynamicsCRMentitlemententityallocationtypemapping), MicrosoftDynamicsCRMmsdynCallablecontext duplicaterecordidMsdynCallablecontext = default(MicrosoftDynamicsCRMmsdynCallablecontext), MicrosoftDynamicsCRMmsdynCallablecontext baserecordidMsdynCallablecontext = default(MicrosoftDynamicsCRMmsdynCallablecontext), MicrosoftDynamicsCRMmsdynPlaybookactivity duplicaterecordidMsdynPlaybookactivity = default(MicrosoftDynamicsCRMmsdynPlaybookactivity), MicrosoftDynamicsCRMmsdynPlaybookactivity baserecordidMsdynPlaybookactivity = default(MicrosoftDynamicsCRMmsdynPlaybookactivity), MicrosoftDynamicsCRMmsdynPlaybookactivityattribute duplicaterecordidMsdynPlaybookactivityattribute = default(MicrosoftDynamicsCRMmsdynPlaybookactivityattribute), MicrosoftDynamicsCRMmsdynPlaybookactivityattribute baserecordidMsdynPlaybookactivityattribute = default(MicrosoftDynamicsCRMmsdynPlaybookactivityattribute), MicrosoftDynamicsCRMmsdynPlaybookcategory duplicaterecordidMsdynPlaybookcategory = default(MicrosoftDynamicsCRMmsdynPlaybookcategory), MicrosoftDynamicsCRMmsdynPlaybookcategory baserecordidMsdynPlaybookcategory = default(MicrosoftDynamicsCRMmsdynPlaybookcategory), MicrosoftDynamicsCRMmsdynPlaybookinstance duplicaterecordidMsdynPlaybookinstance = default(MicrosoftDynamicsCRMmsdynPlaybookinstance), MicrosoftDynamicsCRMmsdynPlaybookinstance baserecordidMsdynPlaybookinstance = default(MicrosoftDynamicsCRMmsdynPlaybookinstance), MicrosoftDynamicsCRMmsdynPlaybooktemplate duplicaterecordidMsdynPlaybooktemplate = default(MicrosoftDynamicsCRMmsdynPlaybooktemplate), MicrosoftDynamicsCRMmsdynPlaybooktemplate baserecordidMsdynPlaybooktemplate = default(MicrosoftDynamicsCRMmsdynPlaybooktemplate), MicrosoftDynamicsCRMopportunity duplicaterecordidOpportunity = default(MicrosoftDynamicsCRMopportunity), MicrosoftDynamicsCRMopportunity baserecordidOpportunity = default(MicrosoftDynamicsCRMopportunity), MicrosoftDynamicsCRMquote duplicaterecordidQuote = default(MicrosoftDynamicsCRMquote), MicrosoftDynamicsCRMquote baserecordidQuote = default(MicrosoftDynamicsCRMquote), MicrosoftDynamicsCRMcompetitor duplicaterecordidCompetitor = default(MicrosoftDynamicsCRMcompetitor), MicrosoftDynamicsCRMcompetitor baserecordidCompetitor = default(MicrosoftDynamicsCRMcompetitor), MicrosoftDynamicsCRMterritory baserecordidTerritory = default(MicrosoftDynamicsCRMterritory), MicrosoftDynamicsCRMterritory duplicaterecordidTerritory = default(MicrosoftDynamicsCRMterritory), MicrosoftDynamicsCRMadminsettingsentity duplicaterecordidAdminsettingsentity = default(MicrosoftDynamicsCRMadminsettingsentity), MicrosoftDynamicsCRMadminsettingsentity baserecordidAdminsettingsentity = default(MicrosoftDynamicsCRMadminsettingsentity), MicrosoftDynamicsCRMmsdynRelationshipinsightsunifiedconfig duplicaterecordidMsdynRelationshipinsightsunifiedconfig = default(MicrosoftDynamicsCRMmsdynRelationshipinsightsunifiedconfig), MicrosoftDynamicsCRMmsdynRelationshipinsightsunifiedconfig baserecordidMsdynRelationshipinsightsunifiedconfig = default(MicrosoftDynamicsCRMmsdynRelationshipinsightsunifiedconfig), MicrosoftDynamicsCRMmsdynSiconfig duplicaterecordidMsdynSiconfig = default(MicrosoftDynamicsCRMmsdynSiconfig), MicrosoftDynamicsCRMmsdynSiconfig baserecordidMsdynSiconfig = default(MicrosoftDynamicsCRMmsdynSiconfig), MicrosoftDynamicsCRMmsdynUntrackedappointment duplicaterecordidMsdynUntrackedappointment = default(MicrosoftDynamicsCRMmsdynUntrackedappointment), MicrosoftDynamicsCRMmsdynUntrackedappointment baserecordidMsdynUntrackedappointment = default(MicrosoftDynamicsCRMmsdynUntrackedappointment), MicrosoftDynamicsCRMmsdynIcebreakersconfig duplicaterecordidMsdynIcebreakersconfig = default(MicrosoftDynamicsCRMmsdynIcebreakersconfig), MicrosoftDynamicsCRMmsdynIcebreakersconfig baserecordidMsdynIcebreakersconfig = default(MicrosoftDynamicsCRMmsdynIcebreakersconfig), MicrosoftDynamicsCRMmsdynPostalbum duplicaterecordidMsdynPostalbum = default(MicrosoftDynamicsCRMmsdynPostalbum), MicrosoftDynamicsCRMmsdynPostalbum baserecordidMsdynPostalbum = default(MicrosoftDynamicsCRMmsdynPostalbum), MicrosoftDynamicsCRMknowledgearticle duplicaterecordidKnowledgearticle = default(MicrosoftDynamicsCRMknowledgearticle), MicrosoftDynamicsCRMknowledgearticle baserecordidKnowledgearticle = default(MicrosoftDynamicsCRMknowledgearticle), MicrosoftDynamicsCRMknowledgebaserecord duplicaterecordidKnowledgebaserecord = default(MicrosoftDynamicsCRMknowledgebaserecord), MicrosoftDynamicsCRMknowledgebaserecord baserecordidKnowledgebaserecord = default(MicrosoftDynamicsCRMknowledgebaserecord), MicrosoftDynamicsCRMgoalrollupquery baserecordidGoalrollupquery = default(MicrosoftDynamicsCRMgoalrollupquery), MicrosoftDynamicsCRMpublisher duplicaterecordidPublisher = default(MicrosoftDynamicsCRMpublisher), MicrosoftDynamicsCRMtransactioncurrency baserecordidTransactioncurrency = default(MicrosoftDynamicsCRMtransactioncurrency), MicrosoftDynamicsCRMrecurringappointmentmaster baserecordidRecurringappointmentmaster = default(MicrosoftDynamicsCRMrecurringappointmentmaster), MicrosoftDynamicsCRMgoal duplicaterecordidGoal = default(MicrosoftDynamicsCRMgoal), MicrosoftDynamicsCRMtransactioncurrency duplicaterecordidTransactioncurrency = default(MicrosoftDynamicsCRMtransactioncurrency), MicrosoftDynamicsCRMtask baserecordidTask = default(MicrosoftDynamicsCRMtask), MicrosoftDynamicsCRMrecurringappointmentmaster duplicaterecordidRecurringappointmentmaster = default(MicrosoftDynamicsCRMrecurringappointmentmaster), MicrosoftDynamicsCRMasyncoperation asyncoperationid = default(MicrosoftDynamicsCRMasyncoperation), MicrosoftDynamicsCRMtask duplicaterecordidTask = default(MicrosoftDynamicsCRMtask), MicrosoftDynamicsCRMemail baserecordidEmail = default(MicrosoftDynamicsCRMemail), MicrosoftDynamicsCRMsocialprofile baserecordidSocialprofile = default(MicrosoftDynamicsCRMsocialprofile), MicrosoftDynamicsCRMteam baserecordidTeam = default(MicrosoftDynamicsCRMteam), MicrosoftDynamicsCRMsystemuser baserecordidSystemuser = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMaccount baserecordidAccount = default(MicrosoftDynamicsCRMaccount), MicrosoftDynamicsCRMappointment baserecordidAppointment = default(MicrosoftDynamicsCRMappointment), MicrosoftDynamicsCRMsharepointdocumentlocation baserecordidSharepointdocumentlocation = default(MicrosoftDynamicsCRMsharepointdocumentlocation), MicrosoftDynamicsCRMfax duplicaterecordidFax = default(MicrosoftDynamicsCRMfax), MicrosoftDynamicsCRMpublisher baserecordidPublisher = default(MicrosoftDynamicsCRMpublisher), MicrosoftDynamicsCRMsharepointsite duplicaterecordidSharepointsite = default(MicrosoftDynamicsCRMsharepointsite), MicrosoftDynamicsCRMkbarticle duplicaterecordidKbarticle = default(MicrosoftDynamicsCRMkbarticle), MicrosoftDynamicsCRMteam duplicaterecordidTeam = default(MicrosoftDynamicsCRMteam), MicrosoftDynamicsCRMappointment duplicaterecordidAppointment = default(MicrosoftDynamicsCRMappointment), MicrosoftDynamicsCRMphonecall duplicaterecordidPhonecall = default(MicrosoftDynamicsCRMphonecall), MicrosoftDynamicsCRMgoalrollupquery duplicaterecordidGoalrollupquery = default(MicrosoftDynamicsCRMgoalrollupquery), MicrosoftDynamicsCRMsharepointsite baserecordidSharepointsite = default(MicrosoftDynamicsCRMsharepointsite), MicrosoftDynamicsCRMphonecall baserecordidPhonecall = default(MicrosoftDynamicsCRMphonecall), MicrosoftDynamicsCRMcontact duplicaterecordidContact = default(MicrosoftDynamicsCRMcontact), MicrosoftDynamicsCRMkbarticle baserecordidKbarticle = default(MicrosoftDynamicsCRMkbarticle), MicrosoftDynamicsCRMemail duplicaterecordidEmail = default(MicrosoftDynamicsCRMemail), MicrosoftDynamicsCRMletter baserecordidLetter = default(MicrosoftDynamicsCRMletter), MicrosoftDynamicsCRMsocialactivity baserecordidSocialactivity = default(MicrosoftDynamicsCRMsocialactivity), MicrosoftDynamicsCRMsystemuser duplicaterecordidSystemuser = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsocialactivity duplicaterecordidSocialactivity = default(MicrosoftDynamicsCRMsocialactivity), MicrosoftDynamicsCRMsharepointdocumentlocation duplicaterecordidSharepointdocumentlocation = default(MicrosoftDynamicsCRMsharepointdocumentlocation), MicrosoftDynamicsCRMsocialprofile duplicaterecordidSocialprofile = default(MicrosoftDynamicsCRMsocialprofile), MicrosoftDynamicsCRMgoal baserecordidGoal = default(MicrosoftDynamicsCRMgoal), MicrosoftDynamicsCRMaccount duplicaterecordidAccount = default(MicrosoftDynamicsCRMaccount), MicrosoftDynamicsCRMfax baserecordidFax = default(MicrosoftDynamicsCRMfax), MicrosoftDynamicsCRMqueue duplicaterecordidQueue = default(MicrosoftDynamicsCRMqueue), MicrosoftDynamicsCRMduplicaterule duplicateruleid = default(MicrosoftDynamicsCRMduplicaterule), MicrosoftDynamicsCRMcontact baserecordidContact = default(MicrosoftDynamicsCRMcontact), MicrosoftDynamicsCRMemailserverprofile duplicaterecordidEmailserverprofile = default(MicrosoftDynamicsCRMemailserverprofile), MicrosoftDynamicsCRMqueue baserecordidQueue = default(MicrosoftDynamicsCRMqueue), MicrosoftDynamicsCRMemailserverprofile baserecordidEmailserverprofile = default(MicrosoftDynamicsCRMemailserverprofile), MicrosoftDynamicsCRMletter duplicaterecordidLetter = default(MicrosoftDynamicsCRMletter))
         {
-            Duplicateid = duplicateid;
-            this._baserecordidValue = _baserecordidValue;
-            this._duplicateruleidValue = _duplicateruleidValue;
-            this._asyncoperationidValue = _asyncoperationidValue;
-            this._duplicaterecordidValue = _duplicaterecordidValue;
             Owninguser = owninguser;
-            Owningbusinessunit = owningbusinessunit;
+            this._duplicateruleidValue = _duplicateruleidValue;
             Createdon = createdon;
             this._owneridValue = _owneridValue;
-            DuplicaterecordidKnowledgearticle = duplicaterecordidKnowledgearticle;
-            BaserecordidKnowledgearticle = baserecordidKnowledgearticle;
-            DuplicaterecordidEntitlement = duplicaterecordidEntitlement;
-            BaserecordidEntitlement = baserecordidEntitlement;
-            DuplicaterecordidEntitlementchannel = duplicaterecordidEntitlementchannel;
-            BaserecordidEntitlementchannel = baserecordidEntitlementchannel;
-            DuplicaterecordidEntitlementtemplate = duplicaterecordidEntitlementtemplate;
-            BaserecordidEntitlementtemplate = baserecordidEntitlementtemplate;
+            Owningbusinessunit = owningbusinessunit;
+            this._asyncoperationidValue = _asyncoperationidValue;
+            this._baserecordidValue = _baserecordidValue;
+            Duplicateid = duplicateid;
+            this._duplicaterecordidValue = _duplicaterecordidValue;
+            DuplicaterecordidGovCommunity = duplicaterecordidGovCommunity;
+            BaserecordidGovCommunity = baserecordidGovCommunity;
+            DuplicaterecordidGovRegion = duplicaterecordidGovRegion;
+            BaserecordidGovRegion = baserecordidGovRegion;
+            DuplicaterecordidGovIncidenttask = duplicaterecordidGovIncidenttask;
+            BaserecordidGovIncidenttask = baserecordidGovIncidenttask;
+            DuplicaterecordidGovRegistration = duplicaterecordidGovRegistration;
+            BaserecordidGovRegistration = baserecordidGovRegistration;
+            DuplicaterecordidLead = duplicaterecordidLead;
+            BaserecordidLead = baserecordidLead;
             DuplicaterecordidBookableresource = duplicaterecordidBookableresource;
             BaserecordidBookableresource = baserecordidBookableresource;
             DuplicaterecordidBookableresourcebooking = duplicaterecordidBookableresourcebooking;
@@ -68,108 +70,112 @@ namespace Gov.Jag.Embc.Interfaces.Models
             BaserecordidRatingmodel = baserecordidRatingmodel;
             DuplicaterecordidRatingvalue = duplicaterecordidRatingvalue;
             BaserecordidRatingvalue = baserecordidRatingvalue;
+            DuplicaterecordidCampaign = duplicaterecordidCampaign;
+            BaserecordidCampaign = baserecordidCampaign;
+            DuplicaterecordidCampaignresponse = duplicaterecordidCampaignresponse;
+            BaserecordidCampaignresponse = baserecordidCampaignresponse;
+            DuplicaterecordidList = duplicaterecordidList;
+            BaserecordidList = baserecordidList;
+            DuplicaterecordidContract = duplicaterecordidContract;
+            BaserecordidContract = baserecordidContract;
+            DuplicaterecordidEquipment = duplicaterecordidEquipment;
+            BaserecordidEquipment = baserecordidEquipment;
+            DuplicaterecordidIncident = duplicaterecordidIncident;
+            BaserecordidIncident = baserecordidIncident;
+            BaserecordidEntitlement = baserecordidEntitlement;
+            DuplicaterecordidEntitlement = duplicaterecordidEntitlement;
+            BaserecordidEntitlementchannel = baserecordidEntitlementchannel;
+            DuplicaterecordidEntitlementchannel = duplicaterecordidEntitlementchannel;
+            DuplicaterecordidEntitlementtemplate = duplicaterecordidEntitlementtemplate;
+            BaserecordidEntitlementtemplate = baserecordidEntitlementtemplate;
+            BaserecordidResourcegroup = baserecordidResourcegroup;
+            DuplicaterecordidResourcegroup = duplicaterecordidResourcegroup;
+            BaserecordidService = baserecordidService;
+            DuplicaterecordidService = duplicaterecordidService;
+            DuplicaterecordidEntitlemententityallocationtypemapping = duplicaterecordidEntitlemententityallocationtypemapping;
+            BaserecordidEntitlemententityallocationtypemapping = baserecordidEntitlemententityallocationtypemapping;
+            DuplicaterecordidMsdynCallablecontext = duplicaterecordidMsdynCallablecontext;
+            BaserecordidMsdynCallablecontext = baserecordidMsdynCallablecontext;
+            DuplicaterecordidMsdynPlaybookactivity = duplicaterecordidMsdynPlaybookactivity;
+            BaserecordidMsdynPlaybookactivity = baserecordidMsdynPlaybookactivity;
+            DuplicaterecordidMsdynPlaybookactivityattribute = duplicaterecordidMsdynPlaybookactivityattribute;
+            BaserecordidMsdynPlaybookactivityattribute = baserecordidMsdynPlaybookactivityattribute;
+            DuplicaterecordidMsdynPlaybookcategory = duplicaterecordidMsdynPlaybookcategory;
+            BaserecordidMsdynPlaybookcategory = baserecordidMsdynPlaybookcategory;
+            DuplicaterecordidMsdynPlaybookinstance = duplicaterecordidMsdynPlaybookinstance;
+            BaserecordidMsdynPlaybookinstance = baserecordidMsdynPlaybookinstance;
+            DuplicaterecordidMsdynPlaybooktemplate = duplicaterecordidMsdynPlaybooktemplate;
+            BaserecordidMsdynPlaybooktemplate = baserecordidMsdynPlaybooktemplate;
+            DuplicaterecordidOpportunity = duplicaterecordidOpportunity;
+            BaserecordidOpportunity = baserecordidOpportunity;
+            DuplicaterecordidQuote = duplicaterecordidQuote;
+            BaserecordidQuote = baserecordidQuote;
+            DuplicaterecordidCompetitor = duplicaterecordidCompetitor;
+            BaserecordidCompetitor = baserecordidCompetitor;
+            BaserecordidTerritory = baserecordidTerritory;
+            DuplicaterecordidTerritory = duplicaterecordidTerritory;
+            DuplicaterecordidAdminsettingsentity = duplicaterecordidAdminsettingsentity;
+            BaserecordidAdminsettingsentity = baserecordidAdminsettingsentity;
+            DuplicaterecordidMsdynRelationshipinsightsunifiedconfig = duplicaterecordidMsdynRelationshipinsightsunifiedconfig;
+            BaserecordidMsdynRelationshipinsightsunifiedconfig = baserecordidMsdynRelationshipinsightsunifiedconfig;
+            DuplicaterecordidMsdynSiconfig = duplicaterecordidMsdynSiconfig;
+            BaserecordidMsdynSiconfig = baserecordidMsdynSiconfig;
+            DuplicaterecordidMsdynUntrackedappointment = duplicaterecordidMsdynUntrackedappointment;
+            BaserecordidMsdynUntrackedappointment = baserecordidMsdynUntrackedappointment;
+            DuplicaterecordidMsdynIcebreakersconfig = duplicaterecordidMsdynIcebreakersconfig;
+            BaserecordidMsdynIcebreakersconfig = baserecordidMsdynIcebreakersconfig;
+            DuplicaterecordidMsdynPostalbum = duplicaterecordidMsdynPostalbum;
+            BaserecordidMsdynPostalbum = baserecordidMsdynPostalbum;
+            DuplicaterecordidKnowledgearticle = duplicaterecordidKnowledgearticle;
+            BaserecordidKnowledgearticle = baserecordidKnowledgearticle;
             DuplicaterecordidKnowledgebaserecord = duplicaterecordidKnowledgebaserecord;
             BaserecordidKnowledgebaserecord = baserecordidKnowledgebaserecord;
             BaserecordidGoalrollupquery = baserecordidGoalrollupquery;
             DuplicaterecordidPublisher = duplicaterecordidPublisher;
             BaserecordidTransactioncurrency = baserecordidTransactioncurrency;
-            BaserecordidCampaign = baserecordidCampaign;
-            BaserecordidLead = baserecordidLead;
             BaserecordidRecurringappointmentmaster = baserecordidRecurringappointmentmaster;
             DuplicaterecordidGoal = duplicaterecordidGoal;
             DuplicaterecordidTransactioncurrency = duplicaterecordidTransactioncurrency;
-            BaserecordidCompetitor = baserecordidCompetitor;
-            BaserecordidEquipment = baserecordidEquipment;
             BaserecordidTask = baserecordidTask;
             DuplicaterecordidRecurringappointmentmaster = duplicaterecordidRecurringappointmentmaster;
             Asyncoperationid = asyncoperationid;
             DuplicaterecordidTask = duplicaterecordidTask;
-            DuplicaterecordidEquipment = duplicaterecordidEquipment;
             BaserecordidEmail = baserecordidEmail;
             BaserecordidSocialprofile = baserecordidSocialprofile;
             BaserecordidTeam = baserecordidTeam;
             BaserecordidSystemuser = baserecordidSystemuser;
             BaserecordidAccount = baserecordidAccount;
             BaserecordidAppointment = baserecordidAppointment;
-            BaserecordidOpportunity = baserecordidOpportunity;
-            DuplicaterecordidCampaign = duplicaterecordidCampaign;
             BaserecordidSharepointdocumentlocation = baserecordidSharepointdocumentlocation;
             DuplicaterecordidFax = duplicaterecordidFax;
-            DuplicaterecordidTerritory = duplicaterecordidTerritory;
-            BaserecordidList = baserecordidList;
             BaserecordidPublisher = baserecordidPublisher;
             DuplicaterecordidSharepointsite = duplicaterecordidSharepointsite;
             DuplicaterecordidKbarticle = duplicaterecordidKbarticle;
             DuplicaterecordidTeam = duplicaterecordidTeam;
             DuplicaterecordidAppointment = duplicaterecordidAppointment;
-            BaserecordidContract = baserecordidContract;
-            DuplicaterecordidIncident = duplicaterecordidIncident;
-            DuplicaterecordidOpportunity = duplicaterecordidOpportunity;
-            DuplicaterecordidQuote = duplicaterecordidQuote;
             DuplicaterecordidPhonecall = duplicaterecordidPhonecall;
-            BaserecordidResourcegroup = baserecordidResourcegroup;
-            BaserecordidTerritory = baserecordidTerritory;
             DuplicaterecordidGoalrollupquery = duplicaterecordidGoalrollupquery;
             BaserecordidSharepointsite = baserecordidSharepointsite;
             BaserecordidPhonecall = baserecordidPhonecall;
             DuplicaterecordidContact = duplicaterecordidContact;
-            DuplicaterecordidCampaignresponse = duplicaterecordidCampaignresponse;
             BaserecordidKbarticle = baserecordidKbarticle;
-            BaserecordidService = baserecordidService;
             DuplicaterecordidEmail = duplicaterecordidEmail;
-            DuplicaterecordidCompetitor = duplicaterecordidCompetitor;
             BaserecordidLetter = baserecordidLetter;
             BaserecordidSocialactivity = baserecordidSocialactivity;
             DuplicaterecordidSystemuser = duplicaterecordidSystemuser;
-            DuplicaterecordidLead = duplicaterecordidLead;
             DuplicaterecordidSocialactivity = duplicaterecordidSocialactivity;
             DuplicaterecordidSharepointdocumentlocation = duplicaterecordidSharepointdocumentlocation;
             DuplicaterecordidSocialprofile = duplicaterecordidSocialprofile;
             BaserecordidGoal = baserecordidGoal;
             DuplicaterecordidAccount = duplicaterecordidAccount;
-            DuplicaterecordidList = duplicaterecordidList;
-            DuplicaterecordidResourcegroup = duplicaterecordidResourcegroup;
-            BaserecordidCampaignresponse = baserecordidCampaignresponse;
-            DuplicaterecordidContract = duplicaterecordidContract;
-            DuplicaterecordidService = duplicaterecordidService;
             BaserecordidFax = baserecordidFax;
             DuplicaterecordidQueue = duplicaterecordidQueue;
             Duplicateruleid = duplicateruleid;
             BaserecordidContact = baserecordidContact;
-            BaserecordidIncident = baserecordidIncident;
             DuplicaterecordidEmailserverprofile = duplicaterecordidEmailserverprofile;
             BaserecordidQueue = baserecordidQueue;
             BaserecordidEmailserverprofile = baserecordidEmailserverprofile;
             DuplicaterecordidLetter = duplicaterecordidLetter;
-            BaserecordidQuote = baserecordidQuote;
-            DuplicaterecordidBcgovCustomaddress = duplicaterecordidBcgovCustomaddress;
-            BaserecordidBcgovCustomaddress = baserecordidBcgovCustomaddress;
-            DuplicaterecordidBcgovTermsconditionspreset = duplicaterecordidBcgovTermsconditionspreset;
-            BaserecordidBcgovTermsconditionspreset = baserecordidBcgovTermsconditionspreset;
-            DuplicaterecordidBcgovApplicationtype = duplicaterecordidBcgovApplicationtype;
-            BaserecordidBcgovApplicationtype = baserecordidBcgovApplicationtype;
-            DuplicaterecordidBcgovBusinesscontact = duplicaterecordidBcgovBusinesscontact;
-            BaserecordidBcgovBusinesscontact = baserecordidBcgovBusinesscontact;
-            DuplicaterecordidBcgovCustomproduct = duplicaterecordidBcgovCustomproduct;
-            BaserecordidBcgovCustomproduct = baserecordidBcgovCustomproduct;
-            DuplicaterecordidBcgovCertificate = duplicaterecordidBcgovCertificate;
-            BaserecordidBcgovCertificate = baserecordidBcgovCertificate;
-            DuplicaterecordidBcgovLocation = duplicaterecordidBcgovLocation;
-            BaserecordidBcgovLocation = baserecordidBcgovLocation;
-            DuplicaterecordidBcgovEquipment = duplicaterecordidBcgovEquipment;
-            BaserecordidBcgovEquipment = baserecordidBcgovEquipment;
-            DuplicaterecordidBcgovEquipmentlocation = duplicaterecordidBcgovEquipmentlocation;
-            BaserecordidBcgovEquipmentlocation = baserecordidBcgovEquipmentlocation;
-            DuplicaterecordidBcgovCertificatetermsandconditions = duplicaterecordidBcgovCertificatetermsandconditions;
-            BaserecordidBcgovCertificatetermsandconditions = baserecordidBcgovCertificatetermsandconditions;
-            DuplicaterecordidBcgovRiskassessment = duplicaterecordidBcgovRiskassessment;
-            BaserecordidBcgovRiskassessment = baserecordidBcgovRiskassessment;
-            DuplicaterecordidAbsAutonumberedentity = duplicaterecordidAbsAutonumberedentity;
-            BaserecordidAbsAutonumberedentity = baserecordidAbsAutonumberedentity;
-            DuplicaterecordidAbsAutonumberingdefinition = duplicaterecordidAbsAutonumberingdefinition;
-            BaserecordidAbsAutonumberingdefinition = baserecordidAbsAutonumberingdefinition;
-            DuplicaterecordidCategory = duplicaterecordidCategory;
-            BaserecordidCategory = baserecordidCategory;
             CustomInit();
         }
 
@@ -180,38 +186,13 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "duplicateid")]
-        public string Duplicateid { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_baserecordid_value")]
-        public string _baserecordidValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_duplicateruleid_value")]
-        public string _duplicateruleidValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_asyncoperationid_value")]
-        public string _asyncoperationidValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_duplicaterecordid_value")]
-        public string _duplicaterecordidValue { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "owninguser")]
         public string Owninguser { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "owningbusinessunit")]
-        public string Owningbusinessunit { get; set; }
+        [JsonProperty(PropertyName = "_duplicateruleid_value")]
+        public string _duplicateruleidValue { get; set; }
 
         /// <summary>
         /// </summary>
@@ -225,43 +206,78 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_knowledgearticle")]
-        public MicrosoftDynamicsCRMknowledgearticle DuplicaterecordidKnowledgearticle { get; set; }
+        [JsonProperty(PropertyName = "owningbusinessunit")]
+        public string Owningbusinessunit { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_knowledgearticle")]
-        public MicrosoftDynamicsCRMknowledgearticle BaserecordidKnowledgearticle { get; set; }
+        [JsonProperty(PropertyName = "_asyncoperationid_value")]
+        public string _asyncoperationidValue { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_entitlement")]
-        public MicrosoftDynamicsCRMentitlement DuplicaterecordidEntitlement { get; set; }
+        [JsonProperty(PropertyName = "_baserecordid_value")]
+        public string _baserecordidValue { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_entitlement")]
-        public MicrosoftDynamicsCRMentitlement BaserecordidEntitlement { get; set; }
+        [JsonProperty(PropertyName = "duplicateid")]
+        public string Duplicateid { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_entitlementchannel")]
-        public MicrosoftDynamicsCRMentitlementchannel DuplicaterecordidEntitlementchannel { get; set; }
+        [JsonProperty(PropertyName = "_duplicaterecordid_value")]
+        public string _duplicaterecordidValue { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_entitlementchannel")]
-        public MicrosoftDynamicsCRMentitlementchannel BaserecordidEntitlementchannel { get; set; }
+        [JsonProperty(PropertyName = "duplicaterecordid_gov_community")]
+        public MicrosoftDynamicsCRMgovCommunity DuplicaterecordidGovCommunity { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_entitlementtemplate")]
-        public MicrosoftDynamicsCRMentitlementtemplate DuplicaterecordidEntitlementtemplate { get; set; }
+        [JsonProperty(PropertyName = "baserecordid_gov_community")]
+        public MicrosoftDynamicsCRMgovCommunity BaserecordidGovCommunity { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_entitlementtemplate")]
-        public MicrosoftDynamicsCRMentitlementtemplate BaserecordidEntitlementtemplate { get; set; }
+        [JsonProperty(PropertyName = "duplicaterecordid_gov_region")]
+        public MicrosoftDynamicsCRMgovRegion DuplicaterecordidGovRegion { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_gov_region")]
+        public MicrosoftDynamicsCRMgovRegion BaserecordidGovRegion { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_gov_incidenttask")]
+        public MicrosoftDynamicsCRMgovIncidenttask DuplicaterecordidGovIncidenttask { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_gov_incidenttask")]
+        public MicrosoftDynamicsCRMgovIncidenttask BaserecordidGovIncidenttask { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_gov_registration")]
+        public MicrosoftDynamicsCRMgovRegistration DuplicaterecordidGovRegistration { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_gov_registration")]
+        public MicrosoftDynamicsCRMgovRegistration BaserecordidGovRegistration { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_lead")]
+        public MicrosoftDynamicsCRMlead DuplicaterecordidLead { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_lead")]
+        public MicrosoftDynamicsCRMlead BaserecordidLead { get; set; }
 
         /// <summary>
         /// </summary>
@@ -375,6 +391,296 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_campaign")]
+        public MicrosoftDynamicsCRMcampaign DuplicaterecordidCampaign { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_campaign")]
+        public MicrosoftDynamicsCRMcampaign BaserecordidCampaign { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_campaignresponse")]
+        public MicrosoftDynamicsCRMcampaignresponse DuplicaterecordidCampaignresponse { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_campaignresponse")]
+        public MicrosoftDynamicsCRMcampaignresponse BaserecordidCampaignresponse { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_list")]
+        public MicrosoftDynamicsCRMlist DuplicaterecordidList { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_list")]
+        public MicrosoftDynamicsCRMlist BaserecordidList { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_contract")]
+        public MicrosoftDynamicsCRMcontract DuplicaterecordidContract { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_contract")]
+        public MicrosoftDynamicsCRMcontract BaserecordidContract { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_equipment")]
+        public MicrosoftDynamicsCRMequipment DuplicaterecordidEquipment { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_equipment")]
+        public MicrosoftDynamicsCRMequipment BaserecordidEquipment { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_incident")]
+        public MicrosoftDynamicsCRMincident DuplicaterecordidIncident { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_incident")]
+        public MicrosoftDynamicsCRMincident BaserecordidIncident { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_entitlement")]
+        public MicrosoftDynamicsCRMentitlement BaserecordidEntitlement { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_entitlement")]
+        public MicrosoftDynamicsCRMentitlement DuplicaterecordidEntitlement { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_entitlementchannel")]
+        public MicrosoftDynamicsCRMentitlementchannel BaserecordidEntitlementchannel { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_entitlementchannel")]
+        public MicrosoftDynamicsCRMentitlementchannel DuplicaterecordidEntitlementchannel { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_entitlementtemplate")]
+        public MicrosoftDynamicsCRMentitlementtemplate DuplicaterecordidEntitlementtemplate { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_entitlementtemplate")]
+        public MicrosoftDynamicsCRMentitlementtemplate BaserecordidEntitlementtemplate { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_resourcegroup")]
+        public MicrosoftDynamicsCRMresourcegroup BaserecordidResourcegroup { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_resourcegroup")]
+        public MicrosoftDynamicsCRMresourcegroup DuplicaterecordidResourcegroup { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_service")]
+        public MicrosoftDynamicsCRMservice BaserecordidService { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_service")]
+        public MicrosoftDynamicsCRMservice DuplicaterecordidService { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_entitlemententityallocationtypemapping")]
+        public MicrosoftDynamicsCRMentitlemententityallocationtypemapping DuplicaterecordidEntitlemententityallocationtypemapping { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_entitlemententityallocationtypemapping")]
+        public MicrosoftDynamicsCRMentitlemententityallocationtypemapping BaserecordidEntitlemententityallocationtypemapping { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_msdyn_callablecontext")]
+        public MicrosoftDynamicsCRMmsdynCallablecontext DuplicaterecordidMsdynCallablecontext { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_msdyn_callablecontext")]
+        public MicrosoftDynamicsCRMmsdynCallablecontext BaserecordidMsdynCallablecontext { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_msdyn_playbookactivity")]
+        public MicrosoftDynamicsCRMmsdynPlaybookactivity DuplicaterecordidMsdynPlaybookactivity { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_msdyn_playbookactivity")]
+        public MicrosoftDynamicsCRMmsdynPlaybookactivity BaserecordidMsdynPlaybookactivity { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_msdyn_playbookactivityattribute")]
+        public MicrosoftDynamicsCRMmsdynPlaybookactivityattribute DuplicaterecordidMsdynPlaybookactivityattribute { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_msdyn_playbookactivityattribute")]
+        public MicrosoftDynamicsCRMmsdynPlaybookactivityattribute BaserecordidMsdynPlaybookactivityattribute { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_msdyn_playbookcategory")]
+        public MicrosoftDynamicsCRMmsdynPlaybookcategory DuplicaterecordidMsdynPlaybookcategory { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_msdyn_playbookcategory")]
+        public MicrosoftDynamicsCRMmsdynPlaybookcategory BaserecordidMsdynPlaybookcategory { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_msdyn_playbookinstance")]
+        public MicrosoftDynamicsCRMmsdynPlaybookinstance DuplicaterecordidMsdynPlaybookinstance { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_msdyn_playbookinstance")]
+        public MicrosoftDynamicsCRMmsdynPlaybookinstance BaserecordidMsdynPlaybookinstance { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_msdyn_playbooktemplate")]
+        public MicrosoftDynamicsCRMmsdynPlaybooktemplate DuplicaterecordidMsdynPlaybooktemplate { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_msdyn_playbooktemplate")]
+        public MicrosoftDynamicsCRMmsdynPlaybooktemplate BaserecordidMsdynPlaybooktemplate { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_opportunity")]
+        public MicrosoftDynamicsCRMopportunity DuplicaterecordidOpportunity { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_opportunity")]
+        public MicrosoftDynamicsCRMopportunity BaserecordidOpportunity { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_quote")]
+        public MicrosoftDynamicsCRMquote DuplicaterecordidQuote { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_quote")]
+        public MicrosoftDynamicsCRMquote BaserecordidQuote { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_competitor")]
+        public MicrosoftDynamicsCRMcompetitor DuplicaterecordidCompetitor { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_competitor")]
+        public MicrosoftDynamicsCRMcompetitor BaserecordidCompetitor { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_territory")]
+        public MicrosoftDynamicsCRMterritory BaserecordidTerritory { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_territory")]
+        public MicrosoftDynamicsCRMterritory DuplicaterecordidTerritory { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_adminsettingsentity")]
+        public MicrosoftDynamicsCRMadminsettingsentity DuplicaterecordidAdminsettingsentity { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_adminsettingsentity")]
+        public MicrosoftDynamicsCRMadminsettingsentity BaserecordidAdminsettingsentity { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_msdyn_relationshipinsightsunifiedconfig")]
+        public MicrosoftDynamicsCRMmsdynRelationshipinsightsunifiedconfig DuplicaterecordidMsdynRelationshipinsightsunifiedconfig { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_msdyn_relationshipinsightsunifiedconfig")]
+        public MicrosoftDynamicsCRMmsdynRelationshipinsightsunifiedconfig BaserecordidMsdynRelationshipinsightsunifiedconfig { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_msdyn_siconfig")]
+        public MicrosoftDynamicsCRMmsdynSiconfig DuplicaterecordidMsdynSiconfig { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_msdyn_siconfig")]
+        public MicrosoftDynamicsCRMmsdynSiconfig BaserecordidMsdynSiconfig { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_msdyn_untrackedappointment")]
+        public MicrosoftDynamicsCRMmsdynUntrackedappointment DuplicaterecordidMsdynUntrackedappointment { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_msdyn_untrackedappointment")]
+        public MicrosoftDynamicsCRMmsdynUntrackedappointment BaserecordidMsdynUntrackedappointment { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_msdyn_icebreakersconfig")]
+        public MicrosoftDynamicsCRMmsdynIcebreakersconfig DuplicaterecordidMsdynIcebreakersconfig { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_msdyn_icebreakersconfig")]
+        public MicrosoftDynamicsCRMmsdynIcebreakersconfig BaserecordidMsdynIcebreakersconfig { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_msdyn_postalbum")]
+        public MicrosoftDynamicsCRMmsdynPostalbum DuplicaterecordidMsdynPostalbum { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_msdyn_postalbum")]
+        public MicrosoftDynamicsCRMmsdynPostalbum BaserecordidMsdynPostalbum { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "duplicaterecordid_knowledgearticle")]
+        public MicrosoftDynamicsCRMknowledgearticle DuplicaterecordidKnowledgearticle { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baserecordid_knowledgearticle")]
+        public MicrosoftDynamicsCRMknowledgearticle BaserecordidKnowledgearticle { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "duplicaterecordid_knowledgebaserecord")]
         public MicrosoftDynamicsCRMknowledgebaserecord DuplicaterecordidKnowledgebaserecord { get; set; }
 
@@ -400,16 +706,6 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_campaign")]
-        public MicrosoftDynamicsCRMcampaign BaserecordidCampaign { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_lead")]
-        public MicrosoftDynamicsCRMlead BaserecordidLead { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "baserecordid_recurringappointmentmaster")]
         public MicrosoftDynamicsCRMrecurringappointmentmaster BaserecordidRecurringappointmentmaster { get; set; }
 
@@ -422,16 +718,6 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// </summary>
         [JsonProperty(PropertyName = "duplicaterecordid_transactioncurrency")]
         public MicrosoftDynamicsCRMtransactioncurrency DuplicaterecordidTransactioncurrency { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_competitor")]
-        public MicrosoftDynamicsCRMcompetitor BaserecordidCompetitor { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_equipment")]
-        public MicrosoftDynamicsCRMequipment BaserecordidEquipment { get; set; }
 
         /// <summary>
         /// </summary>
@@ -452,11 +738,6 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// </summary>
         [JsonProperty(PropertyName = "duplicaterecordid_task")]
         public MicrosoftDynamicsCRMtask DuplicaterecordidTask { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_equipment")]
-        public MicrosoftDynamicsCRMequipment DuplicaterecordidEquipment { get; set; }
 
         /// <summary>
         /// </summary>
@@ -490,16 +771,6 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_opportunity")]
-        public MicrosoftDynamicsCRMopportunity BaserecordidOpportunity { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_campaign")]
-        public MicrosoftDynamicsCRMcampaign DuplicaterecordidCampaign { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "baserecordid_sharepointdocumentlocation")]
         public MicrosoftDynamicsCRMsharepointdocumentlocation BaserecordidSharepointdocumentlocation { get; set; }
 
@@ -507,16 +778,6 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// </summary>
         [JsonProperty(PropertyName = "duplicaterecordid_fax")]
         public MicrosoftDynamicsCRMfax DuplicaterecordidFax { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_territory")]
-        public MicrosoftDynamicsCRMterritory DuplicaterecordidTerritory { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_list")]
-        public MicrosoftDynamicsCRMlist BaserecordidList { get; set; }
 
         /// <summary>
         /// </summary>
@@ -545,38 +806,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_contract")]
-        public MicrosoftDynamicsCRMcontract BaserecordidContract { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_incident")]
-        public MicrosoftDynamicsCRMincident DuplicaterecordidIncident { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_opportunity")]
-        public MicrosoftDynamicsCRMopportunity DuplicaterecordidOpportunity { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_quote")]
-        public MicrosoftDynamicsCRMquote DuplicaterecordidQuote { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "duplicaterecordid_phonecall")]
         public MicrosoftDynamicsCRMphonecall DuplicaterecordidPhonecall { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_resourcegroup")]
-        public MicrosoftDynamicsCRMresourcegroup BaserecordidResourcegroup { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_territory")]
-        public MicrosoftDynamicsCRMterritory BaserecordidTerritory { get; set; }
 
         /// <summary>
         /// </summary>
@@ -600,28 +831,13 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_campaignresponse")]
-        public MicrosoftDynamicsCRMcampaignresponse DuplicaterecordidCampaignresponse { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "baserecordid_kbarticle")]
         public MicrosoftDynamicsCRMkbarticle BaserecordidKbarticle { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_service")]
-        public MicrosoftDynamicsCRMservice BaserecordidService { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "duplicaterecordid_email")]
         public MicrosoftDynamicsCRMemail DuplicaterecordidEmail { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_competitor")]
-        public MicrosoftDynamicsCRMcompetitor DuplicaterecordidCompetitor { get; set; }
 
         /// <summary>
         /// </summary>
@@ -637,11 +853,6 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// </summary>
         [JsonProperty(PropertyName = "duplicaterecordid_systemuser")]
         public MicrosoftDynamicsCRMsystemuser DuplicaterecordidSystemuser { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_lead")]
-        public MicrosoftDynamicsCRMlead DuplicaterecordidLead { get; set; }
 
         /// <summary>
         /// </summary>
@@ -670,31 +881,6 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_list")]
-        public MicrosoftDynamicsCRMlist DuplicaterecordidList { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_resourcegroup")]
-        public MicrosoftDynamicsCRMresourcegroup DuplicaterecordidResourcegroup { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_campaignresponse")]
-        public MicrosoftDynamicsCRMcampaignresponse BaserecordidCampaignresponse { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_contract")]
-        public MicrosoftDynamicsCRMcontract DuplicaterecordidContract { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_service")]
-        public MicrosoftDynamicsCRMservice DuplicaterecordidService { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "baserecordid_fax")]
         public MicrosoftDynamicsCRMfax BaserecordidFax { get; set; }
 
@@ -715,11 +901,6 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_incident")]
-        public MicrosoftDynamicsCRMincident BaserecordidIncident { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "duplicaterecordid_emailserverprofile")]
         public MicrosoftDynamicsCRMemailserverprofile DuplicaterecordidEmailserverprofile { get; set; }
 
@@ -737,151 +918,6 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// </summary>
         [JsonProperty(PropertyName = "duplicaterecordid_letter")]
         public MicrosoftDynamicsCRMletter DuplicaterecordidLetter { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_quote")]
-        public MicrosoftDynamicsCRMquote BaserecordidQuote { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_bcgov_customaddress")]
-        public MicrosoftDynamicsCRMbcgovCustomaddress DuplicaterecordidBcgovCustomaddress { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_bcgov_customaddress")]
-        public MicrosoftDynamicsCRMbcgovCustomaddress BaserecordidBcgovCustomaddress { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_bcgov_termsconditionspreset")]
-        public MicrosoftDynamicsCRMbcgovTermsconditionspreset DuplicaterecordidBcgovTermsconditionspreset { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_bcgov_termsconditionspreset")]
-        public MicrosoftDynamicsCRMbcgovTermsconditionspreset BaserecordidBcgovTermsconditionspreset { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_bcgov_applicationtype")]
-        public MicrosoftDynamicsCRMbcgovApplicationtype DuplicaterecordidBcgovApplicationtype { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_bcgov_applicationtype")]
-        public MicrosoftDynamicsCRMbcgovApplicationtype BaserecordidBcgovApplicationtype { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_bcgov_businesscontact")]
-        public MicrosoftDynamicsCRMbcgovBusinesscontact DuplicaterecordidBcgovBusinesscontact { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_bcgov_businesscontact")]
-        public MicrosoftDynamicsCRMbcgovBusinesscontact BaserecordidBcgovBusinesscontact { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_bcgov_customproduct")]
-        public MicrosoftDynamicsCRMbcgovCustomproduct DuplicaterecordidBcgovCustomproduct { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_bcgov_customproduct")]
-        public MicrosoftDynamicsCRMbcgovCustomproduct BaserecordidBcgovCustomproduct { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_bcgov_certificate")]
-        public MicrosoftDynamicsCRMbcgovCertificate DuplicaterecordidBcgovCertificate { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_bcgov_certificate")]
-        public MicrosoftDynamicsCRMbcgovCertificate BaserecordidBcgovCertificate { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_bcgov_location")]
-        public MicrosoftDynamicsCRMbcgovLocation DuplicaterecordidBcgovLocation { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_bcgov_location")]
-        public MicrosoftDynamicsCRMbcgovLocation BaserecordidBcgovLocation { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_bcgov_equipment")]
-        public MicrosoftDynamicsCRMbcgovEquipment DuplicaterecordidBcgovEquipment { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_bcgov_equipment")]
-        public MicrosoftDynamicsCRMbcgovEquipment BaserecordidBcgovEquipment { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_bcgov_equipmentlocation")]
-        public MicrosoftDynamicsCRMbcgovEquipmentlocation DuplicaterecordidBcgovEquipmentlocation { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_bcgov_equipmentlocation")]
-        public MicrosoftDynamicsCRMbcgovEquipmentlocation BaserecordidBcgovEquipmentlocation { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_bcgov_certificatetermsandconditions")]
-        public MicrosoftDynamicsCRMbcgovCertificatetermsandconditions DuplicaterecordidBcgovCertificatetermsandconditions { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_bcgov_certificatetermsandconditions")]
-        public MicrosoftDynamicsCRMbcgovCertificatetermsandconditions BaserecordidBcgovCertificatetermsandconditions { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_bcgov_riskassessment")]
-        public MicrosoftDynamicsCRMbcgovRiskassessment DuplicaterecordidBcgovRiskassessment { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_bcgov_riskassessment")]
-        public MicrosoftDynamicsCRMbcgovRiskassessment BaserecordidBcgovRiskassessment { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_abs_autonumberedentity")]
-        public MicrosoftDynamicsCRMabsAutonumberedentity DuplicaterecordidAbsAutonumberedentity { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_abs_autonumberedentity")]
-        public MicrosoftDynamicsCRMabsAutonumberedentity BaserecordidAbsAutonumberedentity { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_abs_autonumberingdefinition")]
-        public MicrosoftDynamicsCRMabsAutonumberingdefinition DuplicaterecordidAbsAutonumberingdefinition { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_abs_autonumberingdefinition")]
-        public MicrosoftDynamicsCRMabsAutonumberingdefinition BaserecordidAbsAutonumberingdefinition { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "duplicaterecordid_category")]
-        public MicrosoftDynamicsCRMcategory DuplicaterecordidCategory { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "baserecordid_category")]
-        public MicrosoftDynamicsCRMcategory BaserecordidCategory { get; set; }
 
     }
 }

@@ -9,7 +9,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
+    
 
     /// <summary>
     /// attachment
@@ -72,7 +73,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "body_binary")]
-        public object BodyBinary { get; set; }
+        [NotMapped] public object BodyBinary { get; set; }
 
         /// <summary>
         /// </summary>
@@ -92,12 +93,12 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "Attachment_SyncErrors")]
-        public IList<MicrosoftDynamicsCRMsyncerror> AttachmentSyncErrors { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMsyncerror> AttachmentSyncErrors { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "attachment_activity_mime_attachments")]
-        public IList<MicrosoftDynamicsCRMactivitymimeattachment> AttachmentActivityMimeAttachments { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMactivitymimeattachment> AttachmentActivityMimeAttachments { get; set; }
 
     }
 }

@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// QueryExpression
@@ -29,11 +29,12 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the
         /// MicrosoftDynamicsCRMQueryExpression class.
         /// </summary>
-        public MicrosoftDynamicsCRMQueryExpression(bool? distinct = default(bool?), bool? noLock = default(bool?), MicrosoftDynamicsCRMPagingInfo pageInfo = default(MicrosoftDynamicsCRMPagingInfo), IList<MicrosoftDynamicsCRMLinkEntity> linkEntities = default(IList<MicrosoftDynamicsCRMLinkEntity>), MicrosoftDynamicsCRMFilterExpression criteria = default(MicrosoftDynamicsCRMFilterExpression), IList<MicrosoftDynamicsCRMOrderExpression> orders = default(IList<MicrosoftDynamicsCRMOrderExpression>), string entityName = default(string), MicrosoftDynamicsCRMColumnSet columnSet = default(MicrosoftDynamicsCRMColumnSet), int? topCount = default(int?))
+        public MicrosoftDynamicsCRMQueryExpression(bool? distinct = default(bool?), bool? noLock = default(bool?), MicrosoftDynamicsCRMPagingInfo pageInfo = default(MicrosoftDynamicsCRMPagingInfo), string queryHints = default(string), IList<MicrosoftDynamicsCRMLinkEntity> linkEntities = default(IList<MicrosoftDynamicsCRMLinkEntity>), MicrosoftDynamicsCRMFilterExpression criteria = default(MicrosoftDynamicsCRMFilterExpression), IList<MicrosoftDynamicsCRMOrderExpression> orders = default(IList<MicrosoftDynamicsCRMOrderExpression>), string entityName = default(string), MicrosoftDynamicsCRMColumnSet columnSet = default(MicrosoftDynamicsCRMColumnSet), int? topCount = default(int?))
         {
             Distinct = distinct;
             NoLock = noLock;
             PageInfo = pageInfo;
+            QueryHints = queryHints;
             LinkEntities = linkEntities;
             Criteria = criteria;
             Orders = orders;
@@ -65,8 +66,13 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "QueryHints")]
+        public string QueryHints { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "LinkEntities")]
-        public IList<MicrosoftDynamicsCRMLinkEntity> LinkEntities { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMLinkEntity> LinkEntities { get; set; }
 
         /// <summary>
         /// </summary>
@@ -76,7 +82,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "Orders")]
-        public IList<MicrosoftDynamicsCRMOrderExpression> Orders { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMOrderExpression> Orders { get; set; }
 
         /// <summary>
         /// </summary>

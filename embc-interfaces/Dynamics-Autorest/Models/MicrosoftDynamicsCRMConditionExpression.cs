@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// ConditionExpression
@@ -52,8 +52,9 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// 'UnderOrEqual', 'Above', 'AboveOrEqual',
         /// 'EqualUserOrUserHierarchy', 'EqualUserOrUserHierarchyAndTeams',
         /// 'OlderThanXYears', 'OlderThanXWeeks', 'OlderThanXDays',
-        /// 'OlderThanXHours', 'OlderThanXMinutes'</param>
-        public MicrosoftDynamicsCRMConditionExpression(string entityName = default(string), string attributeName = default(string), string operatorProperty = default(string), IList<object> values = default(IList<object>))
+        /// 'OlderThanXHours', 'OlderThanXMinutes', 'ContainValues',
+        /// 'DoesNotContainValues'</param>
+        public MicrosoftDynamicsCRMConditionExpression(string entityName = default(string), string attributeName = default(string), string operatorProperty = default(string), IList<MicrosoftDynamicsCRMObject> values = default(IList<MicrosoftDynamicsCRMObject>))
         {
             EntityName = entityName;
             AttributeName = attributeName;
@@ -101,7 +102,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// 'UnderOrEqual', 'Above', 'AboveOrEqual',
         /// 'EqualUserOrUserHierarchy', 'EqualUserOrUserHierarchyAndTeams',
         /// 'OlderThanXYears', 'OlderThanXWeeks', 'OlderThanXDays',
-        /// 'OlderThanXHours', 'OlderThanXMinutes'
+        /// 'OlderThanXHours', 'OlderThanXMinutes', 'ContainValues',
+        /// 'DoesNotContainValues'
         /// </summary>
         [JsonProperty(PropertyName = "Operator")]
         public string OperatorProperty { get; set; }
@@ -109,7 +111,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "Values")]
-        public IList<object> Values { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMObject> Values { get; set; }
 
     }
 }

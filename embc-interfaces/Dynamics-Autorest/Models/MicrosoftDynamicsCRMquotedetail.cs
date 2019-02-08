@@ -9,7 +9,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// quotedetail
@@ -29,85 +30,95 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the MicrosoftDynamicsCRMquotedetail
         /// class.
         /// </summary>
-        public MicrosoftDynamicsCRMquotedetail(System.DateTimeOffset? createdon = default(System.DateTimeOffset?), string quotedetailid = default(string), int? pricingerrorcode = default(int?), string owningbusinessunit = default(string), object extendedamount = default(object), string description = default(string), bool? isproductoverridden = default(bool?), object volumediscountamount = default(object), bool? willcall = default(bool?), object quantity = default(object), int? shiptoFreighttermscode = default(int?), System.DateTimeOffset? overriddencreatedon = default(System.DateTimeOffset?), int? utcconversiontimezonecode = default(int?), object tax = default(object), string _createdbyValue = default(string), string shiptoLine1 = default(string), System.DateTimeOffset? modifiedon = default(System.DateTimeOffset?), bool? ispriceoverridden = default(bool?), string _productidValue = default(string), string shiptoTelephone = default(string), string shiptoAddressid = default(string), string shiptoFax = default(string), string shiptoStateorprovince = default(string), long? versionnumber = default(long?), object volumediscountamountBase = default(object), string parentbundleid = default(string), object priceperunitBase = default(object), string _modifiedbyValue = default(string), int? producttypecode = default(int?), string shiptoLine2 = default(string), object baseamountBase = default(object), object priceperunit = default(object), string _createdonbehalfbyValue = default(string), string _transactioncurrencyidValue = default(string), int? importsequencenumber = default(int?), int? sequencenumber = default(int?), string _uomidValue = default(string), string shiptoCountry = default(string), int? lineitemnumber = default(int?), string _quoteidValue = default(string), string productdescription = default(string), string shiptoLine3 = default(string), string shiptoName = default(string), object exchangerate = default(object), int? timezoneruleversionnumber = default(int?), string _salesrepidValue = default(string), string _modifiedonbehalfbyValue = default(string), object baseamount = default(object), object manualdiscountamountBase = default(object), object taxBase = default(object), string shiptoContactname = default(string), string productassociationid = default(string), object manualdiscountamount = default(object), string owninguser = default(string), string shiptoPostalcode = default(string), string _owneridValue = default(string), string shiptoCity = default(string), int? quotestatecode = default(int?), object extendedamountBase = default(object), int? propertyconfigurationstatus = default(int?), System.DateTimeOffset? requestdeliveryby = default(System.DateTimeOffset?), MicrosoftDynamicsCRMsystemuser createdby = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMbulkdeletefailure> quoteDetailBulkDeleteFailures = default(IList<MicrosoftDynamicsCRMbulkdeletefailure>), MicrosoftDynamicsCRMproduct productid = default(MicrosoftDynamicsCRMproduct), IList<MicrosoftDynamicsCRMdynamicpropertyinstance> quoteDetailDynamicpropertyinstance = default(IList<MicrosoftDynamicsCRMdynamicpropertyinstance>), MicrosoftDynamicsCRMuom uomid = default(MicrosoftDynamicsCRMuom), MicrosoftDynamicsCRMsystemuser createdonbehalfby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMtransactioncurrency transactioncurrencyid = default(MicrosoftDynamicsCRMtransactioncurrency), MicrosoftDynamicsCRMproductassociation productassociationidProductassociation = default(MicrosoftDynamicsCRMproductassociation), MicrosoftDynamicsCRMquotedetail parentbundleidQuotedetail = default(MicrosoftDynamicsCRMquotedetail), IList<MicrosoftDynamicsCRMquotedetail> quotedetailParentQuotedetail = default(IList<MicrosoftDynamicsCRMquotedetail>), MicrosoftDynamicsCRMsystemuser modifiedonbehalfby = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMasyncoperation> quoteDetailAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), IList<MicrosoftDynamicsCRMsyncerror> quoteDetailSyncErrors = default(IList<MicrosoftDynamicsCRMsyncerror>), MicrosoftDynamicsCRMsystemuser modifiedby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMquote quoteid = default(MicrosoftDynamicsCRMquote), MicrosoftDynamicsCRMsystemuser salesrepid = default(MicrosoftDynamicsCRMsystemuser))
+        public MicrosoftDynamicsCRMquotedetail(string _modifiedonbehalfbyValue = default(string), object taxBase = default(object), string quotedetailid = default(string), string shiptoCountry = default(string), System.DateTimeOffset? overriddencreatedon = default(System.DateTimeOffset?), object baseamountBase = default(object), string shiptoFax = default(string), System.DateTimeOffset? createdon = default(System.DateTimeOffset?), long? versionnumber = default(long?), string parentbundleid = default(string), int? sequencenumber = default(int?), string quotedetailname = default(string), object extendedamountBase = default(object), System.DateTimeOffset? modifiedon = default(System.DateTimeOffset?), string productassociationid = default(string), string _salesrepidValue = default(string), string _owninguserValue = default(string), object priceperunit = default(object), string _owneridValue = default(string), string _createdbyValue = default(string), bool? ispriceoverridden = default(bool?), int? producttypecode = default(int?), object tax = default(object), object manualdiscountamountBase = default(object), string _productidValue = default(string), string _owningteamValue = default(string), object manualdiscountamount = default(object), object extendedamount = default(object), string shiptoContactname = default(string), System.DateTimeOffset? requestdeliveryby = default(System.DateTimeOffset?), int? utcconversiontimezonecode = default(int?), string description = default(string), string shiptoTelephone = default(string), bool? willcall = default(bool?), string productdescription = default(string), int? importsequencenumber = default(int?), string _modifiedbyValue = default(string), object quantity = default(object), string _createdonbehalfbyValue = default(string), object baseamount = default(object), object exchangerate = default(object), string shiptoAddressid = default(string), string shiptoPostalcode = default(string), string shiptoStateorprovince = default(string), int? propertyconfigurationstatus = default(int?), bool? isproductoverridden = default(bool?), int? lineitemnumber = default(int?), string shiptoCity = default(string), object volumediscountamount = default(object), int? timezoneruleversionnumber = default(int?), object priceperunitBase = default(object), string _owningbusinessunitValue = default(string), string _uomidValue = default(string), string shiptoLine2 = default(string), string shiptoLine1 = default(string), int? quotestatecode = default(int?), int? pricingerrorcode = default(int?), string _transactioncurrencyidValue = default(string), string shiptoName = default(string), int? shiptoFreighttermscode = default(int?), object volumediscountamountBase = default(object), string _quoteidValue = default(string), string shiptoLine3 = default(string), MicrosoftDynamicsCRMsystemuser createdby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser createdonbehalfby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser modifiedby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser modifiedonbehalfby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser owninguser = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMteam owningteam = default(MicrosoftDynamicsCRMteam), IList<MicrosoftDynamicsCRMsyncerror> quoteDetailSyncErrors = default(IList<MicrosoftDynamicsCRMsyncerror>), IList<MicrosoftDynamicsCRMasyncoperation> quoteDetailAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), IList<MicrosoftDynamicsCRMmailboxtrackingfolder> quotedetailMailboxTrackingFolders = default(IList<MicrosoftDynamicsCRMmailboxtrackingfolder>), IList<MicrosoftDynamicsCRMprocesssession> quoteDetailProcessSessions = default(IList<MicrosoftDynamicsCRMprocesssession>), IList<MicrosoftDynamicsCRMbulkdeletefailure> quoteDetailBulkDeleteFailures = default(IList<MicrosoftDynamicsCRMbulkdeletefailure>), IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> quotedetailPrincipalobjectattributeaccess = default(IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess>), MicrosoftDynamicsCRMtransactioncurrency transactioncurrencyid = default(MicrosoftDynamicsCRMtransactioncurrency), MicrosoftDynamicsCRMproduct productid = default(MicrosoftDynamicsCRMproduct), MicrosoftDynamicsCRMproductassociation productassociationidProductassociation = default(MicrosoftDynamicsCRMproductassociation), MicrosoftDynamicsCRMquote quoteid = default(MicrosoftDynamicsCRMquote), IList<MicrosoftDynamicsCRMdynamicpropertyinstance> quoteDetailDynamicpropertyinstance = default(IList<MicrosoftDynamicsCRMdynamicpropertyinstance>), MicrosoftDynamicsCRMquotedetail parentbundleidQuotedetail = default(MicrosoftDynamicsCRMquotedetail), IList<MicrosoftDynamicsCRMquotedetail> quotedetailParentQuotedetail = default(IList<MicrosoftDynamicsCRMquotedetail>), MicrosoftDynamicsCRMsystemuser salesrepid = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMuom uomid = default(MicrosoftDynamicsCRMuom), IList<MicrosoftDynamicsCRMsalesorderdetail> msdynQuotedetailSalesorderdetail = default(IList<MicrosoftDynamicsCRMsalesorderdetail>), MicrosoftDynamicsCRMquotedetail parentbundleidrefQuotedetail = default(MicrosoftDynamicsCRMquotedetail), IList<MicrosoftDynamicsCRMquotedetail> quotedetailParentrefQuotedetail = default(IList<MicrosoftDynamicsCRMquotedetail>))
         {
-            Createdon = createdon;
-            Quotedetailid = quotedetailid;
-            Pricingerrorcode = pricingerrorcode;
-            Owningbusinessunit = owningbusinessunit;
-            Extendedamount = extendedamount;
-            Description = description;
-            Isproductoverridden = isproductoverridden;
-            Volumediscountamount = volumediscountamount;
-            Willcall = willcall;
-            Quantity = quantity;
-            ShiptoFreighttermscode = shiptoFreighttermscode;
-            Overriddencreatedon = overriddencreatedon;
-            Utcconversiontimezonecode = utcconversiontimezonecode;
-            Tax = tax;
-            this._createdbyValue = _createdbyValue;
-            ShiptoLine1 = shiptoLine1;
-            Modifiedon = modifiedon;
-            Ispriceoverridden = ispriceoverridden;
-            this._productidValue = _productidValue;
-            ShiptoTelephone = shiptoTelephone;
-            ShiptoAddressid = shiptoAddressid;
-            ShiptoFax = shiptoFax;
-            ShiptoStateorprovince = shiptoStateorprovince;
-            Versionnumber = versionnumber;
-            VolumediscountamountBase = volumediscountamountBase;
-            Parentbundleid = parentbundleid;
-            PriceperunitBase = priceperunitBase;
-            this._modifiedbyValue = _modifiedbyValue;
-            Producttypecode = producttypecode;
-            ShiptoLine2 = shiptoLine2;
-            BaseamountBase = baseamountBase;
-            Priceperunit = priceperunit;
-            this._createdonbehalfbyValue = _createdonbehalfbyValue;
-            this._transactioncurrencyidValue = _transactioncurrencyidValue;
-            Importsequencenumber = importsequencenumber;
-            Sequencenumber = sequencenumber;
-            this._uomidValue = _uomidValue;
-            ShiptoCountry = shiptoCountry;
-            Lineitemnumber = lineitemnumber;
-            this._quoteidValue = _quoteidValue;
-            Productdescription = productdescription;
-            ShiptoLine3 = shiptoLine3;
-            ShiptoName = shiptoName;
-            Exchangerate = exchangerate;
-            Timezoneruleversionnumber = timezoneruleversionnumber;
-            this._salesrepidValue = _salesrepidValue;
             this._modifiedonbehalfbyValue = _modifiedonbehalfbyValue;
-            Baseamount = baseamount;
-            ManualdiscountamountBase = manualdiscountamountBase;
             TaxBase = taxBase;
-            ShiptoContactname = shiptoContactname;
-            Productassociationid = productassociationid;
-            Manualdiscountamount = manualdiscountamount;
-            Owninguser = owninguser;
-            ShiptoPostalcode = shiptoPostalcode;
-            this._owneridValue = _owneridValue;
-            ShiptoCity = shiptoCity;
-            Quotestatecode = quotestatecode;
+            Quotedetailid = quotedetailid;
+            ShiptoCountry = shiptoCountry;
+            Overriddencreatedon = overriddencreatedon;
+            BaseamountBase = baseamountBase;
+            ShiptoFax = shiptoFax;
+            Createdon = createdon;
+            Versionnumber = versionnumber;
+            Parentbundleid = parentbundleid;
+            Sequencenumber = sequencenumber;
+            Quotedetailname = quotedetailname;
             ExtendedamountBase = extendedamountBase;
-            Propertyconfigurationstatus = propertyconfigurationstatus;
+            Modifiedon = modifiedon;
+            Productassociationid = productassociationid;
+            this._salesrepidValue = _salesrepidValue;
+            this._owninguserValue = _owninguserValue;
+            Priceperunit = priceperunit;
+            this._owneridValue = _owneridValue;
+            this._createdbyValue = _createdbyValue;
+            Ispriceoverridden = ispriceoverridden;
+            Producttypecode = producttypecode;
+            Tax = tax;
+            ManualdiscountamountBase = manualdiscountamountBase;
+            this._productidValue = _productidValue;
+            this._owningteamValue = _owningteamValue;
+            Manualdiscountamount = manualdiscountamount;
+            Extendedamount = extendedamount;
+            ShiptoContactname = shiptoContactname;
             Requestdeliveryby = requestdeliveryby;
+            Utcconversiontimezonecode = utcconversiontimezonecode;
+            Description = description;
+            ShiptoTelephone = shiptoTelephone;
+            Willcall = willcall;
+            Productdescription = productdescription;
+            Importsequencenumber = importsequencenumber;
+            this._modifiedbyValue = _modifiedbyValue;
+            Quantity = quantity;
+            this._createdonbehalfbyValue = _createdonbehalfbyValue;
+            Baseamount = baseamount;
+            Exchangerate = exchangerate;
+            ShiptoAddressid = shiptoAddressid;
+            ShiptoPostalcode = shiptoPostalcode;
+            ShiptoStateorprovince = shiptoStateorprovince;
+            Propertyconfigurationstatus = propertyconfigurationstatus;
+            Isproductoverridden = isproductoverridden;
+            Lineitemnumber = lineitemnumber;
+            ShiptoCity = shiptoCity;
+            Volumediscountamount = volumediscountamount;
+            Timezoneruleversionnumber = timezoneruleversionnumber;
+            PriceperunitBase = priceperunitBase;
+            this._owningbusinessunitValue = _owningbusinessunitValue;
+            this._uomidValue = _uomidValue;
+            ShiptoLine2 = shiptoLine2;
+            ShiptoLine1 = shiptoLine1;
+            Quotestatecode = quotestatecode;
+            Pricingerrorcode = pricingerrorcode;
+            this._transactioncurrencyidValue = _transactioncurrencyidValue;
+            ShiptoName = shiptoName;
+            ShiptoFreighttermscode = shiptoFreighttermscode;
+            VolumediscountamountBase = volumediscountamountBase;
+            this._quoteidValue = _quoteidValue;
+            ShiptoLine3 = shiptoLine3;
             Createdby = createdby;
-            QuoteDetailBulkDeleteFailures = quoteDetailBulkDeleteFailures;
-            Productid = productid;
-            QuoteDetailDynamicpropertyinstance = quoteDetailDynamicpropertyinstance;
-            Uomid = uomid;
             Createdonbehalfby = createdonbehalfby;
+            Modifiedby = modifiedby;
+            Modifiedonbehalfby = modifiedonbehalfby;
+            Owninguser = owninguser;
+            Owningteam = owningteam;
+            QuoteDetailSyncErrors = quoteDetailSyncErrors;
+            QuoteDetailAsyncOperations = quoteDetailAsyncOperations;
+            QuotedetailMailboxTrackingFolders = quotedetailMailboxTrackingFolders;
+            QuoteDetailProcessSessions = quoteDetailProcessSessions;
+            QuoteDetailBulkDeleteFailures = quoteDetailBulkDeleteFailures;
+            QuotedetailPrincipalobjectattributeaccess = quotedetailPrincipalobjectattributeaccess;
             Transactioncurrencyid = transactioncurrencyid;
+            Productid = productid;
             ProductassociationidProductassociation = productassociationidProductassociation;
+            Quoteid = quoteid;
+            QuoteDetailDynamicpropertyinstance = quoteDetailDynamicpropertyinstance;
             ParentbundleidQuotedetail = parentbundleidQuotedetail;
             QuotedetailParentQuotedetail = quotedetailParentQuotedetail;
-            Modifiedonbehalfby = modifiedonbehalfby;
-            QuoteDetailAsyncOperations = quoteDetailAsyncOperations;
-            QuoteDetailSyncErrors = quoteDetailSyncErrors;
-            Modifiedby = modifiedby;
-            Quoteid = quoteid;
             Salesrepid = salesrepid;
+            Uomid = uomid;
+            MsdynQuotedetailSalesorderdetail = msdynQuotedetailSalesorderdetail;
+            ParentbundleidrefQuotedetail = parentbundleidrefQuotedetail;
+            QuotedetailParentrefQuotedetail = quotedetailParentrefQuotedetail;
             CustomInit();
         }
 
@@ -118,8 +129,13 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "createdon")]
-        public System.DateTimeOffset? Createdon { get; set; }
+        [JsonProperty(PropertyName = "_modifiedonbehalfby_value")]
+        public string _modifiedonbehalfbyValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "tax_base")]
+        [NotMapped] public object TaxBase { get; set; }
 
         /// <summary>
         /// </summary>
@@ -128,48 +144,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "pricingerrorcode")]
-        public int? Pricingerrorcode { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "owningbusinessunit")]
-        public string Owningbusinessunit { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "extendedamount")]
-        public object Extendedamount { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "description")]
-        public string Description { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "isproductoverridden")]
-        public bool? Isproductoverridden { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "volumediscountamount")]
-        public object Volumediscountamount { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "willcall")]
-        public bool? Willcall { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "quantity")]
-        public object Quantity { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "shipto_freighttermscode")]
-        public int? ShiptoFreighttermscode { get; set; }
+        [JsonProperty(PropertyName = "shipto_country")]
+        public string ShiptoCountry { get; set; }
 
         /// <summary>
         /// </summary>
@@ -178,48 +154,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "utcconversiontimezonecode")]
-        public int? Utcconversiontimezonecode { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "tax")]
-        public object Tax { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_createdby_value")]
-        public string _createdbyValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "shipto_line1")]
-        public string ShiptoLine1 { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "modifiedon")]
-        public System.DateTimeOffset? Modifiedon { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "ispriceoverridden")]
-        public bool? Ispriceoverridden { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_productid_value")]
-        public string _productidValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "shipto_telephone")]
-        public string ShiptoTelephone { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "shipto_addressid")]
-        public string ShiptoAddressid { get; set; }
+        [JsonProperty(PropertyName = "baseamount_base")]
+        [NotMapped] public object BaseamountBase { get; set; }
 
         /// <summary>
         /// </summary>
@@ -228,8 +164,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "shipto_stateorprovince")]
-        public string ShiptoStateorprovince { get; set; }
+        [JsonProperty(PropertyName = "createdon")]
+        public System.DateTimeOffset? Createdon { get; set; }
 
         /// <summary>
         /// </summary>
@@ -238,58 +174,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "volumediscountamount_base")]
-        public object VolumediscountamountBase { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "parentbundleid")]
         public string Parentbundleid { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "priceperunit_base")]
-        public object PriceperunitBase { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_modifiedby_value")]
-        public string _modifiedbyValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "producttypecode")]
-        public int? Producttypecode { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "shipto_line2")]
-        public string ShiptoLine2 { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "baseamount_base")]
-        public object BaseamountBase { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "priceperunit")]
-        public object Priceperunit { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_createdonbehalfby_value")]
-        public string _createdonbehalfbyValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_transactioncurrencyid_value")]
-        public string _transactioncurrencyidValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "importsequencenumber")]
-        public int? Importsequencenumber { get; set; }
 
         /// <summary>
         /// </summary>
@@ -298,78 +184,18 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "_uomid_value")]
-        public string _uomidValue { get; set; }
+        [JsonProperty(PropertyName = "quotedetailname")]
+        public string Quotedetailname { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "shipto_country")]
-        public string ShiptoCountry { get; set; }
+        [JsonProperty(PropertyName = "extendedamount_base")]
+        [NotMapped] public object ExtendedamountBase { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "lineitemnumber")]
-        public int? Lineitemnumber { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_quoteid_value")]
-        public string _quoteidValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "productdescription")]
-        public string Productdescription { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "shipto_line3")]
-        public string ShiptoLine3 { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "shipto_name")]
-        public string ShiptoName { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "exchangerate")]
-        public object Exchangerate { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "timezoneruleversionnumber")]
-        public int? Timezoneruleversionnumber { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_salesrepid_value")]
-        public string _salesrepidValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_modifiedonbehalfby_value")]
-        public string _modifiedonbehalfbyValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "baseamount")]
-        public object Baseamount { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "manualdiscountamount_base")]
-        public object ManualdiscountamountBase { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "tax_base")]
-        public object TaxBase { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "shipto_contactname")]
-        public string ShiptoContactname { get; set; }
+        [JsonProperty(PropertyName = "modifiedon")]
+        public System.DateTimeOffset? Modifiedon { get; set; }
 
         /// <summary>
         /// </summary>
@@ -378,18 +204,18 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "manualdiscountamount")]
-        public object Manualdiscountamount { get; set; }
+        [JsonProperty(PropertyName = "_salesrepid_value")]
+        public string _salesrepidValue { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "owninguser")]
-        public string Owninguser { get; set; }
+        [JsonProperty(PropertyName = "_owninguser_value")]
+        public string _owninguserValue { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "shipto_postalcode")]
-        public string ShiptoPostalcode { get; set; }
+        [JsonProperty(PropertyName = "priceperunit")]
+        [NotMapped] public object Priceperunit { get; set; }
 
         /// <summary>
         /// </summary>
@@ -398,23 +224,53 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "shipto_city")]
-        public string ShiptoCity { get; set; }
+        [JsonProperty(PropertyName = "_createdby_value")]
+        public string _createdbyValue { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "quotestatecode")]
-        public int? Quotestatecode { get; set; }
+        [JsonProperty(PropertyName = "ispriceoverridden")]
+        public bool? Ispriceoverridden { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "extendedamount_base")]
-        public object ExtendedamountBase { get; set; }
+        [JsonProperty(PropertyName = "producttypecode")]
+        public int? Producttypecode { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "propertyconfigurationstatus")]
-        public int? Propertyconfigurationstatus { get; set; }
+        [JsonProperty(PropertyName = "tax")]
+        [NotMapped] public object Tax { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "manualdiscountamount_base")]
+        [NotMapped] public object ManualdiscountamountBase { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_productid_value")]
+        public string _productidValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_owningteam_value")]
+        public string _owningteamValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "manualdiscountamount")]
+        [NotMapped] public object Manualdiscountamount { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "extendedamount")]
+        [NotMapped] public object Extendedamount { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "shipto_contactname")]
+        public string ShiptoContactname { get; set; }
 
         /// <summary>
         /// </summary>
@@ -423,28 +279,173 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "utcconversiontimezonecode")]
+        public int? Utcconversiontimezonecode { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "shipto_telephone")]
+        public string ShiptoTelephone { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "willcall")]
+        public bool? Willcall { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "productdescription")]
+        public string Productdescription { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "importsequencenumber")]
+        public int? Importsequencenumber { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_modifiedby_value")]
+        public string _modifiedbyValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "quantity")]
+        [NotMapped] public object Quantity { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_createdonbehalfby_value")]
+        public string _createdonbehalfbyValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "baseamount")]
+        [NotMapped] public object Baseamount { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "exchangerate")]
+        [NotMapped] public object Exchangerate { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "shipto_addressid")]
+        public string ShiptoAddressid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "shipto_postalcode")]
+        public string ShiptoPostalcode { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "shipto_stateorprovince")]
+        public string ShiptoStateorprovince { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "propertyconfigurationstatus")]
+        public int? Propertyconfigurationstatus { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "isproductoverridden")]
+        public bool? Isproductoverridden { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "lineitemnumber")]
+        public int? Lineitemnumber { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "shipto_city")]
+        public string ShiptoCity { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "volumediscountamount")]
+        [NotMapped] public object Volumediscountamount { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "timezoneruleversionnumber")]
+        public int? Timezoneruleversionnumber { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "priceperunit_base")]
+        [NotMapped] public object PriceperunitBase { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_owningbusinessunit_value")]
+        public string _owningbusinessunitValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_uomid_value")]
+        public string _uomidValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "shipto_line2")]
+        public string ShiptoLine2 { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "shipto_line1")]
+        public string ShiptoLine1 { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "quotestatecode")]
+        public int? Quotestatecode { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "pricingerrorcode")]
+        public int? Pricingerrorcode { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_transactioncurrencyid_value")]
+        public string _transactioncurrencyidValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "shipto_name")]
+        public string ShiptoName { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "shipto_freighttermscode")]
+        public int? ShiptoFreighttermscode { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "volumediscountamount_base")]
+        [NotMapped] public object VolumediscountamountBase { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_quoteid_value")]
+        public string _quoteidValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "shipto_line3")]
+        public string ShiptoLine3 { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "createdby")]
         public MicrosoftDynamicsCRMsystemuser Createdby { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "QuoteDetail_BulkDeleteFailures")]
-        public IList<MicrosoftDynamicsCRMbulkdeletefailure> QuoteDetailBulkDeleteFailures { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "productid")]
-        public MicrosoftDynamicsCRMproduct Productid { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "QuoteDetail_Dynamicpropertyinstance")]
-        public IList<MicrosoftDynamicsCRMdynamicpropertyinstance> QuoteDetailDynamicpropertyinstance { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "uomid")]
-        public MicrosoftDynamicsCRMuom Uomid { get; set; }
 
         /// <summary>
         /// </summary>
@@ -453,13 +454,78 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "modifiedby")]
+        public MicrosoftDynamicsCRMsystemuser Modifiedby { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "modifiedonbehalfby")]
+        public MicrosoftDynamicsCRMsystemuser Modifiedonbehalfby { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "owninguser")]
+        public MicrosoftDynamicsCRMsystemuser Owninguser { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "owningteam")]
+        public MicrosoftDynamicsCRMteam Owningteam { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "QuoteDetail_SyncErrors")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMsyncerror> QuoteDetailSyncErrors { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "QuoteDetail_AsyncOperations")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMasyncoperation> QuoteDetailAsyncOperations { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "quotedetail_MailboxTrackingFolders")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMmailboxtrackingfolder> QuotedetailMailboxTrackingFolders { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "QuoteDetail_ProcessSessions")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMprocesssession> QuoteDetailProcessSessions { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "QuoteDetail_BulkDeleteFailures")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbulkdeletefailure> QuoteDetailBulkDeleteFailures { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "quotedetail_principalobjectattributeaccess")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> QuotedetailPrincipalobjectattributeaccess { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "transactioncurrencyid")]
         public MicrosoftDynamicsCRMtransactioncurrency Transactioncurrencyid { get; set; }
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "productid")]
+        public MicrosoftDynamicsCRMproduct Productid { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "productassociationid_productassociation")]
         public MicrosoftDynamicsCRMproductassociation ProductassociationidProductassociation { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "quoteid")]
+        public MicrosoftDynamicsCRMquote Quoteid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "QuoteDetail_Dynamicpropertyinstance")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMdynamicpropertyinstance> QuoteDetailDynamicpropertyinstance { get; set; }
 
         /// <summary>
         /// </summary>
@@ -469,37 +535,32 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "quotedetail_parent_quotedetail")]
-        public IList<MicrosoftDynamicsCRMquotedetail> QuotedetailParentQuotedetail { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "modifiedonbehalfby")]
-        public MicrosoftDynamicsCRMsystemuser Modifiedonbehalfby { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "QuoteDetail_AsyncOperations")]
-        public IList<MicrosoftDynamicsCRMasyncoperation> QuoteDetailAsyncOperations { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "QuoteDetail_SyncErrors")]
-        public IList<MicrosoftDynamicsCRMsyncerror> QuoteDetailSyncErrors { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "modifiedby")]
-        public MicrosoftDynamicsCRMsystemuser Modifiedby { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "quoteid")]
-        public MicrosoftDynamicsCRMquote Quoteid { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMquotedetail> QuotedetailParentQuotedetail { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "salesrepid")]
         public MicrosoftDynamicsCRMsystemuser Salesrepid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "uomid")]
+        public MicrosoftDynamicsCRMuom Uomid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "msdyn_quotedetail_salesorderdetail")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMsalesorderdetail> MsdynQuotedetailSalesorderdetail { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "parentbundleidref_quotedetail")]
+        public MicrosoftDynamicsCRMquotedetail ParentbundleidrefQuotedetail { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "quotedetail_parentref_quotedetail")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMquotedetail> QuotedetailParentrefQuotedetail { get; set; }
 
     }
 }

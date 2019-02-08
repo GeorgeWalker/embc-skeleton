@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// phonecall
@@ -29,48 +29,58 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the MicrosoftDynamicsCRMphonecall
         /// class.
         /// </summary>
-        public MicrosoftDynamicsCRMphonecall(int? importsequencenumber = default(int?), string phonenumber = default(string), string category = default(string), System.DateTimeOffset? overriddencreatedon = default(System.DateTimeOffset?), string subscriptionid = default(string), bool? directioncode = default(bool?), string subcategory = default(string), MicrosoftDynamicsCRMentitlement regardingobjectidEntitlementPhonecall = default(MicrosoftDynamicsCRMentitlement), MicrosoftDynamicsCRMentitlementtemplate regardingobjectidEntitlementtemplatePhonecall = default(MicrosoftDynamicsCRMentitlementtemplate), IList<MicrosoftDynamicsCRMpostregarding> phonecallPostRegardings = default(IList<MicrosoftDynamicsCRMpostregarding>), IList<MicrosoftDynamicsCRMpostfollow> phonecallPostFollows = default(IList<MicrosoftDynamicsCRMpostfollow>), MicrosoftDynamicsCRMbookableresourcebooking regardingobjectidBookableresourcebookingPhonecall = default(MicrosoftDynamicsCRMbookableresourcebooking), MicrosoftDynamicsCRMbookableresourcebookingheader regardingobjectidBookableresourcebookingheaderPhonecall = default(MicrosoftDynamicsCRMbookableresourcebookingheader), MicrosoftDynamicsCRMknowledgebaserecord regardingobjectidKnowledgebaserecordPhonecall = default(MicrosoftDynamicsCRMknowledgebaserecord), MicrosoftDynamicsCRMlead regardingobjectidLeadPhonecall = default(MicrosoftDynamicsCRMlead), MicrosoftDynamicsCRMopportunity regardingobjectidOpportunityPhonecall = default(MicrosoftDynamicsCRMopportunity), IList<MicrosoftDynamicsCRMactioncard> phonecallActioncard = default(IList<MicrosoftDynamicsCRMactioncard>), MicrosoftDynamicsCRMtransactioncurrency transactioncurrencyidPhonecall = default(MicrosoftDynamicsCRMtransactioncurrency), MicrosoftDynamicsCRMcontact regardingobjectidContactPhonecall = default(MicrosoftDynamicsCRMcontact), IList<MicrosoftDynamicsCRMcampaignresponse> phonecallCampaignresponse = default(IList<MicrosoftDynamicsCRMcampaignresponse>), MicrosoftDynamicsCRMservice serviceidPhonecall = default(MicrosoftDynamicsCRMservice), MicrosoftDynamicsCRMsla slaPhonecallSla = default(MicrosoftDynamicsCRMsla), IList<MicrosoftDynamicsCRMbulkdeletefailure> phoneCallBulkDeleteFailures = default(IList<MicrosoftDynamicsCRMbulkdeletefailure>), MicrosoftDynamicsCRMsystemuser modifiedonbehalfbyPhonecall = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMbulkoperation regardingobjectidBulkoperationPhonecall = default(MicrosoftDynamicsCRMbulkoperation), IList<MicrosoftDynamicsCRMasyncoperation> phoneCallAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), MicrosoftDynamicsCRMaccount regardingobjectidAccountPhonecall = default(MicrosoftDynamicsCRMaccount), MicrosoftDynamicsCRMinvoice regardingobjectidInvoicePhonecall = default(MicrosoftDynamicsCRMinvoice), MicrosoftDynamicsCRMsystemuser createdbyPhonecall = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser createdonbehalfbyPhonecall = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMactivityparty> phonecallActivityParties = default(IList<MicrosoftDynamicsCRMactivityparty>), MicrosoftDynamicsCRMincident regardingobjectidIncidentPhonecall = default(MicrosoftDynamicsCRMincident), MicrosoftDynamicsCRMbusinessunit owningbusinessunitPhonecall = default(MicrosoftDynamicsCRMbusinessunit), IList<MicrosoftDynamicsCRMduplicaterecord> phoneCallDuplicateMatchingRecord = default(IList<MicrosoftDynamicsCRMduplicaterecord>), MicrosoftDynamicsCRMknowledgearticle regardingobjectidKnowledgearticlePhonecall = default(MicrosoftDynamicsCRMknowledgearticle), MicrosoftDynamicsCRMprocessstage stageidProcessstage = default(MicrosoftDynamicsCRMprocessstage), IList<MicrosoftDynamicsCRMduplicaterecord> phoneCallDuplicateBaseRecord = default(IList<MicrosoftDynamicsCRMduplicaterecord>), IList<MicrosoftDynamicsCRMconnection> phonecallConnections1 = default(IList<MicrosoftDynamicsCRMconnection>), MicrosoftDynamicsCRMcontract regardingobjectidContractPhonecall = default(MicrosoftDynamicsCRMcontract), MicrosoftDynamicsCRMsalesorder regardingobjectidSalesorderPhonecall = default(MicrosoftDynamicsCRMsalesorder), MicrosoftDynamicsCRMactivitypointer activityidActivitypointer = default(MicrosoftDynamicsCRMactivitypointer), IList<MicrosoftDynamicsCRMslakpiinstance> slakpiinstancePhonecall = default(IList<MicrosoftDynamicsCRMslakpiinstance>), MicrosoftDynamicsCRMsla slainvokedidPhonecallSla = default(MicrosoftDynamicsCRMsla), IList<MicrosoftDynamicsCRMsyncerror> phoneCallSyncErrors = default(IList<MicrosoftDynamicsCRMsyncerror>), MicrosoftDynamicsCRMsystemuser modifiedbyPhonecall = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMteam owningteamPhonecall = default(MicrosoftDynamicsCRMteam), IList<MicrosoftDynamicsCRMqueueitem> phoneCallQueueItem = default(IList<MicrosoftDynamicsCRMqueueitem>), MicrosoftDynamicsCRMcampaign regardingobjectidCampaignPhonecall = default(MicrosoftDynamicsCRMcampaign), MicrosoftDynamicsCRMcampaignactivity regardingobjectidCampaignactivityPhonecall = default(MicrosoftDynamicsCRMcampaignactivity), IList<MicrosoftDynamicsCRMannotation> phoneCallAnnotation = default(IList<MicrosoftDynamicsCRMannotation>), MicrosoftDynamicsCRMquote regardingobjectidQuotePhonecall = default(MicrosoftDynamicsCRMquote), IList<MicrosoftDynamicsCRMconnection> phonecallConnections2 = default(IList<MicrosoftDynamicsCRMconnection>), MicrosoftDynamicsCRMsystemuser owninguserPhonecall = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMbcgovCustomaddress regardingobjectidBcgovCustomaddressPhonecall = default(MicrosoftDynamicsCRMbcgovCustomaddress), MicrosoftDynamicsCRMbcgovCustomproduct regardingobjectidBcgovCustomproductPhonecall = default(MicrosoftDynamicsCRMbcgovCustomproduct), MicrosoftDynamicsCRMbcgovLocation regardingobjectidBcgovLocationPhonecall = default(MicrosoftDynamicsCRMbcgovLocation), MicrosoftDynamicsCRMbcgovEquipment regardingobjectidBcgovEquipmentPhonecall = default(MicrosoftDynamicsCRMbcgovEquipment), MicrosoftDynamicsCRMbcgovEquipmentlocation regardingobjectidBcgovEquipmentlocationPhonecall = default(MicrosoftDynamicsCRMbcgovEquipmentlocation), MicrosoftDynamicsCRMbcgovRiskassessment regardingobjectidBcgovRiskassessmentPhonecall = default(MicrosoftDynamicsCRMbcgovRiskassessment))
+        public MicrosoftDynamicsCRMphonecall(string subcategory = default(string), bool? directioncode = default(bool?), System.DateTimeOffset? overriddencreatedon = default(System.DateTimeOffset?), string category = default(string), string subscriptionid = default(string), string phonenumber = default(string), int? importsequencenumber = default(int?), MicrosoftDynamicsCRMgovCommunity regardingobjectidGovCommunityPhonecall = default(MicrosoftDynamicsCRMgovCommunity), MicrosoftDynamicsCRMgovIncidenttask regardingobjectidGovIncidenttaskPhonecall = default(MicrosoftDynamicsCRMgovIncidenttask), MicrosoftDynamicsCRMgovRegistration regardingobjectidGovRegistrationPhonecall = default(MicrosoftDynamicsCRMgovRegistration), MicrosoftDynamicsCRMlead regardingobjectidLeadPhonecall = default(MicrosoftDynamicsCRMlead), MicrosoftDynamicsCRMbookableresourcebooking regardingobjectidBookableresourcebookingPhonecall = default(MicrosoftDynamicsCRMbookableresourcebooking), MicrosoftDynamicsCRMbookableresourcebookingheader regardingobjectidBookableresourcebookingheaderPhonecall = default(MicrosoftDynamicsCRMbookableresourcebookingheader), MicrosoftDynamicsCRMbulkoperation regardingobjectidBulkoperationPhonecall = default(MicrosoftDynamicsCRMbulkoperation), MicrosoftDynamicsCRMcampaign regardingobjectidCampaignPhonecall = default(MicrosoftDynamicsCRMcampaign), MicrosoftDynamicsCRMcampaignactivity regardingobjectidCampaignactivityPhonecall = default(MicrosoftDynamicsCRMcampaignactivity), IList<MicrosoftDynamicsCRMcampaignresponse> phonecallCampaignresponse = default(IList<MicrosoftDynamicsCRMcampaignresponse>), MicrosoftDynamicsCRMcontract regardingobjectidContractPhonecall = default(MicrosoftDynamicsCRMcontract), MicrosoftDynamicsCRMentitlement regardingobjectidEntitlementPhonecall = default(MicrosoftDynamicsCRMentitlement), MicrosoftDynamicsCRMentitlementtemplate regardingobjectidEntitlementtemplatePhonecall = default(MicrosoftDynamicsCRMentitlementtemplate), MicrosoftDynamicsCRMincident regardingobjectidIncidentPhonecall = default(MicrosoftDynamicsCRMincident), MicrosoftDynamicsCRMsite regardingobjectidSitePhonecall = default(MicrosoftDynamicsCRMsite), MicrosoftDynamicsCRMservice serviceidPhonecall = default(MicrosoftDynamicsCRMservice), MicrosoftDynamicsCRMmsdynPlaybookinstance regardingobjectidMsdynPlaybookinstancePhonecall = default(MicrosoftDynamicsCRMmsdynPlaybookinstance), MicrosoftDynamicsCRMinvoice regardingobjectidInvoicePhonecall = default(MicrosoftDynamicsCRMinvoice), MicrosoftDynamicsCRMopportunity regardingobjectidOpportunityPhonecall = default(MicrosoftDynamicsCRMopportunity), MicrosoftDynamicsCRMquote regardingobjectidQuotePhonecall = default(MicrosoftDynamicsCRMquote), MicrosoftDynamicsCRMsalesorder regardingobjectidSalesorderPhonecall = default(MicrosoftDynamicsCRMsalesorder), MicrosoftDynamicsCRMmsdynPostalbum regardingobjectidMsdynPostalbumPhonecall = default(MicrosoftDynamicsCRMmsdynPostalbum), IList<MicrosoftDynamicsCRMpostregarding> phonecallPostRegardings = default(IList<MicrosoftDynamicsCRMpostregarding>), IList<MicrosoftDynamicsCRMpostfollow> phonecallPostFollows = default(IList<MicrosoftDynamicsCRMpostfollow>), MicrosoftDynamicsCRMknowledgebaserecord regardingobjectidKnowledgebaserecordPhonecall = default(MicrosoftDynamicsCRMknowledgebaserecord), IList<MicrosoftDynamicsCRMactioncard> phonecallActioncard = default(IList<MicrosoftDynamicsCRMactioncard>), MicrosoftDynamicsCRMtransactioncurrency transactioncurrencyidPhonecall = default(MicrosoftDynamicsCRMtransactioncurrency), MicrosoftDynamicsCRMcontact regardingobjectidContactPhonecall = default(MicrosoftDynamicsCRMcontact), MicrosoftDynamicsCRMsla slaPhonecallSla = default(MicrosoftDynamicsCRMsla), IList<MicrosoftDynamicsCRMbulkdeletefailure> phoneCallBulkDeleteFailures = default(IList<MicrosoftDynamicsCRMbulkdeletefailure>), MicrosoftDynamicsCRMsystemuser modifiedonbehalfbyPhonecall = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMasyncoperation> phoneCallAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), MicrosoftDynamicsCRMaccount regardingobjectidAccountPhonecall = default(MicrosoftDynamicsCRMaccount), MicrosoftDynamicsCRMsystemuser createdbyPhonecall = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser createdonbehalfbyPhonecall = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMactivityparty> phonecallActivityParties = default(IList<MicrosoftDynamicsCRMactivityparty>), IList<MicrosoftDynamicsCRMprocesssession> phoneCallProcessSessions = default(IList<MicrosoftDynamicsCRMprocesssession>), MicrosoftDynamicsCRMbusinessunit owningbusinessunitPhonecall = default(MicrosoftDynamicsCRMbusinessunit), IList<MicrosoftDynamicsCRMduplicaterecord> phoneCallDuplicateMatchingRecord = default(IList<MicrosoftDynamicsCRMduplicaterecord>), MicrosoftDynamicsCRMknowledgearticle regardingobjectidKnowledgearticlePhonecall = default(MicrosoftDynamicsCRMknowledgearticle), MicrosoftDynamicsCRMprocessstage stageidProcessstage = default(MicrosoftDynamicsCRMprocessstage), IList<MicrosoftDynamicsCRMduplicaterecord> phoneCallDuplicateBaseRecord = default(IList<MicrosoftDynamicsCRMduplicaterecord>), IList<MicrosoftDynamicsCRMconnection> phonecallConnections1 = default(IList<MicrosoftDynamicsCRMconnection>), MicrosoftDynamicsCRMactivitypointer activityidActivitypointer = default(MicrosoftDynamicsCRMactivitypointer), IList<MicrosoftDynamicsCRMslakpiinstance> slakpiinstancePhonecall = default(IList<MicrosoftDynamicsCRMslakpiinstance>), MicrosoftDynamicsCRMsla slainvokedidPhonecallSla = default(MicrosoftDynamicsCRMsla), IList<MicrosoftDynamicsCRMsyncerror> phoneCallSyncErrors = default(IList<MicrosoftDynamicsCRMsyncerror>), MicrosoftDynamicsCRMsystemuser modifiedbyPhonecall = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMteam owningteamPhonecall = default(MicrosoftDynamicsCRMteam), IList<MicrosoftDynamicsCRMqueueitem> phoneCallQueueItem = default(IList<MicrosoftDynamicsCRMqueueitem>), IList<MicrosoftDynamicsCRMannotation> phoneCallAnnotation = default(IList<MicrosoftDynamicsCRMannotation>), IList<MicrosoftDynamicsCRMconnection> phonecallConnections2 = default(IList<MicrosoftDynamicsCRMconnection>), MicrosoftDynamicsCRMsystemuser owninguserPhonecall = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> phonecallPrincipalobjectattributeaccess = default(IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess>))
         {
-            Importsequencenumber = importsequencenumber;
-            Phonenumber = phonenumber;
-            Category = category;
-            Overriddencreatedon = overriddencreatedon;
-            Subscriptionid = subscriptionid;
-            Directioncode = directioncode;
             Subcategory = subcategory;
-            RegardingobjectidEntitlementPhonecall = regardingobjectidEntitlementPhonecall;
-            RegardingobjectidEntitlementtemplatePhonecall = regardingobjectidEntitlementtemplatePhonecall;
-            PhonecallPostRegardings = phonecallPostRegardings;
-            PhonecallPostFollows = phonecallPostFollows;
+            Directioncode = directioncode;
+            Overriddencreatedon = overriddencreatedon;
+            Category = category;
+            Subscriptionid = subscriptionid;
+            Phonenumber = phonenumber;
+            Importsequencenumber = importsequencenumber;
+            RegardingobjectidGovCommunityPhonecall = regardingobjectidGovCommunityPhonecall;
+            RegardingobjectidGovIncidenttaskPhonecall = regardingobjectidGovIncidenttaskPhonecall;
+            RegardingobjectidGovRegistrationPhonecall = regardingobjectidGovRegistrationPhonecall;
+            RegardingobjectidLeadPhonecall = regardingobjectidLeadPhonecall;
             RegardingobjectidBookableresourcebookingPhonecall = regardingobjectidBookableresourcebookingPhonecall;
             RegardingobjectidBookableresourcebookingheaderPhonecall = regardingobjectidBookableresourcebookingheaderPhonecall;
-            RegardingobjectidKnowledgebaserecordPhonecall = regardingobjectidKnowledgebaserecordPhonecall;
-            RegardingobjectidLeadPhonecall = regardingobjectidLeadPhonecall;
+            RegardingobjectidBulkoperationPhonecall = regardingobjectidBulkoperationPhonecall;
+            RegardingobjectidCampaignPhonecall = regardingobjectidCampaignPhonecall;
+            RegardingobjectidCampaignactivityPhonecall = regardingobjectidCampaignactivityPhonecall;
+            PhonecallCampaignresponse = phonecallCampaignresponse;
+            RegardingobjectidContractPhonecall = regardingobjectidContractPhonecall;
+            RegardingobjectidEntitlementPhonecall = regardingobjectidEntitlementPhonecall;
+            RegardingobjectidEntitlementtemplatePhonecall = regardingobjectidEntitlementtemplatePhonecall;
+            RegardingobjectidIncidentPhonecall = regardingobjectidIncidentPhonecall;
+            RegardingobjectidSitePhonecall = regardingobjectidSitePhonecall;
+            ServiceidPhonecall = serviceidPhonecall;
+            RegardingobjectidMsdynPlaybookinstancePhonecall = regardingobjectidMsdynPlaybookinstancePhonecall;
+            RegardingobjectidInvoicePhonecall = regardingobjectidInvoicePhonecall;
             RegardingobjectidOpportunityPhonecall = regardingobjectidOpportunityPhonecall;
+            RegardingobjectidQuotePhonecall = regardingobjectidQuotePhonecall;
+            RegardingobjectidSalesorderPhonecall = regardingobjectidSalesorderPhonecall;
+            RegardingobjectidMsdynPostalbumPhonecall = regardingobjectidMsdynPostalbumPhonecall;
+            PhonecallPostRegardings = phonecallPostRegardings;
+            PhonecallPostFollows = phonecallPostFollows;
+            RegardingobjectidKnowledgebaserecordPhonecall = regardingobjectidKnowledgebaserecordPhonecall;
             PhonecallActioncard = phonecallActioncard;
             TransactioncurrencyidPhonecall = transactioncurrencyidPhonecall;
             RegardingobjectidContactPhonecall = regardingobjectidContactPhonecall;
-            PhonecallCampaignresponse = phonecallCampaignresponse;
-            ServiceidPhonecall = serviceidPhonecall;
             SlaPhonecallSla = slaPhonecallSla;
             PhoneCallBulkDeleteFailures = phoneCallBulkDeleteFailures;
             ModifiedonbehalfbyPhonecall = modifiedonbehalfbyPhonecall;
-            RegardingobjectidBulkoperationPhonecall = regardingobjectidBulkoperationPhonecall;
             PhoneCallAsyncOperations = phoneCallAsyncOperations;
             RegardingobjectidAccountPhonecall = regardingobjectidAccountPhonecall;
-            RegardingobjectidInvoicePhonecall = regardingobjectidInvoicePhonecall;
             CreatedbyPhonecall = createdbyPhonecall;
             CreatedonbehalfbyPhonecall = createdonbehalfbyPhonecall;
             PhonecallActivityParties = phonecallActivityParties;
-            RegardingobjectidIncidentPhonecall = regardingobjectidIncidentPhonecall;
+            PhoneCallProcessSessions = phoneCallProcessSessions;
             OwningbusinessunitPhonecall = owningbusinessunitPhonecall;
             PhoneCallDuplicateMatchingRecord = phoneCallDuplicateMatchingRecord;
             RegardingobjectidKnowledgearticlePhonecall = regardingobjectidKnowledgearticlePhonecall;
             StageidProcessstage = stageidProcessstage;
             PhoneCallDuplicateBaseRecord = phoneCallDuplicateBaseRecord;
             PhonecallConnections1 = phonecallConnections1;
-            RegardingobjectidContractPhonecall = regardingobjectidContractPhonecall;
-            RegardingobjectidSalesorderPhonecall = regardingobjectidSalesorderPhonecall;
             ActivityidActivitypointer = activityidActivitypointer;
             SlakpiinstancePhonecall = slakpiinstancePhonecall;
             SlainvokedidPhonecallSla = slainvokedidPhonecallSla;
@@ -78,18 +88,10 @@ namespace Gov.Jag.Embc.Interfaces.Models
             ModifiedbyPhonecall = modifiedbyPhonecall;
             OwningteamPhonecall = owningteamPhonecall;
             PhoneCallQueueItem = phoneCallQueueItem;
-            RegardingobjectidCampaignPhonecall = regardingobjectidCampaignPhonecall;
-            RegardingobjectidCampaignactivityPhonecall = regardingobjectidCampaignactivityPhonecall;
             PhoneCallAnnotation = phoneCallAnnotation;
-            RegardingobjectidQuotePhonecall = regardingobjectidQuotePhonecall;
             PhonecallConnections2 = phonecallConnections2;
             OwninguserPhonecall = owninguserPhonecall;
-            RegardingobjectidBcgovCustomaddressPhonecall = regardingobjectidBcgovCustomaddressPhonecall;
-            RegardingobjectidBcgovCustomproductPhonecall = regardingobjectidBcgovCustomproductPhonecall;
-            RegardingobjectidBcgovLocationPhonecall = regardingobjectidBcgovLocationPhonecall;
-            RegardingobjectidBcgovEquipmentPhonecall = regardingobjectidBcgovEquipmentPhonecall;
-            RegardingobjectidBcgovEquipmentlocationPhonecall = regardingobjectidBcgovEquipmentlocationPhonecall;
-            RegardingobjectidBcgovRiskassessmentPhonecall = regardingobjectidBcgovRiskassessmentPhonecall;
+            PhonecallPrincipalobjectattributeaccess = phonecallPrincipalobjectattributeaccess;
             CustomInit();
         }
 
@@ -100,28 +102,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "importsequencenumber")]
-        public int? Importsequencenumber { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "phonenumber")]
-        public string Phonenumber { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "category")]
-        public string Category { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "overriddencreatedon")]
-        public System.DateTimeOffset? Overriddencreatedon { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "subscriptionid")]
-        public string Subscriptionid { get; set; }
+        [JsonProperty(PropertyName = "subcategory")]
+        public string Subcategory { get; set; }
 
         /// <summary>
         /// </summary>
@@ -130,28 +112,48 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "subcategory")]
-        public string Subcategory { get; set; }
+        [JsonProperty(PropertyName = "overriddencreatedon")]
+        public System.DateTimeOffset? Overriddencreatedon { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_entitlement_phonecall")]
-        public MicrosoftDynamicsCRMentitlement RegardingobjectidEntitlementPhonecall { get; set; }
+        [JsonProperty(PropertyName = "category")]
+        public string Category { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_entitlementtemplate_phonecall")]
-        public MicrosoftDynamicsCRMentitlementtemplate RegardingobjectidEntitlementtemplatePhonecall { get; set; }
+        [JsonProperty(PropertyName = "subscriptionid")]
+        public string Subscriptionid { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "phonecall_PostRegardings")]
-        public IList<MicrosoftDynamicsCRMpostregarding> PhonecallPostRegardings { get; set; }
+        [JsonProperty(PropertyName = "phonenumber")]
+        public string Phonenumber { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "phonecall_PostFollows")]
-        public IList<MicrosoftDynamicsCRMpostfollow> PhonecallPostFollows { get; set; }
+        [JsonProperty(PropertyName = "importsequencenumber")]
+        public int? Importsequencenumber { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_gov_community_phonecall")]
+        public MicrosoftDynamicsCRMgovCommunity RegardingobjectidGovCommunityPhonecall { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_gov_incidenttask_phonecall")]
+        public MicrosoftDynamicsCRMgovIncidenttask RegardingobjectidGovIncidenttaskPhonecall { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_gov_registration_phonecall")]
+        public MicrosoftDynamicsCRMgovRegistration RegardingobjectidGovRegistrationPhonecall { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_lead_phonecall")]
+        public MicrosoftDynamicsCRMlead RegardingobjectidLeadPhonecall { get; set; }
 
         /// <summary>
         /// </summary>
@@ -165,13 +167,63 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_knowledgebaserecord_phonecall")]
-        public MicrosoftDynamicsCRMknowledgebaserecord RegardingobjectidKnowledgebaserecordPhonecall { get; set; }
+        [JsonProperty(PropertyName = "regardingobjectid_bulkoperation_phonecall")]
+        public MicrosoftDynamicsCRMbulkoperation RegardingobjectidBulkoperationPhonecall { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_lead_phonecall")]
-        public MicrosoftDynamicsCRMlead RegardingobjectidLeadPhonecall { get; set; }
+        [JsonProperty(PropertyName = "regardingobjectid_campaign_phonecall")]
+        public MicrosoftDynamicsCRMcampaign RegardingobjectidCampaignPhonecall { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_campaignactivity_phonecall")]
+        public MicrosoftDynamicsCRMcampaignactivity RegardingobjectidCampaignactivityPhonecall { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "phonecall_campaignresponse")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMcampaignresponse> PhonecallCampaignresponse { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_contract_phonecall")]
+        public MicrosoftDynamicsCRMcontract RegardingobjectidContractPhonecall { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_entitlement_phonecall")]
+        public MicrosoftDynamicsCRMentitlement RegardingobjectidEntitlementPhonecall { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_entitlementtemplate_phonecall")]
+        public MicrosoftDynamicsCRMentitlementtemplate RegardingobjectidEntitlementtemplatePhonecall { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_incident_phonecall")]
+        public MicrosoftDynamicsCRMincident RegardingobjectidIncidentPhonecall { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_site_phonecall")]
+        public MicrosoftDynamicsCRMsite RegardingobjectidSitePhonecall { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "serviceid_phonecall")]
+        public MicrosoftDynamicsCRMservice ServiceidPhonecall { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_msdyn_playbookinstance_phonecall")]
+        public MicrosoftDynamicsCRMmsdynPlaybookinstance RegardingobjectidMsdynPlaybookinstancePhonecall { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_invoice_phonecall")]
+        public MicrosoftDynamicsCRMinvoice RegardingobjectidInvoicePhonecall { get; set; }
 
         /// <summary>
         /// </summary>
@@ -180,8 +232,38 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_quote_phonecall")]
+        public MicrosoftDynamicsCRMquote RegardingobjectidQuotePhonecall { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_salesorder_phonecall")]
+        public MicrosoftDynamicsCRMsalesorder RegardingobjectidSalesorderPhonecall { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_msdyn_postalbum_phonecall")]
+        public MicrosoftDynamicsCRMmsdynPostalbum RegardingobjectidMsdynPostalbumPhonecall { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "phonecall_PostRegardings")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMpostregarding> PhonecallPostRegardings { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "phonecall_PostFollows")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMpostfollow> PhonecallPostFollows { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_knowledgebaserecord_phonecall")]
+        public MicrosoftDynamicsCRMknowledgebaserecord RegardingobjectidKnowledgebaserecordPhonecall { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "phonecall_actioncard")]
-        public IList<MicrosoftDynamicsCRMactioncard> PhonecallActioncard { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMactioncard> PhonecallActioncard { get; set; }
 
         /// <summary>
         /// </summary>
@@ -195,23 +277,13 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "phonecall_campaignresponse")]
-        public IList<MicrosoftDynamicsCRMcampaignresponse> PhonecallCampaignresponse { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "serviceid_phonecall")]
-        public MicrosoftDynamicsCRMservice ServiceidPhonecall { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "sla_phonecall_sla")]
         public MicrosoftDynamicsCRMsla SlaPhonecallSla { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "PhoneCall_BulkDeleteFailures")]
-        public IList<MicrosoftDynamicsCRMbulkdeletefailure> PhoneCallBulkDeleteFailures { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMbulkdeletefailure> PhoneCallBulkDeleteFailures { get; set; }
 
         /// <summary>
         /// </summary>
@@ -220,23 +292,13 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_bulkoperation_phonecall")]
-        public MicrosoftDynamicsCRMbulkoperation RegardingobjectidBulkoperationPhonecall { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "PhoneCall_AsyncOperations")]
-        public IList<MicrosoftDynamicsCRMasyncoperation> PhoneCallAsyncOperations { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMasyncoperation> PhoneCallAsyncOperations { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "regardingobjectid_account_phonecall")]
         public MicrosoftDynamicsCRMaccount RegardingobjectidAccountPhonecall { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_invoice_phonecall")]
-        public MicrosoftDynamicsCRMinvoice RegardingobjectidInvoicePhonecall { get; set; }
 
         /// <summary>
         /// </summary>
@@ -251,12 +313,12 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "phonecall_activity_parties")]
-        public IList<MicrosoftDynamicsCRMactivityparty> PhonecallActivityParties { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMactivityparty> PhonecallActivityParties { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_incident_phonecall")]
-        public MicrosoftDynamicsCRMincident RegardingobjectidIncidentPhonecall { get; set; }
+        [JsonProperty(PropertyName = "PhoneCall_ProcessSessions")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMprocesssession> PhoneCallProcessSessions { get; set; }
 
         /// <summary>
         /// </summary>
@@ -266,7 +328,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "PhoneCall_DuplicateMatchingRecord")]
-        public IList<MicrosoftDynamicsCRMduplicaterecord> PhoneCallDuplicateMatchingRecord { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMduplicaterecord> PhoneCallDuplicateMatchingRecord { get; set; }
 
         /// <summary>
         /// </summary>
@@ -281,22 +343,12 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "PhoneCall_DuplicateBaseRecord")]
-        public IList<MicrosoftDynamicsCRMduplicaterecord> PhoneCallDuplicateBaseRecord { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMduplicaterecord> PhoneCallDuplicateBaseRecord { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "phonecall_connections1")]
-        public IList<MicrosoftDynamicsCRMconnection> PhonecallConnections1 { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_contract_phonecall")]
-        public MicrosoftDynamicsCRMcontract RegardingobjectidContractPhonecall { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_salesorder_phonecall")]
-        public MicrosoftDynamicsCRMsalesorder RegardingobjectidSalesorderPhonecall { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMconnection> PhonecallConnections1 { get; set; }
 
         /// <summary>
         /// </summary>
@@ -306,7 +358,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "slakpiinstance_phonecall")]
-        public IList<MicrosoftDynamicsCRMslakpiinstance> SlakpiinstancePhonecall { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMslakpiinstance> SlakpiinstancePhonecall { get; set; }
 
         /// <summary>
         /// </summary>
@@ -316,7 +368,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "PhoneCall_SyncErrors")]
-        public IList<MicrosoftDynamicsCRMsyncerror> PhoneCallSyncErrors { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMsyncerror> PhoneCallSyncErrors { get; set; }
 
         /// <summary>
         /// </summary>
@@ -331,32 +383,17 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "PhoneCall_QueueItem")]
-        public IList<MicrosoftDynamicsCRMqueueitem> PhoneCallQueueItem { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_campaign_phonecall")]
-        public MicrosoftDynamicsCRMcampaign RegardingobjectidCampaignPhonecall { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_campaignactivity_phonecall")]
-        public MicrosoftDynamicsCRMcampaignactivity RegardingobjectidCampaignactivityPhonecall { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMqueueitem> PhoneCallQueueItem { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "PhoneCall_Annotation")]
-        public IList<MicrosoftDynamicsCRMannotation> PhoneCallAnnotation { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_quote_phonecall")]
-        public MicrosoftDynamicsCRMquote RegardingobjectidQuotePhonecall { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMannotation> PhoneCallAnnotation { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "phonecall_connections2")]
-        public IList<MicrosoftDynamicsCRMconnection> PhonecallConnections2 { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMconnection> PhonecallConnections2 { get; set; }
 
         /// <summary>
         /// </summary>
@@ -365,33 +402,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_bcgov_customaddress_phonecall")]
-        public MicrosoftDynamicsCRMbcgovCustomaddress RegardingobjectidBcgovCustomaddressPhonecall { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_bcgov_customproduct_phonecall")]
-        public MicrosoftDynamicsCRMbcgovCustomproduct RegardingobjectidBcgovCustomproductPhonecall { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_bcgov_location_phonecall")]
-        public MicrosoftDynamicsCRMbcgovLocation RegardingobjectidBcgovLocationPhonecall { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_bcgov_equipment_phonecall")]
-        public MicrosoftDynamicsCRMbcgovEquipment RegardingobjectidBcgovEquipmentPhonecall { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_bcgov_equipmentlocation_phonecall")]
-        public MicrosoftDynamicsCRMbcgovEquipmentlocation RegardingobjectidBcgovEquipmentlocationPhonecall { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_bcgov_riskassessment_phonecall")]
-        public MicrosoftDynamicsCRMbcgovRiskassessment RegardingobjectidBcgovRiskassessmentPhonecall { get; set; }
+        [JsonProperty(PropertyName = "phonecall_principalobjectattributeaccess")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> PhonecallPrincipalobjectattributeaccess { get; set; }
 
     }
 }

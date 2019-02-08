@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// bookableresourcecharacteristic
@@ -29,35 +29,35 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the
         /// MicrosoftDynamicsCRMbookableresourcecharacteristic class.
         /// </summary>
-        public MicrosoftDynamicsCRMbookableresourcecharacteristic(string processid = default(string), string _createdonbehalfbyValue = default(string), string name = default(string), string _owningbusinessunitValue = default(string), System.DateTimeOffset? overriddencreatedon = default(System.DateTimeOffset?), System.DateTimeOffset? modifiedon = default(System.DateTimeOffset?), long? versionnumber = default(long?), string _transactioncurrencyidValue = default(string), string _resourceValue = default(string), int? statuscode = default(int?), string _owningteamValue = default(string), string _characteristicValue = default(string), string _modifiedbyValue = default(string), string _owninguserValue = default(string), int? statecode = default(int?), string traversedpath = default(string), string _modifiedonbehalfbyValue = default(string), int? utcconversiontimezonecode = default(int?), int? importsequencenumber = default(int?), string _createdbyValue = default(string), object exchangerate = default(object), System.DateTimeOffset? createdon = default(System.DateTimeOffset?), string bookableresourcecharacteristicid = default(string), int? timezoneruleversionnumber = default(int?), string _owneridValue = default(string), string stageid = default(string), string _ratingvalueValue = default(string), MicrosoftDynamicsCRMsystemuser createdbyname = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser createdonbehalfbyname = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser modifiedbyname = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser modifiedonbehalfbyname = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser owninguser = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMteam owningteam = default(MicrosoftDynamicsCRMteam), MicrosoftDynamicsCRMprincipal ownerid = default(MicrosoftDynamicsCRMprincipal), MicrosoftDynamicsCRMbusinessunit owningbusinessunit = default(MicrosoftDynamicsCRMbusinessunit), IList<MicrosoftDynamicsCRMduplicaterecord> bookableresourcecharacteristicDuplicateMatchingRecord = default(IList<MicrosoftDynamicsCRMduplicaterecord>), IList<MicrosoftDynamicsCRMduplicaterecord> bookableresourcecharacteristicDuplicateBaseRecord = default(IList<MicrosoftDynamicsCRMduplicaterecord>), IList<MicrosoftDynamicsCRMannotation> bookableresourcecharacteristicAnnotations = default(IList<MicrosoftDynamicsCRMannotation>), IList<MicrosoftDynamicsCRMasyncoperation> bookableresourcecharacteristicAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), IList<MicrosoftDynamicsCRMbulkdeletefailure> bookableresourcecharacteristicBulkDeleteFailures = default(IList<MicrosoftDynamicsCRMbulkdeletefailure>), MicrosoftDynamicsCRMbookableresource resource = default(MicrosoftDynamicsCRMbookableresource), MicrosoftDynamicsCRMcharacteristic characteristic = default(MicrosoftDynamicsCRMcharacteristic), MicrosoftDynamicsCRMratingvalue ratingValue = default(MicrosoftDynamicsCRMratingvalue), MicrosoftDynamicsCRMtransactioncurrency transactioncurrencyid = default(MicrosoftDynamicsCRMtransactioncurrency), IList<MicrosoftDynamicsCRMsyncerror> bookableResourceCharacteristicSyncErrors = default(IList<MicrosoftDynamicsCRMsyncerror>))
+        public MicrosoftDynamicsCRMbookableresourcecharacteristic(object exchangerate = default(object), string _owningbusinessunitValue = default(string), string _owninguserValue = default(string), string _owneridValue = default(string), int? statecode = default(int?), System.DateTimeOffset? overriddencreatedon = default(System.DateTimeOffset?), System.DateTimeOffset? createdon = default(System.DateTimeOffset?), int? statuscode = default(int?), string traversedpath = default(string), string _characteristicValue = default(string), int? timezoneruleversionnumber = default(int?), string _owningteamValue = default(string), string _modifiedonbehalfbyValue = default(string), long? versionnumber = default(long?), string name = default(string), string processid = default(string), string _transactioncurrencyidValue = default(string), string bookableresourcecharacteristicid = default(string), System.DateTimeOffset? modifiedon = default(System.DateTimeOffset?), string _createdonbehalfbyValue = default(string), string _ratingvalueValue = default(string), int? importsequencenumber = default(int?), string _modifiedbyValue = default(string), string _createdbyValue = default(string), string stageid = default(string), int? utcconversiontimezonecode = default(int?), string _resourceValue = default(string), MicrosoftDynamicsCRMsystemuser createdbyname = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser createdonbehalfbyname = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser modifiedbyname = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser modifiedonbehalfbyname = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser owninguser = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMteam owningteam = default(MicrosoftDynamicsCRMteam), MicrosoftDynamicsCRMprincipal ownerid = default(MicrosoftDynamicsCRMprincipal), MicrosoftDynamicsCRMbusinessunit owningbusinessunit = default(MicrosoftDynamicsCRMbusinessunit), IList<MicrosoftDynamicsCRMsyncerror> bookableResourceCharacteristicSyncErrors = default(IList<MicrosoftDynamicsCRMsyncerror>), IList<MicrosoftDynamicsCRMduplicaterecord> bookableresourcecharacteristicDuplicateMatchingRecord = default(IList<MicrosoftDynamicsCRMduplicaterecord>), IList<MicrosoftDynamicsCRMduplicaterecord> bookableresourcecharacteristicDuplicateBaseRecord = default(IList<MicrosoftDynamicsCRMduplicaterecord>), IList<MicrosoftDynamicsCRMasyncoperation> bookableresourcecharacteristicAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), IList<MicrosoftDynamicsCRMmailboxtrackingfolder> bookableresourcecharacteristicMailboxTrackingFolders = default(IList<MicrosoftDynamicsCRMmailboxtrackingfolder>), IList<MicrosoftDynamicsCRMprocesssession> bookableresourcecharacteristicProcessSession = default(IList<MicrosoftDynamicsCRMprocesssession>), IList<MicrosoftDynamicsCRMbulkdeletefailure> bookableresourcecharacteristicBulkDeleteFailures = default(IList<MicrosoftDynamicsCRMbulkdeletefailure>), IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> bookableresourcecharacteristicPrincipalObjectAttributeAccesses = default(IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess>), IList<MicrosoftDynamicsCRMannotation> bookableresourcecharacteristicAnnotations = default(IList<MicrosoftDynamicsCRMannotation>), MicrosoftDynamicsCRMbookableresource resource = default(MicrosoftDynamicsCRMbookableresource), MicrosoftDynamicsCRMcharacteristic characteristic = default(MicrosoftDynamicsCRMcharacteristic), MicrosoftDynamicsCRMratingvalue ratingValue = default(MicrosoftDynamicsCRMratingvalue), MicrosoftDynamicsCRMtransactioncurrency transactioncurrencyid = default(MicrosoftDynamicsCRMtransactioncurrency))
         {
-            Processid = processid;
-            this._createdonbehalfbyValue = _createdonbehalfbyValue;
-            Name = name;
-            this._owningbusinessunitValue = _owningbusinessunitValue;
-            Overriddencreatedon = overriddencreatedon;
-            Modifiedon = modifiedon;
-            Versionnumber = versionnumber;
-            this._transactioncurrencyidValue = _transactioncurrencyidValue;
-            this._resourceValue = _resourceValue;
-            Statuscode = statuscode;
-            this._owningteamValue = _owningteamValue;
-            this._characteristicValue = _characteristicValue;
-            this._modifiedbyValue = _modifiedbyValue;
-            this._owninguserValue = _owninguserValue;
-            Statecode = statecode;
-            Traversedpath = traversedpath;
-            this._modifiedonbehalfbyValue = _modifiedonbehalfbyValue;
-            Utcconversiontimezonecode = utcconversiontimezonecode;
-            Importsequencenumber = importsequencenumber;
-            this._createdbyValue = _createdbyValue;
             Exchangerate = exchangerate;
-            Createdon = createdon;
-            Bookableresourcecharacteristicid = bookableresourcecharacteristicid;
-            Timezoneruleversionnumber = timezoneruleversionnumber;
+            this._owningbusinessunitValue = _owningbusinessunitValue;
+            this._owninguserValue = _owninguserValue;
             this._owneridValue = _owneridValue;
-            Stageid = stageid;
+            Statecode = statecode;
+            Overriddencreatedon = overriddencreatedon;
+            Createdon = createdon;
+            Statuscode = statuscode;
+            Traversedpath = traversedpath;
+            this._characteristicValue = _characteristicValue;
+            Timezoneruleversionnumber = timezoneruleversionnumber;
+            this._owningteamValue = _owningteamValue;
+            this._modifiedonbehalfbyValue = _modifiedonbehalfbyValue;
+            Versionnumber = versionnumber;
+            Name = name;
+            Processid = processid;
+            this._transactioncurrencyidValue = _transactioncurrencyidValue;
+            Bookableresourcecharacteristicid = bookableresourcecharacteristicid;
+            Modifiedon = modifiedon;
+            this._createdonbehalfbyValue = _createdonbehalfbyValue;
             this._ratingvalueValue = _ratingvalueValue;
+            Importsequencenumber = importsequencenumber;
+            this._modifiedbyValue = _modifiedbyValue;
+            this._createdbyValue = _createdbyValue;
+            Stageid = stageid;
+            Utcconversiontimezonecode = utcconversiontimezonecode;
+            this._resourceValue = _resourceValue;
             Createdbyname = createdbyname;
             Createdonbehalfbyname = createdonbehalfbyname;
             Modifiedbyname = modifiedbyname;
@@ -66,16 +66,19 @@ namespace Gov.Jag.Embc.Interfaces.Models
             Owningteam = owningteam;
             Ownerid = ownerid;
             Owningbusinessunit = owningbusinessunit;
+            BookableResourceCharacteristicSyncErrors = bookableResourceCharacteristicSyncErrors;
             BookableresourcecharacteristicDuplicateMatchingRecord = bookableresourcecharacteristicDuplicateMatchingRecord;
             BookableresourcecharacteristicDuplicateBaseRecord = bookableresourcecharacteristicDuplicateBaseRecord;
-            BookableresourcecharacteristicAnnotations = bookableresourcecharacteristicAnnotations;
             BookableresourcecharacteristicAsyncOperations = bookableresourcecharacteristicAsyncOperations;
+            BookableresourcecharacteristicMailboxTrackingFolders = bookableresourcecharacteristicMailboxTrackingFolders;
+            BookableresourcecharacteristicProcessSession = bookableresourcecharacteristicProcessSession;
             BookableresourcecharacteristicBulkDeleteFailures = bookableresourcecharacteristicBulkDeleteFailures;
+            BookableresourcecharacteristicPrincipalObjectAttributeAccesses = bookableresourcecharacteristicPrincipalObjectAttributeAccesses;
+            BookableresourcecharacteristicAnnotations = bookableresourcecharacteristicAnnotations;
             Resource = resource;
             Characteristic = characteristic;
             RatingValue = ratingValue;
             Transactioncurrencyid = transactioncurrencyid;
-            BookableResourceCharacteristicSyncErrors = bookableResourceCharacteristicSyncErrors;
             CustomInit();
         }
 
@@ -86,18 +89,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "processid")]
-        public string Processid { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_createdonbehalfby_value")]
-        public string _createdonbehalfbyValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "name")]
-        public string Name { get; set; }
+        [JsonProperty(PropertyName = "exchangerate")]
+        [NotMapped] public object Exchangerate { get; set; }
 
         /// <summary>
         /// </summary>
@@ -106,103 +99,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "overriddencreatedon")]
-        public System.DateTimeOffset? Overriddencreatedon { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "modifiedon")]
-        public System.DateTimeOffset? Modifiedon { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "versionnumber")]
-        public long? Versionnumber { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_transactioncurrencyid_value")]
-        public string _transactioncurrencyidValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_resource_value")]
-        public string _resourceValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "statuscode")]
-        public int? Statuscode { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_owningteam_value")]
-        public string _owningteamValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_characteristic_value")]
-        public string _characteristicValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_modifiedby_value")]
-        public string _modifiedbyValue { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "_owninguser_value")]
         public string _owninguserValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "statecode")]
-        public int? Statecode { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "traversedpath")]
-        public string Traversedpath { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_modifiedonbehalfby_value")]
-        public string _modifiedonbehalfbyValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "utcconversiontimezonecode")]
-        public int? Utcconversiontimezonecode { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "importsequencenumber")]
-        public int? Importsequencenumber { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_createdby_value")]
-        public string _createdbyValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "exchangerate")]
-        public object Exchangerate { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "createdon")]
-        public System.DateTimeOffset? Createdon { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "bookableresourcecharacteristicid")]
-        public string Bookableresourcecharacteristicid { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "timezoneruleversionnumber")]
-        public int? Timezoneruleversionnumber { get; set; }
 
         /// <summary>
         /// </summary>
@@ -211,13 +109,118 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "stageid")]
-        public string Stageid { get; set; }
+        [JsonProperty(PropertyName = "statecode")]
+        public int? Statecode { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "overriddencreatedon")]
+        public System.DateTimeOffset? Overriddencreatedon { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "createdon")]
+        public System.DateTimeOffset? Createdon { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "statuscode")]
+        public int? Statuscode { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "traversedpath")]
+        public string Traversedpath { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_characteristic_value")]
+        public string _characteristicValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "timezoneruleversionnumber")]
+        public int? Timezoneruleversionnumber { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_owningteam_value")]
+        public string _owningteamValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_modifiedonbehalfby_value")]
+        public string _modifiedonbehalfbyValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "versionnumber")]
+        public long? Versionnumber { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "processid")]
+        public string Processid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_transactioncurrencyid_value")]
+        public string _transactioncurrencyidValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "bookableresourcecharacteristicid")]
+        public string Bookableresourcecharacteristicid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "modifiedon")]
+        public System.DateTimeOffset? Modifiedon { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_createdonbehalfby_value")]
+        public string _createdonbehalfbyValue { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "_ratingvalue_value")]
         public string _ratingvalueValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "importsequencenumber")]
+        public int? Importsequencenumber { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_modifiedby_value")]
+        public string _modifiedbyValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_createdby_value")]
+        public string _createdbyValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "stageid")]
+        public string Stageid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "utcconversiontimezonecode")]
+        public int? Utcconversiontimezonecode { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_resource_value")]
+        public string _resourceValue { get; set; }
 
         /// <summary>
         /// </summary>
@@ -261,28 +264,48 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "BookableResourceCharacteristic_SyncErrors")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMsyncerror> BookableResourceCharacteristicSyncErrors { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "bookableresourcecharacteristic_DuplicateMatchingRecord")]
-        public IList<MicrosoftDynamicsCRMduplicaterecord> BookableresourcecharacteristicDuplicateMatchingRecord { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMduplicaterecord> BookableresourcecharacteristicDuplicateMatchingRecord { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "bookableresourcecharacteristic_DuplicateBaseRecord")]
-        public IList<MicrosoftDynamicsCRMduplicaterecord> BookableresourcecharacteristicDuplicateBaseRecord { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "bookableresourcecharacteristic_Annotations")]
-        public IList<MicrosoftDynamicsCRMannotation> BookableresourcecharacteristicAnnotations { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMduplicaterecord> BookableresourcecharacteristicDuplicateBaseRecord { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "bookableresourcecharacteristic_AsyncOperations")]
-        public IList<MicrosoftDynamicsCRMasyncoperation> BookableresourcecharacteristicAsyncOperations { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMasyncoperation> BookableresourcecharacteristicAsyncOperations { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "bookableresourcecharacteristic_MailboxTrackingFolders")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMmailboxtrackingfolder> BookableresourcecharacteristicMailboxTrackingFolders { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "bookableresourcecharacteristic_ProcessSession")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMprocesssession> BookableresourcecharacteristicProcessSession { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "bookableresourcecharacteristic_BulkDeleteFailures")]
-        public IList<MicrosoftDynamicsCRMbulkdeletefailure> BookableresourcecharacteristicBulkDeleteFailures { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMbulkdeletefailure> BookableresourcecharacteristicBulkDeleteFailures { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "bookableresourcecharacteristic_PrincipalObjectAttributeAccesses")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> BookableresourcecharacteristicPrincipalObjectAttributeAccesses { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "bookableresourcecharacteristic_Annotations")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMannotation> BookableresourcecharacteristicAnnotations { get; set; }
 
         /// <summary>
         /// </summary>
@@ -303,11 +326,6 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// </summary>
         [JsonProperty(PropertyName = "transactioncurrencyid")]
         public MicrosoftDynamicsCRMtransactioncurrency Transactioncurrencyid { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "BookableResourceCharacteristic_SyncErrors")]
-        public IList<MicrosoftDynamicsCRMsyncerror> BookableResourceCharacteristicSyncErrors { get; set; }
 
     }
 }

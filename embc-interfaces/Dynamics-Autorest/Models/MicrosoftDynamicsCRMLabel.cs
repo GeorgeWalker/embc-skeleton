@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// Label
@@ -42,7 +42,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "LocalizedLabels")]
-        public IList<MicrosoftDynamicsCRMLocalizedLabel> LocalizedLabels { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMLocalizedLabel> LocalizedLabels { get; set; }
 
         /// <summary>
         /// </summary>

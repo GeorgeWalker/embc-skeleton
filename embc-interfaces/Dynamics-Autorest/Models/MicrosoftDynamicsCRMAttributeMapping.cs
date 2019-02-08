@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// AttributeMapping
@@ -99,7 +99,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "ComputedProperties")]
-        public IList<string> ComputedProperties { get; set; }
+        [NotMapped] public IList<string> ComputedProperties { get; set; }
 
         /// <summary>
         /// </summary>

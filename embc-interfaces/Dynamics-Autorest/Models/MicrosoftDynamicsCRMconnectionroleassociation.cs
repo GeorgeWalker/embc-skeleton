@@ -7,7 +7,7 @@
 namespace Gov.Jag.Embc.Interfaces.Models
 {
     using Newtonsoft.Json;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// connectionroleassociation
@@ -27,11 +27,11 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the
         /// MicrosoftDynamicsCRMconnectionroleassociation class.
         /// </summary>
-        public MicrosoftDynamicsCRMconnectionroleassociation(string associatedconnectionroleid = default(string), string connectionroleassociationid = default(string), string connectionroleid = default(string), long? versionnumber = default(long?))
+        public MicrosoftDynamicsCRMconnectionroleassociation(string connectionroleid = default(string), string connectionroleassociationid = default(string), string associatedconnectionroleid = default(string), long? versionnumber = default(long?))
         {
-            Associatedconnectionroleid = associatedconnectionroleid;
-            Connectionroleassociationid = connectionroleassociationid;
             Connectionroleid = connectionroleid;
+            Connectionroleassociationid = connectionroleassociationid;
+            Associatedconnectionroleid = associatedconnectionroleid;
             Versionnumber = versionnumber;
             CustomInit();
         }
@@ -43,8 +43,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "associatedconnectionroleid")]
-        public string Associatedconnectionroleid { get; set; }
+        [JsonProperty(PropertyName = "connectionroleid")]
+        public string Connectionroleid { get; set; }
 
         /// <summary>
         /// </summary>
@@ -53,8 +53,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "connectionroleid")]
-        public string Connectionroleid { get; set; }
+        [JsonProperty(PropertyName = "associatedconnectionroleid")]
+        public string Associatedconnectionroleid { get; set; }
 
         /// <summary>
         /// </summary>

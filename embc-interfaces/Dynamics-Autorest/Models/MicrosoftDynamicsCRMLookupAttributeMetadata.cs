@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// LookupAttributeMetadata
@@ -29,9 +29,12 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the
         /// MicrosoftDynamicsCRMLookupAttributeMetadata class.
         /// </summary>
-        public MicrosoftDynamicsCRMLookupAttributeMetadata(IList<string> targets = default(IList<string>))
+        /// <param name="format">Possible values include: 'None', 'Connection',
+        /// 'Regarding', 'Text'</param>
+        public MicrosoftDynamicsCRMLookupAttributeMetadata(IList<string> targets = default(IList<string>), string format = default(string))
         {
             Targets = targets;
+            Format = format;
             CustomInit();
         }
 
@@ -43,7 +46,14 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "Targets")]
-        public IList<string> Targets { get; set; }
+        [NotMapped] public IList<string> Targets { get; set; }
+
+        /// <summary>
+        /// Gets or sets possible values include: 'None', 'Connection',
+        /// 'Regarding', 'Text'
+        /// </summary>
+        [JsonProperty(PropertyName = "Format")]
+        public string Format { get; set; }
 
     }
 }

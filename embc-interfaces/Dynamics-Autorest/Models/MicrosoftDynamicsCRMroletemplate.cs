@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// roletemplate
@@ -56,12 +56,12 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "roletemplateprivileges_association")]
-        public IList<MicrosoftDynamicsCRMprivilege> RoletemplateprivilegesAssociation { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMprivilege> RoletemplateprivilegesAssociation { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "role_template_roles")]
-        public IList<MicrosoftDynamicsCRMrole> RoleTemplateRoles { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMrole> RoleTemplateRoles { get; set; }
 
     }
 }

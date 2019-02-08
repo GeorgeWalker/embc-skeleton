@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// privilege
@@ -29,18 +29,18 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the MicrosoftDynamicsCRMprivilege
         /// class.
         /// </summary>
-        public MicrosoftDynamicsCRMprivilege(int? accessright = default(int?), bool? canbebasic = default(bool?), long? versionnumber = default(long?), string name = default(string), string privilegeid = default(string), bool? canbeentityreference = default(bool?), bool? canbeglobal = default(bool?), bool? canbeparententityreference = default(bool?), bool? canbelocal = default(bool?), bool? canbedeep = default(bool?), IList<MicrosoftDynamicsCRMroletemplate> roletemplateprivilegesAssociation = default(IList<MicrosoftDynamicsCRMroletemplate>), IList<MicrosoftDynamicsCRMrole> roleprivilegesAssociation = default(IList<MicrosoftDynamicsCRMrole>), IList<MicrosoftDynamicsCRMasyncoperation> privilegeAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), IList<MicrosoftDynamicsCRMbulkdeletefailure> privilegeBulkDeleteFailures = default(IList<MicrosoftDynamicsCRMbulkdeletefailure>))
+        public MicrosoftDynamicsCRMprivilege(int? accessright = default(int?), bool? canbebasic = default(bool?), long? versionnumber = default(long?), string privilegeid = default(string), bool? canbeentityreference = default(bool?), bool? canbeglobal = default(bool?), bool? canbedeep = default(bool?), string name = default(string), bool? canbeparententityreference = default(bool?), bool? canbelocal = default(bool?), IList<MicrosoftDynamicsCRMroletemplate> roletemplateprivilegesAssociation = default(IList<MicrosoftDynamicsCRMroletemplate>), IList<MicrosoftDynamicsCRMrole> roleprivilegesAssociation = default(IList<MicrosoftDynamicsCRMrole>), IList<MicrosoftDynamicsCRMasyncoperation> privilegeAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), IList<MicrosoftDynamicsCRMbulkdeletefailure> privilegeBulkDeleteFailures = default(IList<MicrosoftDynamicsCRMbulkdeletefailure>))
         {
             Accessright = accessright;
             Canbebasic = canbebasic;
             Versionnumber = versionnumber;
-            Name = name;
             Privilegeid = privilegeid;
             Canbeentityreference = canbeentityreference;
             Canbeglobal = canbeglobal;
+            Canbedeep = canbedeep;
+            Name = name;
             Canbeparententityreference = canbeparententityreference;
             Canbelocal = canbelocal;
-            Canbedeep = canbedeep;
             RoletemplateprivilegesAssociation = roletemplateprivilegesAssociation;
             RoleprivilegesAssociation = roleprivilegesAssociation;
             PrivilegeAsyncOperations = privilegeAsyncOperations;
@@ -70,11 +70,6 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "name")]
-        public string Name { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "privilegeid")]
         public string Privilegeid { get; set; }
 
@@ -90,6 +85,16 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "canbedeep")]
+        public bool? Canbedeep { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "canbeparententityreference")]
         public bool? Canbeparententityreference { get; set; }
 
@@ -100,28 +105,23 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "canbedeep")]
-        public bool? Canbedeep { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "roletemplateprivileges_association")]
-        public IList<MicrosoftDynamicsCRMroletemplate> RoletemplateprivilegesAssociation { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMroletemplate> RoletemplateprivilegesAssociation { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "roleprivileges_association")]
-        public IList<MicrosoftDynamicsCRMrole> RoleprivilegesAssociation { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMrole> RoleprivilegesAssociation { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "Privilege_AsyncOperations")]
-        public IList<MicrosoftDynamicsCRMasyncoperation> PrivilegeAsyncOperations { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMasyncoperation> PrivilegeAsyncOperations { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "Privilege_BulkDeleteFailures")]
-        public IList<MicrosoftDynamicsCRMbulkdeletefailure> PrivilegeBulkDeleteFailures { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMbulkdeletefailure> PrivilegeBulkDeleteFailures { get; set; }
 
     }
 }

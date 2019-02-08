@@ -9,7 +9,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
+    
 
     /// <summary>
     /// team
@@ -27,7 +28,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// Initializes a new instance of the MicrosoftDynamicsCRMteam class.
         /// </summary>
-        public MicrosoftDynamicsCRMteam(string _transactioncurrencyidValue = default(string), long? versionnumber = default(long?), string yominame = default(string), string _teamtemplateidValue = default(string), string _modifiedonbehalfbyValue = default(string), string traversedpath = default(string), string organizationid = default(string), string name = default(string), object exchangerate = default(object), int? importsequencenumber = default(int?), bool? systemmanaged = default(bool?), bool? isdefault = default(bool?), string description = default(string), string _createdbyValue = default(string), string emailaddress = default(string), string processid = default(string), string _businessunitidValue = default(string), string _queueidValue = default(string), string _regardingobjectidValue = default(string), System.DateTimeOffset? modifiedon = default(System.DateTimeOffset?), int? teamtype = default(int?), string stageid = default(string), System.DateTimeOffset? overriddencreatedon = default(System.DateTimeOffset?), System.DateTimeOffset? createdon = default(System.DateTimeOffset?), string _modifiedbyValue = default(string), string _createdonbehalfbyValue = default(string), string _administratoridValue = default(string), string teamid = default(string), IList<MicrosoftDynamicsCRMsystemuser> teammembershipAssociation = default(IList<MicrosoftDynamicsCRMsystemuser>), IList<MicrosoftDynamicsCRMexchangesyncidmapping> teamExchangesyncidmapping = default(IList<MicrosoftDynamicsCRMexchangesyncidmapping>), IList<MicrosoftDynamicsCRMinteractionforemail> teamNewInteractionforemail = default(IList<MicrosoftDynamicsCRMinteractionforemail>), IList<MicrosoftDynamicsCRMknowledgearticle> teamKnowledgearticle = default(IList<MicrosoftDynamicsCRMknowledgearticle>), MicrosoftDynamicsCRMknowledgearticle regardingobjectidKnowledgearticle = default(MicrosoftDynamicsCRMknowledgearticle), IList<MicrosoftDynamicsCRMsharepointsite> teamSharepointsite = default(IList<MicrosoftDynamicsCRMsharepointsite>), IList<MicrosoftDynamicsCRMsharepointdocumentlocation> teamSharepointdocumentlocation = default(IList<MicrosoftDynamicsCRMsharepointdocumentlocation>), IList<MicrosoftDynamicsCRMentitlement> teamEntitlement = default(IList<MicrosoftDynamicsCRMentitlement>), IList<MicrosoftDynamicsCRMgoal> teamGoal = default(IList<MicrosoftDynamicsCRMgoal>), IList<MicrosoftDynamicsCRMgoalrollupquery> teamGoalrollupquery = default(IList<MicrosoftDynamicsCRMgoalrollupquery>), IList<MicrosoftDynamicsCRMmailbox> teamMailbox = default(IList<MicrosoftDynamicsCRMmailbox>), MicrosoftDynamicsCRMteamtemplate associatedteamtemplateid = default(MicrosoftDynamicsCRMteamtemplate), IList<MicrosoftDynamicsCRMbookableresource> teamBookableresource = default(IList<MicrosoftDynamicsCRMbookableresource>), IList<MicrosoftDynamicsCRMbookableresourcebooking> teamBookableresourcebooking = default(IList<MicrosoftDynamicsCRMbookableresourcebooking>), IList<MicrosoftDynamicsCRMbookableresourcebookingheader> teamBookableresourcebookingheader = default(IList<MicrosoftDynamicsCRMbookableresourcebookingheader>), IList<MicrosoftDynamicsCRMbookableresourcecategory> teamBookableresourcecategory = default(IList<MicrosoftDynamicsCRMbookableresourcecategory>), IList<MicrosoftDynamicsCRMbookableresourcecategoryassn> teamBookableresourcecategoryassn = default(IList<MicrosoftDynamicsCRMbookableresourcecategoryassn>), IList<MicrosoftDynamicsCRMbookableresourcecharacteristic> teamBookableresourcecharacteristic = default(IList<MicrosoftDynamicsCRMbookableresourcecharacteristic>), IList<MicrosoftDynamicsCRMbookableresourcegroup> teamBookableresourcegroup = default(IList<MicrosoftDynamicsCRMbookableresourcegroup>), IList<MicrosoftDynamicsCRMbookingstatus> teamBookingstatus = default(IList<MicrosoftDynamicsCRMbookingstatus>), IList<MicrosoftDynamicsCRMcharacteristic> teamCharacteristic = default(IList<MicrosoftDynamicsCRMcharacteristic>), IList<MicrosoftDynamicsCRMratingmodel> teamRatingmodel = default(IList<MicrosoftDynamicsCRMratingmodel>), IList<MicrosoftDynamicsCRMratingvalue> teamRatingvalue = default(IList<MicrosoftDynamicsCRMratingvalue>), IList<MicrosoftDynamicsCRMduplicaterule> teamDuplicateRules = default(IList<MicrosoftDynamicsCRMduplicaterule>), IList<MicrosoftDynamicsCRMimport> teamImports = default(IList<MicrosoftDynamicsCRMimport>), IList<MicrosoftDynamicsCRMopportunity> teamOpportunities = default(IList<MicrosoftDynamicsCRMopportunity>), IList<MicrosoftDynamicsCRMpostfollow> owningTeamPostfollows = default(IList<MicrosoftDynamicsCRMpostfollow>), IList<MicrosoftDynamicsCRMrecurringappointmentmaster> teamRecurringappointmentmaster = default(IList<MicrosoftDynamicsCRMrecurringappointmentmaster>), IList<MicrosoftDynamicsCRMworkflowlog> teamWorkflowlog = default(IList<MicrosoftDynamicsCRMworkflowlog>), IList<MicrosoftDynamicsCRMconnection> teamConnections2 = default(IList<MicrosoftDynamicsCRMconnection>), MicrosoftDynamicsCRMprocessstage stageidProcessstage = default(MicrosoftDynamicsCRMprocessstage), IList<MicrosoftDynamicsCRMcontract> teamServiceContracts = default(IList<MicrosoftDynamicsCRMcontract>), IList<MicrosoftDynamicsCRMuserform> teamUserform = default(IList<MicrosoftDynamicsCRMuserform>), IList<MicrosoftDynamicsCRMcampaign> teamCampaigns = default(IList<MicrosoftDynamicsCRMcampaign>), IList<MicrosoftDynamicsCRMquote> teamQuotes = default(IList<MicrosoftDynamicsCRMquote>), IList<MicrosoftDynamicsCRMasyncoperation> teamAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), IList<MicrosoftDynamicsCRMsyncerror> teamSyncError = default(IList<MicrosoftDynamicsCRMsyncerror>), IList<MicrosoftDynamicsCRMlead> leadOwningTeam = default(IList<MicrosoftDynamicsCRMlead>), MicrosoftDynamicsCRMqueue queueid = default(MicrosoftDynamicsCRMqueue), IList<MicrosoftDynamicsCRMlist> teamList = default(IList<MicrosoftDynamicsCRMlist>), IList<MicrosoftDynamicsCRMincident> teamIncidents = default(IList<MicrosoftDynamicsCRMincident>), IList<MicrosoftDynamicsCRMduplicaterecord> teamDuplicateBaseRecord = default(IList<MicrosoftDynamicsCRMduplicaterecord>), IList<MicrosoftDynamicsCRMtask> teamTask = default(IList<MicrosoftDynamicsCRMtask>), IList<MicrosoftDynamicsCRMuserquery> teamUserquery = default(IList<MicrosoftDynamicsCRMuserquery>), MicrosoftDynamicsCRMsystemuser modifiedonbehalfby = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMsocialactivity> teamSocialactivity = default(IList<MicrosoftDynamicsCRMsocialactivity>), IList<MicrosoftDynamicsCRMuserqueryvisualization> teamUserqueryvisualizations = default(IList<MicrosoftDynamicsCRMuserqueryvisualization>), IList<MicrosoftDynamicsCRMsyncerror> teamSyncErrors = default(IList<MicrosoftDynamicsCRMsyncerror>), IList<MicrosoftDynamicsCRMimportmap> teamImportMaps = default(IList<MicrosoftDynamicsCRMimportmap>), IList<MicrosoftDynamicsCRMfax> teamFax = default(IList<MicrosoftDynamicsCRMfax>), IList<MicrosoftDynamicsCRMqueueitem> teamQueueitembaseWorkerid = default(IList<MicrosoftDynamicsCRMqueueitem>), IList<MicrosoftDynamicsCRMpostregarding> teamPostRegardings = default(IList<MicrosoftDynamicsCRMpostregarding>), MicrosoftDynamicsCRMbusinessunit businessunitid = default(MicrosoftDynamicsCRMbusinessunit), IList<MicrosoftDynamicsCRMimportfile> importFileTeam = default(IList<MicrosoftDynamicsCRMimportfile>), IList<MicrosoftDynamicsCRMconnection> teamConnections1 = default(IList<MicrosoftDynamicsCRMconnection>), IList<MicrosoftDynamicsCRMtemplate> teamEmailTemplates = default(IList<MicrosoftDynamicsCRMtemplate>), IList<MicrosoftDynamicsCRMworkflow> teamWorkflow = default(IList<MicrosoftDynamicsCRMworkflow>), IList<MicrosoftDynamicsCRMduplicaterecord> teamDuplicateMatchingRecord = default(IList<MicrosoftDynamicsCRMduplicaterecord>), MicrosoftDynamicsCRMorganization organizationidOrganization = default(MicrosoftDynamicsCRMorganization), IList<MicrosoftDynamicsCRMdynamicpropertyinstance> teamDynamicPropertyInstance = default(IList<MicrosoftDynamicsCRMdynamicpropertyinstance>), IList<MicrosoftDynamicsCRMemail> teamEmail = default(IList<MicrosoftDynamicsCRMemail>), IList<MicrosoftDynamicsCRMletter> teamLetter = default(IList<MicrosoftDynamicsCRMletter>), IList<MicrosoftDynamicsCRMimportfile> teamImportFiles = default(IList<MicrosoftDynamicsCRMimportfile>), IList<MicrosoftDynamicsCRMcampaignresponse> teamCampaignresponse = default(IList<MicrosoftDynamicsCRMcampaignresponse>), IList<MicrosoftDynamicsCRMimportdata> teamImportData = default(IList<MicrosoftDynamicsCRMimportdata>), MicrosoftDynamicsCRMtransactioncurrency transactioncurrencyid = default(MicrosoftDynamicsCRMtransactioncurrency), IList<MicrosoftDynamicsCRMresourcespec> teamResourceSpecs = default(IList<MicrosoftDynamicsCRMresourcespec>), IList<MicrosoftDynamicsCRMasyncoperation> teamAsyncoperation = default(IList<MicrosoftDynamicsCRMasyncoperation>), IList<MicrosoftDynamicsCRMcontact> teamContacts = default(IList<MicrosoftDynamicsCRMcontact>), MicrosoftDynamicsCRMopportunity regardingobjectidOpportunity = default(MicrosoftDynamicsCRMopportunity), IList<MicrosoftDynamicsCRMresourcegroup> teamResourceGroups = default(IList<MicrosoftDynamicsCRMresourcegroup>), MicrosoftDynamicsCRMsystemuser modifiedby = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMinvoice> teamInvoices = default(IList<MicrosoftDynamicsCRMinvoice>), IList<MicrosoftDynamicsCRMemailserverprofile> teamEmailserverprofile = default(IList<MicrosoftDynamicsCRMemailserverprofile>), IList<MicrosoftDynamicsCRMbulkoperation> teamBulkOperation = default(IList<MicrosoftDynamicsCRMbulkoperation>), MicrosoftDynamicsCRMsystemuser createdby = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMannotation> teamAnnotations = default(IList<MicrosoftDynamicsCRMannotation>), IList<MicrosoftDynamicsCRMimportlog> teamImportLogs = default(IList<MicrosoftDynamicsCRMimportlog>), IList<MicrosoftDynamicsCRMorderclose> teamOrderclose = default(IList<MicrosoftDynamicsCRMorderclose>), IList<MicrosoftDynamicsCRMsla> teamSlaBase = default(IList<MicrosoftDynamicsCRMsla>), IList<MicrosoftDynamicsCRMfieldsecurityprofile> teamprofilesAssociation = default(IList<MicrosoftDynamicsCRMfieldsecurityprofile>), IList<MicrosoftDynamicsCRMphonecall> teamPhonecall = default(IList<MicrosoftDynamicsCRMphonecall>), IList<MicrosoftDynamicsCRMcampaignactivity> teamCampaignactivity = default(IList<MicrosoftDynamicsCRMcampaignactivity>), IList<MicrosoftDynamicsCRMincidentresolution> teamIncidentresolution = default(IList<MicrosoftDynamicsCRMincidentresolution>), IList<MicrosoftDynamicsCRMrole> teamrolesAssociation = default(IList<MicrosoftDynamicsCRMrole>), IList<MicrosoftDynamicsCRMaccount> teamAccounts = default(IList<MicrosoftDynamicsCRMaccount>), IList<MicrosoftDynamicsCRMserviceappointment> teamServiceAppointments = default(IList<MicrosoftDynamicsCRMserviceappointment>), IList<MicrosoftDynamicsCRMquoteclose> teamQuoteclose = default(IList<MicrosoftDynamicsCRMquoteclose>), IList<MicrosoftDynamicsCRMactivitypointer> teamActivity = default(IList<MicrosoftDynamicsCRMactivitypointer>), IList<MicrosoftDynamicsCRMappointment> teamAppointment = default(IList<MicrosoftDynamicsCRMappointment>), MicrosoftDynamicsCRMsystemuser createdonbehalfby = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMsalesorder> teamOrders = default(IList<MicrosoftDynamicsCRMsalesorder>), IList<MicrosoftDynamicsCRMopportunityclose> teamOpportunityclose = default(IList<MicrosoftDynamicsCRMopportunityclose>), MicrosoftDynamicsCRMsystemuser administratorid = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMbulkdeletefailure> teamBulkDeleteFailures = default(IList<MicrosoftDynamicsCRMbulkdeletefailure>), IList<MicrosoftDynamicsCRMgoal> teamGoalGoalowner = default(IList<MicrosoftDynamicsCRMgoal>), IList<MicrosoftDynamicsCRMbcgovCustomaddress> teamBcgovCustomaddress = default(IList<MicrosoftDynamicsCRMbcgovCustomaddress>), MicrosoftDynamicsCRMbcgovCustomaddress regardingobjectidBcgovCustomaddress = default(MicrosoftDynamicsCRMbcgovCustomaddress), MicrosoftDynamicsCRMaccount regardingobjectidAccount = default(MicrosoftDynamicsCRMaccount), MicrosoftDynamicsCRMincident regardingobjectidIncident = default(MicrosoftDynamicsCRMincident), IList<MicrosoftDynamicsCRMbcgovTermsconditionspreset> teamBcgovTermsconditionspreset = default(IList<MicrosoftDynamicsCRMbcgovTermsconditionspreset>), IList<MicrosoftDynamicsCRMbcgovApplicationtype> teamBcgovApplicationtype = default(IList<MicrosoftDynamicsCRMbcgovApplicationtype>), IList<MicrosoftDynamicsCRMbcgovBusinesscontact> teamBcgovBusinesscontact = default(IList<MicrosoftDynamicsCRMbcgovBusinesscontact>), IList<MicrosoftDynamicsCRMbcgovCustomproduct> teamBcgovCustomproduct = default(IList<MicrosoftDynamicsCRMbcgovCustomproduct>), MicrosoftDynamicsCRMbcgovCustomproduct regardingobjectidBcgovCustomproduct = default(MicrosoftDynamicsCRMbcgovCustomproduct), IList<MicrosoftDynamicsCRMbcgovCertificate> teamBcgovCertificate = default(IList<MicrosoftDynamicsCRMbcgovCertificate>), IList<MicrosoftDynamicsCRMbcgovLocation> teamBcgovLocation = default(IList<MicrosoftDynamicsCRMbcgovLocation>), IList<MicrosoftDynamicsCRMbcgovEquipment> teamBcgovEquipment = default(IList<MicrosoftDynamicsCRMbcgovEquipment>), IList<MicrosoftDynamicsCRMbcgovEquipmentlocation> teamBcgovEquipmentlocation = default(IList<MicrosoftDynamicsCRMbcgovEquipmentlocation>), IList<MicrosoftDynamicsCRMbcgovCertificatetermsandconditions> teamBcgovCertificatetermsandconditions = default(IList<MicrosoftDynamicsCRMbcgovCertificatetermsandconditions>), IList<MicrosoftDynamicsCRMbcgovRiskassessment> teamBcgovRiskassessment = default(IList<MicrosoftDynamicsCRMbcgovRiskassessment>), IList<MicrosoftDynamicsCRMabsAutonumberedentity> teamAbsAutonumberedentity = default(IList<MicrosoftDynamicsCRMabsAutonumberedentity>))
+        public MicrosoftDynamicsCRMteam(string _transactioncurrencyidValue = default(string), long? versionnumber = default(long?), string yominame = default(string), string _teamtemplateidValue = default(string), string _modifiedonbehalfbyValue = default(string), string traversedpath = default(string), string organizationid = default(string), string name = default(string), string _regardingobjectidValue = default(string), object exchangerate = default(object), int? importsequencenumber = default(int?), bool? systemmanaged = default(bool?), string description = default(string), string _createdbyValue = default(string), string emailaddress = default(string), string processid = default(string), string _businessunitidValue = default(string), string _queueidValue = default(string), System.DateTimeOffset? modifiedon = default(System.DateTimeOffset?), bool? isdefault = default(bool?), int? teamtype = default(int?), string stageid = default(string), System.DateTimeOffset? overriddencreatedon = default(System.DateTimeOffset?), System.DateTimeOffset? createdon = default(System.DateTimeOffset?), string _modifiedbyValue = default(string), string _createdonbehalfbyValue = default(string), string _administratoridValue = default(string), string teamid = default(string), IList<MicrosoftDynamicsCRMgovCommunity> teamGovCommunity = default(IList<MicrosoftDynamicsCRMgovCommunity>), IList<MicrosoftDynamicsCRMgovIncidenttask> teamGovIncidenttask = default(IList<MicrosoftDynamicsCRMgovIncidenttask>), IList<MicrosoftDynamicsCRMgovRegistration> teamGovRegistration = default(IList<MicrosoftDynamicsCRMgovRegistration>), IList<MicrosoftDynamicsCRMlead> leadOwningTeam = default(IList<MicrosoftDynamicsCRMlead>), IList<MicrosoftDynamicsCRMdynamicpropertyinstance> teamDynamicPropertyInstance = default(IList<MicrosoftDynamicsCRMdynamicpropertyinstance>), IList<MicrosoftDynamicsCRMbookableresource> teamBookableresource = default(IList<MicrosoftDynamicsCRMbookableresource>), IList<MicrosoftDynamicsCRMbookableresourcebooking> teamBookableresourcebooking = default(IList<MicrosoftDynamicsCRMbookableresourcebooking>), IList<MicrosoftDynamicsCRMbookableresourcebookingheader> teamBookableresourcebookingheader = default(IList<MicrosoftDynamicsCRMbookableresourcebookingheader>), IList<MicrosoftDynamicsCRMbookableresourcecategory> teamBookableresourcecategory = default(IList<MicrosoftDynamicsCRMbookableresourcecategory>), IList<MicrosoftDynamicsCRMbookableresourcecategoryassn> teamBookableresourcecategoryassn = default(IList<MicrosoftDynamicsCRMbookableresourcecategoryassn>), IList<MicrosoftDynamicsCRMbookableresourcecharacteristic> teamBookableresourcecharacteristic = default(IList<MicrosoftDynamicsCRMbookableresourcecharacteristic>), IList<MicrosoftDynamicsCRMbookableresourcegroup> teamBookableresourcegroup = default(IList<MicrosoftDynamicsCRMbookableresourcegroup>), IList<MicrosoftDynamicsCRMbookingstatus> teamBookingstatus = default(IList<MicrosoftDynamicsCRMbookingstatus>), IList<MicrosoftDynamicsCRMcharacteristic> teamCharacteristic = default(IList<MicrosoftDynamicsCRMcharacteristic>), IList<MicrosoftDynamicsCRMratingmodel> teamRatingmodel = default(IList<MicrosoftDynamicsCRMratingmodel>), IList<MicrosoftDynamicsCRMratingvalue> teamRatingvalue = default(IList<MicrosoftDynamicsCRMratingvalue>), IList<MicrosoftDynamicsCRMbulkoperation> teamBulkOperation = default(IList<MicrosoftDynamicsCRMbulkoperation>), IList<MicrosoftDynamicsCRMbulkoperationlog> teamBulkoperationlog = default(IList<MicrosoftDynamicsCRMbulkoperationlog>), IList<MicrosoftDynamicsCRMcampaign> teamCampaigns = default(IList<MicrosoftDynamicsCRMcampaign>), IList<MicrosoftDynamicsCRMcampaignactivity> teamCampaignactivity = default(IList<MicrosoftDynamicsCRMcampaignactivity>), IList<MicrosoftDynamicsCRMcampaignresponse> teamCampaignresponse = default(IList<MicrosoftDynamicsCRMcampaignresponse>), IList<MicrosoftDynamicsCRMlist> teamList = default(IList<MicrosoftDynamicsCRMlist>), IList<MicrosoftDynamicsCRMcontract> teamServiceContracts = default(IList<MicrosoftDynamicsCRMcontract>), IList<MicrosoftDynamicsCRMcontractdetail> teamContractdetail = default(IList<MicrosoftDynamicsCRMcontractdetail>), IList<MicrosoftDynamicsCRMentitlement> teamEntitlement = default(IList<MicrosoftDynamicsCRMentitlement>), IList<MicrosoftDynamicsCRMentitlementchannel> teamEntitlementchannel = default(IList<MicrosoftDynamicsCRMentitlementchannel>), IList<MicrosoftDynamicsCRMincident> teamIncidents = default(IList<MicrosoftDynamicsCRMincident>), IList<MicrosoftDynamicsCRMincidentresolution> teamIncidentresolution = default(IList<MicrosoftDynamicsCRMincidentresolution>), IList<MicrosoftDynamicsCRMknowledgearticleincident> teamKnowledgearticleincident = default(IList<MicrosoftDynamicsCRMknowledgearticleincident>), IList<MicrosoftDynamicsCRMserviceappointment> teamServiceAppointments = default(IList<MicrosoftDynamicsCRMserviceappointment>), IList<MicrosoftDynamicsCRMresourcespec> teamResourceSpecs = default(IList<MicrosoftDynamicsCRMresourcespec>), IList<MicrosoftDynamicsCRMresourcegroup> teamResourceGroups = default(IList<MicrosoftDynamicsCRMresourcegroup>), IList<MicrosoftDynamicsCRMentitlemententityallocationtypemapping> teamEntitlemententityallocationtypemapping = default(IList<MicrosoftDynamicsCRMentitlemententityallocationtypemapping>), IList<MicrosoftDynamicsCRMmsdynCallablecontext> teamMsdynCallablecontext = default(IList<MicrosoftDynamicsCRMmsdynCallablecontext>), IList<MicrosoftDynamicsCRMmsdynPlaybookactivity> teamMsdynPlaybookactivity = default(IList<MicrosoftDynamicsCRMmsdynPlaybookactivity>), IList<MicrosoftDynamicsCRMmsdynPlaybookactivityattribute> teamMsdynPlaybookactivityattribute = default(IList<MicrosoftDynamicsCRMmsdynPlaybookactivityattribute>), IList<MicrosoftDynamicsCRMmsdynPlaybookcategory> teamMsdynPlaybookcategory = default(IList<MicrosoftDynamicsCRMmsdynPlaybookcategory>), IList<MicrosoftDynamicsCRMmsdynPlaybookinstance> teamMsdynPlaybookinstance = default(IList<MicrosoftDynamicsCRMmsdynPlaybookinstance>), IList<MicrosoftDynamicsCRMmsdynPlaybooktemplate> teamMsdynPlaybooktemplate = default(IList<MicrosoftDynamicsCRMmsdynPlaybooktemplate>), IList<MicrosoftDynamicsCRMinvoice> teamInvoices = default(IList<MicrosoftDynamicsCRMinvoice>), IList<MicrosoftDynamicsCRMinvoicedetail> teamInvoicedetail = default(IList<MicrosoftDynamicsCRMinvoicedetail>), IList<MicrosoftDynamicsCRMopportunity> teamOpportunities = default(IList<MicrosoftDynamicsCRMopportunity>), MicrosoftDynamicsCRMopportunity regardingobjectidOpportunity = default(MicrosoftDynamicsCRMopportunity), IList<MicrosoftDynamicsCRMopportunityclose> teamOpportunityclose = default(IList<MicrosoftDynamicsCRMopportunityclose>), IList<MicrosoftDynamicsCRMopportunityproduct> teamOpportunityproduct = default(IList<MicrosoftDynamicsCRMopportunityproduct>), IList<MicrosoftDynamicsCRMorderclose> teamOrderclose = default(IList<MicrosoftDynamicsCRMorderclose>), IList<MicrosoftDynamicsCRMquote> teamQuotes = default(IList<MicrosoftDynamicsCRMquote>), IList<MicrosoftDynamicsCRMquoteclose> teamQuoteclose = default(IList<MicrosoftDynamicsCRMquoteclose>), IList<MicrosoftDynamicsCRMquotedetail> teamQuotedetail = default(IList<MicrosoftDynamicsCRMquotedetail>), IList<MicrosoftDynamicsCRMsalesorder> teamOrders = default(IList<MicrosoftDynamicsCRMsalesorder>), IList<MicrosoftDynamicsCRMsalesorderdetail> teamSalesorderdetail = default(IList<MicrosoftDynamicsCRMsalesorderdetail>), IList<MicrosoftDynamicsCRMadminsettingsentity> teamAdminsettingsentity = default(IList<MicrosoftDynamicsCRMadminsettingsentity>), IList<MicrosoftDynamicsCRMmsdynRelationshipinsightsunifiedconfig> teamMsdynRelationshipinsightsunifiedconfig = default(IList<MicrosoftDynamicsCRMmsdynRelationshipinsightsunifiedconfig>), IList<MicrosoftDynamicsCRMmsdynSiconfig> teamMsdynSiconfig = default(IList<MicrosoftDynamicsCRMmsdynSiconfig>), IList<MicrosoftDynamicsCRMmsdynUntrackedappointment> teamMsdynUntrackedappointment = default(IList<MicrosoftDynamicsCRMmsdynUntrackedappointment>), IList<MicrosoftDynamicsCRMmsdynNotesanalysisconfig> teamMsdynNotesanalysisconfig = default(IList<MicrosoftDynamicsCRMmsdynNotesanalysisconfig>), IList<MicrosoftDynamicsCRMmsdynIcebreakersconfig> teamMsdynIcebreakersconfig = default(IList<MicrosoftDynamicsCRMmsdynIcebreakersconfig>), IList<MicrosoftDynamicsCRMmsdynPostalbum> teamMsdynPostalbum = default(IList<MicrosoftDynamicsCRMmsdynPostalbum>), IList<MicrosoftDynamicsCRMmsdynWallsavedqueryusersettings> teamMsdynWallsavedqueryusersettings = default(IList<MicrosoftDynamicsCRMmsdynWallsavedqueryusersettings>), IList<MicrosoftDynamicsCRMsystemuser> teammembershipAssociation = default(IList<MicrosoftDynamicsCRMsystemuser>), IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> teamPrincipalobjectattributeaccessPrincipalid = default(IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess>), IList<MicrosoftDynamicsCRMexchangesyncidmapping> teamExchangesyncidmapping = default(IList<MicrosoftDynamicsCRMexchangesyncidmapping>), IList<MicrosoftDynamicsCRMinteractionforemail> teamNewInteractionforemail = default(IList<MicrosoftDynamicsCRMinteractionforemail>), IList<MicrosoftDynamicsCRMknowledgearticle> teamKnowledgearticle = default(IList<MicrosoftDynamicsCRMknowledgearticle>), MicrosoftDynamicsCRMknowledgearticle regardingobjectidKnowledgearticle = default(MicrosoftDynamicsCRMknowledgearticle), IList<MicrosoftDynamicsCRMsharepointsite> teamSharepointsite = default(IList<MicrosoftDynamicsCRMsharepointsite>), IList<MicrosoftDynamicsCRMsharepointdocumentlocation> teamSharepointdocumentlocation = default(IList<MicrosoftDynamicsCRMsharepointdocumentlocation>), IList<MicrosoftDynamicsCRMgoal> teamGoal = default(IList<MicrosoftDynamicsCRMgoal>), IList<MicrosoftDynamicsCRMgoalrollupquery> teamGoalrollupquery = default(IList<MicrosoftDynamicsCRMgoalrollupquery>), IList<MicrosoftDynamicsCRMmailbox> teamMailbox = default(IList<MicrosoftDynamicsCRMmailbox>), MicrosoftDynamicsCRMteamtemplate associatedteamtemplateid = default(MicrosoftDynamicsCRMteamtemplate), IList<MicrosoftDynamicsCRMduplicaterule> teamDuplicateRules = default(IList<MicrosoftDynamicsCRMduplicaterule>), IList<MicrosoftDynamicsCRMimport> teamImports = default(IList<MicrosoftDynamicsCRMimport>), IList<MicrosoftDynamicsCRMpostfollow> owningTeamPostfollows = default(IList<MicrosoftDynamicsCRMpostfollow>), IList<MicrosoftDynamicsCRMrecurringappointmentmaster> teamRecurringappointmentmaster = default(IList<MicrosoftDynamicsCRMrecurringappointmentmaster>), IList<MicrosoftDynamicsCRMworkflowlog> teamWorkflowlog = default(IList<MicrosoftDynamicsCRMworkflowlog>), IList<MicrosoftDynamicsCRMconnection> teamConnections2 = default(IList<MicrosoftDynamicsCRMconnection>), IList<MicrosoftDynamicsCRMprocesssession> teamProcesssession = default(IList<MicrosoftDynamicsCRMprocesssession>), MicrosoftDynamicsCRMprocessstage stageidProcessstage = default(MicrosoftDynamicsCRMprocessstage), IList<MicrosoftDynamicsCRMuserform> teamUserform = default(IList<MicrosoftDynamicsCRMuserform>), IList<MicrosoftDynamicsCRMasyncoperation> teamAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), IList<MicrosoftDynamicsCRMsyncerror> teamSyncError = default(IList<MicrosoftDynamicsCRMsyncerror>), MicrosoftDynamicsCRMqueue queueid = default(MicrosoftDynamicsCRMqueue), IList<MicrosoftDynamicsCRMduplicaterecord> teamDuplicateBaseRecord = default(IList<MicrosoftDynamicsCRMduplicaterecord>), IList<MicrosoftDynamicsCRMtask> teamTask = default(IList<MicrosoftDynamicsCRMtask>), IList<MicrosoftDynamicsCRMuserquery> teamUserquery = default(IList<MicrosoftDynamicsCRMuserquery>), MicrosoftDynamicsCRMsystemuser modifiedonbehalfby = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMsocialactivity> teamSocialactivity = default(IList<MicrosoftDynamicsCRMsocialactivity>), IList<MicrosoftDynamicsCRMuserqueryvisualization> teamUserqueryvisualizations = default(IList<MicrosoftDynamicsCRMuserqueryvisualization>), IList<MicrosoftDynamicsCRMsyncerror> teamSyncErrors = default(IList<MicrosoftDynamicsCRMsyncerror>), IList<MicrosoftDynamicsCRMimportmap> teamImportMaps = default(IList<MicrosoftDynamicsCRMimportmap>), IList<MicrosoftDynamicsCRMfax> teamFax = default(IList<MicrosoftDynamicsCRMfax>), IList<MicrosoftDynamicsCRMqueueitem> teamQueueitembaseWorkerid = default(IList<MicrosoftDynamicsCRMqueueitem>), IList<MicrosoftDynamicsCRMpostregarding> teamPostRegardings = default(IList<MicrosoftDynamicsCRMpostregarding>), MicrosoftDynamicsCRMbusinessunit businessunitid = default(MicrosoftDynamicsCRMbusinessunit), IList<MicrosoftDynamicsCRMimportfile> importFileTeam = default(IList<MicrosoftDynamicsCRMimportfile>), IList<MicrosoftDynamicsCRMconnection> teamConnections1 = default(IList<MicrosoftDynamicsCRMconnection>), IList<MicrosoftDynamicsCRMtemplate> teamEmailTemplates = default(IList<MicrosoftDynamicsCRMtemplate>), IList<MicrosoftDynamicsCRMworkflow> teamWorkflow = default(IList<MicrosoftDynamicsCRMworkflow>), IList<MicrosoftDynamicsCRMduplicaterecord> teamDuplicateMatchingRecord = default(IList<MicrosoftDynamicsCRMduplicaterecord>), MicrosoftDynamicsCRMorganization organizationidOrganization = default(MicrosoftDynamicsCRMorganization), IList<MicrosoftDynamicsCRMemail> teamEmail = default(IList<MicrosoftDynamicsCRMemail>), IList<MicrosoftDynamicsCRMletter> teamLetter = default(IList<MicrosoftDynamicsCRMletter>), IList<MicrosoftDynamicsCRMimportfile> teamImportFiles = default(IList<MicrosoftDynamicsCRMimportfile>), IList<MicrosoftDynamicsCRMimportdata> teamImportData = default(IList<MicrosoftDynamicsCRMimportdata>), MicrosoftDynamicsCRMtransactioncurrency transactioncurrencyid = default(MicrosoftDynamicsCRMtransactioncurrency), IList<MicrosoftDynamicsCRMasyncoperation> teamAsyncoperation = default(IList<MicrosoftDynamicsCRMasyncoperation>), IList<MicrosoftDynamicsCRMcontact> teamContacts = default(IList<MicrosoftDynamicsCRMcontact>), IList<MicrosoftDynamicsCRMmailboxtrackingfolder> teamMailboxtrackingfolder = default(IList<MicrosoftDynamicsCRMmailboxtrackingfolder>), MicrosoftDynamicsCRMsystemuser modifiedby = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMemailserverprofile> teamEmailserverprofile = default(IList<MicrosoftDynamicsCRMemailserverprofile>), IList<MicrosoftDynamicsCRMprocesssession> teamProcessSessions = default(IList<MicrosoftDynamicsCRMprocesssession>), IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> teamPrincipalobjectattributeaccess = default(IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess>), MicrosoftDynamicsCRMsystemuser createdby = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMannotation> teamAnnotations = default(IList<MicrosoftDynamicsCRMannotation>), IList<MicrosoftDynamicsCRMimportlog> teamImportLogs = default(IList<MicrosoftDynamicsCRMimportlog>), IList<MicrosoftDynamicsCRMsla> teamSlaBase = default(IList<MicrosoftDynamicsCRMsla>), IList<MicrosoftDynamicsCRMfieldsecurityprofile> teamprofilesAssociation = default(IList<MicrosoftDynamicsCRMfieldsecurityprofile>), IList<MicrosoftDynamicsCRMphonecall> teamPhonecall = default(IList<MicrosoftDynamicsCRMphonecall>), IList<MicrosoftDynamicsCRMrole> teamrolesAssociation = default(IList<MicrosoftDynamicsCRMrole>), IList<MicrosoftDynamicsCRMaccount> teamAccounts = default(IList<MicrosoftDynamicsCRMaccount>), IList<MicrosoftDynamicsCRMactivitypointer> teamActivity = default(IList<MicrosoftDynamicsCRMactivitypointer>), IList<MicrosoftDynamicsCRMappointment> teamAppointment = default(IList<MicrosoftDynamicsCRMappointment>), MicrosoftDynamicsCRMsystemuser createdonbehalfby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser administratorid = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMbulkdeletefailure> teamBulkDeleteFailures = default(IList<MicrosoftDynamicsCRMbulkdeletefailure>), IList<MicrosoftDynamicsCRMgoal> teamGoalGoalowner = default(IList<MicrosoftDynamicsCRMgoal>))
         {
             this._transactioncurrencyidValue = _transactioncurrencyidValue;
             Versionnumber = versionnumber;
@@ -37,18 +38,18 @@ namespace Gov.Jag.Embc.Interfaces.Models
             Traversedpath = traversedpath;
             Organizationid = organizationid;
             Name = name;
+            this._regardingobjectidValue = _regardingobjectidValue;
             Exchangerate = exchangerate;
             Importsequencenumber = importsequencenumber;
             Systemmanaged = systemmanaged;
-            Isdefault = isdefault;
             Description = description;
             this._createdbyValue = _createdbyValue;
             Emailaddress = emailaddress;
             Processid = processid;
             this._businessunitidValue = _businessunitidValue;
             this._queueidValue = _queueidValue;
-            this._regardingobjectidValue = _regardingobjectidValue;
             Modifiedon = modifiedon;
+            Isdefault = isdefault;
             Teamtype = teamtype;
             Stageid = stageid;
             Overriddencreatedon = overriddencreatedon;
@@ -57,18 +58,11 @@ namespace Gov.Jag.Embc.Interfaces.Models
             this._createdonbehalfbyValue = _createdonbehalfbyValue;
             this._administratoridValue = _administratoridValue;
             Teamid = teamid;
-            TeammembershipAssociation = teammembershipAssociation;
-            TeamExchangesyncidmapping = teamExchangesyncidmapping;
-            TeamNewInteractionforemail = teamNewInteractionforemail;
-            TeamKnowledgearticle = teamKnowledgearticle;
-            RegardingobjectidKnowledgearticle = regardingobjectidKnowledgearticle;
-            TeamSharepointsite = teamSharepointsite;
-            TeamSharepointdocumentlocation = teamSharepointdocumentlocation;
-            TeamEntitlement = teamEntitlement;
-            TeamGoal = teamGoal;
-            TeamGoalrollupquery = teamGoalrollupquery;
-            TeamMailbox = teamMailbox;
-            Associatedteamtemplateid = associatedteamtemplateid;
+            TeamGovCommunity = teamGovCommunity;
+            TeamGovIncidenttask = teamGovIncidenttask;
+            TeamGovRegistration = teamGovRegistration;
+            LeadOwningTeam = leadOwningTeam;
+            TeamDynamicPropertyInstance = teamDynamicPropertyInstance;
             TeamBookableresource = teamBookableresource;
             TeamBookableresourcebooking = teamBookableresourcebooking;
             TeamBookableresourcebookingheader = teamBookableresourcebookingheader;
@@ -80,24 +74,73 @@ namespace Gov.Jag.Embc.Interfaces.Models
             TeamCharacteristic = teamCharacteristic;
             TeamRatingmodel = teamRatingmodel;
             TeamRatingvalue = teamRatingvalue;
+            TeamBulkOperation = teamBulkOperation;
+            TeamBulkoperationlog = teamBulkoperationlog;
+            TeamCampaigns = teamCampaigns;
+            TeamCampaignactivity = teamCampaignactivity;
+            TeamCampaignresponse = teamCampaignresponse;
+            TeamList = teamList;
+            TeamServiceContracts = teamServiceContracts;
+            TeamContractdetail = teamContractdetail;
+            TeamEntitlement = teamEntitlement;
+            TeamEntitlementchannel = teamEntitlementchannel;
+            TeamIncidents = teamIncidents;
+            TeamIncidentresolution = teamIncidentresolution;
+            TeamKnowledgearticleincident = teamKnowledgearticleincident;
+            TeamServiceAppointments = teamServiceAppointments;
+            TeamResourceSpecs = teamResourceSpecs;
+            TeamResourceGroups = teamResourceGroups;
+            TeamEntitlemententityallocationtypemapping = teamEntitlemententityallocationtypemapping;
+            TeamMsdynCallablecontext = teamMsdynCallablecontext;
+            TeamMsdynPlaybookactivity = teamMsdynPlaybookactivity;
+            TeamMsdynPlaybookactivityattribute = teamMsdynPlaybookactivityattribute;
+            TeamMsdynPlaybookcategory = teamMsdynPlaybookcategory;
+            TeamMsdynPlaybookinstance = teamMsdynPlaybookinstance;
+            TeamMsdynPlaybooktemplate = teamMsdynPlaybooktemplate;
+            TeamInvoices = teamInvoices;
+            TeamInvoicedetail = teamInvoicedetail;
+            TeamOpportunities = teamOpportunities;
+            RegardingobjectidOpportunity = regardingobjectidOpportunity;
+            TeamOpportunityclose = teamOpportunityclose;
+            TeamOpportunityproduct = teamOpportunityproduct;
+            TeamOrderclose = teamOrderclose;
+            TeamQuotes = teamQuotes;
+            TeamQuoteclose = teamQuoteclose;
+            TeamQuotedetail = teamQuotedetail;
+            TeamOrders = teamOrders;
+            TeamSalesorderdetail = teamSalesorderdetail;
+            TeamAdminsettingsentity = teamAdminsettingsentity;
+            TeamMsdynRelationshipinsightsunifiedconfig = teamMsdynRelationshipinsightsunifiedconfig;
+            TeamMsdynSiconfig = teamMsdynSiconfig;
+            TeamMsdynUntrackedappointment = teamMsdynUntrackedappointment;
+            TeamMsdynNotesanalysisconfig = teamMsdynNotesanalysisconfig;
+            TeamMsdynIcebreakersconfig = teamMsdynIcebreakersconfig;
+            TeamMsdynPostalbum = teamMsdynPostalbum;
+            TeamMsdynWallsavedqueryusersettings = teamMsdynWallsavedqueryusersettings;
+            TeammembershipAssociation = teammembershipAssociation;
+            TeamPrincipalobjectattributeaccessPrincipalid = teamPrincipalobjectattributeaccessPrincipalid;
+            TeamExchangesyncidmapping = teamExchangesyncidmapping;
+            TeamNewInteractionforemail = teamNewInteractionforemail;
+            TeamKnowledgearticle = teamKnowledgearticle;
+            RegardingobjectidKnowledgearticle = regardingobjectidKnowledgearticle;
+            TeamSharepointsite = teamSharepointsite;
+            TeamSharepointdocumentlocation = teamSharepointdocumentlocation;
+            TeamGoal = teamGoal;
+            TeamGoalrollupquery = teamGoalrollupquery;
+            TeamMailbox = teamMailbox;
+            Associatedteamtemplateid = associatedteamtemplateid;
             TeamDuplicateRules = teamDuplicateRules;
             TeamImports = teamImports;
-            TeamOpportunities = teamOpportunities;
             OwningTeamPostfollows = owningTeamPostfollows;
             TeamRecurringappointmentmaster = teamRecurringappointmentmaster;
             TeamWorkflowlog = teamWorkflowlog;
             TeamConnections2 = teamConnections2;
+            TeamProcesssession = teamProcesssession;
             StageidProcessstage = stageidProcessstage;
-            TeamServiceContracts = teamServiceContracts;
             TeamUserform = teamUserform;
-            TeamCampaigns = teamCampaigns;
-            TeamQuotes = teamQuotes;
             TeamAsyncOperations = teamAsyncOperations;
             TeamSyncError = teamSyncError;
-            LeadOwningTeam = leadOwningTeam;
             Queueid = queueid;
-            TeamList = teamList;
-            TeamIncidents = teamIncidents;
             TeamDuplicateBaseRecord = teamDuplicateBaseRecord;
             TeamTask = teamTask;
             TeamUserquery = teamUserquery;
@@ -116,59 +159,32 @@ namespace Gov.Jag.Embc.Interfaces.Models
             TeamWorkflow = teamWorkflow;
             TeamDuplicateMatchingRecord = teamDuplicateMatchingRecord;
             OrganizationidOrganization = organizationidOrganization;
-            TeamDynamicPropertyInstance = teamDynamicPropertyInstance;
             TeamEmail = teamEmail;
             TeamLetter = teamLetter;
             TeamImportFiles = teamImportFiles;
-            TeamCampaignresponse = teamCampaignresponse;
             TeamImportData = teamImportData;
             Transactioncurrencyid = transactioncurrencyid;
-            TeamResourceSpecs = teamResourceSpecs;
             TeamAsyncoperation = teamAsyncoperation;
             TeamContacts = teamContacts;
-            RegardingobjectidOpportunity = regardingobjectidOpportunity;
-            TeamResourceGroups = teamResourceGroups;
+            TeamMailboxtrackingfolder = teamMailboxtrackingfolder;
             Modifiedby = modifiedby;
-            TeamInvoices = teamInvoices;
             TeamEmailserverprofile = teamEmailserverprofile;
-            TeamBulkOperation = teamBulkOperation;
+            TeamProcessSessions = teamProcessSessions;
+            TeamPrincipalobjectattributeaccess = teamPrincipalobjectattributeaccess;
             Createdby = createdby;
             TeamAnnotations = teamAnnotations;
             TeamImportLogs = teamImportLogs;
-            TeamOrderclose = teamOrderclose;
             TeamSlaBase = teamSlaBase;
             TeamprofilesAssociation = teamprofilesAssociation;
             TeamPhonecall = teamPhonecall;
-            TeamCampaignactivity = teamCampaignactivity;
-            TeamIncidentresolution = teamIncidentresolution;
             TeamrolesAssociation = teamrolesAssociation;
             TeamAccounts = teamAccounts;
-            TeamServiceAppointments = teamServiceAppointments;
-            TeamQuoteclose = teamQuoteclose;
             TeamActivity = teamActivity;
             TeamAppointment = teamAppointment;
             Createdonbehalfby = createdonbehalfby;
-            TeamOrders = teamOrders;
-            TeamOpportunityclose = teamOpportunityclose;
             Administratorid = administratorid;
             TeamBulkDeleteFailures = teamBulkDeleteFailures;
             TeamGoalGoalowner = teamGoalGoalowner;
-            TeamBcgovCustomaddress = teamBcgovCustomaddress;
-            RegardingobjectidBcgovCustomaddress = regardingobjectidBcgovCustomaddress;
-            RegardingobjectidAccount = regardingobjectidAccount;
-            RegardingobjectidIncident = regardingobjectidIncident;
-            TeamBcgovTermsconditionspreset = teamBcgovTermsconditionspreset;
-            TeamBcgovApplicationtype = teamBcgovApplicationtype;
-            TeamBcgovBusinesscontact = teamBcgovBusinesscontact;
-            TeamBcgovCustomproduct = teamBcgovCustomproduct;
-            RegardingobjectidBcgovCustomproduct = regardingobjectidBcgovCustomproduct;
-            TeamBcgovCertificate = teamBcgovCertificate;
-            TeamBcgovLocation = teamBcgovLocation;
-            TeamBcgovEquipment = teamBcgovEquipment;
-            TeamBcgovEquipmentlocation = teamBcgovEquipmentlocation;
-            TeamBcgovCertificatetermsandconditions = teamBcgovCertificatetermsandconditions;
-            TeamBcgovRiskassessment = teamBcgovRiskassessment;
-            TeamAbsAutonumberedentity = teamAbsAutonumberedentity;
             CustomInit();
         }
 
@@ -219,8 +235,13 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "_regardingobjectid_value")]
+        public string _regardingobjectidValue { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "exchangerate")]
-        public object Exchangerate { get; set; }
+        [NotMapped] public object Exchangerate { get; set; }
 
         /// <summary>
         /// </summary>
@@ -231,11 +252,6 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// </summary>
         [JsonProperty(PropertyName = "systemmanaged")]
         public bool? Systemmanaged { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "isdefault")]
-        public bool? Isdefault { get; set; }
 
         /// <summary>
         /// </summary>
@@ -269,13 +285,13 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "_regardingobjectid_value")]
-        public string _regardingobjectidValue { get; set; }
+        [JsonProperty(PropertyName = "modifiedon")]
+        public System.DateTimeOffset? Modifiedon { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "modifiedon")]
-        public System.DateTimeOffset? Modifiedon { get; set; }
+        [JsonProperty(PropertyName = "isdefault")]
+        public bool? Isdefault { get; set; }
 
         /// <summary>
         /// </summary>
@@ -319,23 +335,323 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "team_gov_community")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMgovCommunity> TeamGovCommunity { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_gov_incidenttask")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMgovIncidenttask> TeamGovIncidenttask { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_gov_registration")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMgovRegistration> TeamGovRegistration { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "lead_owning_team")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMlead> LeadOwningTeam { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_DynamicPropertyInstance")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMdynamicpropertyinstance> TeamDynamicPropertyInstance { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_bookableresource")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbookableresource> TeamBookableresource { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_bookableresourcebooking")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbookableresourcebooking> TeamBookableresourcebooking { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_bookableresourcebookingheader")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbookableresourcebookingheader> TeamBookableresourcebookingheader { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_bookableresourcecategory")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbookableresourcecategory> TeamBookableresourcecategory { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_bookableresourcecategoryassn")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbookableresourcecategoryassn> TeamBookableresourcecategoryassn { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_bookableresourcecharacteristic")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbookableresourcecharacteristic> TeamBookableresourcecharacteristic { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_bookableresourcegroup")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbookableresourcegroup> TeamBookableresourcegroup { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_bookingstatus")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbookingstatus> TeamBookingstatus { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_characteristic")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMcharacteristic> TeamCharacteristic { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_ratingmodel")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMratingmodel> TeamRatingmodel { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_ratingvalue")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMratingvalue> TeamRatingvalue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_BulkOperation")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbulkoperation> TeamBulkOperation { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_bulkoperationlog")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbulkoperationlog> TeamBulkoperationlog { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_Campaigns")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMcampaign> TeamCampaigns { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_campaignactivity")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMcampaignactivity> TeamCampaignactivity { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_campaignresponse")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMcampaignresponse> TeamCampaignresponse { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_list")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMlist> TeamList { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_service_contracts")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMcontract> TeamServiceContracts { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_contractdetail")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMcontractdetail> TeamContractdetail { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_entitlement")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMentitlement> TeamEntitlement { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_entitlementchannel")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMentitlementchannel> TeamEntitlementchannel { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_incidents")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMincident> TeamIncidents { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_incidentresolution")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMincidentresolution> TeamIncidentresolution { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_knowledgearticleincident")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMknowledgearticleincident> TeamKnowledgearticleincident { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_service_appointments")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMserviceappointment> TeamServiceAppointments { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_resource_specs")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMresourcespec> TeamResourceSpecs { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_resource_groups")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMresourcegroup> TeamResourceGroups { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_entitlemententityallocationtypemapping")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMentitlemententityallocationtypemapping> TeamEntitlemententityallocationtypemapping { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_msdyn_callablecontext")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMmsdynCallablecontext> TeamMsdynCallablecontext { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_msdyn_playbookactivity")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMmsdynPlaybookactivity> TeamMsdynPlaybookactivity { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_msdyn_playbookactivityattribute")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMmsdynPlaybookactivityattribute> TeamMsdynPlaybookactivityattribute { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_msdyn_playbookcategory")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMmsdynPlaybookcategory> TeamMsdynPlaybookcategory { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_msdyn_playbookinstance")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMmsdynPlaybookinstance> TeamMsdynPlaybookinstance { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_msdyn_playbooktemplate")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMmsdynPlaybooktemplate> TeamMsdynPlaybooktemplate { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_invoices")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMinvoice> TeamInvoices { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_invoicedetail")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMinvoicedetail> TeamInvoicedetail { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_opportunities")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMopportunity> TeamOpportunities { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_opportunity")]
+        public MicrosoftDynamicsCRMopportunity RegardingobjectidOpportunity { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_opportunityclose")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMopportunityclose> TeamOpportunityclose { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_opportunityproduct")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMopportunityproduct> TeamOpportunityproduct { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_orderclose")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMorderclose> TeamOrderclose { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_quotes")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMquote> TeamQuotes { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_quoteclose")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMquoteclose> TeamQuoteclose { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_quotedetail")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMquotedetail> TeamQuotedetail { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_orders")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMsalesorder> TeamOrders { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_salesorderdetail")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMsalesorderdetail> TeamSalesorderdetail { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_adminsettingsentity")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMadminsettingsentity> TeamAdminsettingsentity { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_msdyn_relationshipinsightsunifiedconfig")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMmsdynRelationshipinsightsunifiedconfig> TeamMsdynRelationshipinsightsunifiedconfig { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_msdyn_siconfig")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMmsdynSiconfig> TeamMsdynSiconfig { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_msdyn_untrackedappointment")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMmsdynUntrackedappointment> TeamMsdynUntrackedappointment { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_msdyn_notesanalysisconfig")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMmsdynNotesanalysisconfig> TeamMsdynNotesanalysisconfig { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_msdyn_icebreakersconfig")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMmsdynIcebreakersconfig> TeamMsdynIcebreakersconfig { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_msdyn_postalbum")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMmsdynPostalbum> TeamMsdynPostalbum { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_msdyn_wallsavedqueryusersettings")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMmsdynWallsavedqueryusersettings> TeamMsdynWallsavedqueryusersettings { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "teammembership_association")]
-        public IList<MicrosoftDynamicsCRMsystemuser> TeammembershipAssociation { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMsystemuser> TeammembershipAssociation { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_principalobjectattributeaccess_principalid")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> TeamPrincipalobjectattributeaccessPrincipalid { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_exchangesyncidmapping")]
-        public IList<MicrosoftDynamicsCRMexchangesyncidmapping> TeamExchangesyncidmapping { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMexchangesyncidmapping> TeamExchangesyncidmapping { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_new_interactionforemail")]
-        public IList<MicrosoftDynamicsCRMinteractionforemail> TeamNewInteractionforemail { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMinteractionforemail> TeamNewInteractionforemail { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_knowledgearticle")]
-        public IList<MicrosoftDynamicsCRMknowledgearticle> TeamKnowledgearticle { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMknowledgearticle> TeamKnowledgearticle { get; set; }
 
         /// <summary>
         /// </summary>
@@ -345,32 +661,27 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_sharepointsite")]
-        public IList<MicrosoftDynamicsCRMsharepointsite> TeamSharepointsite { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMsharepointsite> TeamSharepointsite { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_sharepointdocumentlocation")]
-        public IList<MicrosoftDynamicsCRMsharepointdocumentlocation> TeamSharepointdocumentlocation { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_entitlement")]
-        public IList<MicrosoftDynamicsCRMentitlement> TeamEntitlement { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMsharepointdocumentlocation> TeamSharepointdocumentlocation { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_goal")]
-        public IList<MicrosoftDynamicsCRMgoal> TeamGoal { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMgoal> TeamGoal { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_goalrollupquery")]
-        public IList<MicrosoftDynamicsCRMgoalrollupquery> TeamGoalrollupquery { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMgoalrollupquery> TeamGoalrollupquery { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_mailbox")]
-        public IList<MicrosoftDynamicsCRMmailbox> TeamMailbox { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMmailbox> TeamMailbox { get; set; }
 
         /// <summary>
         /// </summary>
@@ -379,93 +690,38 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "team_bookableresource")]
-        public IList<MicrosoftDynamicsCRMbookableresource> TeamBookableresource { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_bookableresourcebooking")]
-        public IList<MicrosoftDynamicsCRMbookableresourcebooking> TeamBookableresourcebooking { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_bookableresourcebookingheader")]
-        public IList<MicrosoftDynamicsCRMbookableresourcebookingheader> TeamBookableresourcebookingheader { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_bookableresourcecategory")]
-        public IList<MicrosoftDynamicsCRMbookableresourcecategory> TeamBookableresourcecategory { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_bookableresourcecategoryassn")]
-        public IList<MicrosoftDynamicsCRMbookableresourcecategoryassn> TeamBookableresourcecategoryassn { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_bookableresourcecharacteristic")]
-        public IList<MicrosoftDynamicsCRMbookableresourcecharacteristic> TeamBookableresourcecharacteristic { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_bookableresourcegroup")]
-        public IList<MicrosoftDynamicsCRMbookableresourcegroup> TeamBookableresourcegroup { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_bookingstatus")]
-        public IList<MicrosoftDynamicsCRMbookingstatus> TeamBookingstatus { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_characteristic")]
-        public IList<MicrosoftDynamicsCRMcharacteristic> TeamCharacteristic { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_ratingmodel")]
-        public IList<MicrosoftDynamicsCRMratingmodel> TeamRatingmodel { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_ratingvalue")]
-        public IList<MicrosoftDynamicsCRMratingvalue> TeamRatingvalue { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "team_DuplicateRules")]
-        public IList<MicrosoftDynamicsCRMduplicaterule> TeamDuplicateRules { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMduplicaterule> TeamDuplicateRules { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_Imports")]
-        public IList<MicrosoftDynamicsCRMimport> TeamImports { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_opportunities")]
-        public IList<MicrosoftDynamicsCRMopportunity> TeamOpportunities { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMimport> TeamImports { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "OwningTeam_postfollows")]
-        public IList<MicrosoftDynamicsCRMpostfollow> OwningTeamPostfollows { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMpostfollow> OwningTeamPostfollows { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_recurringappointmentmaster")]
-        public IList<MicrosoftDynamicsCRMrecurringappointmentmaster> TeamRecurringappointmentmaster { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMrecurringappointmentmaster> TeamRecurringappointmentmaster { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_workflowlog")]
-        public IList<MicrosoftDynamicsCRMworkflowlog> TeamWorkflowlog { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMworkflowlog> TeamWorkflowlog { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_connections2")]
-        public IList<MicrosoftDynamicsCRMconnection> TeamConnections2 { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMconnection> TeamConnections2 { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_processsession")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMprocesssession> TeamProcesssession { get; set; }
 
         /// <summary>
         /// </summary>
@@ -474,38 +730,18 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "team_service_contracts")]
-        public IList<MicrosoftDynamicsCRMcontract> TeamServiceContracts { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "team_userform")]
-        public IList<MicrosoftDynamicsCRMuserform> TeamUserform { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_Campaigns")]
-        public IList<MicrosoftDynamicsCRMcampaign> TeamCampaigns { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_quotes")]
-        public IList<MicrosoftDynamicsCRMquote> TeamQuotes { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMuserform> TeamUserform { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "Team_AsyncOperations")]
-        public IList<MicrosoftDynamicsCRMasyncoperation> TeamAsyncOperations { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMasyncoperation> TeamAsyncOperations { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_SyncError")]
-        public IList<MicrosoftDynamicsCRMsyncerror> TeamSyncError { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "lead_owning_team")]
-        public IList<MicrosoftDynamicsCRMlead> LeadOwningTeam { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMsyncerror> TeamSyncError { get; set; }
 
         /// <summary>
         /// </summary>
@@ -514,28 +750,18 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "team_list")]
-        public IList<MicrosoftDynamicsCRMlist> TeamList { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_incidents")]
-        public IList<MicrosoftDynamicsCRMincident> TeamIncidents { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "Team_DuplicateBaseRecord")]
-        public IList<MicrosoftDynamicsCRMduplicaterecord> TeamDuplicateBaseRecord { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMduplicaterecord> TeamDuplicateBaseRecord { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_task")]
-        public IList<MicrosoftDynamicsCRMtask> TeamTask { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMtask> TeamTask { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_userquery")]
-        public IList<MicrosoftDynamicsCRMuserquery> TeamUserquery { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMuserquery> TeamUserquery { get; set; }
 
         /// <summary>
         /// </summary>
@@ -545,37 +771,37 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_socialactivity")]
-        public IList<MicrosoftDynamicsCRMsocialactivity> TeamSocialactivity { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMsocialactivity> TeamSocialactivity { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_userqueryvisualizations")]
-        public IList<MicrosoftDynamicsCRMuserqueryvisualization> TeamUserqueryvisualizations { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMuserqueryvisualization> TeamUserqueryvisualizations { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "Team_SyncErrors")]
-        public IList<MicrosoftDynamicsCRMsyncerror> TeamSyncErrors { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMsyncerror> TeamSyncErrors { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_ImportMaps")]
-        public IList<MicrosoftDynamicsCRMimportmap> TeamImportMaps { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMimportmap> TeamImportMaps { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_fax")]
-        public IList<MicrosoftDynamicsCRMfax> TeamFax { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMfax> TeamFax { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_queueitembase_workerid")]
-        public IList<MicrosoftDynamicsCRMqueueitem> TeamQueueitembaseWorkerid { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMqueueitem> TeamQueueitembaseWorkerid { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_PostRegardings")]
-        public IList<MicrosoftDynamicsCRMpostregarding> TeamPostRegardings { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMpostregarding> TeamPostRegardings { get; set; }
 
         /// <summary>
         /// </summary>
@@ -585,27 +811,27 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "ImportFile_Team")]
-        public IList<MicrosoftDynamicsCRMimportfile> ImportFileTeam { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMimportfile> ImportFileTeam { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_connections1")]
-        public IList<MicrosoftDynamicsCRMconnection> TeamConnections1 { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMconnection> TeamConnections1 { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_email_templates")]
-        public IList<MicrosoftDynamicsCRMtemplate> TeamEmailTemplates { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMtemplate> TeamEmailTemplates { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_workflow")]
-        public IList<MicrosoftDynamicsCRMworkflow> TeamWorkflow { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMworkflow> TeamWorkflow { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "Team_DuplicateMatchingRecord")]
-        public IList<MicrosoftDynamicsCRMduplicaterecord> TeamDuplicateMatchingRecord { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMduplicaterecord> TeamDuplicateMatchingRecord { get; set; }
 
         /// <summary>
         /// </summary>
@@ -614,33 +840,23 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "team_DynamicPropertyInstance")]
-        public IList<MicrosoftDynamicsCRMdynamicpropertyinstance> TeamDynamicPropertyInstance { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "team_email")]
-        public IList<MicrosoftDynamicsCRMemail> TeamEmail { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMemail> TeamEmail { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_letter")]
-        public IList<MicrosoftDynamicsCRMletter> TeamLetter { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMletter> TeamLetter { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_ImportFiles")]
-        public IList<MicrosoftDynamicsCRMimportfile> TeamImportFiles { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_campaignresponse")]
-        public IList<MicrosoftDynamicsCRMcampaignresponse> TeamCampaignresponse { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMimportfile> TeamImportFiles { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_ImportData")]
-        public IList<MicrosoftDynamicsCRMimportdata> TeamImportData { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMimportdata> TeamImportData { get; set; }
 
         /// <summary>
         /// </summary>
@@ -649,28 +865,18 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "team_resource_specs")]
-        public IList<MicrosoftDynamicsCRMresourcespec> TeamResourceSpecs { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "team_asyncoperation")]
-        public IList<MicrosoftDynamicsCRMasyncoperation> TeamAsyncoperation { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMasyncoperation> TeamAsyncoperation { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_contacts")]
-        public IList<MicrosoftDynamicsCRMcontact> TeamContacts { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMcontact> TeamContacts { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_opportunity")]
-        public MicrosoftDynamicsCRMopportunity RegardingobjectidOpportunity { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_resource_groups")]
-        public IList<MicrosoftDynamicsCRMresourcegroup> TeamResourceGroups { get; set; }
+        [JsonProperty(PropertyName = "team_mailboxtrackingfolder")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMmailboxtrackingfolder> TeamMailboxtrackingfolder { get; set; }
 
         /// <summary>
         /// </summary>
@@ -679,18 +885,18 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "team_invoices")]
-        public IList<MicrosoftDynamicsCRMinvoice> TeamInvoices { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "team_emailserverprofile")]
-        public IList<MicrosoftDynamicsCRMemailserverprofile> TeamEmailserverprofile { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMemailserverprofile> TeamEmailserverprofile { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "team_BulkOperation")]
-        public IList<MicrosoftDynamicsCRMbulkoperation> TeamBulkOperation { get; set; }
+        [JsonProperty(PropertyName = "Team_ProcessSessions")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMprocesssession> TeamProcessSessions { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "team_principalobjectattributeaccess")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> TeamPrincipalobjectattributeaccess { get; set; }
 
         /// <summary>
         /// </summary>
@@ -700,87 +906,52 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_annotations")]
-        public IList<MicrosoftDynamicsCRMannotation> TeamAnnotations { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMannotation> TeamAnnotations { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_ImportLogs")]
-        public IList<MicrosoftDynamicsCRMimportlog> TeamImportLogs { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_orderclose")]
-        public IList<MicrosoftDynamicsCRMorderclose> TeamOrderclose { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMimportlog> TeamImportLogs { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_slaBase")]
-        public IList<MicrosoftDynamicsCRMsla> TeamSlaBase { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMsla> TeamSlaBase { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "teamprofiles_association")]
-        public IList<MicrosoftDynamicsCRMfieldsecurityprofile> TeamprofilesAssociation { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMfieldsecurityprofile> TeamprofilesAssociation { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_phonecall")]
-        public IList<MicrosoftDynamicsCRMphonecall> TeamPhonecall { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_campaignactivity")]
-        public IList<MicrosoftDynamicsCRMcampaignactivity> TeamCampaignactivity { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_incidentresolution")]
-        public IList<MicrosoftDynamicsCRMincidentresolution> TeamIncidentresolution { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMphonecall> TeamPhonecall { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "teamroles_association")]
-        public IList<MicrosoftDynamicsCRMrole> TeamrolesAssociation { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMrole> TeamrolesAssociation { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_accounts")]
-        public IList<MicrosoftDynamicsCRMaccount> TeamAccounts { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_service_appointments")]
-        public IList<MicrosoftDynamicsCRMserviceappointment> TeamServiceAppointments { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_quoteclose")]
-        public IList<MicrosoftDynamicsCRMquoteclose> TeamQuoteclose { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMaccount> TeamAccounts { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_activity")]
-        public IList<MicrosoftDynamicsCRMactivitypointer> TeamActivity { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMactivitypointer> TeamActivity { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_appointment")]
-        public IList<MicrosoftDynamicsCRMappointment> TeamAppointment { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMappointment> TeamAppointment { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "createdonbehalfby")]
         public MicrosoftDynamicsCRMsystemuser Createdonbehalfby { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_orders")]
-        public IList<MicrosoftDynamicsCRMsalesorder> TeamOrders { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_opportunityclose")]
-        public IList<MicrosoftDynamicsCRMopportunityclose> TeamOpportunityclose { get; set; }
 
         /// <summary>
         /// </summary>
@@ -790,92 +961,12 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "Team_BulkDeleteFailures")]
-        public IList<MicrosoftDynamicsCRMbulkdeletefailure> TeamBulkDeleteFailures { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMbulkdeletefailure> TeamBulkDeleteFailures { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "team_goal_goalowner")]
-        public IList<MicrosoftDynamicsCRMgoal> TeamGoalGoalowner { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_bcgov_customaddress")]
-        public IList<MicrosoftDynamicsCRMbcgovCustomaddress> TeamBcgovCustomaddress { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_bcgov_customaddress")]
-        public MicrosoftDynamicsCRMbcgovCustomaddress RegardingobjectidBcgovCustomaddress { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_account")]
-        public MicrosoftDynamicsCRMaccount RegardingobjectidAccount { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_incident")]
-        public MicrosoftDynamicsCRMincident RegardingobjectidIncident { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_bcgov_termsconditionspreset")]
-        public IList<MicrosoftDynamicsCRMbcgovTermsconditionspreset> TeamBcgovTermsconditionspreset { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_bcgov_applicationtype")]
-        public IList<MicrosoftDynamicsCRMbcgovApplicationtype> TeamBcgovApplicationtype { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_bcgov_businesscontact")]
-        public IList<MicrosoftDynamicsCRMbcgovBusinesscontact> TeamBcgovBusinesscontact { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_bcgov_customproduct")]
-        public IList<MicrosoftDynamicsCRMbcgovCustomproduct> TeamBcgovCustomproduct { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_bcgov_customproduct")]
-        public MicrosoftDynamicsCRMbcgovCustomproduct RegardingobjectidBcgovCustomproduct { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_bcgov_certificate")]
-        public IList<MicrosoftDynamicsCRMbcgovCertificate> TeamBcgovCertificate { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_bcgov_location")]
-        public IList<MicrosoftDynamicsCRMbcgovLocation> TeamBcgovLocation { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_bcgov_equipment")]
-        public IList<MicrosoftDynamicsCRMbcgovEquipment> TeamBcgovEquipment { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_bcgov_equipmentlocation")]
-        public IList<MicrosoftDynamicsCRMbcgovEquipmentlocation> TeamBcgovEquipmentlocation { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_bcgov_certificatetermsandconditions")]
-        public IList<MicrosoftDynamicsCRMbcgovCertificatetermsandconditions> TeamBcgovCertificatetermsandconditions { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_bcgov_riskassessment")]
-        public IList<MicrosoftDynamicsCRMbcgovRiskassessment> TeamBcgovRiskassessment { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "team_abs_autonumberedentity")]
-        public IList<MicrosoftDynamicsCRMabsAutonumberedentity> TeamAbsAutonumberedentity { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMgoal> TeamGoalGoalowner { get; set; }
 
     }
 }

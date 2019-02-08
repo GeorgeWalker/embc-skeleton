@@ -7,7 +7,9 @@
 namespace Gov.Jag.Embc.Interfaces.Models
 {
     using Newtonsoft.Json;
-    using System.Linq;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// dynamicpropertyassociation
@@ -27,35 +29,42 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the
         /// MicrosoftDynamicsCRMdynamicpropertyassociation class.
         /// </summary>
-        public MicrosoftDynamicsCRMdynamicpropertyassociation(System.DateTimeOffset? createdon = default(System.DateTimeOffset?), string dynamicpropertyassociationid = default(string), string _organizationidValue = default(string), string _modifiedbyValue = default(string), string _createdbyValue = default(string), string _createdonbehalfbyValue = default(string), int? importsequencenumber = default(int?), int? inheritancestate = default(int?), string _regardingobjectidValue = default(string), string _transactioncurrencyidValue = default(string), string _modifiedonbehalfbyValue = default(string), int? dmtimportstate = default(int?), long? versionnumber = default(long?), int? associationstatus = default(int?), System.DateTimeOffset? modifiedon = default(System.DateTimeOffset?), System.DateTimeOffset? overriddencreatedon = default(System.DateTimeOffset?), object exchangerate = default(object), string _dynamicpropertyidValue = default(string), MicrosoftDynamicsCRMtransactioncurrency transactioncurrencyid = default(MicrosoftDynamicsCRMtransactioncurrency), MicrosoftDynamicsCRMsystemuser modifiedby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMproductassociation regardingobjectidProductassociation = default(MicrosoftDynamicsCRMproductassociation), MicrosoftDynamicsCRMsystemuser modifiedonbehalfby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMdynamicproperty dynamicpropertyid = default(MicrosoftDynamicsCRMdynamicproperty), MicrosoftDynamicsCRMsystemuser createdby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMorganization organizationid = default(MicrosoftDynamicsCRMorganization), MicrosoftDynamicsCRMsystemuser createdonbehalfby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMproduct regardingobjectidProduct = default(MicrosoftDynamicsCRMproduct))
+        public MicrosoftDynamicsCRMdynamicpropertyassociation(string _transactioncurrencyidValue = default(string), System.DateTimeOffset? createdon = default(System.DateTimeOffset?), string dynamicpropertyassociationid = default(string), object exchangerate = default(object), int? dmtimportstate = default(int?), string _dynamicpropertyidValue = default(string), string _modifiedonbehalfbyValue = default(string), int? inheritancestate = default(int?), string _createdonbehalfbyValue = default(string), System.DateTimeOffset? modifiedon = default(System.DateTimeOffset?), string _modifiedbyValue = default(string), int? utcconversiontimezonecode = default(int?), string _regardingobjectidValue = default(string), int? timezoneruleversionnumber = default(int?), int? associationstatus = default(int?), int? importsequencenumber = default(int?), string _organizationidValue = default(string), long? versionnumber = default(long?), System.DateTimeOffset? overriddencreatedon = default(System.DateTimeOffset?), string _createdbyValue = default(string), MicrosoftDynamicsCRMsystemuser createdby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser createdonbehalfby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser modifiedby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser modifiedonbehalfby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMorganization organizationid = default(MicrosoftDynamicsCRMorganization), IList<MicrosoftDynamicsCRMsyncerror> dynamicpropertyassociationSyncErrors = default(IList<MicrosoftDynamicsCRMsyncerror>), IList<MicrosoftDynamicsCRMasyncoperation> dynamicpropertyassociationAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), IList<MicrosoftDynamicsCRMmailboxtrackingfolder> dynamicpropertyassociationMailboxTrackingFolders = default(IList<MicrosoftDynamicsCRMmailboxtrackingfolder>), IList<MicrosoftDynamicsCRMbulkdeletefailure> dynamicpropertyassociationBulkDeleteFailures = default(IList<MicrosoftDynamicsCRMbulkdeletefailure>), IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> dynamicpropertyassociationPrincipalObjectAttributeAccesses = default(IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess>), MicrosoftDynamicsCRMdynamicproperty dynamicpropertyid = default(MicrosoftDynamicsCRMdynamicproperty), MicrosoftDynamicsCRMtransactioncurrency transactioncurrencyid = default(MicrosoftDynamicsCRMtransactioncurrency), MicrosoftDynamicsCRMproduct regardingobjectidProduct = default(MicrosoftDynamicsCRMproduct), MicrosoftDynamicsCRMproductassociation regardingobjectidProductassociation = default(MicrosoftDynamicsCRMproductassociation))
         {
+            this._transactioncurrencyidValue = _transactioncurrencyidValue;
             Createdon = createdon;
             Dynamicpropertyassociationid = dynamicpropertyassociationid;
-            this._organizationidValue = _organizationidValue;
-            this._modifiedbyValue = _modifiedbyValue;
-            this._createdbyValue = _createdbyValue;
-            this._createdonbehalfbyValue = _createdonbehalfbyValue;
-            Importsequencenumber = importsequencenumber;
-            Inheritancestate = inheritancestate;
-            this._regardingobjectidValue = _regardingobjectidValue;
-            this._transactioncurrencyidValue = _transactioncurrencyidValue;
-            this._modifiedonbehalfbyValue = _modifiedonbehalfbyValue;
-            Dmtimportstate = dmtimportstate;
-            Versionnumber = versionnumber;
-            Associationstatus = associationstatus;
-            Modifiedon = modifiedon;
-            Overriddencreatedon = overriddencreatedon;
             Exchangerate = exchangerate;
+            Dmtimportstate = dmtimportstate;
             this._dynamicpropertyidValue = _dynamicpropertyidValue;
-            Transactioncurrencyid = transactioncurrencyid;
-            Modifiedby = modifiedby;
-            RegardingobjectidProductassociation = regardingobjectidProductassociation;
-            Modifiedonbehalfby = modifiedonbehalfby;
-            Dynamicpropertyid = dynamicpropertyid;
+            this._modifiedonbehalfbyValue = _modifiedonbehalfbyValue;
+            Inheritancestate = inheritancestate;
+            this._createdonbehalfbyValue = _createdonbehalfbyValue;
+            Modifiedon = modifiedon;
+            this._modifiedbyValue = _modifiedbyValue;
+            Utcconversiontimezonecode = utcconversiontimezonecode;
+            this._regardingobjectidValue = _regardingobjectidValue;
+            Timezoneruleversionnumber = timezoneruleversionnumber;
+            Associationstatus = associationstatus;
+            Importsequencenumber = importsequencenumber;
+            this._organizationidValue = _organizationidValue;
+            Versionnumber = versionnumber;
+            Overriddencreatedon = overriddencreatedon;
+            this._createdbyValue = _createdbyValue;
             Createdby = createdby;
-            Organizationid = organizationid;
             Createdonbehalfby = createdonbehalfby;
+            Modifiedby = modifiedby;
+            Modifiedonbehalfby = modifiedonbehalfby;
+            Organizationid = organizationid;
+            DynamicpropertyassociationSyncErrors = dynamicpropertyassociationSyncErrors;
+            DynamicpropertyassociationAsyncOperations = dynamicpropertyassociationAsyncOperations;
+            DynamicpropertyassociationMailboxTrackingFolders = dynamicpropertyassociationMailboxTrackingFolders;
+            DynamicpropertyassociationBulkDeleteFailures = dynamicpropertyassociationBulkDeleteFailures;
+            DynamicpropertyassociationPrincipalObjectAttributeAccesses = dynamicpropertyassociationPrincipalObjectAttributeAccesses;
+            Dynamicpropertyid = dynamicpropertyid;
+            Transactioncurrencyid = transactioncurrencyid;
             RegardingobjectidProduct = regardingobjectidProduct;
+            RegardingobjectidProductassociation = regardingobjectidProductassociation;
             CustomInit();
         }
 
@@ -63,6 +72,11 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// An initialization method that performs custom operations like setting defaults
         /// </summary>
         partial void CustomInit();
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_transactioncurrencyid_value")]
+        public string _transactioncurrencyidValue { get; set; }
 
         /// <summary>
         /// </summary>
@@ -76,48 +90,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "_organizationid_value")]
-        public string _organizationidValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_modifiedby_value")]
-        public string _modifiedbyValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_createdby_value")]
-        public string _createdbyValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_createdonbehalfby_value")]
-        public string _createdonbehalfbyValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "importsequencenumber")]
-        public int? Importsequencenumber { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "inheritancestate")]
-        public int? Inheritancestate { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_regardingobjectid_value")]
-        public string _regardingobjectidValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_transactioncurrencyid_value")]
-        public string _transactioncurrencyidValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_modifiedonbehalfby_value")]
-        public string _modifiedonbehalfbyValue { get; set; }
+        [JsonProperty(PropertyName = "exchangerate")]
+        [NotMapped] public object Exchangerate { get; set; }
 
         /// <summary>
         /// </summary>
@@ -126,13 +100,23 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "versionnumber")]
-        public long? Versionnumber { get; set; }
+        [JsonProperty(PropertyName = "_dynamicpropertyid_value")]
+        public string _dynamicpropertyidValue { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "associationstatus")]
-        public int? Associationstatus { get; set; }
+        [JsonProperty(PropertyName = "_modifiedonbehalfby_value")]
+        public string _modifiedonbehalfbyValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "inheritancestate")]
+        public int? Inheritancestate { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_createdonbehalfby_value")]
+        public string _createdonbehalfbyValue { get; set; }
 
         /// <summary>
         /// </summary>
@@ -141,43 +125,53 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "_modifiedby_value")]
+        public string _modifiedbyValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "utcconversiontimezonecode")]
+        public int? Utcconversiontimezonecode { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_regardingobjectid_value")]
+        public string _regardingobjectidValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "timezoneruleversionnumber")]
+        public int? Timezoneruleversionnumber { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "associationstatus")]
+        public int? Associationstatus { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "importsequencenumber")]
+        public int? Importsequencenumber { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_organizationid_value")]
+        public string _organizationidValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "versionnumber")]
+        public long? Versionnumber { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "overriddencreatedon")]
         public System.DateTimeOffset? Overriddencreatedon { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "exchangerate")]
-        public object Exchangerate { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_dynamicpropertyid_value")]
-        public string _dynamicpropertyidValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrencyid")]
-        public MicrosoftDynamicsCRMtransactioncurrency Transactioncurrencyid { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "modifiedby")]
-        public MicrosoftDynamicsCRMsystemuser Modifiedby { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_productassociation")]
-        public MicrosoftDynamicsCRMproductassociation RegardingobjectidProductassociation { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "modifiedonbehalfby")]
-        public MicrosoftDynamicsCRMsystemuser Modifiedonbehalfby { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "dynamicpropertyid")]
-        public MicrosoftDynamicsCRMdynamicproperty Dynamicpropertyid { get; set; }
+        [JsonProperty(PropertyName = "_createdby_value")]
+        public string _createdbyValue { get; set; }
 
         /// <summary>
         /// </summary>
@@ -186,18 +180,68 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "organizationid")]
-        public MicrosoftDynamicsCRMorganization Organizationid { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "createdonbehalfby")]
         public MicrosoftDynamicsCRMsystemuser Createdonbehalfby { get; set; }
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "modifiedby")]
+        public MicrosoftDynamicsCRMsystemuser Modifiedby { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "modifiedonbehalfby")]
+        public MicrosoftDynamicsCRMsystemuser Modifiedonbehalfby { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "organizationid")]
+        public MicrosoftDynamicsCRMorganization Organizationid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "dynamicpropertyassociation_SyncErrors")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMsyncerror> DynamicpropertyassociationSyncErrors { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "dynamicpropertyassociation_AsyncOperations")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMasyncoperation> DynamicpropertyassociationAsyncOperations { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "dynamicpropertyassociation_MailboxTrackingFolders")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMmailboxtrackingfolder> DynamicpropertyassociationMailboxTrackingFolders { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "dynamicpropertyassociation_BulkDeleteFailures")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbulkdeletefailure> DynamicpropertyassociationBulkDeleteFailures { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "dynamicpropertyassociation_PrincipalObjectAttributeAccesses")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> DynamicpropertyassociationPrincipalObjectAttributeAccesses { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "dynamicpropertyid")]
+        public MicrosoftDynamicsCRMdynamicproperty Dynamicpropertyid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrencyid")]
+        public MicrosoftDynamicsCRMtransactioncurrency Transactioncurrencyid { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "regardingobjectid_product")]
         public MicrosoftDynamicsCRMproduct RegardingobjectidProduct { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_productassociation")]
+        public MicrosoftDynamicsCRMproductassociation RegardingobjectidProductassociation { get; set; }
 
     }
 }

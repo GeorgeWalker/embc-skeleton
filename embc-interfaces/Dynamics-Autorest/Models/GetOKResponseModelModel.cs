@@ -9,10 +9,10 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
-    /// Collection of bcgov_businesscontacts
+    /// Collection of gov_communities
     /// </summary>
     public partial class GetOKResponseModelModel
     {
@@ -27,7 +27,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// Initializes a new instance of the GetOKResponseModelModel class.
         /// </summary>
-        public GetOKResponseModelModel(IList<MicrosoftDynamicsCRMbcgovBusinesscontact> value = default(IList<MicrosoftDynamicsCRMbcgovBusinesscontact>))
+        public GetOKResponseModelModel(IList<MicrosoftDynamicsCRMgovCommunity> value = default(IList<MicrosoftDynamicsCRMgovCommunity>))
         {
             Value = value;
             CustomInit();
@@ -41,7 +41,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "value")]
-        public IList<MicrosoftDynamicsCRMbcgovBusinesscontact> Value { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMgovCommunity> Value { get; set; }
 
     }
 }

@@ -7,7 +7,7 @@
 namespace Gov.Jag.Embc.Interfaces.Models
 {
     using Newtonsoft.Json;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// DecimalAttributeMetadata
@@ -48,12 +48,12 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "MaxValue")]
-        public object MaxValue { get; set; }
+        [NotMapped] public object MaxValue { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "MinValue")]
-        public object MinValue { get; set; }
+        [NotMapped] public object MinValue { get; set; }
 
         /// <summary>
         /// </summary>

@@ -9,10 +9,10 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
-    /// Collection of bcgov_customaddresses
+    /// Collection of gov_registrations
     /// </summary>
     public partial class GetOKResponseModelModelModelModelModel
     {
@@ -29,7 +29,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the
         /// GetOKResponseModelModelModelModelModel class.
         /// </summary>
-        public GetOKResponseModelModelModelModelModel(IList<MicrosoftDynamicsCRMbcgovCustomaddress> value = default(IList<MicrosoftDynamicsCRMbcgovCustomaddress>))
+        public GetOKResponseModelModelModelModelModel(IList<MicrosoftDynamicsCRMgovRegistration> value = default(IList<MicrosoftDynamicsCRMgovRegistration>))
         {
             Value = value;
             CustomInit();
@@ -43,7 +43,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "value")]
-        public IList<MicrosoftDynamicsCRMbcgovCustomaddress> Value { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMgovRegistration> Value { get; set; }
 
     }
 }

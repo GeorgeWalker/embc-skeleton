@@ -7,7 +7,9 @@
 namespace Gov.Jag.Embc.Interfaces.Models
 {
     using Newtonsoft.Json;
-    using System.Linq;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// contactquotes
@@ -27,12 +29,20 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the MicrosoftDynamicsCRMcontactquotes
         /// class.
         /// </summary>
-        public MicrosoftDynamicsCRMcontactquotes(string contactquoteid = default(string), string contactid = default(string), long? versionnumber = default(long?), string quoteid = default(string))
+        public MicrosoftDynamicsCRMcontactquotes(int? utcconversiontimezonecode = default(int?), long? versionnumber = default(long?), System.DateTimeOffset? overriddencreatedon = default(System.DateTimeOffset?), string quoteid = default(string), int? timezoneruleversionnumber = default(int?), int? importsequencenumber = default(int?), string contactquoteid = default(string), string contactid = default(string), IList<MicrosoftDynamicsCRMasyncoperation> contactquotesAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), IList<MicrosoftDynamicsCRMmailboxtrackingfolder> contactquotesMailboxTrackingFolders = default(IList<MicrosoftDynamicsCRMmailboxtrackingfolder>), IList<MicrosoftDynamicsCRMbulkdeletefailure> contactquotesBulkDeleteFailures = default(IList<MicrosoftDynamicsCRMbulkdeletefailure>), IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> contactquotesPrincipalObjectAttributeAccesses = default(IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess>))
         {
+            Utcconversiontimezonecode = utcconversiontimezonecode;
+            Versionnumber = versionnumber;
+            Overriddencreatedon = overriddencreatedon;
+            Quoteid = quoteid;
+            Timezoneruleversionnumber = timezoneruleversionnumber;
+            Importsequencenumber = importsequencenumber;
             Contactquoteid = contactquoteid;
             Contactid = contactid;
-            Versionnumber = versionnumber;
-            Quoteid = quoteid;
+            ContactquotesAsyncOperations = contactquotesAsyncOperations;
+            ContactquotesMailboxTrackingFolders = contactquotesMailboxTrackingFolders;
+            ContactquotesBulkDeleteFailures = contactquotesBulkDeleteFailures;
+            ContactquotesPrincipalObjectAttributeAccesses = contactquotesPrincipalObjectAttributeAccesses;
             CustomInit();
         }
 
@@ -40,6 +50,36 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// An initialization method that performs custom operations like setting defaults
         /// </summary>
         partial void CustomInit();
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "utcconversiontimezonecode")]
+        public int? Utcconversiontimezonecode { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "versionnumber")]
+        public long? Versionnumber { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "overriddencreatedon")]
+        public System.DateTimeOffset? Overriddencreatedon { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "quoteid")]
+        public string Quoteid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "timezoneruleversionnumber")]
+        public int? Timezoneruleversionnumber { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "importsequencenumber")]
+        public int? Importsequencenumber { get; set; }
 
         /// <summary>
         /// </summary>
@@ -53,13 +93,23 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "versionnumber")]
-        public long? Versionnumber { get; set; }
+        [JsonProperty(PropertyName = "contactquotes_AsyncOperations")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMasyncoperation> ContactquotesAsyncOperations { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "quoteid")]
-        public string Quoteid { get; set; }
+        [JsonProperty(PropertyName = "contactquotes_MailboxTrackingFolders")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMmailboxtrackingfolder> ContactquotesMailboxTrackingFolders { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "contactquotes_BulkDeleteFailures")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbulkdeletefailure> ContactquotesBulkDeleteFailures { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "contactquotes_PrincipalObjectAttributeAccesses")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> ContactquotesPrincipalObjectAttributeAccesses { get; set; }
 
     }
 }

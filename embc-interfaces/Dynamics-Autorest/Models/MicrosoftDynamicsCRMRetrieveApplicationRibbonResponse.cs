@@ -7,7 +7,8 @@
 namespace Gov.Jag.Embc.Interfaces.Models
 {
     using Newtonsoft.Json;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
+    
 
     /// <summary>
     /// RetrieveApplicationRibbonResponse
@@ -41,7 +42,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "CompressedApplicationRibbonXml")]
-        public object CompressedApplicationRibbonXml { get; set; }
+        [NotMapped] public object CompressedApplicationRibbonXml { get; set; }
 
     }
 }

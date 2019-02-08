@@ -9,7 +9,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
+    
 
     /// <summary>
     /// transactioncurrency
@@ -29,122 +30,132 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the
         /// MicrosoftDynamicsCRMtransactioncurrency class.
         /// </summary>
-        public MicrosoftDynamicsCRMtransactioncurrency(System.DateTimeOffset? overriddencreatedon = default(System.DateTimeOffset?), string currencyname = default(string), string isocurrencycode = default(string), string _createdonbehalfbyValue = default(string), string _organizationidValue = default(string), System.DateTimeOffset? createdon = default(System.DateTimeOffset?), string _createdbyValue = default(string), long? entityimageTimestamp = default(long?), object entityimage = default(object), int? currencyprecision = default(int?), string entityimageUrl = default(string), string _modifiedonbehalfbyValue = default(string), string transactioncurrencyid = default(string), int? importsequencenumber = default(int?), object exchangerate = default(object), string entityimageid = default(string), System.DateTimeOffset? modifiedon = default(System.DateTimeOffset?), int? statecode = default(int?), long? versionnumber = default(long?), string currencysymbol = default(string), string _modifiedbyValue = default(string), int? statuscode = default(int?), IList<MicrosoftDynamicsCRMgoal> transactionCurrencyGoal = default(IList<MicrosoftDynamicsCRMgoal>), IList<MicrosoftDynamicsCRMphonetocaseprocess> transactioncurrencyPhonetocaseprocess = default(IList<MicrosoftDynamicsCRMphonetocaseprocess>), IList<MicrosoftDynamicsCRMbookingstatus> transactionCurrencyBookingstatus = default(IList<MicrosoftDynamicsCRMbookingstatus>), IList<MicrosoftDynamicsCRMentitlement> transactionCurrencyEntitlement = default(IList<MicrosoftDynamicsCRMentitlement>), IList<MicrosoftDynamicsCRMemail> transactionCurrencyEmail = default(IList<MicrosoftDynamicsCRMemail>), IList<MicrosoftDynamicsCRMopportunityproduct> transactioncurrencyOpportunityproduct = default(IList<MicrosoftDynamicsCRMopportunityproduct>), IList<MicrosoftDynamicsCRMduplicaterecord> transactionCurrencyDuplicateBaseRecord = default(IList<MicrosoftDynamicsCRMduplicaterecord>), IList<MicrosoftDynamicsCRMbusinessunit> transactionCurrencyBusinessUnit = default(IList<MicrosoftDynamicsCRMbusinessunit>), IList<MicrosoftDynamicsCRMbookableresourcecharacteristic> transactionCurrencyBookableresourcecharacteristic = default(IList<MicrosoftDynamicsCRMbookableresourcecharacteristic>), IList<MicrosoftDynamicsCRMconnection> transactionCurrencyConnection = default(IList<MicrosoftDynamicsCRMconnection>), IList<MicrosoftDynamicsCRMdynamicpropertyassociation> dynamicPropertyAssociationTransactionCurrency = default(IList<MicrosoftDynamicsCRMdynamicpropertyassociation>), IList<MicrosoftDynamicsCRMincident> transactionCurrencyIncident = default(IList<MicrosoftDynamicsCRMincident>), IList<MicrosoftDynamicsCRMproductpricelevel> transactioncurrencyProductpricelevel = default(IList<MicrosoftDynamicsCRMproductpricelevel>), IList<MicrosoftDynamicsCRMduplicaterecord> transactionCurrencyDuplicateMatchingRecord = default(IList<MicrosoftDynamicsCRMduplicaterecord>), IList<MicrosoftDynamicsCRMcampaign> transactioncurrencyCampaign = default(IList<MicrosoftDynamicsCRMcampaign>), IList<MicrosoftDynamicsCRMcharacteristic> transactionCurrencyCharacteristic = default(IList<MicrosoftDynamicsCRMcharacteristic>), IList<MicrosoftDynamicsCRMcampaignactivity> transactioncurrencyCampaignactivity = default(IList<MicrosoftDynamicsCRMcampaignactivity>), IList<MicrosoftDynamicsCRMleadtoopportunitysalesprocess> transactioncurrencyLeadtoopportunitysalesprocess = default(IList<MicrosoftDynamicsCRMleadtoopportunitysalesprocess>), IList<MicrosoftDynamicsCRMannualfiscalcalendar> transactioncurrencyAnnualfiscalcalendar = default(IList<MicrosoftDynamicsCRMannualfiscalcalendar>), IList<MicrosoftDynamicsCRMphonecall> transactionCurrencyPhoneCall = default(IList<MicrosoftDynamicsCRMphonecall>), IList<MicrosoftDynamicsCRMrecommendeddocument> transactionCurrencyRecommendeddocument = default(IList<MicrosoftDynamicsCRMrecommendeddocument>), IList<MicrosoftDynamicsCRMsalesliterature> transactionCurrencySalesLiterature = default(IList<MicrosoftDynamicsCRMsalesliterature>), IList<MicrosoftDynamicsCRMinvoice> transactioncurrencyInvoice = default(IList<MicrosoftDynamicsCRMinvoice>), IList<MicrosoftDynamicsCRMsocialactivity> transactioncurrencySocialactivity = default(IList<MicrosoftDynamicsCRMsocialactivity>), IList<MicrosoftDynamicsCRMmailmergetemplate> transactionCurrencyMailMergeTemplate = default(IList<MicrosoftDynamicsCRMmailmergetemplate>), IList<MicrosoftDynamicsCRMactivitypointer> transactionCurrencyActivityPointer = default(IList<MicrosoftDynamicsCRMactivitypointer>), IList<MicrosoftDynamicsCRMsalesorder> transactioncurrencySalesorder = default(IList<MicrosoftDynamicsCRMsalesorder>), IList<MicrosoftDynamicsCRMsystemuser> transactionCurrencySystemUser = default(IList<MicrosoftDynamicsCRMsystemuser>), IList<MicrosoftDynamicsCRMasyncoperation> transactionCurrencyAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), IList<MicrosoftDynamicsCRMentitlementtemplate> transactionCurrencyEntitlementtemplate = default(IList<MicrosoftDynamicsCRMentitlementtemplate>), IList<MicrosoftDynamicsCRMmonthlyfiscalcalendar> transactioncurrencyMonthlyfiscalcalendar = default(IList<MicrosoftDynamicsCRMmonthlyfiscalcalendar>), IList<MicrosoftDynamicsCRMfixedmonthlyfiscalcalendar> transactioncurrencyFixedmonthlyfiscalcalendar = default(IList<MicrosoftDynamicsCRMfixedmonthlyfiscalcalendar>), IList<MicrosoftDynamicsCRMcontract> transactioncurrencyContract = default(IList<MicrosoftDynamicsCRMcontract>), IList<MicrosoftDynamicsCRMaccount> transactioncurrencyAccount = default(IList<MicrosoftDynamicsCRMaccount>), IList<MicrosoftDynamicsCRMproductassociation> transactioncurrencyProductAssociation = default(IList<MicrosoftDynamicsCRMproductassociation>), IList<MicrosoftDynamicsCRMquarterlyfiscalcalendar> transactioncurrencyQuarterlyfiscalcalendar = default(IList<MicrosoftDynamicsCRMquarterlyfiscalcalendar>), IList<MicrosoftDynamicsCRMdynamicpropertyoptionsetitem> dynamicPropertyOptionSetItemTransactionCurrency = default(IList<MicrosoftDynamicsCRMdynamicpropertyoptionsetitem>), IList<MicrosoftDynamicsCRMbookableresourcegroup> transactionCurrencyBookableresourcegroup = default(IList<MicrosoftDynamicsCRMbookableresourcegroup>), IList<MicrosoftDynamicsCRMknowledgebaserecord> transactionCurrencyKnowledgeBaseRecord = default(IList<MicrosoftDynamicsCRMknowledgebaserecord>), IList<MicrosoftDynamicsCRMknowledgearticleviews> transactioncurrencyKnowledgearticleviews = default(IList<MicrosoftDynamicsCRMknowledgearticleviews>), IList<MicrosoftDynamicsCRMquote> transactioncurrencyQuote = default(IList<MicrosoftDynamicsCRMquote>), IList<MicrosoftDynamicsCRMcustomeraddress> transactionCurrencyCustomerAddress = default(IList<MicrosoftDynamicsCRMcustomeraddress>), IList<MicrosoftDynamicsCRMfax> transactionCurrencyFax = default(IList<MicrosoftDynamicsCRMfax>), IList<MicrosoftDynamicsCRMposition> transactioncurrencyPosition = default(IList<MicrosoftDynamicsCRMposition>), IList<MicrosoftDynamicsCRMexpiredprocess> transactioncurrencyExpiredprocess = default(IList<MicrosoftDynamicsCRMexpiredprocess>), MicrosoftDynamicsCRMsystemuser createdonbehalfby = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMbookableresource> transactionCurrencyBookableresource = default(IList<MicrosoftDynamicsCRMbookableresource>), IList<MicrosoftDynamicsCRMactioncard> transactioncurrencyActioncard = default(IList<MicrosoftDynamicsCRMactioncard>), IList<MicrosoftDynamicsCRMtask> transactionCurrencyTask = default(IList<MicrosoftDynamicsCRMtask>), IList<MicrosoftDynamicsCRMorganization> basecurrencyOrganization = default(IList<MicrosoftDynamicsCRMorganization>), IList<MicrosoftDynamicsCRMquotedetail> transactioncurrencyQuotedetail = default(IList<MicrosoftDynamicsCRMquotedetail>), IList<MicrosoftDynamicsCRMcompetitor> transactioncurrencyCompetitor = default(IList<MicrosoftDynamicsCRMcompetitor>), IList<MicrosoftDynamicsCRMcontractdetail> transactioncurrencyContractdetail = default(IList<MicrosoftDynamicsCRMcontractdetail>), IList<MicrosoftDynamicsCRMdiscount> transactioncurrencyDiscount = default(IList<MicrosoftDynamicsCRMdiscount>), IList<MicrosoftDynamicsCRMlist> transactioncurrencyList = default(IList<MicrosoftDynamicsCRMlist>), IList<MicrosoftDynamicsCRMproductsubstitute> transactioncurrencyProductSubstitute = default(IList<MicrosoftDynamicsCRMproductsubstitute>), IList<MicrosoftDynamicsCRMfeedback> transactioncurrencyFeedback = default(IList<MicrosoftDynamicsCRMfeedback>), IList<MicrosoftDynamicsCRMratingvalue> transactionCurrencyRatingvalue = default(IList<MicrosoftDynamicsCRMratingvalue>), IList<MicrosoftDynamicsCRMbookableresourcebookingheader> transactionCurrencyBookableresourcebookingheader = default(IList<MicrosoftDynamicsCRMbookableresourcebookingheader>), IList<MicrosoftDynamicsCRMbookableresourcecategoryassn> transactionCurrencyBookableresourcecategoryassn = default(IList<MicrosoftDynamicsCRMbookableresourcecategoryassn>), IList<MicrosoftDynamicsCRMsimilarityrule> transactionCurrencySimilarityRule = default(IList<MicrosoftDynamicsCRMsimilarityrule>), IList<MicrosoftDynamicsCRMopportunityclose> transactioncurrencyOpportunityclose = default(IList<MicrosoftDynamicsCRMopportunityclose>), IList<MicrosoftDynamicsCRMcategory> transactioncurrencyCategory = default(IList<MicrosoftDynamicsCRMcategory>), IList<MicrosoftDynamicsCRMentitlementtemplatechannel> transactionCurrencyEntitlementtemplatechannel = default(IList<MicrosoftDynamicsCRMentitlementtemplatechannel>), IList<MicrosoftDynamicsCRMteam> transactionCurrencyTeam = default(IList<MicrosoftDynamicsCRMteam>), IList<MicrosoftDynamicsCRMsla> transactionCurrencySLA = default(IList<MicrosoftDynamicsCRMsla>), IList<MicrosoftDynamicsCRMrecurringappointmentmaster> transactionCurrencyRecurringAppointmentMaster = default(IList<MicrosoftDynamicsCRMrecurringappointmentmaster>), IList<MicrosoftDynamicsCRMequipment> transactionCurrencyEquipment = default(IList<MicrosoftDynamicsCRMequipment>), IList<MicrosoftDynamicsCRMopportunitysalesprocess> transactioncurrencyOpportunitysalesprocess = default(IList<MicrosoftDynamicsCRMopportunitysalesprocess>), IList<MicrosoftDynamicsCRMknowledgearticle> transactioncurrencyKnowledgearticle = default(IList<MicrosoftDynamicsCRMknowledgearticle>), IList<MicrosoftDynamicsCRMtheme> transactionCurrencyTheme = default(IList<MicrosoftDynamicsCRMtheme>), IList<MicrosoftDynamicsCRMknowledgearticleincident> transactioncurrencyKnowledgearticleincident = default(IList<MicrosoftDynamicsCRMknowledgearticleincident>), IList<MicrosoftDynamicsCRMletter> transactionCurrencyLetter = default(IList<MicrosoftDynamicsCRMletter>), IList<MicrosoftDynamicsCRMentitlementchannel> transactionCurrencyEntitlementchannel = default(IList<MicrosoftDynamicsCRMentitlementchannel>), IList<MicrosoftDynamicsCRMinvoicedetail> transactioncurrencyInvoicedetail = default(IList<MicrosoftDynamicsCRMinvoicedetail>), IList<MicrosoftDynamicsCRMpricelevel> transactioncurrencyPricelevel = default(IList<MicrosoftDynamicsCRMpricelevel>), MicrosoftDynamicsCRMsystemuser modifiedby = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMcampaignresponse> transactionCurrencyCampaignResponse = default(IList<MicrosoftDynamicsCRMcampaignresponse>), IList<MicrosoftDynamicsCRMlead> transactioncurrencyLead = default(IList<MicrosoftDynamicsCRMlead>), IList<MicrosoftDynamicsCRMqueue> transactionCurrencyQueue = default(IList<MicrosoftDynamicsCRMqueue>), IList<MicrosoftDynamicsCRMsocialprofile> transactioncurrencySocialProfile = default(IList<MicrosoftDynamicsCRMsocialprofile>), IList<MicrosoftDynamicsCRMopportunity> transactioncurrencyOpportunity = default(IList<MicrosoftDynamicsCRMopportunity>), IList<MicrosoftDynamicsCRMcontact> transactioncurrencyContact = default(IList<MicrosoftDynamicsCRMcontact>), IList<MicrosoftDynamicsCRMactioncarduserstate> transactionCurrencyActionCardUserState = default(IList<MicrosoftDynamicsCRMactioncarduserstate>), IList<MicrosoftDynamicsCRMappointment> transactionCurrencyAppointment = default(IList<MicrosoftDynamicsCRMappointment>), IList<MicrosoftDynamicsCRMsalesorderdetail> transactioncurrencySalesorderdetail = default(IList<MicrosoftDynamicsCRMsalesorderdetail>), IList<MicrosoftDynamicsCRMproduct> transactioncurrencyProduct = default(IList<MicrosoftDynamicsCRMproduct>), IList<MicrosoftDynamicsCRMbookableresourcecategory> transactionCurrencyBookableresourcecategory = default(IList<MicrosoftDynamicsCRMbookableresourcecategory>), IList<MicrosoftDynamicsCRMserviceappointment> transactionCurrencyServiceAppointment = default(IList<MicrosoftDynamicsCRMserviceappointment>), IList<MicrosoftDynamicsCRMsharepointsite> transactionCurrencySharePointSite = default(IList<MicrosoftDynamicsCRMsharepointsite>), IList<MicrosoftDynamicsCRMbookableresourcebooking> transactionCurrencyBookableresourcebooking = default(IList<MicrosoftDynamicsCRMbookableresourcebooking>), IList<MicrosoftDynamicsCRMdiscounttype> transactioncurrencyDiscounttype = default(IList<MicrosoftDynamicsCRMdiscounttype>), IList<MicrosoftDynamicsCRMsharepointdocumentlocation> transactionCurrencySharePointDocumentLocation = default(IList<MicrosoftDynamicsCRMsharepointdocumentlocation>), IList<MicrosoftDynamicsCRMslaitem> transactionCurrencySLAItem = default(IList<MicrosoftDynamicsCRMslaitem>), IList<MicrosoftDynamicsCRMnewprocess> transactioncurrencyNewprocess = default(IList<MicrosoftDynamicsCRMnewprocess>), IList<MicrosoftDynamicsCRMkbarticle> transactionCurrencyKbArticle = default(IList<MicrosoftDynamicsCRMkbarticle>), IList<MicrosoftDynamicsCRMqueueitem> transactionCurrencyQueueItem = default(IList<MicrosoftDynamicsCRMqueueitem>), IList<MicrosoftDynamicsCRMreportcategory> transactionCurrencyReportCategory = default(IList<MicrosoftDynamicsCRMreportcategory>), MicrosoftDynamicsCRMorganization organizationid = default(MicrosoftDynamicsCRMorganization), IList<MicrosoftDynamicsCRMsemiannualfiscalcalendar> transactioncurrencySemiannualfiscalcalendar = default(IList<MicrosoftDynamicsCRMsemiannualfiscalcalendar>), IList<MicrosoftDynamicsCRMdynamicpropertyinstance> transactionCurrencyDynamicpropertyinsatance = default(IList<MicrosoftDynamicsCRMdynamicpropertyinstance>), IList<MicrosoftDynamicsCRMusersettings> transactioncurrencyUsersettings = default(IList<MicrosoftDynamicsCRMusersettings>), IList<MicrosoftDynamicsCRMratingmodel> transactionCurrencyRatingmodel = default(IList<MicrosoftDynamicsCRMratingmodel>), IList<MicrosoftDynamicsCRMterritory> transactionCurrencyTerritory = default(IList<MicrosoftDynamicsCRMterritory>), IList<MicrosoftDynamicsCRMtranslationprocess> transactioncurrencyTranslationprocess = default(IList<MicrosoftDynamicsCRMtranslationprocess>), IList<MicrosoftDynamicsCRMslakpiinstance> transactionCurrencySlakpiinstance = default(IList<MicrosoftDynamicsCRMslakpiinstance>), IList<MicrosoftDynamicsCRMofficegraphdocument> transactionCurrencyOfficegraphdocument = default(IList<MicrosoftDynamicsCRMofficegraphdocument>), IList<MicrosoftDynamicsCRMleadaddress> transactionCurrencyLeadAddress = default(IList<MicrosoftDynamicsCRMleadaddress>), MicrosoftDynamicsCRMsystemuser modifiedonbehalfby = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMsyncerror> transactionCurrencySyncErrors = default(IList<MicrosoftDynamicsCRMsyncerror>), MicrosoftDynamicsCRMsystemuser createdby = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMinteractionforemail> transactionCurrencyInteractionForEmail = default(IList<MicrosoftDynamicsCRMinteractionforemail>))
+        public MicrosoftDynamicsCRMtransactioncurrency(string _createdonbehalfbyValue = default(string), string isocurrencycode = default(string), string _createdbyValue = default(string), int? statuscode = default(int?), string _organizationidValue = default(string), string currencyname = default(string), System.DateTimeOffset? overriddencreatedon = default(System.DateTimeOffset?), string _modifiedonbehalfbyValue = default(string), object entityimage = default(object), string entityimageid = default(string), object exchangerate = default(object), string currencysymbol = default(string), string entityimageUrl = default(string), System.DateTimeOffset? createdon = default(System.DateTimeOffset?), int? currencyprecision = default(int?), System.DateTimeOffset? modifiedon = default(System.DateTimeOffset?), long? entityimageTimestamp = default(long?), string transactioncurrencyid = default(string), int? statecode = default(int?), int? importsequencenumber = default(int?), long? versionnumber = default(long?), string _modifiedbyValue = default(string), IList<MicrosoftDynamicsCRMterritory> transactionCurrencyTerritory = default(IList<MicrosoftDynamicsCRMterritory>), IList<MicrosoftDynamicsCRMlead> transactioncurrencyLead = default(IList<MicrosoftDynamicsCRMlead>), IList<MicrosoftDynamicsCRMleadaddress> transactionCurrencyLeadAddress = default(IList<MicrosoftDynamicsCRMleadaddress>), IList<MicrosoftDynamicsCRMproduct> transactioncurrencyProduct = default(IList<MicrosoftDynamicsCRMproduct>), IList<MicrosoftDynamicsCRMproductpricelevel> transactioncurrencyProductpricelevel = default(IList<MicrosoftDynamicsCRMproductpricelevel>), IList<MicrosoftDynamicsCRMdynamicpropertyassociation> dynamicPropertyAssociationTransactionCurrency = default(IList<MicrosoftDynamicsCRMdynamicpropertyassociation>), IList<MicrosoftDynamicsCRMdynamicpropertyinstance> transactionCurrencyDynamicpropertyinsatance = default(IList<MicrosoftDynamicsCRMdynamicpropertyinstance>), IList<MicrosoftDynamicsCRMdynamicpropertyoptionsetitem> dynamicPropertyOptionSetItemTransactionCurrency = default(IList<MicrosoftDynamicsCRMdynamicpropertyoptionsetitem>), IList<MicrosoftDynamicsCRMproductassociation> transactioncurrencyProductAssociation = default(IList<MicrosoftDynamicsCRMproductassociation>), IList<MicrosoftDynamicsCRMproductsubstitute> transactioncurrencyProductSubstitute = default(IList<MicrosoftDynamicsCRMproductsubstitute>), IList<MicrosoftDynamicsCRMpricelevel> transactioncurrencyPricelevel = default(IList<MicrosoftDynamicsCRMpricelevel>), IList<MicrosoftDynamicsCRMbookableresource> transactionCurrencyBookableresource = default(IList<MicrosoftDynamicsCRMbookableresource>), IList<MicrosoftDynamicsCRMbookableresourcebooking> transactionCurrencyBookableresourcebooking = default(IList<MicrosoftDynamicsCRMbookableresourcebooking>), IList<MicrosoftDynamicsCRMbookableresourcebookingheader> transactionCurrencyBookableresourcebookingheader = default(IList<MicrosoftDynamicsCRMbookableresourcebookingheader>), IList<MicrosoftDynamicsCRMbookableresourcecategory> transactionCurrencyBookableresourcecategory = default(IList<MicrosoftDynamicsCRMbookableresourcecategory>), IList<MicrosoftDynamicsCRMbookableresourcecategoryassn> transactionCurrencyBookableresourcecategoryassn = default(IList<MicrosoftDynamicsCRMbookableresourcecategoryassn>), IList<MicrosoftDynamicsCRMbookableresourcecharacteristic> transactionCurrencyBookableresourcecharacteristic = default(IList<MicrosoftDynamicsCRMbookableresourcecharacteristic>), IList<MicrosoftDynamicsCRMbookableresourcegroup> transactionCurrencyBookableresourcegroup = default(IList<MicrosoftDynamicsCRMbookableresourcegroup>), IList<MicrosoftDynamicsCRMbookingstatus> transactionCurrencyBookingstatus = default(IList<MicrosoftDynamicsCRMbookingstatus>), IList<MicrosoftDynamicsCRMcharacteristic> transactionCurrencyCharacteristic = default(IList<MicrosoftDynamicsCRMcharacteristic>), IList<MicrosoftDynamicsCRMratingmodel> transactionCurrencyRatingmodel = default(IList<MicrosoftDynamicsCRMratingmodel>), IList<MicrosoftDynamicsCRMratingvalue> transactionCurrencyRatingvalue = default(IList<MicrosoftDynamicsCRMratingvalue>), IList<MicrosoftDynamicsCRMbulkoperation> bulkoperationTransactioncurrencyTransactioncurrencyid = default(IList<MicrosoftDynamicsCRMbulkoperation>), IList<MicrosoftDynamicsCRMcampaign> transactioncurrencyCampaign = default(IList<MicrosoftDynamicsCRMcampaign>), IList<MicrosoftDynamicsCRMcampaignactivity> transactioncurrencyCampaignactivity = default(IList<MicrosoftDynamicsCRMcampaignactivity>), IList<MicrosoftDynamicsCRMcampaignresponse> transactionCurrencyCampaignResponse = default(IList<MicrosoftDynamicsCRMcampaignresponse>), IList<MicrosoftDynamicsCRMlist> transactioncurrencyList = default(IList<MicrosoftDynamicsCRMlist>), IList<MicrosoftDynamicsCRMcontract> transactioncurrencyContract = default(IList<MicrosoftDynamicsCRMcontract>), IList<MicrosoftDynamicsCRMcontractdetail> transactioncurrencyContractdetail = default(IList<MicrosoftDynamicsCRMcontractdetail>), IList<MicrosoftDynamicsCRMincidentresolution> incidentresolutionTransactioncurrencyTransactioncurrencyid = default(IList<MicrosoftDynamicsCRMincidentresolution>), IList<MicrosoftDynamicsCRMserviceappointment> transactionCurrencyServiceAppointment = default(IList<MicrosoftDynamicsCRMserviceappointment>), IList<MicrosoftDynamicsCRMphonetocaseprocess> transactioncurrencyPhonetocaseprocess = default(IList<MicrosoftDynamicsCRMphonetocaseprocess>), IList<MicrosoftDynamicsCRMequipment> transactionCurrencyEquipment = default(IList<MicrosoftDynamicsCRMequipment>), IList<MicrosoftDynamicsCRMincident> transactionCurrencyIncident = default(IList<MicrosoftDynamicsCRMincident>), IList<MicrosoftDynamicsCRMentitlementtemplatechannel> transactionCurrencyEntitlementtemplatechannel = default(IList<MicrosoftDynamicsCRMentitlementtemplatechannel>), IList<MicrosoftDynamicsCRMentitlement> transactionCurrencyEntitlement = default(IList<MicrosoftDynamicsCRMentitlement>), IList<MicrosoftDynamicsCRMentitlementtemplate> transactionCurrencyEntitlementtemplate = default(IList<MicrosoftDynamicsCRMentitlementtemplate>), IList<MicrosoftDynamicsCRMentitlementchannel> transactionCurrencyEntitlementchannel = default(IList<MicrosoftDynamicsCRMentitlementchannel>), IList<MicrosoftDynamicsCRMknowledgearticleincident> transactioncurrencyKnowledgearticleincident = default(IList<MicrosoftDynamicsCRMknowledgearticleincident>), IList<MicrosoftDynamicsCRMdiscount> transactioncurrencyDiscount = default(IList<MicrosoftDynamicsCRMdiscount>), IList<MicrosoftDynamicsCRMinvoice> transactioncurrencyInvoice = default(IList<MicrosoftDynamicsCRMinvoice>), IList<MicrosoftDynamicsCRMinvoicedetail> transactioncurrencyInvoicedetail = default(IList<MicrosoftDynamicsCRMinvoicedetail>), IList<MicrosoftDynamicsCRMopportunity> transactioncurrencyOpportunity = default(IList<MicrosoftDynamicsCRMopportunity>), IList<MicrosoftDynamicsCRMopportunityclose> transactioncurrencyOpportunityclose = default(IList<MicrosoftDynamicsCRMopportunityclose>), IList<MicrosoftDynamicsCRMopportunityproduct> transactioncurrencyOpportunityproduct = default(IList<MicrosoftDynamicsCRMopportunityproduct>), IList<MicrosoftDynamicsCRMorderclose> ordercloseTransactioncurrencyTransactioncurrencyid = default(IList<MicrosoftDynamicsCRMorderclose>), IList<MicrosoftDynamicsCRMquote> transactioncurrencyQuote = default(IList<MicrosoftDynamicsCRMquote>), IList<MicrosoftDynamicsCRMquoteclose> quotecloseTransactioncurrencyTransactioncurrencyid = default(IList<MicrosoftDynamicsCRMquoteclose>), IList<MicrosoftDynamicsCRMquotedetail> transactioncurrencyQuotedetail = default(IList<MicrosoftDynamicsCRMquotedetail>), IList<MicrosoftDynamicsCRMsalesorder> transactioncurrencySalesorder = default(IList<MicrosoftDynamicsCRMsalesorder>), IList<MicrosoftDynamicsCRMsalesorderdetail> transactioncurrencySalesorderdetail = default(IList<MicrosoftDynamicsCRMsalesorderdetail>), IList<MicrosoftDynamicsCRMcompetitor> transactioncurrencyCompetitor = default(IList<MicrosoftDynamicsCRMcompetitor>), IList<MicrosoftDynamicsCRMdiscounttype> transactioncurrencyDiscounttype = default(IList<MicrosoftDynamicsCRMdiscounttype>), IList<MicrosoftDynamicsCRMsalesliterature> transactionCurrencySalesLiterature = default(IList<MicrosoftDynamicsCRMsalesliterature>), IList<MicrosoftDynamicsCRMleadtoopportunitysalesprocess> transactioncurrencyLeadtoopportunitysalesprocess = default(IList<MicrosoftDynamicsCRMleadtoopportunitysalesprocess>), IList<MicrosoftDynamicsCRMopportunitysalesprocess> transactioncurrencyOpportunitysalesprocess = default(IList<MicrosoftDynamicsCRMopportunitysalesprocess>), IList<MicrosoftDynamicsCRMgoal> transactionCurrencyGoal = default(IList<MicrosoftDynamicsCRMgoal>), IList<MicrosoftDynamicsCRMemail> transactionCurrencyEmail = default(IList<MicrosoftDynamicsCRMemail>), IList<MicrosoftDynamicsCRMduplicaterecord> transactionCurrencyDuplicateBaseRecord = default(IList<MicrosoftDynamicsCRMduplicaterecord>), IList<MicrosoftDynamicsCRMbusinessunit> transactionCurrencyBusinessUnit = default(IList<MicrosoftDynamicsCRMbusinessunit>), IList<MicrosoftDynamicsCRMconnection> transactionCurrencyConnection = default(IList<MicrosoftDynamicsCRMconnection>), IList<MicrosoftDynamicsCRMduplicaterecord> transactionCurrencyDuplicateMatchingRecord = default(IList<MicrosoftDynamicsCRMduplicaterecord>), IList<MicrosoftDynamicsCRMannualfiscalcalendar> transactioncurrencyAnnualfiscalcalendar = default(IList<MicrosoftDynamicsCRMannualfiscalcalendar>), IList<MicrosoftDynamicsCRMprocesssession> transactionCurrencyProcessSessions = default(IList<MicrosoftDynamicsCRMprocesssession>), IList<MicrosoftDynamicsCRMphonecall> transactionCurrencyPhoneCall = default(IList<MicrosoftDynamicsCRMphonecall>), IList<MicrosoftDynamicsCRMrecommendeddocument> transactionCurrencyRecommendeddocument = default(IList<MicrosoftDynamicsCRMrecommendeddocument>), IList<MicrosoftDynamicsCRMsocialactivity> transactioncurrencySocialactivity = default(IList<MicrosoftDynamicsCRMsocialactivity>), IList<MicrosoftDynamicsCRMmailmergetemplate> transactionCurrencyMailMergeTemplate = default(IList<MicrosoftDynamicsCRMmailmergetemplate>), IList<MicrosoftDynamicsCRMactivitypointer> transactionCurrencyActivityPointer = default(IList<MicrosoftDynamicsCRMactivitypointer>), IList<MicrosoftDynamicsCRMsystemuser> transactionCurrencySystemUser = default(IList<MicrosoftDynamicsCRMsystemuser>), IList<MicrosoftDynamicsCRMasyncoperation> transactionCurrencyAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), IList<MicrosoftDynamicsCRMmonthlyfiscalcalendar> transactioncurrencyMonthlyfiscalcalendar = default(IList<MicrosoftDynamicsCRMmonthlyfiscalcalendar>), IList<MicrosoftDynamicsCRMfixedmonthlyfiscalcalendar> transactioncurrencyFixedmonthlyfiscalcalendar = default(IList<MicrosoftDynamicsCRMfixedmonthlyfiscalcalendar>), IList<MicrosoftDynamicsCRMaccount> transactioncurrencyAccount = default(IList<MicrosoftDynamicsCRMaccount>), IList<MicrosoftDynamicsCRMquarterlyfiscalcalendar> transactioncurrencyQuarterlyfiscalcalendar = default(IList<MicrosoftDynamicsCRMquarterlyfiscalcalendar>), IList<MicrosoftDynamicsCRMknowledgebaserecord> transactionCurrencyKnowledgeBaseRecord = default(IList<MicrosoftDynamicsCRMknowledgebaserecord>), IList<MicrosoftDynamicsCRMknowledgearticleviews> transactioncurrencyKnowledgearticleviews = default(IList<MicrosoftDynamicsCRMknowledgearticleviews>), IList<MicrosoftDynamicsCRMcustomeraddress> transactionCurrencyCustomerAddress = default(IList<MicrosoftDynamicsCRMcustomeraddress>), IList<MicrosoftDynamicsCRMfax> transactionCurrencyFax = default(IList<MicrosoftDynamicsCRMfax>), IList<MicrosoftDynamicsCRMposition> transactioncurrencyPosition = default(IList<MicrosoftDynamicsCRMposition>), IList<MicrosoftDynamicsCRMexpiredprocess> transactioncurrencyExpiredprocess = default(IList<MicrosoftDynamicsCRMexpiredprocess>), MicrosoftDynamicsCRMsystemuser createdonbehalfby = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMactioncard> transactioncurrencyActioncard = default(IList<MicrosoftDynamicsCRMactioncard>), IList<MicrosoftDynamicsCRMtask> transactionCurrencyTask = default(IList<MicrosoftDynamicsCRMtask>), IList<MicrosoftDynamicsCRMorganization> basecurrencyOrganization = default(IList<MicrosoftDynamicsCRMorganization>), IList<MicrosoftDynamicsCRMfeedback> transactioncurrencyFeedback = default(IList<MicrosoftDynamicsCRMfeedback>), IList<MicrosoftDynamicsCRMsimilarityrule> transactionCurrencySimilarityRule = default(IList<MicrosoftDynamicsCRMsimilarityrule>), IList<MicrosoftDynamicsCRMcategory> transactioncurrencyCategory = default(IList<MicrosoftDynamicsCRMcategory>), IList<MicrosoftDynamicsCRMteam> transactionCurrencyTeam = default(IList<MicrosoftDynamicsCRMteam>), IList<MicrosoftDynamicsCRMsla> transactionCurrencySLA = default(IList<MicrosoftDynamicsCRMsla>), IList<MicrosoftDynamicsCRMrecurringappointmentmaster> transactionCurrencyRecurringAppointmentMaster = default(IList<MicrosoftDynamicsCRMrecurringappointmentmaster>), IList<MicrosoftDynamicsCRMknowledgearticle> transactioncurrencyKnowledgearticle = default(IList<MicrosoftDynamicsCRMknowledgearticle>), IList<MicrosoftDynamicsCRMtheme> transactionCurrencyTheme = default(IList<MicrosoftDynamicsCRMtheme>), IList<MicrosoftDynamicsCRMletter> transactionCurrencyLetter = default(IList<MicrosoftDynamicsCRMletter>), MicrosoftDynamicsCRMsystemuser modifiedby = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMusermapping> transactionCurrencyUserMapping = default(IList<MicrosoftDynamicsCRMusermapping>), IList<MicrosoftDynamicsCRMqueue> transactionCurrencyQueue = default(IList<MicrosoftDynamicsCRMqueue>), IList<MicrosoftDynamicsCRMsocialprofile> transactioncurrencySocialProfile = default(IList<MicrosoftDynamicsCRMsocialprofile>), IList<MicrosoftDynamicsCRMcontact> transactioncurrencyContact = default(IList<MicrosoftDynamicsCRMcontact>), IList<MicrosoftDynamicsCRMactioncarduserstate> transactionCurrencyActionCardUserState = default(IList<MicrosoftDynamicsCRMactioncarduserstate>), IList<MicrosoftDynamicsCRMappointment> transactionCurrencyAppointment = default(IList<MicrosoftDynamicsCRMappointment>), IList<MicrosoftDynamicsCRMsharepointsite> transactionCurrencySharePointSite = default(IList<MicrosoftDynamicsCRMsharepointsite>), IList<MicrosoftDynamicsCRMsharepointdocumentlocation> transactionCurrencySharePointDocumentLocation = default(IList<MicrosoftDynamicsCRMsharepointdocumentlocation>), IList<MicrosoftDynamicsCRMslaitem> transactionCurrencySLAItem = default(IList<MicrosoftDynamicsCRMslaitem>), IList<MicrosoftDynamicsCRMnewprocess> transactioncurrencyNewprocess = default(IList<MicrosoftDynamicsCRMnewprocess>), IList<MicrosoftDynamicsCRMkbarticle> transactionCurrencyKbArticle = default(IList<MicrosoftDynamicsCRMkbarticle>), IList<MicrosoftDynamicsCRMqueueitem> transactionCurrencyQueueItem = default(IList<MicrosoftDynamicsCRMqueueitem>), IList<MicrosoftDynamicsCRMreportcategory> transactionCurrencyReportCategory = default(IList<MicrosoftDynamicsCRMreportcategory>), MicrosoftDynamicsCRMorganization organizationid = default(MicrosoftDynamicsCRMorganization), IList<MicrosoftDynamicsCRMsemiannualfiscalcalendar> transactioncurrencySemiannualfiscalcalendar = default(IList<MicrosoftDynamicsCRMsemiannualfiscalcalendar>), IList<MicrosoftDynamicsCRMusersettings> transactioncurrencyUsersettings = default(IList<MicrosoftDynamicsCRMusersettings>), IList<MicrosoftDynamicsCRMtranslationprocess> transactioncurrencyTranslationprocess = default(IList<MicrosoftDynamicsCRMtranslationprocess>), IList<MicrosoftDynamicsCRMslakpiinstance> transactionCurrencySlakpiinstance = default(IList<MicrosoftDynamicsCRMslakpiinstance>), IList<MicrosoftDynamicsCRMofficegraphdocument> transactionCurrencyOfficegraphdocument = default(IList<MicrosoftDynamicsCRMofficegraphdocument>), MicrosoftDynamicsCRMsystemuser modifiedonbehalfby = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMsyncerror> transactionCurrencySyncErrors = default(IList<MicrosoftDynamicsCRMsyncerror>), MicrosoftDynamicsCRMsystemuser createdby = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMinteractionforemail> transactionCurrencyInteractionForEmail = default(IList<MicrosoftDynamicsCRMinteractionforemail>))
         {
-            Overriddencreatedon = overriddencreatedon;
-            Currencyname = currencyname;
-            Isocurrencycode = isocurrencycode;
             this._createdonbehalfbyValue = _createdonbehalfbyValue;
-            this._organizationidValue = _organizationidValue;
-            Createdon = createdon;
+            Isocurrencycode = isocurrencycode;
             this._createdbyValue = _createdbyValue;
-            EntityimageTimestamp = entityimageTimestamp;
-            Entityimage = entityimage;
-            Currencyprecision = currencyprecision;
-            EntityimageUrl = entityimageUrl;
-            this._modifiedonbehalfbyValue = _modifiedonbehalfbyValue;
-            Transactioncurrencyid = transactioncurrencyid;
-            Importsequencenumber = importsequencenumber;
-            Exchangerate = exchangerate;
-            Entityimageid = entityimageid;
-            Modifiedon = modifiedon;
-            Statecode = statecode;
-            Versionnumber = versionnumber;
-            Currencysymbol = currencysymbol;
-            this._modifiedbyValue = _modifiedbyValue;
             Statuscode = statuscode;
-            TransactionCurrencyGoal = transactionCurrencyGoal;
-            TransactioncurrencyPhonetocaseprocess = transactioncurrencyPhonetocaseprocess;
+            this._organizationidValue = _organizationidValue;
+            Currencyname = currencyname;
+            Overriddencreatedon = overriddencreatedon;
+            this._modifiedonbehalfbyValue = _modifiedonbehalfbyValue;
+            Entityimage = entityimage;
+            Entityimageid = entityimageid;
+            Exchangerate = exchangerate;
+            Currencysymbol = currencysymbol;
+            EntityimageUrl = entityimageUrl;
+            Createdon = createdon;
+            Currencyprecision = currencyprecision;
+            Modifiedon = modifiedon;
+            EntityimageTimestamp = entityimageTimestamp;
+            Transactioncurrencyid = transactioncurrencyid;
+            Statecode = statecode;
+            Importsequencenumber = importsequencenumber;
+            Versionnumber = versionnumber;
+            this._modifiedbyValue = _modifiedbyValue;
+            TransactionCurrencyTerritory = transactionCurrencyTerritory;
+            TransactioncurrencyLead = transactioncurrencyLead;
+            TransactionCurrencyLeadAddress = transactionCurrencyLeadAddress;
+            TransactioncurrencyProduct = transactioncurrencyProduct;
+            TransactioncurrencyProductpricelevel = transactioncurrencyProductpricelevel;
+            DynamicPropertyAssociationTransactionCurrency = dynamicPropertyAssociationTransactionCurrency;
+            TransactionCurrencyDynamicpropertyinsatance = transactionCurrencyDynamicpropertyinsatance;
+            DynamicPropertyOptionSetItemTransactionCurrency = dynamicPropertyOptionSetItemTransactionCurrency;
+            TransactioncurrencyProductAssociation = transactioncurrencyProductAssociation;
+            TransactioncurrencyProductSubstitute = transactioncurrencyProductSubstitute;
+            TransactioncurrencyPricelevel = transactioncurrencyPricelevel;
+            TransactionCurrencyBookableresource = transactionCurrencyBookableresource;
+            TransactionCurrencyBookableresourcebooking = transactionCurrencyBookableresourcebooking;
+            TransactionCurrencyBookableresourcebookingheader = transactionCurrencyBookableresourcebookingheader;
+            TransactionCurrencyBookableresourcecategory = transactionCurrencyBookableresourcecategory;
+            TransactionCurrencyBookableresourcecategoryassn = transactionCurrencyBookableresourcecategoryassn;
+            TransactionCurrencyBookableresourcecharacteristic = transactionCurrencyBookableresourcecharacteristic;
+            TransactionCurrencyBookableresourcegroup = transactionCurrencyBookableresourcegroup;
             TransactionCurrencyBookingstatus = transactionCurrencyBookingstatus;
+            TransactionCurrencyCharacteristic = transactionCurrencyCharacteristic;
+            TransactionCurrencyRatingmodel = transactionCurrencyRatingmodel;
+            TransactionCurrencyRatingvalue = transactionCurrencyRatingvalue;
+            BulkoperationTransactioncurrencyTransactioncurrencyid = bulkoperationTransactioncurrencyTransactioncurrencyid;
+            TransactioncurrencyCampaign = transactioncurrencyCampaign;
+            TransactioncurrencyCampaignactivity = transactioncurrencyCampaignactivity;
+            TransactionCurrencyCampaignResponse = transactionCurrencyCampaignResponse;
+            TransactioncurrencyList = transactioncurrencyList;
+            TransactioncurrencyContract = transactioncurrencyContract;
+            TransactioncurrencyContractdetail = transactioncurrencyContractdetail;
+            IncidentresolutionTransactioncurrencyTransactioncurrencyid = incidentresolutionTransactioncurrencyTransactioncurrencyid;
+            TransactionCurrencyServiceAppointment = transactionCurrencyServiceAppointment;
+            TransactioncurrencyPhonetocaseprocess = transactioncurrencyPhonetocaseprocess;
+            TransactionCurrencyEquipment = transactionCurrencyEquipment;
+            TransactionCurrencyIncident = transactionCurrencyIncident;
+            TransactionCurrencyEntitlementtemplatechannel = transactionCurrencyEntitlementtemplatechannel;
             TransactionCurrencyEntitlement = transactionCurrencyEntitlement;
-            TransactionCurrencyEmail = transactionCurrencyEmail;
+            TransactionCurrencyEntitlementtemplate = transactionCurrencyEntitlementtemplate;
+            TransactionCurrencyEntitlementchannel = transactionCurrencyEntitlementchannel;
+            TransactioncurrencyKnowledgearticleincident = transactioncurrencyKnowledgearticleincident;
+            TransactioncurrencyDiscount = transactioncurrencyDiscount;
+            TransactioncurrencyInvoice = transactioncurrencyInvoice;
+            TransactioncurrencyInvoicedetail = transactioncurrencyInvoicedetail;
+            TransactioncurrencyOpportunity = transactioncurrencyOpportunity;
+            TransactioncurrencyOpportunityclose = transactioncurrencyOpportunityclose;
             TransactioncurrencyOpportunityproduct = transactioncurrencyOpportunityproduct;
+            OrdercloseTransactioncurrencyTransactioncurrencyid = ordercloseTransactioncurrencyTransactioncurrencyid;
+            TransactioncurrencyQuote = transactioncurrencyQuote;
+            QuotecloseTransactioncurrencyTransactioncurrencyid = quotecloseTransactioncurrencyTransactioncurrencyid;
+            TransactioncurrencyQuotedetail = transactioncurrencyQuotedetail;
+            TransactioncurrencySalesorder = transactioncurrencySalesorder;
+            TransactioncurrencySalesorderdetail = transactioncurrencySalesorderdetail;
+            TransactioncurrencyCompetitor = transactioncurrencyCompetitor;
+            TransactioncurrencyDiscounttype = transactioncurrencyDiscounttype;
+            TransactionCurrencySalesLiterature = transactionCurrencySalesLiterature;
+            TransactioncurrencyLeadtoopportunitysalesprocess = transactioncurrencyLeadtoopportunitysalesprocess;
+            TransactioncurrencyOpportunitysalesprocess = transactioncurrencyOpportunitysalesprocess;
+            TransactionCurrencyGoal = transactionCurrencyGoal;
+            TransactionCurrencyEmail = transactionCurrencyEmail;
             TransactionCurrencyDuplicateBaseRecord = transactionCurrencyDuplicateBaseRecord;
             TransactionCurrencyBusinessUnit = transactionCurrencyBusinessUnit;
-            TransactionCurrencyBookableresourcecharacteristic = transactionCurrencyBookableresourcecharacteristic;
             TransactionCurrencyConnection = transactionCurrencyConnection;
-            DynamicPropertyAssociationTransactionCurrency = dynamicPropertyAssociationTransactionCurrency;
-            TransactionCurrencyIncident = transactionCurrencyIncident;
-            TransactioncurrencyProductpricelevel = transactioncurrencyProductpricelevel;
             TransactionCurrencyDuplicateMatchingRecord = transactionCurrencyDuplicateMatchingRecord;
-            TransactioncurrencyCampaign = transactioncurrencyCampaign;
-            TransactionCurrencyCharacteristic = transactionCurrencyCharacteristic;
-            TransactioncurrencyCampaignactivity = transactioncurrencyCampaignactivity;
-            TransactioncurrencyLeadtoopportunitysalesprocess = transactioncurrencyLeadtoopportunitysalesprocess;
             TransactioncurrencyAnnualfiscalcalendar = transactioncurrencyAnnualfiscalcalendar;
+            TransactionCurrencyProcessSessions = transactionCurrencyProcessSessions;
             TransactionCurrencyPhoneCall = transactionCurrencyPhoneCall;
             TransactionCurrencyRecommendeddocument = transactionCurrencyRecommendeddocument;
-            TransactionCurrencySalesLiterature = transactionCurrencySalesLiterature;
-            TransactioncurrencyInvoice = transactioncurrencyInvoice;
             TransactioncurrencySocialactivity = transactioncurrencySocialactivity;
             TransactionCurrencyMailMergeTemplate = transactionCurrencyMailMergeTemplate;
             TransactionCurrencyActivityPointer = transactionCurrencyActivityPointer;
-            TransactioncurrencySalesorder = transactioncurrencySalesorder;
             TransactionCurrencySystemUser = transactionCurrencySystemUser;
             TransactionCurrencyAsyncOperations = transactionCurrencyAsyncOperations;
-            TransactionCurrencyEntitlementtemplate = transactionCurrencyEntitlementtemplate;
             TransactioncurrencyMonthlyfiscalcalendar = transactioncurrencyMonthlyfiscalcalendar;
             TransactioncurrencyFixedmonthlyfiscalcalendar = transactioncurrencyFixedmonthlyfiscalcalendar;
-            TransactioncurrencyContract = transactioncurrencyContract;
             TransactioncurrencyAccount = transactioncurrencyAccount;
-            TransactioncurrencyProductAssociation = transactioncurrencyProductAssociation;
             TransactioncurrencyQuarterlyfiscalcalendar = transactioncurrencyQuarterlyfiscalcalendar;
-            DynamicPropertyOptionSetItemTransactionCurrency = dynamicPropertyOptionSetItemTransactionCurrency;
-            TransactionCurrencyBookableresourcegroup = transactionCurrencyBookableresourcegroup;
             TransactionCurrencyKnowledgeBaseRecord = transactionCurrencyKnowledgeBaseRecord;
             TransactioncurrencyKnowledgearticleviews = transactioncurrencyKnowledgearticleviews;
-            TransactioncurrencyQuote = transactioncurrencyQuote;
             TransactionCurrencyCustomerAddress = transactionCurrencyCustomerAddress;
             TransactionCurrencyFax = transactionCurrencyFax;
             TransactioncurrencyPosition = transactioncurrencyPosition;
             TransactioncurrencyExpiredprocess = transactioncurrencyExpiredprocess;
             Createdonbehalfby = createdonbehalfby;
-            TransactionCurrencyBookableresource = transactionCurrencyBookableresource;
             TransactioncurrencyActioncard = transactioncurrencyActioncard;
             TransactionCurrencyTask = transactionCurrencyTask;
             BasecurrencyOrganization = basecurrencyOrganization;
-            TransactioncurrencyQuotedetail = transactioncurrencyQuotedetail;
-            TransactioncurrencyCompetitor = transactioncurrencyCompetitor;
-            TransactioncurrencyContractdetail = transactioncurrencyContractdetail;
-            TransactioncurrencyDiscount = transactioncurrencyDiscount;
-            TransactioncurrencyList = transactioncurrencyList;
-            TransactioncurrencyProductSubstitute = transactioncurrencyProductSubstitute;
             TransactioncurrencyFeedback = transactioncurrencyFeedback;
-            TransactionCurrencyRatingvalue = transactionCurrencyRatingvalue;
-            TransactionCurrencyBookableresourcebookingheader = transactionCurrencyBookableresourcebookingheader;
-            TransactionCurrencyBookableresourcecategoryassn = transactionCurrencyBookableresourcecategoryassn;
             TransactionCurrencySimilarityRule = transactionCurrencySimilarityRule;
-            TransactioncurrencyOpportunityclose = transactioncurrencyOpportunityclose;
             TransactioncurrencyCategory = transactioncurrencyCategory;
-            TransactionCurrencyEntitlementtemplatechannel = transactionCurrencyEntitlementtemplatechannel;
             TransactionCurrencyTeam = transactionCurrencyTeam;
             TransactionCurrencySLA = transactionCurrencySLA;
             TransactionCurrencyRecurringAppointmentMaster = transactionCurrencyRecurringAppointmentMaster;
-            TransactionCurrencyEquipment = transactionCurrencyEquipment;
-            TransactioncurrencyOpportunitysalesprocess = transactioncurrencyOpportunitysalesprocess;
             TransactioncurrencyKnowledgearticle = transactioncurrencyKnowledgearticle;
             TransactionCurrencyTheme = transactionCurrencyTheme;
-            TransactioncurrencyKnowledgearticleincident = transactioncurrencyKnowledgearticleincident;
             TransactionCurrencyLetter = transactionCurrencyLetter;
-            TransactionCurrencyEntitlementchannel = transactionCurrencyEntitlementchannel;
-            TransactioncurrencyInvoicedetail = transactioncurrencyInvoicedetail;
-            TransactioncurrencyPricelevel = transactioncurrencyPricelevel;
             Modifiedby = modifiedby;
-            TransactionCurrencyCampaignResponse = transactionCurrencyCampaignResponse;
-            TransactioncurrencyLead = transactioncurrencyLead;
+            TransactionCurrencyUserMapping = transactionCurrencyUserMapping;
             TransactionCurrencyQueue = transactionCurrencyQueue;
             TransactioncurrencySocialProfile = transactioncurrencySocialProfile;
-            TransactioncurrencyOpportunity = transactioncurrencyOpportunity;
             TransactioncurrencyContact = transactioncurrencyContact;
             TransactionCurrencyActionCardUserState = transactionCurrencyActionCardUserState;
             TransactionCurrencyAppointment = transactionCurrencyAppointment;
-            TransactioncurrencySalesorderdetail = transactioncurrencySalesorderdetail;
-            TransactioncurrencyProduct = transactioncurrencyProduct;
-            TransactionCurrencyBookableresourcecategory = transactionCurrencyBookableresourcecategory;
-            TransactionCurrencyServiceAppointment = transactionCurrencyServiceAppointment;
             TransactionCurrencySharePointSite = transactionCurrencySharePointSite;
-            TransactionCurrencyBookableresourcebooking = transactionCurrencyBookableresourcebooking;
-            TransactioncurrencyDiscounttype = transactioncurrencyDiscounttype;
             TransactionCurrencySharePointDocumentLocation = transactionCurrencySharePointDocumentLocation;
             TransactionCurrencySLAItem = transactionCurrencySLAItem;
             TransactioncurrencyNewprocess = transactioncurrencyNewprocess;
@@ -153,14 +164,10 @@ namespace Gov.Jag.Embc.Interfaces.Models
             TransactionCurrencyReportCategory = transactionCurrencyReportCategory;
             Organizationid = organizationid;
             TransactioncurrencySemiannualfiscalcalendar = transactioncurrencySemiannualfiscalcalendar;
-            TransactionCurrencyDynamicpropertyinsatance = transactionCurrencyDynamicpropertyinsatance;
             TransactioncurrencyUsersettings = transactioncurrencyUsersettings;
-            TransactionCurrencyRatingmodel = transactionCurrencyRatingmodel;
-            TransactionCurrencyTerritory = transactionCurrencyTerritory;
             TransactioncurrencyTranslationprocess = transactioncurrencyTranslationprocess;
             TransactionCurrencySlakpiinstance = transactionCurrencySlakpiinstance;
             TransactionCurrencyOfficegraphdocument = transactionCurrencyOfficegraphdocument;
-            TransactionCurrencyLeadAddress = transactionCurrencyLeadAddress;
             Modifiedonbehalfby = modifiedonbehalfby;
             TransactionCurrencySyncErrors = transactionCurrencySyncErrors;
             Createdby = createdby;
@@ -175,13 +182,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "overriddencreatedon")]
-        public System.DateTimeOffset? Overriddencreatedon { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "currencyname")]
-        public string Currencyname { get; set; }
+        [JsonProperty(PropertyName = "_createdonbehalfby_value")]
+        public string _createdonbehalfbyValue { get; set; }
 
         /// <summary>
         /// </summary>
@@ -190,93 +192,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "_createdonbehalfby_value")]
-        public string _createdonbehalfbyValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_organizationid_value")]
-        public string _organizationidValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "createdon")]
-        public System.DateTimeOffset? Createdon { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "_createdby_value")]
         public string _createdbyValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "entityimage_timestamp")]
-        public long? EntityimageTimestamp { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "entityimage")]
-        public object Entityimage { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "currencyprecision")]
-        public int? Currencyprecision { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "entityimage_url")]
-        public string EntityimageUrl { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_modifiedonbehalfby_value")]
-        public string _modifiedonbehalfbyValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrencyid")]
-        public string Transactioncurrencyid { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "importsequencenumber")]
-        public int? Importsequencenumber { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "exchangerate")]
-        public object Exchangerate { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "entityimageid")]
-        public string Entityimageid { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "modifiedon")]
-        public System.DateTimeOffset? Modifiedon { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "statecode")]
-        public int? Statecode { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "versionnumber")]
-        public long? Versionnumber { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "currencysymbol")]
-        public string Currencysymbol { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_modifiedby_value")]
-        public string _modifiedbyValue { get; set; }
 
         /// <summary>
         /// </summary>
@@ -285,228 +202,498 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_Goal")]
-        public IList<MicrosoftDynamicsCRMgoal> TransactionCurrencyGoal { get; set; }
+        [JsonProperty(PropertyName = "_organizationid_value")]
+        public string _organizationidValue { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_phonetocaseprocess")]
-        public IList<MicrosoftDynamicsCRMphonetocaseprocess> TransactioncurrencyPhonetocaseprocess { get; set; }
+        [JsonProperty(PropertyName = "currencyname")]
+        public string Currencyname { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_bookingstatus")]
-        public IList<MicrosoftDynamicsCRMbookingstatus> TransactionCurrencyBookingstatus { get; set; }
+        [JsonProperty(PropertyName = "overriddencreatedon")]
+        public System.DateTimeOffset? Overriddencreatedon { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_Entitlement")]
-        public IList<MicrosoftDynamicsCRMentitlement> TransactionCurrencyEntitlement { get; set; }
+        [JsonProperty(PropertyName = "_modifiedonbehalfby_value")]
+        public string _modifiedonbehalfbyValue { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_Email")]
-        public IList<MicrosoftDynamicsCRMemail> TransactionCurrencyEmail { get; set; }
+        [JsonProperty(PropertyName = "entityimage")]
+        [NotMapped] public object Entityimage { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_opportunityproduct")]
-        public IList<MicrosoftDynamicsCRMopportunityproduct> TransactioncurrencyOpportunityproduct { get; set; }
+        [JsonProperty(PropertyName = "entityimageid")]
+        public string Entityimageid { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_DuplicateBaseRecord")]
-        public IList<MicrosoftDynamicsCRMduplicaterecord> TransactionCurrencyDuplicateBaseRecord { get; set; }
+        [JsonProperty(PropertyName = "exchangerate")]
+        [NotMapped] public object Exchangerate { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_BusinessUnit")]
-        public IList<MicrosoftDynamicsCRMbusinessunit> TransactionCurrencyBusinessUnit { get; set; }
+        [JsonProperty(PropertyName = "currencysymbol")]
+        public string Currencysymbol { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_bookableresourcecharacteristic")]
-        public IList<MicrosoftDynamicsCRMbookableresourcecharacteristic> TransactionCurrencyBookableresourcecharacteristic { get; set; }
+        [JsonProperty(PropertyName = "entityimage_url")]
+        public string EntityimageUrl { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_Connection")]
-        public IList<MicrosoftDynamicsCRMconnection> TransactionCurrencyConnection { get; set; }
+        [JsonProperty(PropertyName = "createdon")]
+        public System.DateTimeOffset? Createdon { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "DynamicPropertyAssociation_TransactionCurrency")]
-        public IList<MicrosoftDynamicsCRMdynamicpropertyassociation> DynamicPropertyAssociationTransactionCurrency { get; set; }
+        [JsonProperty(PropertyName = "currencyprecision")]
+        public int? Currencyprecision { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_Incident")]
-        public IList<MicrosoftDynamicsCRMincident> TransactionCurrencyIncident { get; set; }
+        [JsonProperty(PropertyName = "modifiedon")]
+        public System.DateTimeOffset? Modifiedon { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "entityimage_timestamp")]
+        public long? EntityimageTimestamp { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrencyid")]
+        public string Transactioncurrencyid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "statecode")]
+        public int? Statecode { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "importsequencenumber")]
+        public int? Importsequencenumber { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "versionnumber")]
+        public long? Versionnumber { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_modifiedby_value")]
+        public string _modifiedbyValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_Territory")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMterritory> TransactionCurrencyTerritory { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_lead")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMlead> TransactioncurrencyLead { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_LeadAddress")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMleadaddress> TransactionCurrencyLeadAddress { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_product")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMproduct> TransactioncurrencyProduct { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "transactioncurrency_productpricelevel")]
-        public IList<MicrosoftDynamicsCRMproductpricelevel> TransactioncurrencyProductpricelevel { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMproductpricelevel> TransactioncurrencyProductpricelevel { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_DuplicateMatchingRecord")]
-        public IList<MicrosoftDynamicsCRMduplicaterecord> TransactionCurrencyDuplicateMatchingRecord { get; set; }
+        [JsonProperty(PropertyName = "DynamicPropertyAssociation_TransactionCurrency")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMdynamicpropertyassociation> DynamicPropertyAssociationTransactionCurrency { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_campaign")]
-        public IList<MicrosoftDynamicsCRMcampaign> TransactioncurrencyCampaign { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_characteristic")]
-        public IList<MicrosoftDynamicsCRMcharacteristic> TransactionCurrencyCharacteristic { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_campaignactivity")]
-        public IList<MicrosoftDynamicsCRMcampaignactivity> TransactioncurrencyCampaignactivity { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_leadtoopportunitysalesprocess")]
-        public IList<MicrosoftDynamicsCRMleadtoopportunitysalesprocess> TransactioncurrencyLeadtoopportunitysalesprocess { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_annualfiscalcalendar")]
-        public IList<MicrosoftDynamicsCRMannualfiscalcalendar> TransactioncurrencyAnnualfiscalcalendar { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_PhoneCall")]
-        public IList<MicrosoftDynamicsCRMphonecall> TransactionCurrencyPhoneCall { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_recommendeddocument")]
-        public IList<MicrosoftDynamicsCRMrecommendeddocument> TransactionCurrencyRecommendeddocument { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_SalesLiterature")]
-        public IList<MicrosoftDynamicsCRMsalesliterature> TransactionCurrencySalesLiterature { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_invoice")]
-        public IList<MicrosoftDynamicsCRMinvoice> TransactioncurrencyInvoice { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_socialactivity")]
-        public IList<MicrosoftDynamicsCRMsocialactivity> TransactioncurrencySocialactivity { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_MailMergeTemplate")]
-        public IList<MicrosoftDynamicsCRMmailmergetemplate> TransactionCurrencyMailMergeTemplate { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_ActivityPointer")]
-        public IList<MicrosoftDynamicsCRMactivitypointer> TransactionCurrencyActivityPointer { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_salesorder")]
-        public IList<MicrosoftDynamicsCRMsalesorder> TransactioncurrencySalesorder { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_SystemUser")]
-        public IList<MicrosoftDynamicsCRMsystemuser> TransactionCurrencySystemUser { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_AsyncOperations")]
-        public IList<MicrosoftDynamicsCRMasyncoperation> TransactionCurrencyAsyncOperations { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_entitlementtemplate")]
-        public IList<MicrosoftDynamicsCRMentitlementtemplate> TransactionCurrencyEntitlementtemplate { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_monthlyfiscalcalendar")]
-        public IList<MicrosoftDynamicsCRMmonthlyfiscalcalendar> TransactioncurrencyMonthlyfiscalcalendar { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_fixedmonthlyfiscalcalendar")]
-        public IList<MicrosoftDynamicsCRMfixedmonthlyfiscalcalendar> TransactioncurrencyFixedmonthlyfiscalcalendar { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_contract")]
-        public IList<MicrosoftDynamicsCRMcontract> TransactioncurrencyContract { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_account")]
-        public IList<MicrosoftDynamicsCRMaccount> TransactioncurrencyAccount { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_ProductAssociation")]
-        public IList<MicrosoftDynamicsCRMproductassociation> TransactioncurrencyProductAssociation { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_quarterlyfiscalcalendar")]
-        public IList<MicrosoftDynamicsCRMquarterlyfiscalcalendar> TransactioncurrencyQuarterlyfiscalcalendar { get; set; }
+        [JsonProperty(PropertyName = "TransactionCurrency_Dynamicpropertyinsatance")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMdynamicpropertyinstance> TransactionCurrencyDynamicpropertyinsatance { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "DynamicPropertyOptionSetItem_TransactionCurrency")]
-        public IList<MicrosoftDynamicsCRMdynamicpropertyoptionsetitem> DynamicPropertyOptionSetItemTransactionCurrency { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMdynamicpropertyoptionsetitem> DynamicPropertyOptionSetItemTransactionCurrency { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_ProductAssociation")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMproductassociation> TransactioncurrencyProductAssociation { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_ProductSubstitute")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMproductsubstitute> TransactioncurrencyProductSubstitute { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_pricelevel")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMpricelevel> TransactioncurrencyPricelevel { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_bookableresource")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbookableresource> TransactionCurrencyBookableresource { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_bookableresourcebooking")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbookableresourcebooking> TransactionCurrencyBookableresourcebooking { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_bookableresourcebookingheader")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbookableresourcebookingheader> TransactionCurrencyBookableresourcebookingheader { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_bookableresourcecategory")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbookableresourcecategory> TransactionCurrencyBookableresourcecategory { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_bookableresourcecategoryassn")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbookableresourcecategoryassn> TransactionCurrencyBookableresourcecategoryassn { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_bookableresourcecharacteristic")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbookableresourcecharacteristic> TransactionCurrencyBookableresourcecharacteristic { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "TransactionCurrency_bookableresourcegroup")]
-        public IList<MicrosoftDynamicsCRMbookableresourcegroup> TransactionCurrencyBookableresourcegroup { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMbookableresourcegroup> TransactionCurrencyBookableresourcegroup { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_KnowledgeBaseRecord")]
-        public IList<MicrosoftDynamicsCRMknowledgebaserecord> TransactionCurrencyKnowledgeBaseRecord { get; set; }
+        [JsonProperty(PropertyName = "TransactionCurrency_bookingstatus")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbookingstatus> TransactionCurrencyBookingstatus { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_knowledgearticleviews")]
-        public IList<MicrosoftDynamicsCRMknowledgearticleviews> TransactioncurrencyKnowledgearticleviews { get; set; }
+        [JsonProperty(PropertyName = "TransactionCurrency_characteristic")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMcharacteristic> TransactionCurrencyCharacteristic { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_ratingmodel")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMratingmodel> TransactionCurrencyRatingmodel { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_ratingvalue")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMratingvalue> TransactionCurrencyRatingvalue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "bulkoperation_transactioncurrency_transactioncurrencyid")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbulkoperation> BulkoperationTransactioncurrencyTransactioncurrencyid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_campaign")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMcampaign> TransactioncurrencyCampaign { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_campaignactivity")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMcampaignactivity> TransactioncurrencyCampaignactivity { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_CampaignResponse")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMcampaignresponse> TransactionCurrencyCampaignResponse { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_list")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMlist> TransactioncurrencyList { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_contract")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMcontract> TransactioncurrencyContract { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_contractdetail")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMcontractdetail> TransactioncurrencyContractdetail { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "incidentresolution_transactioncurrency_transactioncurrencyid")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMincidentresolution> IncidentresolutionTransactioncurrencyTransactioncurrencyid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_ServiceAppointment")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMserviceappointment> TransactionCurrencyServiceAppointment { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_phonetocaseprocess")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMphonetocaseprocess> TransactioncurrencyPhonetocaseprocess { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_Equipment")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMequipment> TransactionCurrencyEquipment { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_Incident")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMincident> TransactionCurrencyIncident { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_entitlementtemplatechannel")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMentitlementtemplatechannel> TransactionCurrencyEntitlementtemplatechannel { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_Entitlement")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMentitlement> TransactionCurrencyEntitlement { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_entitlementtemplate")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMentitlementtemplate> TransactionCurrencyEntitlementtemplate { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_entitlementchannel")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMentitlementchannel> TransactionCurrencyEntitlementchannel { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_knowledgearticleincident")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMknowledgearticleincident> TransactioncurrencyKnowledgearticleincident { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_discount")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMdiscount> TransactioncurrencyDiscount { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_invoice")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMinvoice> TransactioncurrencyInvoice { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_invoicedetail")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMinvoicedetail> TransactioncurrencyInvoicedetail { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_opportunity")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMopportunity> TransactioncurrencyOpportunity { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_opportunityclose")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMopportunityclose> TransactioncurrencyOpportunityclose { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_opportunityproduct")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMopportunityproduct> TransactioncurrencyOpportunityproduct { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "orderclose_transactioncurrency_transactioncurrencyid")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMorderclose> OrdercloseTransactioncurrencyTransactioncurrencyid { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "transactioncurrency_quote")]
-        public IList<MicrosoftDynamicsCRMquote> TransactioncurrencyQuote { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMquote> TransactioncurrencyQuote { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "quoteclose_transactioncurrency_transactioncurrencyid")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMquoteclose> QuotecloseTransactioncurrencyTransactioncurrencyid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_quotedetail")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMquotedetail> TransactioncurrencyQuotedetail { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_salesorder")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMsalesorder> TransactioncurrencySalesorder { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_salesorderdetail")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMsalesorderdetail> TransactioncurrencySalesorderdetail { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_competitor")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMcompetitor> TransactioncurrencyCompetitor { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_discounttype")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMdiscounttype> TransactioncurrencyDiscounttype { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_SalesLiterature")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMsalesliterature> TransactionCurrencySalesLiterature { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_leadtoopportunitysalesprocess")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMleadtoopportunitysalesprocess> TransactioncurrencyLeadtoopportunitysalesprocess { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_opportunitysalesprocess")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMopportunitysalesprocess> TransactioncurrencyOpportunitysalesprocess { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_Goal")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMgoal> TransactionCurrencyGoal { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_Email")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMemail> TransactionCurrencyEmail { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_DuplicateBaseRecord")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMduplicaterecord> TransactionCurrencyDuplicateBaseRecord { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_BusinessUnit")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbusinessunit> TransactionCurrencyBusinessUnit { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_Connection")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMconnection> TransactionCurrencyConnection { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_DuplicateMatchingRecord")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMduplicaterecord> TransactionCurrencyDuplicateMatchingRecord { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_annualfiscalcalendar")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMannualfiscalcalendar> TransactioncurrencyAnnualfiscalcalendar { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_ProcessSessions")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMprocesssession> TransactionCurrencyProcessSessions { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_PhoneCall")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMphonecall> TransactionCurrencyPhoneCall { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_recommendeddocument")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMrecommendeddocument> TransactionCurrencyRecommendeddocument { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_socialactivity")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMsocialactivity> TransactioncurrencySocialactivity { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_MailMergeTemplate")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMmailmergetemplate> TransactionCurrencyMailMergeTemplate { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_ActivityPointer")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMactivitypointer> TransactionCurrencyActivityPointer { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_SystemUser")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMsystemuser> TransactionCurrencySystemUser { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_AsyncOperations")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMasyncoperation> TransactionCurrencyAsyncOperations { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_monthlyfiscalcalendar")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMmonthlyfiscalcalendar> TransactioncurrencyMonthlyfiscalcalendar { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_fixedmonthlyfiscalcalendar")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMfixedmonthlyfiscalcalendar> TransactioncurrencyFixedmonthlyfiscalcalendar { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_account")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMaccount> TransactioncurrencyAccount { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_quarterlyfiscalcalendar")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMquarterlyfiscalcalendar> TransactioncurrencyQuarterlyfiscalcalendar { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "TransactionCurrency_KnowledgeBaseRecord")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMknowledgebaserecord> TransactionCurrencyKnowledgeBaseRecord { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrency_knowledgearticleviews")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMknowledgearticleviews> TransactioncurrencyKnowledgearticleviews { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "TransactionCurrency_CustomerAddress")]
-        public IList<MicrosoftDynamicsCRMcustomeraddress> TransactionCurrencyCustomerAddress { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMcustomeraddress> TransactionCurrencyCustomerAddress { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "TransactionCurrency_Fax")]
-        public IList<MicrosoftDynamicsCRMfax> TransactionCurrencyFax { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMfax> TransactionCurrencyFax { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "transactioncurrency_position")]
-        public IList<MicrosoftDynamicsCRMposition> TransactioncurrencyPosition { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMposition> TransactioncurrencyPosition { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "transactioncurrency_expiredprocess")]
-        public IList<MicrosoftDynamicsCRMexpiredprocess> TransactioncurrencyExpiredprocess { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMexpiredprocess> TransactioncurrencyExpiredprocess { get; set; }
 
         /// <summary>
         /// </summary>
@@ -515,153 +702,63 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_bookableresource")]
-        public IList<MicrosoftDynamicsCRMbookableresource> TransactionCurrencyBookableresource { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "transactioncurrency_actioncard")]
-        public IList<MicrosoftDynamicsCRMactioncard> TransactioncurrencyActioncard { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMactioncard> TransactioncurrencyActioncard { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "TransactionCurrency_Task")]
-        public IList<MicrosoftDynamicsCRMtask> TransactionCurrencyTask { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMtask> TransactionCurrencyTask { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "basecurrency_organization")]
-        public IList<MicrosoftDynamicsCRMorganization> BasecurrencyOrganization { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_quotedetail")]
-        public IList<MicrosoftDynamicsCRMquotedetail> TransactioncurrencyQuotedetail { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_competitor")]
-        public IList<MicrosoftDynamicsCRMcompetitor> TransactioncurrencyCompetitor { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_contractdetail")]
-        public IList<MicrosoftDynamicsCRMcontractdetail> TransactioncurrencyContractdetail { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_discount")]
-        public IList<MicrosoftDynamicsCRMdiscount> TransactioncurrencyDiscount { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_list")]
-        public IList<MicrosoftDynamicsCRMlist> TransactioncurrencyList { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_ProductSubstitute")]
-        public IList<MicrosoftDynamicsCRMproductsubstitute> TransactioncurrencyProductSubstitute { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMorganization> BasecurrencyOrganization { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "transactioncurrency_feedback")]
-        public IList<MicrosoftDynamicsCRMfeedback> TransactioncurrencyFeedback { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_ratingvalue")]
-        public IList<MicrosoftDynamicsCRMratingvalue> TransactionCurrencyRatingvalue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_bookableresourcebookingheader")]
-        public IList<MicrosoftDynamicsCRMbookableresourcebookingheader> TransactionCurrencyBookableresourcebookingheader { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_bookableresourcecategoryassn")]
-        public IList<MicrosoftDynamicsCRMbookableresourcecategoryassn> TransactionCurrencyBookableresourcecategoryassn { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMfeedback> TransactioncurrencyFeedback { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "TransactionCurrency_SimilarityRule")]
-        public IList<MicrosoftDynamicsCRMsimilarityrule> TransactionCurrencySimilarityRule { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_opportunityclose")]
-        public IList<MicrosoftDynamicsCRMopportunityclose> TransactioncurrencyOpportunityclose { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMsimilarityrule> TransactionCurrencySimilarityRule { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "transactioncurrency_category")]
-        public IList<MicrosoftDynamicsCRMcategory> TransactioncurrencyCategory { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_entitlementtemplatechannel")]
-        public IList<MicrosoftDynamicsCRMentitlementtemplatechannel> TransactionCurrencyEntitlementtemplatechannel { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMcategory> TransactioncurrencyCategory { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "TransactionCurrency_Team")]
-        public IList<MicrosoftDynamicsCRMteam> TransactionCurrencyTeam { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMteam> TransactionCurrencyTeam { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "TransactionCurrency_SLA")]
-        public IList<MicrosoftDynamicsCRMsla> TransactionCurrencySLA { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMsla> TransactionCurrencySLA { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "TransactionCurrency_RecurringAppointmentMaster")]
-        public IList<MicrosoftDynamicsCRMrecurringappointmentmaster> TransactionCurrencyRecurringAppointmentMaster { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_Equipment")]
-        public IList<MicrosoftDynamicsCRMequipment> TransactionCurrencyEquipment { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_opportunitysalesprocess")]
-        public IList<MicrosoftDynamicsCRMopportunitysalesprocess> TransactioncurrencyOpportunitysalesprocess { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMrecurringappointmentmaster> TransactionCurrencyRecurringAppointmentMaster { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "transactioncurrency_knowledgearticle")]
-        public IList<MicrosoftDynamicsCRMknowledgearticle> TransactioncurrencyKnowledgearticle { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMknowledgearticle> TransactioncurrencyKnowledgearticle { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "TransactionCurrency_Theme")]
-        public IList<MicrosoftDynamicsCRMtheme> TransactionCurrencyTheme { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_knowledgearticleincident")]
-        public IList<MicrosoftDynamicsCRMknowledgearticleincident> TransactioncurrencyKnowledgearticleincident { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMtheme> TransactionCurrencyTheme { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "TransactionCurrency_Letter")]
-        public IList<MicrosoftDynamicsCRMletter> TransactionCurrencyLetter { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_entitlementchannel")]
-        public IList<MicrosoftDynamicsCRMentitlementchannel> TransactionCurrencyEntitlementchannel { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_invoicedetail")]
-        public IList<MicrosoftDynamicsCRMinvoicedetail> TransactioncurrencyInvoicedetail { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_pricelevel")]
-        public IList<MicrosoftDynamicsCRMpricelevel> TransactioncurrencyPricelevel { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMletter> TransactionCurrencyLetter { get; set; }
 
         /// <summary>
         /// </summary>
@@ -670,108 +767,68 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_CampaignResponse")]
-        public IList<MicrosoftDynamicsCRMcampaignresponse> TransactionCurrencyCampaignResponse { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_lead")]
-        public IList<MicrosoftDynamicsCRMlead> TransactioncurrencyLead { get; set; }
+        [JsonProperty(PropertyName = "TransactionCurrency_UserMapping")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMusermapping> TransactionCurrencyUserMapping { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "TransactionCurrency_Queue")]
-        public IList<MicrosoftDynamicsCRMqueue> TransactionCurrencyQueue { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMqueue> TransactionCurrencyQueue { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "transactioncurrency_SocialProfile")]
-        public IList<MicrosoftDynamicsCRMsocialprofile> TransactioncurrencySocialProfile { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_opportunity")]
-        public IList<MicrosoftDynamicsCRMopportunity> TransactioncurrencyOpportunity { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMsocialprofile> TransactioncurrencySocialProfile { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "transactioncurrency_contact")]
-        public IList<MicrosoftDynamicsCRMcontact> TransactioncurrencyContact { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMcontact> TransactioncurrencyContact { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "TransactionCurrency_ActionCardUserState")]
-        public IList<MicrosoftDynamicsCRMactioncarduserstate> TransactionCurrencyActionCardUserState { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMactioncarduserstate> TransactionCurrencyActionCardUserState { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "TransactionCurrency_Appointment")]
-        public IList<MicrosoftDynamicsCRMappointment> TransactionCurrencyAppointment { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_salesorderdetail")]
-        public IList<MicrosoftDynamicsCRMsalesorderdetail> TransactioncurrencySalesorderdetail { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_product")]
-        public IList<MicrosoftDynamicsCRMproduct> TransactioncurrencyProduct { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_bookableresourcecategory")]
-        public IList<MicrosoftDynamicsCRMbookableresourcecategory> TransactionCurrencyBookableresourcecategory { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_ServiceAppointment")]
-        public IList<MicrosoftDynamicsCRMserviceappointment> TransactionCurrencyServiceAppointment { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMappointment> TransactionCurrencyAppointment { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "TransactionCurrency_SharePointSite")]
-        public IList<MicrosoftDynamicsCRMsharepointsite> TransactionCurrencySharePointSite { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_bookableresourcebooking")]
-        public IList<MicrosoftDynamicsCRMbookableresourcebooking> TransactionCurrencyBookableresourcebooking { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrency_discounttype")]
-        public IList<MicrosoftDynamicsCRMdiscounttype> TransactioncurrencyDiscounttype { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMsharepointsite> TransactionCurrencySharePointSite { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "TransactionCurrency_SharePointDocumentLocation")]
-        public IList<MicrosoftDynamicsCRMsharepointdocumentlocation> TransactionCurrencySharePointDocumentLocation { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMsharepointdocumentlocation> TransactionCurrencySharePointDocumentLocation { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "TransactionCurrency_SLAItem")]
-        public IList<MicrosoftDynamicsCRMslaitem> TransactionCurrencySLAItem { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMslaitem> TransactionCurrencySLAItem { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "transactioncurrency_newprocess")]
-        public IList<MicrosoftDynamicsCRMnewprocess> TransactioncurrencyNewprocess { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMnewprocess> TransactioncurrencyNewprocess { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "TransactionCurrency_KbArticle")]
-        public IList<MicrosoftDynamicsCRMkbarticle> TransactionCurrencyKbArticle { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMkbarticle> TransactionCurrencyKbArticle { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "TransactionCurrency_QueueItem")]
-        public IList<MicrosoftDynamicsCRMqueueitem> TransactionCurrencyQueueItem { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMqueueitem> TransactionCurrencyQueueItem { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "TransactionCurrency_ReportCategory")]
-        public IList<MicrosoftDynamicsCRMreportcategory> TransactionCurrencyReportCategory { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMreportcategory> TransactionCurrencyReportCategory { get; set; }
 
         /// <summary>
         /// </summary>
@@ -781,47 +838,27 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "transactioncurrency_semiannualfiscalcalendar")]
-        public IList<MicrosoftDynamicsCRMsemiannualfiscalcalendar> TransactioncurrencySemiannualfiscalcalendar { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_Dynamicpropertyinsatance")]
-        public IList<MicrosoftDynamicsCRMdynamicpropertyinstance> TransactionCurrencyDynamicpropertyinsatance { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMsemiannualfiscalcalendar> TransactioncurrencySemiannualfiscalcalendar { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "transactioncurrency_usersettings")]
-        public IList<MicrosoftDynamicsCRMusersettings> TransactioncurrencyUsersettings { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_ratingmodel")]
-        public IList<MicrosoftDynamicsCRMratingmodel> TransactionCurrencyRatingmodel { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_Territory")]
-        public IList<MicrosoftDynamicsCRMterritory> TransactionCurrencyTerritory { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMusersettings> TransactioncurrencyUsersettings { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "transactioncurrency_translationprocess")]
-        public IList<MicrosoftDynamicsCRMtranslationprocess> TransactioncurrencyTranslationprocess { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMtranslationprocess> TransactioncurrencyTranslationprocess { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "TransactionCurrency_slakpiinstance")]
-        public IList<MicrosoftDynamicsCRMslakpiinstance> TransactionCurrencySlakpiinstance { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMslakpiinstance> TransactionCurrencySlakpiinstance { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "TransactionCurrency_officegraphdocument")]
-        public IList<MicrosoftDynamicsCRMofficegraphdocument> TransactionCurrencyOfficegraphdocument { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "TransactionCurrency_LeadAddress")]
-        public IList<MicrosoftDynamicsCRMleadaddress> TransactionCurrencyLeadAddress { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMofficegraphdocument> TransactionCurrencyOfficegraphdocument { get; set; }
 
         /// <summary>
         /// </summary>
@@ -831,7 +868,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "TransactionCurrency_SyncErrors")]
-        public IList<MicrosoftDynamicsCRMsyncerror> TransactionCurrencySyncErrors { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMsyncerror> TransactionCurrencySyncErrors { get; set; }
 
         /// <summary>
         /// </summary>
@@ -841,7 +878,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "TransactionCurrency_InteractionForEmail")]
-        public IList<MicrosoftDynamicsCRMinteractionforemail> TransactionCurrencyInteractionForEmail { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMinteractionforemail> TransactionCurrencyInteractionForEmail { get; set; }
 
     }
 }

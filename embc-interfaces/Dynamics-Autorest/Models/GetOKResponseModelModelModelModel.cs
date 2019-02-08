@@ -9,10 +9,10 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
-    /// Collection of bcgov_certificatetermsandconditionses
+    /// Collection of gov_regions
     /// </summary>
     public partial class GetOKResponseModelModelModelModel
     {
@@ -29,7 +29,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the GetOKResponseModelModelModelModel
         /// class.
         /// </summary>
-        public GetOKResponseModelModelModelModel(IList<MicrosoftDynamicsCRMbcgovCertificatetermsandconditions> value = default(IList<MicrosoftDynamicsCRMbcgovCertificatetermsandconditions>))
+        public GetOKResponseModelModelModelModel(IList<MicrosoftDynamicsCRMgovRegion> value = default(IList<MicrosoftDynamicsCRMgovRegion>))
         {
             Value = value;
             CustomInit();
@@ -43,7 +43,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "value")]
-        public IList<MicrosoftDynamicsCRMbcgovCertificatetermsandconditions> Value { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMgovRegion> Value { get; set; }
 
     }
 }

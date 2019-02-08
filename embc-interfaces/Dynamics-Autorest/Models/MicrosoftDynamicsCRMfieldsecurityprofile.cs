@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// fieldsecurityprofile
@@ -29,7 +29,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the
         /// MicrosoftDynamicsCRMfieldsecurityprofile class.
         /// </summary>
-        public MicrosoftDynamicsCRMfieldsecurityprofile(string _modifiedbyValue = default(string), long? versionnumber = default(long?), string name = default(string), string _modifiedonbehalfbyValue = default(string), System.DateTimeOffset? overwritetime = default(System.DateTimeOffset?), System.DateTimeOffset? createdon = default(System.DateTimeOffset?), System.DateTimeOffset? modifiedon = default(System.DateTimeOffset?), int? componentstate = default(int?), string description = default(string), bool? ismanaged = default(bool?), string solutionid = default(string), string _organizationidValue = default(string), string fieldsecurityprofileidunique = default(string), string fieldsecurityprofileid = default(string), string _createdbyValue = default(string), string _createdonbehalfbyValue = default(string), MicrosoftDynamicsCRMsystemuser createdonbehalfby = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMsyncerror> fieldSecurityProfileSyncErrors = default(IList<MicrosoftDynamicsCRMsyncerror>), MicrosoftDynamicsCRMorganization organizationid = default(MicrosoftDynamicsCRMorganization), IList<MicrosoftDynamicsCRMsystemuser> systemuserprofilesAssociation = default(IList<MicrosoftDynamicsCRMsystemuser>), IList<MicrosoftDynamicsCRMfieldpermission> lkFieldpermissionFieldsecurityprofileid = default(IList<MicrosoftDynamicsCRMfieldpermission>), MicrosoftDynamicsCRMsystemuser modifiedonbehalfby = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMteam> teamprofilesAssociation = default(IList<MicrosoftDynamicsCRMteam>), MicrosoftDynamicsCRMsystemuser modifiedby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser createdby = default(MicrosoftDynamicsCRMsystemuser))
+        public MicrosoftDynamicsCRMfieldsecurityprofile(string _modifiedbyValue = default(string), long? versionnumber = default(long?), string name = default(string), string _modifiedonbehalfbyValue = default(string), System.DateTimeOffset? overwritetime = default(System.DateTimeOffset?), System.DateTimeOffset? createdon = default(System.DateTimeOffset?), System.DateTimeOffset? modifiedon = default(System.DateTimeOffset?), int? componentstate = default(int?), string description = default(string), string _organizationidValue = default(string), bool? ismanaged = default(bool?), string solutionid = default(string), string fieldsecurityprofileidunique = default(string), string fieldsecurityprofileid = default(string), string _createdbyValue = default(string), string _createdonbehalfbyValue = default(string), MicrosoftDynamicsCRMsystemuser createdonbehalfby = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMsyncerror> fieldSecurityProfileSyncErrors = default(IList<MicrosoftDynamicsCRMsyncerror>), MicrosoftDynamicsCRMorganization organizationid = default(MicrosoftDynamicsCRMorganization), IList<MicrosoftDynamicsCRMsystemuser> systemuserprofilesAssociation = default(IList<MicrosoftDynamicsCRMsystemuser>), IList<MicrosoftDynamicsCRMfieldpermission> lkFieldpermissionFieldsecurityprofileid = default(IList<MicrosoftDynamicsCRMfieldpermission>), MicrosoftDynamicsCRMsystemuser modifiedonbehalfby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMSolution solutionFieldsecurityprofile = default(MicrosoftDynamicsCRMSolution), IList<MicrosoftDynamicsCRMteam> teamprofilesAssociation = default(IList<MicrosoftDynamicsCRMteam>), MicrosoftDynamicsCRMsystemuser modifiedby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser createdby = default(MicrosoftDynamicsCRMsystemuser))
         {
             this._modifiedbyValue = _modifiedbyValue;
             Versionnumber = versionnumber;
@@ -40,9 +40,9 @@ namespace Gov.Jag.Embc.Interfaces.Models
             Modifiedon = modifiedon;
             Componentstate = componentstate;
             Description = description;
+            this._organizationidValue = _organizationidValue;
             Ismanaged = ismanaged;
             Solutionid = solutionid;
-            this._organizationidValue = _organizationidValue;
             Fieldsecurityprofileidunique = fieldsecurityprofileidunique;
             Fieldsecurityprofileid = fieldsecurityprofileid;
             this._createdbyValue = _createdbyValue;
@@ -53,6 +53,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
             SystemuserprofilesAssociation = systemuserprofilesAssociation;
             LkFieldpermissionFieldsecurityprofileid = lkFieldpermissionFieldsecurityprofileid;
             Modifiedonbehalfby = modifiedonbehalfby;
+            SolutionFieldsecurityprofile = solutionFieldsecurityprofile;
             TeamprofilesAssociation = teamprofilesAssociation;
             Modifiedby = modifiedby;
             Createdby = createdby;
@@ -111,6 +112,11 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "_organizationid_value")]
+        public string _organizationidValue { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "ismanaged")]
         public bool? Ismanaged { get; set; }
 
@@ -118,11 +124,6 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// </summary>
         [JsonProperty(PropertyName = "solutionid")]
         public string Solutionid { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_organizationid_value")]
-        public string _organizationidValue { get; set; }
 
         /// <summary>
         /// </summary>
@@ -152,7 +153,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "FieldSecurityProfile_SyncErrors")]
-        public IList<MicrosoftDynamicsCRMsyncerror> FieldSecurityProfileSyncErrors { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMsyncerror> FieldSecurityProfileSyncErrors { get; set; }
 
         /// <summary>
         /// </summary>
@@ -162,12 +163,12 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "systemuserprofiles_association")]
-        public IList<MicrosoftDynamicsCRMsystemuser> SystemuserprofilesAssociation { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMsystemuser> SystemuserprofilesAssociation { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "lk_fieldpermission_fieldsecurityprofileid")]
-        public IList<MicrosoftDynamicsCRMfieldpermission> LkFieldpermissionFieldsecurityprofileid { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMfieldpermission> LkFieldpermissionFieldsecurityprofileid { get; set; }
 
         /// <summary>
         /// </summary>
@@ -176,8 +177,13 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "solution_fieldsecurityprofile")]
+        public MicrosoftDynamicsCRMSolution SolutionFieldsecurityprofile { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "teamprofiles_association")]
-        public IList<MicrosoftDynamicsCRMteam> TeamprofilesAssociation { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMteam> TeamprofilesAssociation { get; set; }
 
         /// <summary>
         /// </summary>

@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// RetrieveInstalledLanguagePacksResponse
@@ -43,7 +43,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "RetrieveInstalledLanguagePacks")]
-        public IList<int?> RetrieveInstalledLanguagePacks { get; set; }
+        [NotMapped] public IList<int?> RetrieveInstalledLanguagePacks { get; set; }
 
     }
 }

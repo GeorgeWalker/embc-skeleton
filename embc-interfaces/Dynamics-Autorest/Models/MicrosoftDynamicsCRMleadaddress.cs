@@ -9,7 +9,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
+    
 
     /// <summary>
     /// leadaddress
@@ -29,47 +30,55 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the MicrosoftDynamicsCRMleadaddress
         /// class.
         /// </summary>
-        public MicrosoftDynamicsCRMleadaddress(string _parentidValue = default(string), string upszone = default(string), object exchangerate = default(object), System.DateTimeOffset? createdon = default(System.DateTimeOffset?), string line1 = default(string), string stateorprovince = default(string), string _modifiedbyValue = default(string), string name = default(string), long? versionnumber = default(long?), int? addressnumber = default(int?), System.DateTimeOffset? modifiedon = default(System.DateTimeOffset?), string country = default(string), string telephone2 = default(string), string line2 = default(string), string _createdonbehalfbyValue = default(string), double? latitude = default(double?), string postofficebox = default(string), string _createdbyValue = default(string), string telephone3 = default(string), string telephone1 = default(string), string fax = default(string), string composite = default(string), string leadaddressid = default(string), string line3 = default(string), int? addresstypecode = default(int?), int? shippingmethodcode = default(int?), string county = default(string), string _transactioncurrencyidValue = default(string), string _modifiedonbehalfbyValue = default(string), double? longitude = default(double?), string city = default(string), string postalcode = default(string), int? utcoffset = default(int?), IList<MicrosoftDynamicsCRMsyncerror> leadAddressSyncErrors = default(IList<MicrosoftDynamicsCRMsyncerror>), MicrosoftDynamicsCRMlead parentid = default(MicrosoftDynamicsCRMlead), MicrosoftDynamicsCRMsystemuser modifiedby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser createdonbehalfby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser createdby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser modifiedonbehalfby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMtransactioncurrency transactioncurrencyid = default(MicrosoftDynamicsCRMtransactioncurrency))
+        public MicrosoftDynamicsCRMleadaddress(string _parentidValue = default(string), string _createdonbehalfbyValue = default(string), System.DateTimeOffset? createdon = default(System.DateTimeOffset?), string telephone2 = default(string), string line1 = default(string), string stateorprovince = default(string), int? timezoneruleversionnumber = default(int?), string upszone = default(string), string _createdbyValue = default(string), string name = default(string), int? utcoffset = default(int?), int? addressnumber = default(int?), System.DateTimeOffset? overriddencreatedon = default(System.DateTimeOffset?), System.DateTimeOffset? modifiedon = default(System.DateTimeOffset?), string _modifiedonbehalfbyValue = default(string), string _modifiedbyValue = default(string), long? versionnumber = default(long?), object exchangerate = default(object), string line2 = default(string), string county = default(string), string postofficebox = default(string), string telephone3 = default(string), string telephone1 = default(string), int? utcconversiontimezonecode = default(int?), string fax = default(string), string postalcode = default(string), string composite = default(string), string leadaddressid = default(string), int? addresstypecode = default(int?), int? shippingmethodcode = default(int?), string _transactioncurrencyidValue = default(string), string line3 = default(string), double? longitude = default(double?), string city = default(string), int? importsequencenumber = default(int?), double? latitude = default(double?), string country = default(string), MicrosoftDynamicsCRMsystemuser createdby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser createdonbehalfby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser modifiedby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser modifiedonbehalfby = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMsyncerror> leadAddressSyncErrors = default(IList<MicrosoftDynamicsCRMsyncerror>), IList<MicrosoftDynamicsCRMasyncoperation> leadaddressAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), IList<MicrosoftDynamicsCRMmailboxtrackingfolder> leadaddressMailboxTrackingFolders = default(IList<MicrosoftDynamicsCRMmailboxtrackingfolder>), IList<MicrosoftDynamicsCRMbulkdeletefailure> leadaddressBulkDeleteFailures = default(IList<MicrosoftDynamicsCRMbulkdeletefailure>), IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> leadaddressPrincipalObjectAttributeAccesses = default(IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess>), MicrosoftDynamicsCRMlead parentid = default(MicrosoftDynamicsCRMlead), MicrosoftDynamicsCRMtransactioncurrency transactioncurrencyid = default(MicrosoftDynamicsCRMtransactioncurrency))
         {
             this._parentidValue = _parentidValue;
-            Upszone = upszone;
-            Exchangerate = exchangerate;
+            this._createdonbehalfbyValue = _createdonbehalfbyValue;
             Createdon = createdon;
+            Telephone2 = telephone2;
             Line1 = line1;
             Stateorprovince = stateorprovince;
-            this._modifiedbyValue = _modifiedbyValue;
-            Name = name;
-            Versionnumber = versionnumber;
-            Addressnumber = addressnumber;
-            Modifiedon = modifiedon;
-            Country = country;
-            Telephone2 = telephone2;
-            Line2 = line2;
-            this._createdonbehalfbyValue = _createdonbehalfbyValue;
-            Latitude = latitude;
-            Postofficebox = postofficebox;
+            Timezoneruleversionnumber = timezoneruleversionnumber;
+            Upszone = upszone;
             this._createdbyValue = _createdbyValue;
+            Name = name;
+            Utcoffset = utcoffset;
+            Addressnumber = addressnumber;
+            Overriddencreatedon = overriddencreatedon;
+            Modifiedon = modifiedon;
+            this._modifiedonbehalfbyValue = _modifiedonbehalfbyValue;
+            this._modifiedbyValue = _modifiedbyValue;
+            Versionnumber = versionnumber;
+            Exchangerate = exchangerate;
+            Line2 = line2;
+            County = county;
+            Postofficebox = postofficebox;
             Telephone3 = telephone3;
             Telephone1 = telephone1;
+            Utcconversiontimezonecode = utcconversiontimezonecode;
             Fax = fax;
+            Postalcode = postalcode;
             Composite = composite;
             Leadaddressid = leadaddressid;
-            Line3 = line3;
             Addresstypecode = addresstypecode;
             Shippingmethodcode = shippingmethodcode;
-            County = county;
             this._transactioncurrencyidValue = _transactioncurrencyidValue;
-            this._modifiedonbehalfbyValue = _modifiedonbehalfbyValue;
+            Line3 = line3;
             Longitude = longitude;
             City = city;
-            Postalcode = postalcode;
-            Utcoffset = utcoffset;
-            LeadAddressSyncErrors = leadAddressSyncErrors;
-            Parentid = parentid;
-            Modifiedby = modifiedby;
-            Createdonbehalfby = createdonbehalfby;
+            Importsequencenumber = importsequencenumber;
+            Latitude = latitude;
+            Country = country;
             Createdby = createdby;
+            Createdonbehalfby = createdonbehalfby;
+            Modifiedby = modifiedby;
             Modifiedonbehalfby = modifiedonbehalfby;
+            LeadAddressSyncErrors = leadAddressSyncErrors;
+            LeadaddressAsyncOperations = leadaddressAsyncOperations;
+            LeadaddressMailboxTrackingFolders = leadaddressMailboxTrackingFolders;
+            LeadaddressBulkDeleteFailures = leadaddressBulkDeleteFailures;
+            LeadaddressPrincipalObjectAttributeAccesses = leadaddressPrincipalObjectAttributeAccesses;
+            Parentid = parentid;
             Transactioncurrencyid = transactioncurrencyid;
             CustomInit();
         }
@@ -86,18 +95,18 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "upszone")]
-        public string Upszone { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "exchangerate")]
-        public object Exchangerate { get; set; }
+        [JsonProperty(PropertyName = "_createdonbehalfby_value")]
+        public string _createdonbehalfbyValue { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "createdon")]
         public System.DateTimeOffset? Createdon { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "telephone2")]
+        public string Telephone2 { get; set; }
 
         /// <summary>
         /// </summary>
@@ -111,8 +120,18 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "_modifiedby_value")]
-        public string _modifiedbyValue { get; set; }
+        [JsonProperty(PropertyName = "timezoneruleversionnumber")]
+        public int? Timezoneruleversionnumber { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "upszone")]
+        public string Upszone { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_createdby_value")]
+        public string _createdbyValue { get; set; }
 
         /// <summary>
         /// </summary>
@@ -121,8 +140,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "versionnumber")]
-        public long? Versionnumber { get; set; }
+        [JsonProperty(PropertyName = "utcoffset")]
+        public int? Utcoffset { get; set; }
 
         /// <summary>
         /// </summary>
@@ -131,18 +150,33 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "overriddencreatedon")]
+        public System.DateTimeOffset? Overriddencreatedon { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "modifiedon")]
         public System.DateTimeOffset? Modifiedon { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "country")]
-        public string Country { get; set; }
+        [JsonProperty(PropertyName = "_modifiedonbehalfby_value")]
+        public string _modifiedonbehalfbyValue { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "telephone2")]
-        public string Telephone2 { get; set; }
+        [JsonProperty(PropertyName = "_modifiedby_value")]
+        public string _modifiedbyValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "versionnumber")]
+        public long? Versionnumber { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "exchangerate")]
+        [NotMapped] public object Exchangerate { get; set; }
 
         /// <summary>
         /// </summary>
@@ -151,23 +185,13 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "_createdonbehalfby_value")]
-        public string _createdonbehalfbyValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "latitude")]
-        public double? Latitude { get; set; }
+        [JsonProperty(PropertyName = "county")]
+        public string County { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "postofficebox")]
         public string Postofficebox { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_createdby_value")]
-        public string _createdbyValue { get; set; }
 
         /// <summary>
         /// </summary>
@@ -181,8 +205,18 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "utcconversiontimezonecode")]
+        public int? Utcconversiontimezonecode { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "fax")]
         public string Fax { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "postalcode")]
+        public string Postalcode { get; set; }
 
         /// <summary>
         /// </summary>
@@ -196,11 +230,6 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "line3")]
-        public string Line3 { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "addresstypecode")]
         public int? Addresstypecode { get; set; }
 
@@ -211,18 +240,13 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "county")]
-        public string County { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "_transactioncurrencyid_value")]
         public string _transactioncurrencyidValue { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "_modifiedonbehalfby_value")]
-        public string _modifiedonbehalfbyValue { get; set; }
+        [JsonProperty(PropertyName = "line3")]
+        public string Line3 { get; set; }
 
         /// <summary>
         /// </summary>
@@ -236,33 +260,18 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "postalcode")]
-        public string Postalcode { get; set; }
+        [JsonProperty(PropertyName = "importsequencenumber")]
+        public int? Importsequencenumber { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "utcoffset")]
-        public int? Utcoffset { get; set; }
+        [JsonProperty(PropertyName = "latitude")]
+        public double? Latitude { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "LeadAddress_SyncErrors")]
-        public IList<MicrosoftDynamicsCRMsyncerror> LeadAddressSyncErrors { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "parentid")]
-        public MicrosoftDynamicsCRMlead Parentid { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "modifiedby")]
-        public MicrosoftDynamicsCRMsystemuser Modifiedby { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "createdonbehalfby")]
-        public MicrosoftDynamicsCRMsystemuser Createdonbehalfby { get; set; }
+        [JsonProperty(PropertyName = "country")]
+        public string Country { get; set; }
 
         /// <summary>
         /// </summary>
@@ -271,8 +280,48 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "createdonbehalfby")]
+        public MicrosoftDynamicsCRMsystemuser Createdonbehalfby { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "modifiedby")]
+        public MicrosoftDynamicsCRMsystemuser Modifiedby { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "modifiedonbehalfby")]
         public MicrosoftDynamicsCRMsystemuser Modifiedonbehalfby { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "LeadAddress_SyncErrors")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMsyncerror> LeadAddressSyncErrors { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "leadaddress_AsyncOperations")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMasyncoperation> LeadaddressAsyncOperations { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "leadaddress_MailboxTrackingFolders")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMmailboxtrackingfolder> LeadaddressMailboxTrackingFolders { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "leadaddress_BulkDeleteFailures")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbulkdeletefailure> LeadaddressBulkDeleteFailures { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "leadaddress_PrincipalObjectAttributeAccesses")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> LeadaddressPrincipalObjectAttributeAccesses { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "parentid")]
+        public MicrosoftDynamicsCRMlead Parentid { get; set; }
 
         /// <summary>
         /// </summary>

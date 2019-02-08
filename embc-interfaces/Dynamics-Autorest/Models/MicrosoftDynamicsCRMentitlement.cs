@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// entitlement
@@ -29,47 +29,48 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the MicrosoftDynamicsCRMentitlement
         /// class.
         /// </summary>
-        public MicrosoftDynamicsCRMentitlement(int? decreaseremainingon = default(int?), System.DateTimeOffset? startdate = default(System.DateTimeOffset?), int? statecode = default(int?), int? kbaccesslevel = default(int?), string entitlementid = default(string), System.DateTimeOffset? modifiedon = default(System.DateTimeOffset?), long? versionnumber = default(long?), int? importsequencenumber = default(int?), System.DateTimeOffset? enddate = default(System.DateTimeOffset?), string _customeridValue = default(string), bool? restrictcasecreation = default(bool?), bool? isdefault = default(bool?), string _owningteamValue = default(string), object exchangerate = default(object), int? allocationtypecode = default(int?), string _accountidValue = default(string), object remainingterms = default(object), string _contactidValue = default(string), string processid = default(string), string description = default(string), string _transactioncurrencyidValue = default(string), string _owningbusinessunitValue = default(string), string _slaidValue = default(string), System.DateTimeOffset? createdon = default(System.DateTimeOffset?), string _owninguserValue = default(string), int? statuscode = default(int?), System.DateTimeOffset? overriddencreatedon = default(System.DateTimeOffset?), object totalterms = default(object), string _owneridValue = default(string), string stageid = default(string), int? utcconversiontimezonecode = default(int?), string _modifiedonbehalfbyValue = default(string), string traversedpath = default(string), string _entitlementtemplateidValue = default(string), string _createdbyValue = default(string), string _createdonbehalfbyValue = default(string), int? timezoneruleversionnumber = default(int?), string _modifiedbyValue = default(string), string name = default(string), MicrosoftDynamicsCRMsystemuser createdby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser createdonbehalfby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser modifiedby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser modifiedonbehalfby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser owninguser = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMteam owningteam = default(MicrosoftDynamicsCRMteam), MicrosoftDynamicsCRMprincipal ownerid = default(MicrosoftDynamicsCRMprincipal), MicrosoftDynamicsCRMbusinessunit owningbusinessunit = default(MicrosoftDynamicsCRMbusinessunit), IList<MicrosoftDynamicsCRMactivitypointer> entitlementActivityPointers = default(IList<MicrosoftDynamicsCRMactivitypointer>), IList<MicrosoftDynamicsCRMappointment> entitlementAppointments = default(IList<MicrosoftDynamicsCRMappointment>), IList<MicrosoftDynamicsCRMemail> entitlementEmails = default(IList<MicrosoftDynamicsCRMemail>), IList<MicrosoftDynamicsCRMfax> entitlementFaxes = default(IList<MicrosoftDynamicsCRMfax>), IList<MicrosoftDynamicsCRMletter> entitlementLetters = default(IList<MicrosoftDynamicsCRMletter>), IList<MicrosoftDynamicsCRMphonecall> entitlementPhoneCalls = default(IList<MicrosoftDynamicsCRMphonecall>), IList<MicrosoftDynamicsCRMserviceappointment> entitlementServiceAppointments = default(IList<MicrosoftDynamicsCRMserviceappointment>), IList<MicrosoftDynamicsCRMtask> entitlementTasks = default(IList<MicrosoftDynamicsCRMtask>), IList<MicrosoftDynamicsCRMrecurringappointmentmaster> entitlementRecurringAppointmentMasters = default(IList<MicrosoftDynamicsCRMrecurringappointmentmaster>), IList<MicrosoftDynamicsCRMconnection> entitlementConnections1 = default(IList<MicrosoftDynamicsCRMconnection>), IList<MicrosoftDynamicsCRMconnection> entitlementConnections2 = default(IList<MicrosoftDynamicsCRMconnection>), IList<MicrosoftDynamicsCRMduplicaterecord> entitlementDuplicateMatchingRecord = default(IList<MicrosoftDynamicsCRMduplicaterecord>), IList<MicrosoftDynamicsCRMduplicaterecord> entitlementDuplicateBaseRecord = default(IList<MicrosoftDynamicsCRMduplicaterecord>), IList<MicrosoftDynamicsCRMannotation> entitlementAnnotations = default(IList<MicrosoftDynamicsCRMannotation>), IList<MicrosoftDynamicsCRMasyncoperation> entitlementAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), IList<MicrosoftDynamicsCRMbulkdeletefailure> entitlementBulkDeleteFailures = default(IList<MicrosoftDynamicsCRMbulkdeletefailure>), MicrosoftDynamicsCRMaccount customeridAccount = default(MicrosoftDynamicsCRMaccount), IList<MicrosoftDynamicsCRMentitlementchannel> entitlementEntitlementchannelEntitlementId = default(IList<MicrosoftDynamicsCRMentitlementchannel>), IList<MicrosoftDynamicsCRMproduct> productEntitlementAssociation = default(IList<MicrosoftDynamicsCRMproduct>), MicrosoftDynamicsCRMentitlementtemplate entitlementtemplateid = default(MicrosoftDynamicsCRMentitlementtemplate), MicrosoftDynamicsCRMaccount accountid = default(MicrosoftDynamicsCRMaccount), MicrosoftDynamicsCRMcontact contactid = default(MicrosoftDynamicsCRMcontact), MicrosoftDynamicsCRMtransactioncurrency transactioncurrencyid = default(MicrosoftDynamicsCRMtransactioncurrency), IList<MicrosoftDynamicsCRMsocialactivity> entitlementSocialActivities = default(IList<MicrosoftDynamicsCRMsocialactivity>), MicrosoftDynamicsCRMsla slaid = default(MicrosoftDynamicsCRMsla), IList<MicrosoftDynamicsCRMcontact> entitlementcontactsAssociation = default(IList<MicrosoftDynamicsCRMcontact>), MicrosoftDynamicsCRMcontact customeridContact = default(MicrosoftDynamicsCRMcontact), IList<MicrosoftDynamicsCRMincident> entitlementCases = default(IList<MicrosoftDynamicsCRMincident>), IList<MicrosoftDynamicsCRMsyncerror> entitlementSyncErrors = default(IList<MicrosoftDynamicsCRMsyncerror>))
+        public MicrosoftDynamicsCRMentitlement(string _owneridValue = default(string), System.DateTimeOffset? startdate = default(System.DateTimeOffset?), string stageid = default(string), long? versionnumber = default(long?), int? statecode = default(int?), string _contactidValue = default(string), string description = default(string), string name = default(string), string _owningteamValue = default(string), string emailaddress = default(string), int? decreaseremainingon = default(int?), System.DateTimeOffset? overriddencreatedon = default(System.DateTimeOffset?), System.DateTimeOffset? enddate = default(System.DateTimeOffset?), System.DateTimeOffset? modifiedon = default(System.DateTimeOffset?), object totalterms = default(object), string _owninguserValue = default(string), System.DateTimeOffset? createdon = default(System.DateTimeOffset?), object remainingterms = default(object), int? statuscode = default(int?), string processid = default(string), string _owningbusinessunitValue = default(string), int? importsequencenumber = default(int?), string _accountidValue = default(string), bool? restrictcasecreation = default(bool?), int? allocationtypecode = default(int?), object exchangerate = default(object), string _transactioncurrencyidValue = default(string), string _createdonbehalfbyValue = default(string), string entitlementid = default(string), string traversedpath = default(string), string _customeridValue = default(string), string _entitlementtemplateidValue = default(string), int? timezoneruleversionnumber = default(int?), int? kbaccesslevel = default(int?), string _createdbyValue = default(string), bool? isdefault = default(bool?), string _modifiedbyValue = default(string), string _slaidValue = default(string), string _modifiedonbehalfbyValue = default(string), int? utcconversiontimezonecode = default(int?), MicrosoftDynamicsCRMsystemuser createdby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser createdonbehalfby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser modifiedby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser modifiedonbehalfby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser owninguser = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMteam owningteam = default(MicrosoftDynamicsCRMteam), MicrosoftDynamicsCRMprincipal ownerid = default(MicrosoftDynamicsCRMprincipal), MicrosoftDynamicsCRMbusinessunit owningbusinessunit = default(MicrosoftDynamicsCRMbusinessunit), IList<MicrosoftDynamicsCRMactivitypointer> entitlementActivityPointers = default(IList<MicrosoftDynamicsCRMactivitypointer>), IList<MicrosoftDynamicsCRMsyncerror> entitlementSyncErrors = default(IList<MicrosoftDynamicsCRMsyncerror>), IList<MicrosoftDynamicsCRMactivityparty> entitlementActivityParties = default(IList<MicrosoftDynamicsCRMactivityparty>), IList<MicrosoftDynamicsCRMasyncoperation> entitlementAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), IList<MicrosoftDynamicsCRMmailboxtrackingfolder> entitlementMailboxTrackingFolder = default(IList<MicrosoftDynamicsCRMmailboxtrackingfolder>), IList<MicrosoftDynamicsCRMprocesssession> entitlementProcessSession = default(IList<MicrosoftDynamicsCRMprocesssession>), IList<MicrosoftDynamicsCRMbulkdeletefailure> entitlementBulkDeleteFailures = default(IList<MicrosoftDynamicsCRMbulkdeletefailure>), IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> entitlementPrincipalObjectAttributeAccesses = default(IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess>), IList<MicrosoftDynamicsCRMappointment> entitlementAppointments = default(IList<MicrosoftDynamicsCRMappointment>), IList<MicrosoftDynamicsCRMemail> entitlementEmails = default(IList<MicrosoftDynamicsCRMemail>), IList<MicrosoftDynamicsCRMfax> entitlementFaxes = default(IList<MicrosoftDynamicsCRMfax>), IList<MicrosoftDynamicsCRMletter> entitlementLetters = default(IList<MicrosoftDynamicsCRMletter>), IList<MicrosoftDynamicsCRMphonecall> entitlementPhoneCalls = default(IList<MicrosoftDynamicsCRMphonecall>), IList<MicrosoftDynamicsCRMtask> entitlementTasks = default(IList<MicrosoftDynamicsCRMtask>), IList<MicrosoftDynamicsCRMrecurringappointmentmaster> entitlementRecurringAppointmentMasters = default(IList<MicrosoftDynamicsCRMrecurringappointmentmaster>), IList<MicrosoftDynamicsCRMsocialactivity> entitlementSocialActivities = default(IList<MicrosoftDynamicsCRMsocialactivity>), IList<MicrosoftDynamicsCRMconnection> entitlementConnections1 = default(IList<MicrosoftDynamicsCRMconnection>), IList<MicrosoftDynamicsCRMconnection> entitlementConnections2 = default(IList<MicrosoftDynamicsCRMconnection>), IList<MicrosoftDynamicsCRMannotation> entitlementAnnotations = default(IList<MicrosoftDynamicsCRMannotation>), IList<MicrosoftDynamicsCRMincidentresolution> entitlementIncidentResolutions = default(IList<MicrosoftDynamicsCRMincidentresolution>), IList<MicrosoftDynamicsCRMserviceappointment> entitlementServiceAppointments = default(IList<MicrosoftDynamicsCRMserviceappointment>), MicrosoftDynamicsCRMaccount accountid = default(MicrosoftDynamicsCRMaccount), MicrosoftDynamicsCRMaccount customeridAccount = default(MicrosoftDynamicsCRMaccount), MicrosoftDynamicsCRMcontact contactid = default(MicrosoftDynamicsCRMcontact), MicrosoftDynamicsCRMcontact customeridContact = default(MicrosoftDynamicsCRMcontact), IList<MicrosoftDynamicsCRMcontact> entitlementcontactsAssociation = default(IList<MicrosoftDynamicsCRMcontact>), IList<MicrosoftDynamicsCRMincident> entitlementCases = default(IList<MicrosoftDynamicsCRMincident>), IList<MicrosoftDynamicsCRMentitlementchannel> entitlementEntitlementchannelEntitlementId = default(IList<MicrosoftDynamicsCRMentitlementchannel>), MicrosoftDynamicsCRMentitlementtemplate entitlementtemplateid = default(MicrosoftDynamicsCRMentitlementtemplate), IList<MicrosoftDynamicsCRMproduct> productEntitlementAssociation = default(IList<MicrosoftDynamicsCRMproduct>), MicrosoftDynamicsCRMsla slaid = default(MicrosoftDynamicsCRMsla), MicrosoftDynamicsCRMtransactioncurrency transactioncurrencyid = default(MicrosoftDynamicsCRMtransactioncurrency), IList<MicrosoftDynamicsCRMduplicaterecord> entitlementDuplicateBaseRecord = default(IList<MicrosoftDynamicsCRMduplicaterecord>), IList<MicrosoftDynamicsCRMduplicaterecord> entitlementDuplicateMatchingRecord = default(IList<MicrosoftDynamicsCRMduplicaterecord>), IList<MicrosoftDynamicsCRMopportunityclose> entitlementOpportunityCloses = default(IList<MicrosoftDynamicsCRMopportunityclose>), IList<MicrosoftDynamicsCRMorderclose> entitlementOrderCloses = default(IList<MicrosoftDynamicsCRMorderclose>), IList<MicrosoftDynamicsCRMquoteclose> entitlementQuoteCloses = default(IList<MicrosoftDynamicsCRMquoteclose>))
         {
-            Decreaseremainingon = decreaseremainingon;
-            Startdate = startdate;
-            Statecode = statecode;
-            Kbaccesslevel = kbaccesslevel;
-            Entitlementid = entitlementid;
-            Modifiedon = modifiedon;
-            Versionnumber = versionnumber;
-            Importsequencenumber = importsequencenumber;
-            Enddate = enddate;
-            this._customeridValue = _customeridValue;
-            Restrictcasecreation = restrictcasecreation;
-            Isdefault = isdefault;
-            this._owningteamValue = _owningteamValue;
-            Exchangerate = exchangerate;
-            Allocationtypecode = allocationtypecode;
-            this._accountidValue = _accountidValue;
-            Remainingterms = remainingterms;
-            this._contactidValue = _contactidValue;
-            Processid = processid;
-            Description = description;
-            this._transactioncurrencyidValue = _transactioncurrencyidValue;
-            this._owningbusinessunitValue = _owningbusinessunitValue;
-            this._slaidValue = _slaidValue;
-            Createdon = createdon;
-            this._owninguserValue = _owninguserValue;
-            Statuscode = statuscode;
-            Overriddencreatedon = overriddencreatedon;
-            Totalterms = totalterms;
             this._owneridValue = _owneridValue;
+            Startdate = startdate;
             Stageid = stageid;
-            Utcconversiontimezonecode = utcconversiontimezonecode;
-            this._modifiedonbehalfbyValue = _modifiedonbehalfbyValue;
-            Traversedpath = traversedpath;
-            this._entitlementtemplateidValue = _entitlementtemplateidValue;
-            this._createdbyValue = _createdbyValue;
-            this._createdonbehalfbyValue = _createdonbehalfbyValue;
-            Timezoneruleversionnumber = timezoneruleversionnumber;
-            this._modifiedbyValue = _modifiedbyValue;
+            Versionnumber = versionnumber;
+            Statecode = statecode;
+            this._contactidValue = _contactidValue;
+            Description = description;
             Name = name;
+            this._owningteamValue = _owningteamValue;
+            Emailaddress = emailaddress;
+            Decreaseremainingon = decreaseremainingon;
+            Overriddencreatedon = overriddencreatedon;
+            Enddate = enddate;
+            Modifiedon = modifiedon;
+            Totalterms = totalterms;
+            this._owninguserValue = _owninguserValue;
+            Createdon = createdon;
+            Remainingterms = remainingterms;
+            Statuscode = statuscode;
+            Processid = processid;
+            this._owningbusinessunitValue = _owningbusinessunitValue;
+            Importsequencenumber = importsequencenumber;
+            this._accountidValue = _accountidValue;
+            Restrictcasecreation = restrictcasecreation;
+            Allocationtypecode = allocationtypecode;
+            Exchangerate = exchangerate;
+            this._transactioncurrencyidValue = _transactioncurrencyidValue;
+            this._createdonbehalfbyValue = _createdonbehalfbyValue;
+            Entitlementid = entitlementid;
+            Traversedpath = traversedpath;
+            this._customeridValue = _customeridValue;
+            this._entitlementtemplateidValue = _entitlementtemplateidValue;
+            Timezoneruleversionnumber = timezoneruleversionnumber;
+            Kbaccesslevel = kbaccesslevel;
+            this._createdbyValue = _createdbyValue;
+            Isdefault = isdefault;
+            this._modifiedbyValue = _modifiedbyValue;
+            this._slaidValue = _slaidValue;
+            this._modifiedonbehalfbyValue = _modifiedonbehalfbyValue;
+            Utcconversiontimezonecode = utcconversiontimezonecode;
             Createdby = createdby;
             Createdonbehalfby = createdonbehalfby;
             Modifiedby = modifiedby;
@@ -79,34 +80,42 @@ namespace Gov.Jag.Embc.Interfaces.Models
             Ownerid = ownerid;
             Owningbusinessunit = owningbusinessunit;
             EntitlementActivityPointers = entitlementActivityPointers;
+            EntitlementSyncErrors = entitlementSyncErrors;
+            EntitlementActivityParties = entitlementActivityParties;
+            EntitlementAsyncOperations = entitlementAsyncOperations;
+            EntitlementMailboxTrackingFolder = entitlementMailboxTrackingFolder;
+            EntitlementProcessSession = entitlementProcessSession;
+            EntitlementBulkDeleteFailures = entitlementBulkDeleteFailures;
+            EntitlementPrincipalObjectAttributeAccesses = entitlementPrincipalObjectAttributeAccesses;
             EntitlementAppointments = entitlementAppointments;
             EntitlementEmails = entitlementEmails;
             EntitlementFaxes = entitlementFaxes;
             EntitlementLetters = entitlementLetters;
             EntitlementPhoneCalls = entitlementPhoneCalls;
-            EntitlementServiceAppointments = entitlementServiceAppointments;
             EntitlementTasks = entitlementTasks;
             EntitlementRecurringAppointmentMasters = entitlementRecurringAppointmentMasters;
+            EntitlementSocialActivities = entitlementSocialActivities;
             EntitlementConnections1 = entitlementConnections1;
             EntitlementConnections2 = entitlementConnections2;
-            EntitlementDuplicateMatchingRecord = entitlementDuplicateMatchingRecord;
-            EntitlementDuplicateBaseRecord = entitlementDuplicateBaseRecord;
             EntitlementAnnotations = entitlementAnnotations;
-            EntitlementAsyncOperations = entitlementAsyncOperations;
-            EntitlementBulkDeleteFailures = entitlementBulkDeleteFailures;
-            CustomeridAccount = customeridAccount;
-            EntitlementEntitlementchannelEntitlementId = entitlementEntitlementchannelEntitlementId;
-            ProductEntitlementAssociation = productEntitlementAssociation;
-            Entitlementtemplateid = entitlementtemplateid;
+            EntitlementIncidentResolutions = entitlementIncidentResolutions;
+            EntitlementServiceAppointments = entitlementServiceAppointments;
             Accountid = accountid;
+            CustomeridAccount = customeridAccount;
             Contactid = contactid;
-            Transactioncurrencyid = transactioncurrencyid;
-            EntitlementSocialActivities = entitlementSocialActivities;
-            Slaid = slaid;
-            EntitlementcontactsAssociation = entitlementcontactsAssociation;
             CustomeridContact = customeridContact;
+            EntitlementcontactsAssociation = entitlementcontactsAssociation;
             EntitlementCases = entitlementCases;
-            EntitlementSyncErrors = entitlementSyncErrors;
+            EntitlementEntitlementchannelEntitlementId = entitlementEntitlementchannelEntitlementId;
+            Entitlementtemplateid = entitlementtemplateid;
+            ProductEntitlementAssociation = productEntitlementAssociation;
+            Slaid = slaid;
+            Transactioncurrencyid = transactioncurrencyid;
+            EntitlementDuplicateBaseRecord = entitlementDuplicateBaseRecord;
+            EntitlementDuplicateMatchingRecord = entitlementDuplicateMatchingRecord;
+            EntitlementOpportunityCloses = entitlementOpportunityCloses;
+            EntitlementOrderCloses = entitlementOrderCloses;
+            EntitlementQuoteCloses = entitlementQuoteCloses;
             CustomInit();
         }
 
@@ -117,8 +126,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "decreaseremainingon")]
-        public int? Decreaseremainingon { get; set; }
+        [JsonProperty(PropertyName = "_ownerid_value")]
+        public string _owneridValue { get; set; }
 
         /// <summary>
         /// </summary>
@@ -127,23 +136,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "statecode")]
-        public int? Statecode { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "kbaccesslevel")]
-        public int? Kbaccesslevel { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "entitlementid")]
-        public string Entitlementid { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "modifiedon")]
-        public System.DateTimeOffset? Modifiedon { get; set; }
+        [JsonProperty(PropertyName = "stageid")]
+        public string Stageid { get; set; }
 
         /// <summary>
         /// </summary>
@@ -152,53 +146,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "importsequencenumber")]
-        public int? Importsequencenumber { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "enddate")]
-        public System.DateTimeOffset? Enddate { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_customerid_value")]
-        public string _customeridValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "restrictcasecreation")]
-        public bool? Restrictcasecreation { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "isdefault")]
-        public bool? Isdefault { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_owningteam_value")]
-        public string _owningteamValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "exchangerate")]
-        public object Exchangerate { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "allocationtypecode")]
-        public int? Allocationtypecode { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_accountid_value")]
-        public string _accountidValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "remainingterms")]
-        public object Remainingterms { get; set; }
+        [JsonProperty(PropertyName = "statecode")]
+        public int? Statecode { get; set; }
 
         /// <summary>
         /// </summary>
@@ -207,43 +156,28 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "processid")]
-        public string Processid { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "_transactioncurrencyid_value")]
-        public string _transactioncurrencyidValue { get; set; }
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "_owningbusinessunit_value")]
-        public string _owningbusinessunitValue { get; set; }
+        [JsonProperty(PropertyName = "_owningteam_value")]
+        public string _owningteamValue { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "_slaid_value")]
-        public string _slaidValue { get; set; }
+        [JsonProperty(PropertyName = "emailaddress")]
+        public string Emailaddress { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "createdon")]
-        public System.DateTimeOffset? Createdon { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_owninguser_value")]
-        public string _owninguserValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "statuscode")]
-        public int? Statuscode { get; set; }
+        [JsonProperty(PropertyName = "decreaseremainingon")]
+        public int? Decreaseremainingon { get; set; }
 
         /// <summary>
         /// </summary>
@@ -252,43 +186,78 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "enddate")]
+        public System.DateTimeOffset? Enddate { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "modifiedon")]
+        public System.DateTimeOffset? Modifiedon { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "totalterms")]
-        public object Totalterms { get; set; }
+        [NotMapped] public object Totalterms { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "_ownerid_value")]
-        public string _owneridValue { get; set; }
+        [JsonProperty(PropertyName = "_owninguser_value")]
+        public string _owninguserValue { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "stageid")]
-        public string Stageid { get; set; }
+        [JsonProperty(PropertyName = "createdon")]
+        public System.DateTimeOffset? Createdon { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "utcconversiontimezonecode")]
-        public int? Utcconversiontimezonecode { get; set; }
+        [JsonProperty(PropertyName = "remainingterms")]
+        [NotMapped] public object Remainingterms { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "_modifiedonbehalfby_value")]
-        public string _modifiedonbehalfbyValue { get; set; }
+        [JsonProperty(PropertyName = "statuscode")]
+        public int? Statuscode { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "traversedpath")]
-        public string Traversedpath { get; set; }
+        [JsonProperty(PropertyName = "processid")]
+        public string Processid { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "_entitlementtemplateid_value")]
-        public string _entitlementtemplateidValue { get; set; }
+        [JsonProperty(PropertyName = "_owningbusinessunit_value")]
+        public string _owningbusinessunitValue { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "_createdby_value")]
-        public string _createdbyValue { get; set; }
+        [JsonProperty(PropertyName = "importsequencenumber")]
+        public int? Importsequencenumber { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_accountid_value")]
+        public string _accountidValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "restrictcasecreation")]
+        public bool? Restrictcasecreation { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "allocationtypecode")]
+        public int? Allocationtypecode { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "exchangerate")]
+        [NotMapped] public object Exchangerate { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_transactioncurrencyid_value")]
+        public string _transactioncurrencyidValue { get; set; }
 
         /// <summary>
         /// </summary>
@@ -297,8 +266,43 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "entitlementid")]
+        public string Entitlementid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "traversedpath")]
+        public string Traversedpath { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_customerid_value")]
+        public string _customeridValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_entitlementtemplateid_value")]
+        public string _entitlementtemplateidValue { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "timezoneruleversionnumber")]
         public int? Timezoneruleversionnumber { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "kbaccesslevel")]
+        public int? Kbaccesslevel { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_createdby_value")]
+        public string _createdbyValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "isdefault")]
+        public bool? Isdefault { get; set; }
 
         /// <summary>
         /// </summary>
@@ -307,8 +311,18 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "name")]
-        public string Name { get; set; }
+        [JsonProperty(PropertyName = "_slaid_value")]
+        public string _slaidValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_modifiedonbehalfby_value")]
+        public string _modifiedonbehalfbyValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "utcconversiontimezonecode")]
+        public int? Utcconversiontimezonecode { get; set; }
 
         /// <summary>
         /// </summary>
@@ -353,102 +367,107 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "entitlement_ActivityPointers")]
-        public IList<MicrosoftDynamicsCRMactivitypointer> EntitlementActivityPointers { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMactivitypointer> EntitlementActivityPointers { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "entitlement_Appointments")]
-        public IList<MicrosoftDynamicsCRMappointment> EntitlementAppointments { get; set; }
+        [JsonProperty(PropertyName = "Entitlement_SyncErrors")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMsyncerror> EntitlementSyncErrors { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "entitlement_Emails")]
-        public IList<MicrosoftDynamicsCRMemail> EntitlementEmails { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "entitlement_Faxes")]
-        public IList<MicrosoftDynamicsCRMfax> EntitlementFaxes { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "entitlement_Letters")]
-        public IList<MicrosoftDynamicsCRMletter> EntitlementLetters { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "entitlement_PhoneCalls")]
-        public IList<MicrosoftDynamicsCRMphonecall> EntitlementPhoneCalls { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "entitlement_ServiceAppointments")]
-        public IList<MicrosoftDynamicsCRMserviceappointment> EntitlementServiceAppointments { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "entitlement_Tasks")]
-        public IList<MicrosoftDynamicsCRMtask> EntitlementTasks { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "entitlement_RecurringAppointmentMasters")]
-        public IList<MicrosoftDynamicsCRMrecurringappointmentmaster> EntitlementRecurringAppointmentMasters { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "entitlement_connections1")]
-        public IList<MicrosoftDynamicsCRMconnection> EntitlementConnections1 { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "entitlement_connections2")]
-        public IList<MicrosoftDynamicsCRMconnection> EntitlementConnections2 { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "entitlement_DuplicateMatchingRecord")]
-        public IList<MicrosoftDynamicsCRMduplicaterecord> EntitlementDuplicateMatchingRecord { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "entitlement_DuplicateBaseRecord")]
-        public IList<MicrosoftDynamicsCRMduplicaterecord> EntitlementDuplicateBaseRecord { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "entitlement_Annotations")]
-        public IList<MicrosoftDynamicsCRMannotation> EntitlementAnnotations { get; set; }
+        [JsonProperty(PropertyName = "entitlement_ActivityParties")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMactivityparty> EntitlementActivityParties { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "entitlement_AsyncOperations")]
-        public IList<MicrosoftDynamicsCRMasyncoperation> EntitlementAsyncOperations { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMasyncoperation> EntitlementAsyncOperations { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "Entitlement_MailboxTrackingFolder")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMmailboxtrackingfolder> EntitlementMailboxTrackingFolder { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "entitlement_ProcessSession")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMprocesssession> EntitlementProcessSession { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "entitlement_BulkDeleteFailures")]
-        public IList<MicrosoftDynamicsCRMbulkdeletefailure> EntitlementBulkDeleteFailures { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMbulkdeletefailure> EntitlementBulkDeleteFailures { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "customerid_account")]
-        public MicrosoftDynamicsCRMaccount CustomeridAccount { get; set; }
+        [JsonProperty(PropertyName = "entitlement_PrincipalObjectAttributeAccesses")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> EntitlementPrincipalObjectAttributeAccesses { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "entitlement_entitlementchannel_EntitlementId")]
-        public IList<MicrosoftDynamicsCRMentitlementchannel> EntitlementEntitlementchannelEntitlementId { get; set; }
+        [JsonProperty(PropertyName = "entitlement_Appointments")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMappointment> EntitlementAppointments { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "product_entitlement_association")]
-        public IList<MicrosoftDynamicsCRMproduct> ProductEntitlementAssociation { get; set; }
+        [JsonProperty(PropertyName = "entitlement_Emails")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMemail> EntitlementEmails { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "entitlementtemplateid")]
-        public MicrosoftDynamicsCRMentitlementtemplate Entitlementtemplateid { get; set; }
+        [JsonProperty(PropertyName = "entitlement_Faxes")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMfax> EntitlementFaxes { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "entitlement_Letters")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMletter> EntitlementLetters { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "entitlement_PhoneCalls")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMphonecall> EntitlementPhoneCalls { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "entitlement_Tasks")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMtask> EntitlementTasks { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "entitlement_RecurringAppointmentMasters")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMrecurringappointmentmaster> EntitlementRecurringAppointmentMasters { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "entitlement_SocialActivities")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMsocialactivity> EntitlementSocialActivities { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "entitlement_connections1")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMconnection> EntitlementConnections1 { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "entitlement_connections2")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMconnection> EntitlementConnections2 { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "entitlement_Annotations")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMannotation> EntitlementAnnotations { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "entitlement_IncidentResolutions")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMincidentresolution> EntitlementIncidentResolutions { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "entitlement_ServiceAppointments")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMserviceappointment> EntitlementServiceAppointments { get; set; }
 
         /// <summary>
         /// </summary>
@@ -457,28 +476,13 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "customerid_account")]
+        public MicrosoftDynamicsCRMaccount CustomeridAccount { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "contactid")]
         public MicrosoftDynamicsCRMcontact Contactid { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrencyid")]
-        public MicrosoftDynamicsCRMtransactioncurrency Transactioncurrencyid { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "entitlement_SocialActivities")]
-        public IList<MicrosoftDynamicsCRMsocialactivity> EntitlementSocialActivities { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "slaid")]
-        public MicrosoftDynamicsCRMsla Slaid { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "entitlementcontacts_association")]
-        public IList<MicrosoftDynamicsCRMcontact> EntitlementcontactsAssociation { get; set; }
 
         /// <summary>
         /// </summary>
@@ -487,13 +491,63 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "entitlement_cases")]
-        public IList<MicrosoftDynamicsCRMincident> EntitlementCases { get; set; }
+        [JsonProperty(PropertyName = "entitlementcontacts_association")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMcontact> EntitlementcontactsAssociation { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "Entitlement_SyncErrors")]
-        public IList<MicrosoftDynamicsCRMsyncerror> EntitlementSyncErrors { get; set; }
+        [JsonProperty(PropertyName = "entitlement_cases")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMincident> EntitlementCases { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "entitlement_entitlementchannel_EntitlementId")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMentitlementchannel> EntitlementEntitlementchannelEntitlementId { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "entitlementtemplateid")]
+        public MicrosoftDynamicsCRMentitlementtemplate Entitlementtemplateid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "product_entitlement_association")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMproduct> ProductEntitlementAssociation { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "slaid")]
+        public MicrosoftDynamicsCRMsla Slaid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrencyid")]
+        public MicrosoftDynamicsCRMtransactioncurrency Transactioncurrencyid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "entitlement_DuplicateBaseRecord")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMduplicaterecord> EntitlementDuplicateBaseRecord { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "entitlement_DuplicateMatchingRecord")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMduplicaterecord> EntitlementDuplicateMatchingRecord { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "entitlement_OpportunityCloses")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMopportunityclose> EntitlementOpportunityCloses { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "entitlement_OrderCloses")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMorderclose> EntitlementOrderCloses { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "entitlement_QuoteCloses")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMquoteclose> EntitlementQuoteCloses { get; set; }
 
     }
 }

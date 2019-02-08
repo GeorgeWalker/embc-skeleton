@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// EntityKeyMetadata
@@ -31,7 +31,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// </summary>
         /// <param name="entityKeyIndexStatus">Possible values include:
         /// 'Pending', 'InProgress', 'Active', 'Failed'</param>
-        public MicrosoftDynamicsCRMEntityKeyMetadata(MicrosoftDynamicsCRMLabel displayName = default(MicrosoftDynamicsCRMLabel), string logicalName = default(string), string schemaName = default(string), string entityLogicalName = default(string), IList<string> keyAttributes = default(IList<string>), MicrosoftDynamicsCRMBooleanManagedProperty isCustomizable = default(MicrosoftDynamicsCRMBooleanManagedProperty), bool? isManaged = default(bool?), string introducedVersion = default(string), string entityKeyIndexStatus = default(string), string asyncJob = default(string))
+        public MicrosoftDynamicsCRMEntityKeyMetadata(MicrosoftDynamicsCRMLabel displayName = default(MicrosoftDynamicsCRMLabel), string logicalName = default(string), string schemaName = default(string), string entityLogicalName = default(string), IList<string> keyAttributes = default(IList<string>), MicrosoftDynamicsCRMBooleanManagedProperty isCustomizable = default(MicrosoftDynamicsCRMBooleanManagedProperty), bool? isManaged = default(bool?), string introducedVersion = default(string), string entityKeyIndexStatus = default(string), string asyncJob = default(string), bool? isSynchronous = default(bool?))
         {
             DisplayName = displayName;
             LogicalName = logicalName;
@@ -43,6 +43,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
             IntroducedVersion = introducedVersion;
             EntityKeyIndexStatus = entityKeyIndexStatus;
             AsyncJob = asyncJob;
+            IsSynchronous = isSynchronous;
             CustomInit();
         }
 
@@ -74,7 +75,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "KeyAttributes")]
-        public IList<string> KeyAttributes { get; set; }
+        [NotMapped] public IList<string> KeyAttributes { get; set; }
 
         /// <summary>
         /// </summary>
@@ -102,6 +103,11 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// </summary>
         [JsonProperty(PropertyName = "AsyncJob")]
         public string AsyncJob { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "IsSynchronous")]
+        public bool? IsSynchronous { get; set; }
 
     }
 }

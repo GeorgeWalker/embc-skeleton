@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// AppointmentProposal
@@ -67,7 +67,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "ProposalParties")]
-        public IList<MicrosoftDynamicsCRMProposalParty> ProposalParties { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMProposalParty> ProposalParties { get; set; }
 
     }
 }

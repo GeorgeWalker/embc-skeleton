@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// ExpandCalendarResponse
@@ -43,7 +43,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "result")]
-        public IList<MicrosoftDynamicsCRMTimeInfo> Result { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMTimeInfo> Result { get; set; }
 
     }
 }

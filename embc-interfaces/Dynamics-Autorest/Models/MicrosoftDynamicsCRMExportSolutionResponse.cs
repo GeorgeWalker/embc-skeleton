@@ -7,7 +7,7 @@
 namespace Gov.Jag.Embc.Interfaces.Models
 {
     using Newtonsoft.Json;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// ExportSolutionResponse
@@ -41,7 +41,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "ExportSolutionFile")]
-        public object ExportSolutionFile { get; set; }
+        [NotMapped] public object ExportSolutionFile { get; set; }
 
     }
 }

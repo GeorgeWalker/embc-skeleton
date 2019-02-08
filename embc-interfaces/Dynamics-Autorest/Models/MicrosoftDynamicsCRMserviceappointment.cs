@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// serviceappointment
@@ -29,61 +29,70 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the
         /// MicrosoftDynamicsCRMserviceappointment class.
         /// </summary>
-        public MicrosoftDynamicsCRMserviceappointment(string category = default(string), int? importsequencenumber = default(int?), string subcategory = default(string), bool? isalldayevent = default(bool?), string location = default(string), System.DateTimeOffset? overriddencreatedon = default(System.DateTimeOffset?), string subscriptionid = default(string), string _siteidValue = default(string), MicrosoftDynamicsCRMentitlement regardingobjectidEntitlementServiceappointment = default(MicrosoftDynamicsCRMentitlement), MicrosoftDynamicsCRMentitlementtemplate regardingobjectidEntitlementtemplateServiceappointment = default(MicrosoftDynamicsCRMentitlementtemplate), MicrosoftDynamicsCRMbookableresourcebooking regardingobjectidBookableresourcebookingServiceappointment = default(MicrosoftDynamicsCRMbookableresourcebooking), MicrosoftDynamicsCRMbookableresourcebookingheader regardingobjectidBookableresourcebookingheaderServiceappointment = default(MicrosoftDynamicsCRMbookableresourcebookingheader), MicrosoftDynamicsCRMknowledgebaserecord regardingobjectidKnowledgebaserecordServiceappointment = default(MicrosoftDynamicsCRMknowledgebaserecord), MicrosoftDynamicsCRMaccount regardingobjectidAccountServiceappointment = default(MicrosoftDynamicsCRMaccount), IList<MicrosoftDynamicsCRMslakpiinstance> slakpiinstanceServiceappointment = default(IList<MicrosoftDynamicsCRMslakpiinstance>), IList<MicrosoftDynamicsCRMactivityparty> serviceappointmentActivityParties = default(IList<MicrosoftDynamicsCRMactivityparty>), MicrosoftDynamicsCRMservice serviceidServiceappointment = default(MicrosoftDynamicsCRMservice), IList<MicrosoftDynamicsCRMbulkdeletefailure> serviceAppointmentBulkDeleteFailures = default(IList<MicrosoftDynamicsCRMbulkdeletefailure>), IList<MicrosoftDynamicsCRMsyncerror> serviceAppointmentSyncErrors = default(IList<MicrosoftDynamicsCRMsyncerror>), MicrosoftDynamicsCRMsystemuser createdonbehalfbyServiceappointment = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMincident regardingobjectidIncidentServiceappointment = default(MicrosoftDynamicsCRMincident), IList<MicrosoftDynamicsCRMconnection> serviceappointmentConnections2 = default(IList<MicrosoftDynamicsCRMconnection>), MicrosoftDynamicsCRMsystemuser owninguserServiceappointment = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsalesorder regardingobjectidSalesorderServiceappointment = default(MicrosoftDynamicsCRMsalesorder), IList<MicrosoftDynamicsCRMasyncoperation> serviceAppointmentAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), MicrosoftDynamicsCRMcontact regardingobjectidContactServiceappointment = default(MicrosoftDynamicsCRMcontact), IList<MicrosoftDynamicsCRMconnection> serviceappointmentConnections1 = default(IList<MicrosoftDynamicsCRMconnection>), MicrosoftDynamicsCRMactivitypointer activityidActivitypointer = default(MicrosoftDynamicsCRMactivitypointer), MicrosoftDynamicsCRMcontract regardingobjectidContractServiceappointment = default(MicrosoftDynamicsCRMcontract), IList<MicrosoftDynamicsCRMactioncard> serviceappointmentActioncard = default(IList<MicrosoftDynamicsCRMactioncard>), MicrosoftDynamicsCRMcampaign regardingobjectidCampaignServiceappointment = default(MicrosoftDynamicsCRMcampaign), IList<MicrosoftDynamicsCRMqueueitem> serviceAppointmentQueueItem = default(IList<MicrosoftDynamicsCRMqueueitem>), MicrosoftDynamicsCRMopportunity regardingobjectidOpportunityServiceappointment = default(MicrosoftDynamicsCRMopportunity), MicrosoftDynamicsCRMquote regardingobjectidQuoteServiceappointment = default(MicrosoftDynamicsCRMquote), MicrosoftDynamicsCRMknowledgearticle regardingobjectidKnowledgearticleServiceappointment = default(MicrosoftDynamicsCRMknowledgearticle), MicrosoftDynamicsCRMsite siteid = default(MicrosoftDynamicsCRMsite), MicrosoftDynamicsCRMsystemuser createdbyServiceappointment = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMtransactioncurrency transactioncurrencyidServiceappointment = default(MicrosoftDynamicsCRMtransactioncurrency), MicrosoftDynamicsCRMsla sLAId = default(MicrosoftDynamicsCRMsla), IList<MicrosoftDynamicsCRMannotation> serviceAppointmentAnnotation = default(IList<MicrosoftDynamicsCRMannotation>), MicrosoftDynamicsCRMsystemuser modifiedbyServiceappointment = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMteam owningteamServiceappointment = default(MicrosoftDynamicsCRMteam), MicrosoftDynamicsCRMsystemuser modifiedonbehalfbyServiceappointment = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMinvoice regardingobjectidInvoiceServiceappointment = default(MicrosoftDynamicsCRMinvoice), MicrosoftDynamicsCRMsla slainvokedidServiceappointmentSla = default(MicrosoftDynamicsCRMsla), MicrosoftDynamicsCRMbusinessunit owningbusinessunitServiceappointment = default(MicrosoftDynamicsCRMbusinessunit), MicrosoftDynamicsCRMlead regardingobjectidLeadServiceappointment = default(MicrosoftDynamicsCRMlead), MicrosoftDynamicsCRMbcgovCustomaddress regardingobjectidBcgovCustomaddressServiceappointment = default(MicrosoftDynamicsCRMbcgovCustomaddress), MicrosoftDynamicsCRMbcgovCustomproduct regardingobjectidBcgovCustomproductServiceappointment = default(MicrosoftDynamicsCRMbcgovCustomproduct), MicrosoftDynamicsCRMbcgovLocation regardingobjectidBcgovLocationServiceappointment = default(MicrosoftDynamicsCRMbcgovLocation), MicrosoftDynamicsCRMbcgovEquipment regardingobjectidBcgovEquipmentServiceappointment = default(MicrosoftDynamicsCRMbcgovEquipment), MicrosoftDynamicsCRMbcgovEquipmentlocation regardingobjectidBcgovEquipmentlocationServiceappointment = default(MicrosoftDynamicsCRMbcgovEquipmentlocation), MicrosoftDynamicsCRMbcgovRiskassessment regardingobjectidBcgovRiskassessmentServiceappointment = default(MicrosoftDynamicsCRMbcgovRiskassessment))
+        public MicrosoftDynamicsCRMserviceappointment(bool? isalldayevent = default(bool?), string category = default(string), string location = default(string), string subscriptionid = default(string), string subcategory = default(string), System.DateTimeOffset? overriddencreatedon = default(System.DateTimeOffset?), string _siteidValue = default(string), int? importsequencenumber = default(int?), MicrosoftDynamicsCRMgovCommunity regardingobjectidGovCommunityServiceappointment = default(MicrosoftDynamicsCRMgovCommunity), MicrosoftDynamicsCRMgovIncidenttask regardingobjectidGovIncidenttaskServiceappointment = default(MicrosoftDynamicsCRMgovIncidenttask), MicrosoftDynamicsCRMgovRegistration regardingobjectidGovRegistrationServiceappointment = default(MicrosoftDynamicsCRMgovRegistration), MicrosoftDynamicsCRMlead regardingobjectidLeadServiceappointment = default(MicrosoftDynamicsCRMlead), MicrosoftDynamicsCRMbookableresourcebooking regardingobjectidBookableresourcebookingServiceappointment = default(MicrosoftDynamicsCRMbookableresourcebooking), MicrosoftDynamicsCRMbookableresourcebookingheader regardingobjectidBookableresourcebookingheaderServiceappointment = default(MicrosoftDynamicsCRMbookableresourcebookingheader), MicrosoftDynamicsCRMbulkoperation regardingobjectidBulkoperationServiceappointment = default(MicrosoftDynamicsCRMbulkoperation), MicrosoftDynamicsCRMcampaign regardingobjectidCampaignServiceappointment = default(MicrosoftDynamicsCRMcampaign), MicrosoftDynamicsCRMcampaignactivity regardingobjectidCampaignactivityServiceappointment = default(MicrosoftDynamicsCRMcampaignactivity), MicrosoftDynamicsCRMcontract regardingobjectidContractServiceappointment = default(MicrosoftDynamicsCRMcontract), MicrosoftDynamicsCRMentitlement regardingobjectidEntitlementServiceappointment = default(MicrosoftDynamicsCRMentitlement), MicrosoftDynamicsCRMentitlementtemplate regardingobjectidEntitlementtemplateServiceappointment = default(MicrosoftDynamicsCRMentitlementtemplate), MicrosoftDynamicsCRMincident regardingobjectidIncidentServiceappointment = default(MicrosoftDynamicsCRMincident), MicrosoftDynamicsCRMinteractionforemail regardingobjectidNewInteractionforemailServiceappointment = default(MicrosoftDynamicsCRMinteractionforemail), MicrosoftDynamicsCRMknowledgebaserecord regardingobjectidKnowledgebaserecordServiceappointment = default(MicrosoftDynamicsCRMknowledgebaserecord), MicrosoftDynamicsCRMaccount regardingobjectidAccountServiceappointment = default(MicrosoftDynamicsCRMaccount), MicrosoftDynamicsCRMsystemuser createdbyServiceappointment = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMcontact regardingobjectidContactServiceappointment = default(MicrosoftDynamicsCRMcontact), MicrosoftDynamicsCRMmailbox sendermailboxidServiceappointment = default(MicrosoftDynamicsCRMmailbox), MicrosoftDynamicsCRMtransactioncurrency transactioncurrencyidServiceappointment = default(MicrosoftDynamicsCRMtransactioncurrency), MicrosoftDynamicsCRMprincipal owneridServiceappointment = default(MicrosoftDynamicsCRMprincipal), MicrosoftDynamicsCRMsystemuser owninguserServiceappointment = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsla sLAId = default(MicrosoftDynamicsCRMsla), MicrosoftDynamicsCRMbusinessunit owningbusinessunitServiceappointment = default(MicrosoftDynamicsCRMbusinessunit), MicrosoftDynamicsCRMknowledgearticle regardingobjectidKnowledgearticleServiceappointment = default(MicrosoftDynamicsCRMknowledgearticle), MicrosoftDynamicsCRMsystemuser modifiedonbehalfbyServiceappointment = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser createdonbehalfbyServiceappointment = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser modifiedbyServiceappointment = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMteam owningteamServiceappointment = default(MicrosoftDynamicsCRMteam), MicrosoftDynamicsCRMsla slainvokedidServiceappointmentSla = default(MicrosoftDynamicsCRMsla), MicrosoftDynamicsCRMactivitypointer activityidActivitypointer = default(MicrosoftDynamicsCRMactivitypointer), IList<MicrosoftDynamicsCRMactivityparty> serviceappointmentActivityParties = default(IList<MicrosoftDynamicsCRMactivityparty>), IList<MicrosoftDynamicsCRMcampaignresponse> campaignResponseServiceAppointments = default(IList<MicrosoftDynamicsCRMcampaignresponse>), IList<MicrosoftDynamicsCRMsyncerror> serviceAppointmentSyncErrors = default(IList<MicrosoftDynamicsCRMsyncerror>), IList<MicrosoftDynamicsCRMasyncoperation> serviceAppointmentAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), IList<MicrosoftDynamicsCRMmailboxtrackingfolder> serviceappointmentMailboxTrackingFolders = default(IList<MicrosoftDynamicsCRMmailboxtrackingfolder>), IList<MicrosoftDynamicsCRMprocesssession> serviceAppointmentProcessSessions = default(IList<MicrosoftDynamicsCRMprocesssession>), IList<MicrosoftDynamicsCRMbulkdeletefailure> serviceAppointmentBulkDeleteFailures = default(IList<MicrosoftDynamicsCRMbulkdeletefailure>), IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> serviceappointmentPrincipalobjectattributeaccess = default(IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess>), IList<MicrosoftDynamicsCRMconnection> serviceappointmentConnections1 = default(IList<MicrosoftDynamicsCRMconnection>), IList<MicrosoftDynamicsCRMconnection> serviceappointmentConnections2 = default(IList<MicrosoftDynamicsCRMconnection>), IList<MicrosoftDynamicsCRMqueueitem> serviceAppointmentQueueItem = default(IList<MicrosoftDynamicsCRMqueueitem>), IList<MicrosoftDynamicsCRMannotation> serviceAppointmentAnnotation = default(IList<MicrosoftDynamicsCRMannotation>), MicrosoftDynamicsCRMsite regardingobjectidSiteServiceappointment = default(MicrosoftDynamicsCRMsite), IList<MicrosoftDynamicsCRMactioncard> serviceappointmentActioncard = default(IList<MicrosoftDynamicsCRMactioncard>), MicrosoftDynamicsCRMservice serviceidServiceappointment = default(MicrosoftDynamicsCRMservice), IList<MicrosoftDynamicsCRMslakpiinstance> slakpiinstanceServiceappointment = default(IList<MicrosoftDynamicsCRMslakpiinstance>), MicrosoftDynamicsCRMsite siteid = default(MicrosoftDynamicsCRMsite), MicrosoftDynamicsCRMmsdynPlaybookinstance regardingobjectidMsdynPlaybookinstanceServiceappointment = default(MicrosoftDynamicsCRMmsdynPlaybookinstance), MicrosoftDynamicsCRMinvoice regardingobjectidInvoiceServiceappointment = default(MicrosoftDynamicsCRMinvoice), MicrosoftDynamicsCRMopportunity regardingobjectidOpportunityServiceappointment = default(MicrosoftDynamicsCRMopportunity), MicrosoftDynamicsCRMquote regardingobjectidQuoteServiceappointment = default(MicrosoftDynamicsCRMquote), MicrosoftDynamicsCRMsalesorder regardingobjectidSalesorderServiceappointment = default(MicrosoftDynamicsCRMsalesorder), MicrosoftDynamicsCRMmsdynPostalbum regardingobjectidMsdynPostalbumServiceappointment = default(MicrosoftDynamicsCRMmsdynPostalbum))
         {
-            Category = category;
-            Importsequencenumber = importsequencenumber;
-            Subcategory = subcategory;
             Isalldayevent = isalldayevent;
+            Category = category;
             Location = location;
-            Overriddencreatedon = overriddencreatedon;
             Subscriptionid = subscriptionid;
+            Subcategory = subcategory;
+            Overriddencreatedon = overriddencreatedon;
             this._siteidValue = _siteidValue;
-            RegardingobjectidEntitlementServiceappointment = regardingobjectidEntitlementServiceappointment;
-            RegardingobjectidEntitlementtemplateServiceappointment = regardingobjectidEntitlementtemplateServiceappointment;
+            Importsequencenumber = importsequencenumber;
+            RegardingobjectidGovCommunityServiceappointment = regardingobjectidGovCommunityServiceappointment;
+            RegardingobjectidGovIncidenttaskServiceappointment = regardingobjectidGovIncidenttaskServiceappointment;
+            RegardingobjectidGovRegistrationServiceappointment = regardingobjectidGovRegistrationServiceappointment;
+            RegardingobjectidLeadServiceappointment = regardingobjectidLeadServiceappointment;
             RegardingobjectidBookableresourcebookingServiceappointment = regardingobjectidBookableresourcebookingServiceappointment;
             RegardingobjectidBookableresourcebookingheaderServiceappointment = regardingobjectidBookableresourcebookingheaderServiceappointment;
+            RegardingobjectidBulkoperationServiceappointment = regardingobjectidBulkoperationServiceappointment;
+            RegardingobjectidCampaignServiceappointment = regardingobjectidCampaignServiceappointment;
+            RegardingobjectidCampaignactivityServiceappointment = regardingobjectidCampaignactivityServiceappointment;
+            RegardingobjectidContractServiceappointment = regardingobjectidContractServiceappointment;
+            RegardingobjectidEntitlementServiceappointment = regardingobjectidEntitlementServiceappointment;
+            RegardingobjectidEntitlementtemplateServiceappointment = regardingobjectidEntitlementtemplateServiceappointment;
+            RegardingobjectidIncidentServiceappointment = regardingobjectidIncidentServiceappointment;
+            RegardingobjectidNewInteractionforemailServiceappointment = regardingobjectidNewInteractionforemailServiceappointment;
             RegardingobjectidKnowledgebaserecordServiceappointment = regardingobjectidKnowledgebaserecordServiceappointment;
             RegardingobjectidAccountServiceappointment = regardingobjectidAccountServiceappointment;
-            SlakpiinstanceServiceappointment = slakpiinstanceServiceappointment;
-            ServiceappointmentActivityParties = serviceappointmentActivityParties;
-            ServiceidServiceappointment = serviceidServiceappointment;
-            ServiceAppointmentBulkDeleteFailures = serviceAppointmentBulkDeleteFailures;
-            ServiceAppointmentSyncErrors = serviceAppointmentSyncErrors;
-            CreatedonbehalfbyServiceappointment = createdonbehalfbyServiceappointment;
-            RegardingobjectidIncidentServiceappointment = regardingobjectidIncidentServiceappointment;
-            ServiceappointmentConnections2 = serviceappointmentConnections2;
-            OwninguserServiceappointment = owninguserServiceappointment;
-            RegardingobjectidSalesorderServiceappointment = regardingobjectidSalesorderServiceappointment;
-            ServiceAppointmentAsyncOperations = serviceAppointmentAsyncOperations;
-            RegardingobjectidContactServiceappointment = regardingobjectidContactServiceappointment;
-            ServiceappointmentConnections1 = serviceappointmentConnections1;
-            ActivityidActivitypointer = activityidActivitypointer;
-            RegardingobjectidContractServiceappointment = regardingobjectidContractServiceappointment;
-            ServiceappointmentActioncard = serviceappointmentActioncard;
-            RegardingobjectidCampaignServiceappointment = regardingobjectidCampaignServiceappointment;
-            ServiceAppointmentQueueItem = serviceAppointmentQueueItem;
-            RegardingobjectidOpportunityServiceappointment = regardingobjectidOpportunityServiceappointment;
-            RegardingobjectidQuoteServiceappointment = regardingobjectidQuoteServiceappointment;
-            RegardingobjectidKnowledgearticleServiceappointment = regardingobjectidKnowledgearticleServiceappointment;
-            Siteid = siteid;
             CreatedbyServiceappointment = createdbyServiceappointment;
+            RegardingobjectidContactServiceappointment = regardingobjectidContactServiceappointment;
+            SendermailboxidServiceappointment = sendermailboxidServiceappointment;
             TransactioncurrencyidServiceappointment = transactioncurrencyidServiceappointment;
+            OwneridServiceappointment = owneridServiceappointment;
+            OwninguserServiceappointment = owninguserServiceappointment;
             SLAId = sLAId;
-            ServiceAppointmentAnnotation = serviceAppointmentAnnotation;
+            OwningbusinessunitServiceappointment = owningbusinessunitServiceappointment;
+            RegardingobjectidKnowledgearticleServiceappointment = regardingobjectidKnowledgearticleServiceappointment;
+            ModifiedonbehalfbyServiceappointment = modifiedonbehalfbyServiceappointment;
+            CreatedonbehalfbyServiceappointment = createdonbehalfbyServiceappointment;
             ModifiedbyServiceappointment = modifiedbyServiceappointment;
             OwningteamServiceappointment = owningteamServiceappointment;
-            ModifiedonbehalfbyServiceappointment = modifiedonbehalfbyServiceappointment;
-            RegardingobjectidInvoiceServiceappointment = regardingobjectidInvoiceServiceappointment;
             SlainvokedidServiceappointmentSla = slainvokedidServiceappointmentSla;
-            OwningbusinessunitServiceappointment = owningbusinessunitServiceappointment;
-            RegardingobjectidLeadServiceappointment = regardingobjectidLeadServiceappointment;
-            RegardingobjectidBcgovCustomaddressServiceappointment = regardingobjectidBcgovCustomaddressServiceappointment;
-            RegardingobjectidBcgovCustomproductServiceappointment = regardingobjectidBcgovCustomproductServiceappointment;
-            RegardingobjectidBcgovLocationServiceappointment = regardingobjectidBcgovLocationServiceappointment;
-            RegardingobjectidBcgovEquipmentServiceappointment = regardingobjectidBcgovEquipmentServiceappointment;
-            RegardingobjectidBcgovEquipmentlocationServiceappointment = regardingobjectidBcgovEquipmentlocationServiceappointment;
-            RegardingobjectidBcgovRiskassessmentServiceappointment = regardingobjectidBcgovRiskassessmentServiceappointment;
+            ActivityidActivitypointer = activityidActivitypointer;
+            ServiceappointmentActivityParties = serviceappointmentActivityParties;
+            CampaignResponseServiceAppointments = campaignResponseServiceAppointments;
+            ServiceAppointmentSyncErrors = serviceAppointmentSyncErrors;
+            ServiceAppointmentAsyncOperations = serviceAppointmentAsyncOperations;
+            ServiceappointmentMailboxTrackingFolders = serviceappointmentMailboxTrackingFolders;
+            ServiceAppointmentProcessSessions = serviceAppointmentProcessSessions;
+            ServiceAppointmentBulkDeleteFailures = serviceAppointmentBulkDeleteFailures;
+            ServiceappointmentPrincipalobjectattributeaccess = serviceappointmentPrincipalobjectattributeaccess;
+            ServiceappointmentConnections1 = serviceappointmentConnections1;
+            ServiceappointmentConnections2 = serviceappointmentConnections2;
+            ServiceAppointmentQueueItem = serviceAppointmentQueueItem;
+            ServiceAppointmentAnnotation = serviceAppointmentAnnotation;
+            RegardingobjectidSiteServiceappointment = regardingobjectidSiteServiceappointment;
+            ServiceappointmentActioncard = serviceappointmentActioncard;
+            ServiceidServiceappointment = serviceidServiceappointment;
+            SlakpiinstanceServiceappointment = slakpiinstanceServiceappointment;
+            Siteid = siteid;
+            RegardingobjectidMsdynPlaybookinstanceServiceappointment = regardingobjectidMsdynPlaybookinstanceServiceappointment;
+            RegardingobjectidInvoiceServiceappointment = regardingobjectidInvoiceServiceappointment;
+            RegardingobjectidOpportunityServiceappointment = regardingobjectidOpportunityServiceappointment;
+            RegardingobjectidQuoteServiceappointment = regardingobjectidQuoteServiceappointment;
+            RegardingobjectidSalesorderServiceappointment = regardingobjectidSalesorderServiceappointment;
+            RegardingobjectidMsdynPostalbumServiceappointment = regardingobjectidMsdynPostalbumServiceappointment;
             CustomInit();
         }
 
@@ -94,23 +103,13 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "category")]
-        public string Category { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "importsequencenumber")]
-        public int? Importsequencenumber { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "subcategory")]
-        public string Subcategory { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "isalldayevent")]
         public bool? Isalldayevent { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "category")]
+        public string Category { get; set; }
 
         /// <summary>
         /// </summary>
@@ -119,13 +118,18 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "overriddencreatedon")]
-        public System.DateTimeOffset? Overriddencreatedon { get; set; }
+        [JsonProperty(PropertyName = "subscriptionid")]
+        public string Subscriptionid { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "subscriptionid")]
-        public string Subscriptionid { get; set; }
+        [JsonProperty(PropertyName = "subcategory")]
+        public string Subcategory { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "overriddencreatedon")]
+        public System.DateTimeOffset? Overriddencreatedon { get; set; }
 
         /// <summary>
         /// </summary>
@@ -134,13 +138,28 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_entitlement_serviceappointment")]
-        public MicrosoftDynamicsCRMentitlement RegardingobjectidEntitlementServiceappointment { get; set; }
+        [JsonProperty(PropertyName = "importsequencenumber")]
+        public int? Importsequencenumber { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_entitlementtemplate_serviceappointment")]
-        public MicrosoftDynamicsCRMentitlementtemplate RegardingobjectidEntitlementtemplateServiceappointment { get; set; }
+        [JsonProperty(PropertyName = "regardingobjectid_gov_community_serviceappointment")]
+        public MicrosoftDynamicsCRMgovCommunity RegardingobjectidGovCommunityServiceappointment { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_gov_incidenttask_serviceappointment")]
+        public MicrosoftDynamicsCRMgovIncidenttask RegardingobjectidGovIncidenttaskServiceappointment { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_gov_registration_serviceappointment")]
+        public MicrosoftDynamicsCRMgovRegistration RegardingobjectidGovRegistrationServiceappointment { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_lead_serviceappointment")]
+        public MicrosoftDynamicsCRMlead RegardingobjectidLeadServiceappointment { get; set; }
 
         /// <summary>
         /// </summary>
@@ -154,6 +173,46 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_bulkoperation_serviceappointment")]
+        public MicrosoftDynamicsCRMbulkoperation RegardingobjectidBulkoperationServiceappointment { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_campaign_serviceappointment")]
+        public MicrosoftDynamicsCRMcampaign RegardingobjectidCampaignServiceappointment { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_campaignactivity_serviceappointment")]
+        public MicrosoftDynamicsCRMcampaignactivity RegardingobjectidCampaignactivityServiceappointment { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_contract_serviceappointment")]
+        public MicrosoftDynamicsCRMcontract RegardingobjectidContractServiceappointment { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_entitlement_serviceappointment")]
+        public MicrosoftDynamicsCRMentitlement RegardingobjectidEntitlementServiceappointment { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_entitlementtemplate_serviceappointment")]
+        public MicrosoftDynamicsCRMentitlementtemplate RegardingobjectidEntitlementtemplateServiceappointment { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_incident_serviceappointment")]
+        public MicrosoftDynamicsCRMincident RegardingobjectidIncidentServiceappointment { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_new_interactionforemail_serviceappointment")]
+        public MicrosoftDynamicsCRMinteractionforemail RegardingobjectidNewInteractionforemailServiceappointment { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "regardingobjectid_knowledgebaserecord_serviceappointment")]
         public MicrosoftDynamicsCRMknowledgebaserecord RegardingobjectidKnowledgebaserecordServiceappointment { get; set; }
 
@@ -164,58 +223,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "slakpiinstance_serviceappointment")]
-        public IList<MicrosoftDynamicsCRMslakpiinstance> SlakpiinstanceServiceappointment { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "serviceappointment_activity_parties")]
-        public IList<MicrosoftDynamicsCRMactivityparty> ServiceappointmentActivityParties { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "serviceid_serviceappointment")]
-        public MicrosoftDynamicsCRMservice ServiceidServiceappointment { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "ServiceAppointment_BulkDeleteFailures")]
-        public IList<MicrosoftDynamicsCRMbulkdeletefailure> ServiceAppointmentBulkDeleteFailures { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "ServiceAppointment_SyncErrors")]
-        public IList<MicrosoftDynamicsCRMsyncerror> ServiceAppointmentSyncErrors { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "createdonbehalfby_serviceappointment")]
-        public MicrosoftDynamicsCRMsystemuser CreatedonbehalfbyServiceappointment { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_incident_serviceappointment")]
-        public MicrosoftDynamicsCRMincident RegardingobjectidIncidentServiceappointment { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "serviceappointment_connections2")]
-        public IList<MicrosoftDynamicsCRMconnection> ServiceappointmentConnections2 { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "owninguser_serviceappointment")]
-        public MicrosoftDynamicsCRMsystemuser OwninguserServiceappointment { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_salesorder_serviceappointment")]
-        public MicrosoftDynamicsCRMsalesorder RegardingobjectidSalesorderServiceappointment { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "ServiceAppointment_AsyncOperations")]
-        public IList<MicrosoftDynamicsCRMasyncoperation> ServiceAppointmentAsyncOperations { get; set; }
+        [JsonProperty(PropertyName = "createdby_serviceappointment")]
+        public MicrosoftDynamicsCRMsystemuser CreatedbyServiceappointment { get; set; }
 
         /// <summary>
         /// </summary>
@@ -224,58 +233,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "serviceappointment_connections1")]
-        public IList<MicrosoftDynamicsCRMconnection> ServiceappointmentConnections1 { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "activityid_activitypointer")]
-        public MicrosoftDynamicsCRMactivitypointer ActivityidActivitypointer { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_contract_serviceappointment")]
-        public MicrosoftDynamicsCRMcontract RegardingobjectidContractServiceappointment { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "serviceappointment_actioncard")]
-        public IList<MicrosoftDynamicsCRMactioncard> ServiceappointmentActioncard { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_campaign_serviceappointment")]
-        public MicrosoftDynamicsCRMcampaign RegardingobjectidCampaignServiceappointment { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "ServiceAppointment_QueueItem")]
-        public IList<MicrosoftDynamicsCRMqueueitem> ServiceAppointmentQueueItem { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_opportunity_serviceappointment")]
-        public MicrosoftDynamicsCRMopportunity RegardingobjectidOpportunityServiceappointment { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_quote_serviceappointment")]
-        public MicrosoftDynamicsCRMquote RegardingobjectidQuoteServiceappointment { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_knowledgearticle_serviceappointment")]
-        public MicrosoftDynamicsCRMknowledgearticle RegardingobjectidKnowledgearticleServiceappointment { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "siteid")]
-        public MicrosoftDynamicsCRMsite Siteid { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "createdby_serviceappointment")]
-        public MicrosoftDynamicsCRMsystemuser CreatedbyServiceappointment { get; set; }
+        [JsonProperty(PropertyName = "sendermailboxid_serviceappointment")]
+        public MicrosoftDynamicsCRMmailbox SendermailboxidServiceappointment { get; set; }
 
         /// <summary>
         /// </summary>
@@ -284,13 +243,38 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "ownerid_serviceappointment")]
+        public MicrosoftDynamicsCRMprincipal OwneridServiceappointment { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "owninguser_serviceappointment")]
+        public MicrosoftDynamicsCRMsystemuser OwninguserServiceappointment { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "SLAId")]
         public MicrosoftDynamicsCRMsla SLAId { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "ServiceAppointment_Annotation")]
-        public IList<MicrosoftDynamicsCRMannotation> ServiceAppointmentAnnotation { get; set; }
+        [JsonProperty(PropertyName = "owningbusinessunit_serviceappointment")]
+        public MicrosoftDynamicsCRMbusinessunit OwningbusinessunitServiceappointment { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_knowledgearticle_serviceappointment")]
+        public MicrosoftDynamicsCRMknowledgearticle RegardingobjectidKnowledgearticleServiceappointment { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "modifiedonbehalfby_serviceappointment")]
+        public MicrosoftDynamicsCRMsystemuser ModifiedonbehalfbyServiceappointment { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "createdonbehalfby_serviceappointment")]
+        public MicrosoftDynamicsCRMsystemuser CreatedonbehalfbyServiceappointment { get; set; }
 
         /// <summary>
         /// </summary>
@@ -304,8 +288,103 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "modifiedonbehalfby_serviceappointment")]
-        public MicrosoftDynamicsCRMsystemuser ModifiedonbehalfbyServiceappointment { get; set; }
+        [JsonProperty(PropertyName = "slainvokedid_serviceappointment_sla")]
+        public MicrosoftDynamicsCRMsla SlainvokedidServiceappointmentSla { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "activityid_activitypointer")]
+        public MicrosoftDynamicsCRMactivitypointer ActivityidActivitypointer { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "serviceappointment_activity_parties")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMactivityparty> ServiceappointmentActivityParties { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "CampaignResponse_ServiceAppointments")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMcampaignresponse> CampaignResponseServiceAppointments { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "ServiceAppointment_SyncErrors")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMsyncerror> ServiceAppointmentSyncErrors { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "ServiceAppointment_AsyncOperations")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMasyncoperation> ServiceAppointmentAsyncOperations { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "serviceappointment_MailboxTrackingFolders")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMmailboxtrackingfolder> ServiceappointmentMailboxTrackingFolders { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "ServiceAppointment_ProcessSessions")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMprocesssession> ServiceAppointmentProcessSessions { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "ServiceAppointment_BulkDeleteFailures")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbulkdeletefailure> ServiceAppointmentBulkDeleteFailures { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "serviceappointment_principalobjectattributeaccess")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> ServiceappointmentPrincipalobjectattributeaccess { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "serviceappointment_connections1")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMconnection> ServiceappointmentConnections1 { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "serviceappointment_connections2")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMconnection> ServiceappointmentConnections2 { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "ServiceAppointment_QueueItem")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMqueueitem> ServiceAppointmentQueueItem { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "ServiceAppointment_Annotation")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMannotation> ServiceAppointmentAnnotation { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_site_serviceappointment")]
+        public MicrosoftDynamicsCRMsite RegardingobjectidSiteServiceappointment { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "serviceappointment_actioncard")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMactioncard> ServiceappointmentActioncard { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "serviceid_serviceappointment")]
+        public MicrosoftDynamicsCRMservice ServiceidServiceappointment { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "slakpiinstance_serviceappointment")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMslakpiinstance> SlakpiinstanceServiceappointment { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "siteid")]
+        public MicrosoftDynamicsCRMsite Siteid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "regardingobjectid_msdyn_playbookinstance_serviceappointment")]
+        public MicrosoftDynamicsCRMmsdynPlaybookinstance RegardingobjectidMsdynPlaybookinstanceServiceappointment { get; set; }
 
         /// <summary>
         /// </summary>
@@ -314,48 +393,23 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "slainvokedid_serviceappointment_sla")]
-        public MicrosoftDynamicsCRMsla SlainvokedidServiceappointmentSla { get; set; }
+        [JsonProperty(PropertyName = "regardingobjectid_opportunity_serviceappointment")]
+        public MicrosoftDynamicsCRMopportunity RegardingobjectidOpportunityServiceappointment { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "owningbusinessunit_serviceappointment")]
-        public MicrosoftDynamicsCRMbusinessunit OwningbusinessunitServiceappointment { get; set; }
+        [JsonProperty(PropertyName = "regardingobjectid_quote_serviceappointment")]
+        public MicrosoftDynamicsCRMquote RegardingobjectidQuoteServiceappointment { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_lead_serviceappointment")]
-        public MicrosoftDynamicsCRMlead RegardingobjectidLeadServiceappointment { get; set; }
+        [JsonProperty(PropertyName = "regardingobjectid_salesorder_serviceappointment")]
+        public MicrosoftDynamicsCRMsalesorder RegardingobjectidSalesorderServiceappointment { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_bcgov_customaddress_serviceappointment")]
-        public MicrosoftDynamicsCRMbcgovCustomaddress RegardingobjectidBcgovCustomaddressServiceappointment { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_bcgov_customproduct_serviceappointment")]
-        public MicrosoftDynamicsCRMbcgovCustomproduct RegardingobjectidBcgovCustomproductServiceappointment { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_bcgov_location_serviceappointment")]
-        public MicrosoftDynamicsCRMbcgovLocation RegardingobjectidBcgovLocationServiceappointment { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_bcgov_equipment_serviceappointment")]
-        public MicrosoftDynamicsCRMbcgovEquipment RegardingobjectidBcgovEquipmentServiceappointment { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_bcgov_equipmentlocation_serviceappointment")]
-        public MicrosoftDynamicsCRMbcgovEquipmentlocation RegardingobjectidBcgovEquipmentlocationServiceappointment { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "regardingobjectid_bcgov_riskassessment_serviceappointment")]
-        public MicrosoftDynamicsCRMbcgovRiskassessment RegardingobjectidBcgovRiskassessmentServiceappointment { get; set; }
+        [JsonProperty(PropertyName = "regardingobjectid_msdyn_postalbum_serviceappointment")]
+        public MicrosoftDynamicsCRMmsdynPostalbum RegardingobjectidMsdynPostalbumServiceappointment { get; set; }
 
     }
 }

@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// ComplexEntityKeyMetadata
@@ -31,7 +31,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// </summary>
         /// <param name="entityKeyIndexStatus">Possible values include:
         /// 'Pending', 'InProgress', 'Active', 'Failed'</param>
-        public MicrosoftDynamicsCRMComplexEntityKeyMetadata(MicrosoftDynamicsCRMLabel displayName = default(MicrosoftDynamicsCRMLabel), string logicalName = default(string), string schemaName = default(string), string entityLogicalName = default(string), IList<string> keyAttributes = default(IList<string>), MicrosoftDynamicsCRMBooleanManagedProperty isCustomizable = default(MicrosoftDynamicsCRMBooleanManagedProperty), bool? isManaged = default(bool?), string introducedVersion = default(string), string entityKeyIndexStatus = default(string), string metadataId = default(string), bool? hasChanged = default(bool?))
+        public MicrosoftDynamicsCRMComplexEntityKeyMetadata(MicrosoftDynamicsCRMLabel displayName = default(MicrosoftDynamicsCRMLabel), string logicalName = default(string), string schemaName = default(string), string entityLogicalName = default(string), IList<string> keyAttributes = default(IList<string>), MicrosoftDynamicsCRMBooleanManagedProperty isCustomizable = default(MicrosoftDynamicsCRMBooleanManagedProperty), bool? isManaged = default(bool?), string introducedVersion = default(string), string entityKeyIndexStatus = default(string), bool? isSynchronous = default(bool?), string metadataId = default(string), bool? hasChanged = default(bool?))
         {
             DisplayName = displayName;
             LogicalName = logicalName;
@@ -42,6 +42,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
             IsManaged = isManaged;
             IntroducedVersion = introducedVersion;
             EntityKeyIndexStatus = entityKeyIndexStatus;
+            IsSynchronous = isSynchronous;
             MetadataId = metadataId;
             HasChanged = hasChanged;
             CustomInit();
@@ -75,7 +76,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "KeyAttributes")]
-        public IList<string> KeyAttributes { get; set; }
+        [NotMapped] public IList<string> KeyAttributes { get; set; }
 
         /// <summary>
         /// </summary>
@@ -98,6 +99,11 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// </summary>
         [JsonProperty(PropertyName = "EntityKeyIndexStatus")]
         public string EntityKeyIndexStatus { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "IsSynchronous")]
+        public bool? IsSynchronous { get; set; }
 
         /// <summary>
         /// </summary>

@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// dynamicpropertyoptionsetitem
@@ -29,35 +29,42 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the
         /// MicrosoftDynamicsCRMdynamicpropertyoptionsetitem class.
         /// </summary>
-        public MicrosoftDynamicsCRMdynamicpropertyoptionsetitem(System.DateTimeOffset? overriddencreatedon = default(System.DateTimeOffset?), System.DateTimeOffset? createdon = default(System.DateTimeOffset?), string dynamicpropertyoptionname = default(string), string _modifiedonbehalfbyValue = default(string), string _modifiedbyValue = default(string), long? versionnumber = default(long?), object exchangerate = default(object), int? dynamicpropertyoptionsetvaluesequencenumber = default(int?), string _createdonbehalfbyValue = default(string), string _organizationidValue = default(string), int? importsequencenumber = default(int?), int? dynamicpropertyoptionvalue = default(int?), string _transactioncurrencyidValue = default(string), string _dynamicpropertyidValue = default(string), string dynamicpropertyoptiondescription = default(string), int? dmtimportstate = default(int?), string _createdbyValue = default(string), System.DateTimeOffset? modifiedon = default(System.DateTimeOffset?), string dynamicpropertyoptionsetvalueid = default(string), MicrosoftDynamicsCRMsystemuser createdonbehalfby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser modifiedby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMtransactioncurrency transactioncurrencyid = default(MicrosoftDynamicsCRMtransactioncurrency), MicrosoftDynamicsCRMsystemuser createdby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser modifiedonbehalfby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMorganization organizationid = default(MicrosoftDynamicsCRMorganization), MicrosoftDynamicsCRMdynamicproperty dynamicpropertyid = default(MicrosoftDynamicsCRMdynamicproperty), IList<MicrosoftDynamicsCRMdynamicproperty> defaultValueOptionSetDynamicProperty = default(IList<MicrosoftDynamicsCRMdynamicproperty>))
+        public MicrosoftDynamicsCRMdynamicpropertyoptionsetitem(long? versionnumber = default(long?), int? timezoneruleversionnumber = default(int?), string _organizationidValue = default(string), string _createdonbehalfbyValue = default(string), object exchangerate = default(object), string _modifiedbyValue = default(string), System.DateTimeOffset? modifiedon = default(System.DateTimeOffset?), int? dmtimportstate = default(int?), string _modifiedonbehalfbyValue = default(string), int? dynamicpropertyoptionsetvaluesequencenumber = default(int?), string _createdbyValue = default(string), System.DateTimeOffset? overriddencreatedon = default(System.DateTimeOffset?), string _transactioncurrencyidValue = default(string), string dynamicpropertyoptionname = default(string), int? importsequencenumber = default(int?), int? dynamicpropertyoptionvalue = default(int?), string dynamicpropertyoptionsetvalueid = default(string), System.DateTimeOffset? createdon = default(System.DateTimeOffset?), int? utcconversiontimezonecode = default(int?), string dynamicpropertyoptiondescription = default(string), string _dynamicpropertyidValue = default(string), MicrosoftDynamicsCRMsystemuser createdby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser createdonbehalfby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser modifiedby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser modifiedonbehalfby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMorganization organizationid = default(MicrosoftDynamicsCRMorganization), IList<MicrosoftDynamicsCRMsyncerror> dynamicpropertyoptionsetitemSyncErrors = default(IList<MicrosoftDynamicsCRMsyncerror>), IList<MicrosoftDynamicsCRMasyncoperation> dynamicpropertyoptionsetitemAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), IList<MicrosoftDynamicsCRMmailboxtrackingfolder> dynamicpropertyoptionsetitemMailboxTrackingFolders = default(IList<MicrosoftDynamicsCRMmailboxtrackingfolder>), IList<MicrosoftDynamicsCRMbulkdeletefailure> dynamicpropertyoptionsetitemBulkDeleteFailures = default(IList<MicrosoftDynamicsCRMbulkdeletefailure>), IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> dynamicpropertyoptionsetitemPrincipalObjectAttributeAccesses = default(IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess>), IList<MicrosoftDynamicsCRMdynamicproperty> defaultValueOptionSetDynamicProperty = default(IList<MicrosoftDynamicsCRMdynamicproperty>), MicrosoftDynamicsCRMdynamicproperty dynamicpropertyid = default(MicrosoftDynamicsCRMdynamicproperty), MicrosoftDynamicsCRMtransactioncurrency transactioncurrencyid = default(MicrosoftDynamicsCRMtransactioncurrency))
         {
-            Overriddencreatedon = overriddencreatedon;
-            Createdon = createdon;
-            Dynamicpropertyoptionname = dynamicpropertyoptionname;
-            this._modifiedonbehalfbyValue = _modifiedonbehalfbyValue;
-            this._modifiedbyValue = _modifiedbyValue;
             Versionnumber = versionnumber;
-            Exchangerate = exchangerate;
-            Dynamicpropertyoptionsetvaluesequencenumber = dynamicpropertyoptionsetvaluesequencenumber;
-            this._createdonbehalfbyValue = _createdonbehalfbyValue;
+            Timezoneruleversionnumber = timezoneruleversionnumber;
             this._organizationidValue = _organizationidValue;
+            this._createdonbehalfbyValue = _createdonbehalfbyValue;
+            Exchangerate = exchangerate;
+            this._modifiedbyValue = _modifiedbyValue;
+            Modifiedon = modifiedon;
+            Dmtimportstate = dmtimportstate;
+            this._modifiedonbehalfbyValue = _modifiedonbehalfbyValue;
+            Dynamicpropertyoptionsetvaluesequencenumber = dynamicpropertyoptionsetvaluesequencenumber;
+            this._createdbyValue = _createdbyValue;
+            Overriddencreatedon = overriddencreatedon;
+            this._transactioncurrencyidValue = _transactioncurrencyidValue;
+            Dynamicpropertyoptionname = dynamicpropertyoptionname;
             Importsequencenumber = importsequencenumber;
             Dynamicpropertyoptionvalue = dynamicpropertyoptionvalue;
-            this._transactioncurrencyidValue = _transactioncurrencyidValue;
-            this._dynamicpropertyidValue = _dynamicpropertyidValue;
-            Dynamicpropertyoptiondescription = dynamicpropertyoptiondescription;
-            Dmtimportstate = dmtimportstate;
-            this._createdbyValue = _createdbyValue;
-            Modifiedon = modifiedon;
             Dynamicpropertyoptionsetvalueid = dynamicpropertyoptionsetvalueid;
+            Createdon = createdon;
+            Utcconversiontimezonecode = utcconversiontimezonecode;
+            Dynamicpropertyoptiondescription = dynamicpropertyoptiondescription;
+            this._dynamicpropertyidValue = _dynamicpropertyidValue;
+            Createdby = createdby;
             Createdonbehalfby = createdonbehalfby;
             Modifiedby = modifiedby;
-            Transactioncurrencyid = transactioncurrencyid;
-            Createdby = createdby;
             Modifiedonbehalfby = modifiedonbehalfby;
             Organizationid = organizationid;
-            Dynamicpropertyid = dynamicpropertyid;
+            DynamicpropertyoptionsetitemSyncErrors = dynamicpropertyoptionsetitemSyncErrors;
+            DynamicpropertyoptionsetitemAsyncOperations = dynamicpropertyoptionsetitemAsyncOperations;
+            DynamicpropertyoptionsetitemMailboxTrackingFolders = dynamicpropertyoptionsetitemMailboxTrackingFolders;
+            DynamicpropertyoptionsetitemBulkDeleteFailures = dynamicpropertyoptionsetitemBulkDeleteFailures;
+            DynamicpropertyoptionsetitemPrincipalObjectAttributeAccesses = dynamicpropertyoptionsetitemPrincipalObjectAttributeAccesses;
             DefaultValueOptionSetDynamicProperty = defaultValueOptionSetDynamicProperty;
+            Dynamicpropertyid = dynamicpropertyid;
+            Transactioncurrencyid = transactioncurrencyid;
             CustomInit();
         }
 
@@ -68,43 +75,18 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "overriddencreatedon")]
-        public System.DateTimeOffset? Overriddencreatedon { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "createdon")]
-        public System.DateTimeOffset? Createdon { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "dynamicpropertyoptionname")]
-        public string Dynamicpropertyoptionname { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_modifiedonbehalfby_value")]
-        public string _modifiedonbehalfbyValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_modifiedby_value")]
-        public string _modifiedbyValue { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "versionnumber")]
         public long? Versionnumber { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "exchangerate")]
-        public object Exchangerate { get; set; }
+        [JsonProperty(PropertyName = "timezoneruleversionnumber")]
+        public int? Timezoneruleversionnumber { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "dynamicpropertyoptionsetvaluesequencenumber")]
-        public int? Dynamicpropertyoptionsetvaluesequencenumber { get; set; }
+        [JsonProperty(PropertyName = "_organizationid_value")]
+        public string _organizationidValue { get; set; }
 
         /// <summary>
         /// </summary>
@@ -113,8 +95,53 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "_organizationid_value")]
-        public string _organizationidValue { get; set; }
+        [JsonProperty(PropertyName = "exchangerate")]
+        [NotMapped] public object Exchangerate { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_modifiedby_value")]
+        public string _modifiedbyValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "modifiedon")]
+        public System.DateTimeOffset? Modifiedon { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "dmtimportstate")]
+        public int? Dmtimportstate { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_modifiedonbehalfby_value")]
+        public string _modifiedonbehalfbyValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "dynamicpropertyoptionsetvaluesequencenumber")]
+        public int? Dynamicpropertyoptionsetvaluesequencenumber { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_createdby_value")]
+        public string _createdbyValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "overriddencreatedon")]
+        public System.DateTimeOffset? Overriddencreatedon { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_transactioncurrencyid_value")]
+        public string _transactioncurrencyidValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "dynamicpropertyoptionname")]
+        public string Dynamicpropertyoptionname { get; set; }
 
         /// <summary>
         /// </summary>
@@ -128,13 +155,18 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "_transactioncurrencyid_value")]
-        public string _transactioncurrencyidValue { get; set; }
+        [JsonProperty(PropertyName = "dynamicpropertyoptionsetvalueid")]
+        public string Dynamicpropertyoptionsetvalueid { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "_dynamicpropertyid_value")]
-        public string _dynamicpropertyidValue { get; set; }
+        [JsonProperty(PropertyName = "createdon")]
+        public System.DateTimeOffset? Createdon { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "utcconversiontimezonecode")]
+        public int? Utcconversiontimezonecode { get; set; }
 
         /// <summary>
         /// </summary>
@@ -143,23 +175,13 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "dmtimportstate")]
-        public int? Dmtimportstate { get; set; }
+        [JsonProperty(PropertyName = "_dynamicpropertyid_value")]
+        public string _dynamicpropertyidValue { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "_createdby_value")]
-        public string _createdbyValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "modifiedon")]
-        public System.DateTimeOffset? Modifiedon { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "dynamicpropertyoptionsetvalueid")]
-        public string Dynamicpropertyoptionsetvalueid { get; set; }
+        [JsonProperty(PropertyName = "createdby")]
+        public MicrosoftDynamicsCRMsystemuser Createdby { get; set; }
 
         /// <summary>
         /// </summary>
@@ -173,16 +195,6 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrencyid")]
-        public MicrosoftDynamicsCRMtransactioncurrency Transactioncurrencyid { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "createdby")]
-        public MicrosoftDynamicsCRMsystemuser Createdby { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "modifiedonbehalfby")]
         public MicrosoftDynamicsCRMsystemuser Modifiedonbehalfby { get; set; }
 
@@ -193,13 +205,43 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "dynamicpropertyoptionsetitem_SyncErrors")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMsyncerror> DynamicpropertyoptionsetitemSyncErrors { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "dynamicpropertyoptionsetitem_AsyncOperations")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMasyncoperation> DynamicpropertyoptionsetitemAsyncOperations { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "dynamicpropertyoptionsetitem_MailboxTrackingFolders")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMmailboxtrackingfolder> DynamicpropertyoptionsetitemMailboxTrackingFolders { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "dynamicpropertyoptionsetitem_BulkDeleteFailures")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbulkdeletefailure> DynamicpropertyoptionsetitemBulkDeleteFailures { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "dynamicpropertyoptionsetitem_PrincipalObjectAttributeAccesses")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> DynamicpropertyoptionsetitemPrincipalObjectAttributeAccesses { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "DefaultValueOptionSet_DynamicProperty")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMdynamicproperty> DefaultValueOptionSetDynamicProperty { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "dynamicpropertyid")]
         public MicrosoftDynamicsCRMdynamicproperty Dynamicpropertyid { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "DefaultValueOptionSet_DynamicProperty")]
-        public IList<MicrosoftDynamicsCRMdynamicproperty> DefaultValueOptionSetDynamicProperty { get; set; }
+        [JsonProperty(PropertyName = "transactioncurrencyid")]
+        public MicrosoftDynamicsCRMtransactioncurrency Transactioncurrencyid { get; set; }
 
     }
 }

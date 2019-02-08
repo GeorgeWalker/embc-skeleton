@@ -7,7 +7,7 @@
 namespace Gov.Jag.Embc.Interfaces.Models
 {
     using Newtonsoft.Json;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// complexcontrol
@@ -27,16 +27,16 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the
         /// MicrosoftDynamicsCRMcomplexcontrol class.
         /// </summary>
-        public MicrosoftDynamicsCRMcomplexcontrol(long? versionnumber = default(long?), string complexcontrolxml = default(string), string complexcontrolid = default(string), string _organizationidValue = default(string), int? type = default(int?), string complexcontrolidunique = default(string), int? version = default(int?), string name = default(string), string description = default(string), MicrosoftDynamicsCRMorganization organizationid = default(MicrosoftDynamicsCRMorganization))
+        public MicrosoftDynamicsCRMcomplexcontrol(long? versionnumber = default(long?), string _organizationidValue = default(string), string complexcontrolid = default(string), int? version = default(int?), string name = default(string), int? type = default(int?), string complexcontrolxml = default(string), string complexcontrolidunique = default(string), string description = default(string), MicrosoftDynamicsCRMorganization organizationid = default(MicrosoftDynamicsCRMorganization))
         {
             Versionnumber = versionnumber;
-            Complexcontrolxml = complexcontrolxml;
-            Complexcontrolid = complexcontrolid;
             this._organizationidValue = _organizationidValue;
-            Type = type;
-            Complexcontrolidunique = complexcontrolidunique;
+            Complexcontrolid = complexcontrolid;
             Version = version;
             Name = name;
+            Type = type;
+            Complexcontrolxml = complexcontrolxml;
+            Complexcontrolidunique = complexcontrolidunique;
             Description = description;
             Organizationid = organizationid;
             CustomInit();
@@ -54,28 +54,13 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "complexcontrolxml")]
-        public string Complexcontrolxml { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "complexcontrolid")]
-        public string Complexcontrolid { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "_organizationid_value")]
         public string _organizationidValue { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "type")]
-        public int? Type { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "complexcontrolidunique")]
-        public string Complexcontrolidunique { get; set; }
+        [JsonProperty(PropertyName = "complexcontrolid")]
+        public string Complexcontrolid { get; set; }
 
         /// <summary>
         /// </summary>
@@ -86,6 +71,21 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// </summary>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "type")]
+        public int? Type { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "complexcontrolxml")]
+        public string Complexcontrolxml { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "complexcontrolidunique")]
+        public string Complexcontrolidunique { get; set; }
 
         /// <summary>
         /// </summary>

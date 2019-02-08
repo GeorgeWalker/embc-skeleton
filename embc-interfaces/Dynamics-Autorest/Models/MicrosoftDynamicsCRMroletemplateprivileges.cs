@@ -7,7 +7,7 @@
 namespace Gov.Jag.Embc.Interfaces.Models
 {
     using Newtonsoft.Json;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// roletemplateprivileges
@@ -27,12 +27,12 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the
         /// MicrosoftDynamicsCRMroletemplateprivileges class.
         /// </summary>
-        public MicrosoftDynamicsCRMroletemplateprivileges(string roletemplateprivilegeid = default(string), bool? isdeep = default(bool?), bool? islocal = default(bool?), bool? isglobal = default(bool?), string roletemplateid = default(string), string privilegeid = default(string), bool? isbasic = default(bool?))
+        public MicrosoftDynamicsCRMroletemplateprivileges(bool? isdeep = default(bool?), string roletemplateprivilegeid = default(string), bool? isglobal = default(bool?), bool? islocal = default(bool?), string roletemplateid = default(string), string privilegeid = default(string), bool? isbasic = default(bool?))
         {
-            Roletemplateprivilegeid = roletemplateprivilegeid;
             Isdeep = isdeep;
-            Islocal = islocal;
+            Roletemplateprivilegeid = roletemplateprivilegeid;
             Isglobal = isglobal;
+            Islocal = islocal;
             Roletemplateid = roletemplateid;
             Privilegeid = privilegeid;
             Isbasic = isbasic;
@@ -46,23 +46,23 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "roletemplateprivilegeid")]
-        public string Roletemplateprivilegeid { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "isdeep")]
         public bool? Isdeep { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "islocal")]
-        public bool? Islocal { get; set; }
+        [JsonProperty(PropertyName = "roletemplateprivilegeid")]
+        public string Roletemplateprivilegeid { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "isglobal")]
         public bool? Isglobal { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "islocal")]
+        public bool? Islocal { get; set; }
 
         /// <summary>
         /// </summary>

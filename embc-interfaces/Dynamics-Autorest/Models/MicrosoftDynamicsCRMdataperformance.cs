@@ -7,7 +7,7 @@
 namespace Gov.Jag.Embc.Interfaces.Models
 {
     using Newtonsoft.Json;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// dataperformance
@@ -27,27 +27,27 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the
         /// MicrosoftDynamicsCRMdataperformance class.
         /// </summary>
-        public MicrosoftDynamicsCRMdataperformance(string _organizationidValue = default(string), int? count = default(int?), object optimizationstorage = default(object), bool? anyoptimizationavailable = default(bool?), string dataperformanceid = default(string), string lastactionresult = default(string), string component = default(string), object weight = default(object), string entity = default(string), object mediantime = default(object), object estimatedoptimizationimpact = default(object), string solution = default(string), string executionperiod = default(string), object mintime = default(object), string optimizationstatus = default(string), object maxtime = default(object), bool? anyoptimizationapplied = default(bool?), string realizedoptimizationimpact = default(string), System.DateTimeOffset? lastoptimizationdate = default(System.DateTimeOffset?), string operation = default(string), MicrosoftDynamicsCRMorganization organizationid = default(MicrosoftDynamicsCRMorganization))
+        public MicrosoftDynamicsCRMdataperformance(string _organizationidValue = default(string), object estimatedoptimizationimpact = default(object), object optimizationstorage = default(object), string optimizationstatus = default(string), string dataperformanceid = default(string), string lastactionresult = default(string), string component = default(string), object weight = default(object), object mediantime = default(object), string entity = default(string), bool? anyoptimizationavailable = default(bool?), string solution = default(string), string executionperiod = default(string), int? count = default(int?), object maxtime = default(object), bool? anyoptimizationapplied = default(bool?), string realizedoptimizationimpact = default(string), System.DateTimeOffset? lastoptimizationdate = default(System.DateTimeOffset?), object mintime = default(object), string operation = default(string), MicrosoftDynamicsCRMorganization organizationid = default(MicrosoftDynamicsCRMorganization))
         {
             this._organizationidValue = _organizationidValue;
-            Count = count;
+            Estimatedoptimizationimpact = estimatedoptimizationimpact;
             Optimizationstorage = optimizationstorage;
-            Anyoptimizationavailable = anyoptimizationavailable;
+            Optimizationstatus = optimizationstatus;
             Dataperformanceid = dataperformanceid;
             Lastactionresult = lastactionresult;
             Component = component;
             Weight = weight;
-            Entity = entity;
             Mediantime = mediantime;
-            Estimatedoptimizationimpact = estimatedoptimizationimpact;
+            Entity = entity;
+            Anyoptimizationavailable = anyoptimizationavailable;
             Solution = solution;
             Executionperiod = executionperiod;
-            Mintime = mintime;
-            Optimizationstatus = optimizationstatus;
+            Count = count;
             Maxtime = maxtime;
             Anyoptimizationapplied = anyoptimizationapplied;
             Realizedoptimizationimpact = realizedoptimizationimpact;
             Lastoptimizationdate = lastoptimizationdate;
+            Mintime = mintime;
             Operation = operation;
             Organizationid = organizationid;
             CustomInit();
@@ -65,18 +65,18 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "count")]
-        public int? Count { get; set; }
+        [JsonProperty(PropertyName = "estimatedoptimizationimpact")]
+        [NotMapped] public object Estimatedoptimizationimpact { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "optimizationstorage")]
-        public object Optimizationstorage { get; set; }
+        [NotMapped] public object Optimizationstorage { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "anyoptimizationavailable")]
-        public bool? Anyoptimizationavailable { get; set; }
+        [JsonProperty(PropertyName = "optimizationstatus")]
+        public string Optimizationstatus { get; set; }
 
         /// <summary>
         /// </summary>
@@ -96,7 +96,12 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "weight")]
-        public object Weight { get; set; }
+        [NotMapped] public object Weight { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "mediantime")]
+        [NotMapped] public object Mediantime { get; set; }
 
         /// <summary>
         /// </summary>
@@ -105,13 +110,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "mediantime")]
-        public object Mediantime { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "estimatedoptimizationimpact")]
-        public object Estimatedoptimizationimpact { get; set; }
+        [JsonProperty(PropertyName = "anyoptimizationavailable")]
+        public bool? Anyoptimizationavailable { get; set; }
 
         /// <summary>
         /// </summary>
@@ -125,18 +125,13 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "mintime")]
-        public object Mintime { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "optimizationstatus")]
-        public string Optimizationstatus { get; set; }
+        [JsonProperty(PropertyName = "count")]
+        public int? Count { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "maxtime")]
-        public object Maxtime { get; set; }
+        [NotMapped] public object Maxtime { get; set; }
 
         /// <summary>
         /// </summary>
@@ -152,6 +147,11 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// </summary>
         [JsonProperty(PropertyName = "lastoptimizationdate")]
         public System.DateTimeOffset? Lastoptimizationdate { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "mintime")]
+        [NotMapped] public object Mintime { get; set; }
 
         /// <summary>
         /// </summary>

@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// FilterExpression
@@ -31,9 +31,10 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// </summary>
         /// <param name="filterOperator">Possible values include: 'And',
         /// 'Or'</param>
-        public MicrosoftDynamicsCRMFilterExpression(string filterOperator = default(string), IList<MicrosoftDynamicsCRMConditionExpression> conditions = default(IList<MicrosoftDynamicsCRMConditionExpression>), IList<MicrosoftDynamicsCRMFilterExpression> filters = default(IList<MicrosoftDynamicsCRMFilterExpression>), bool? isQuickFindFilter = default(bool?))
+        public MicrosoftDynamicsCRMFilterExpression(string filterOperator = default(string), string filterHint = default(string), IList<MicrosoftDynamicsCRMConditionExpression> conditions = default(IList<MicrosoftDynamicsCRMConditionExpression>), IList<MicrosoftDynamicsCRMFilterExpression> filters = default(IList<MicrosoftDynamicsCRMFilterExpression>), bool? isQuickFindFilter = default(bool?))
         {
             FilterOperator = filterOperator;
+            FilterHint = filterHint;
             Conditions = conditions;
             Filters = filters;
             IsQuickFindFilter = isQuickFindFilter;
@@ -53,13 +54,18 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "FilterHint")]
+        public string FilterHint { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "Conditions")]
-        public IList<MicrosoftDynamicsCRMConditionExpression> Conditions { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMConditionExpression> Conditions { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "Filters")]
-        public IList<MicrosoftDynamicsCRMFilterExpression> Filters { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMFilterExpression> Filters { get; set; }
 
         /// <summary>
         /// </summary>

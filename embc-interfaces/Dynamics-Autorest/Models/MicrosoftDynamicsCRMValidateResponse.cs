@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// ValidateResponse
@@ -43,7 +43,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "Result")]
-        public IList<MicrosoftDynamicsCRMValidationResult> Result { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMValidationResult> Result { get; set; }
 
     }
 }

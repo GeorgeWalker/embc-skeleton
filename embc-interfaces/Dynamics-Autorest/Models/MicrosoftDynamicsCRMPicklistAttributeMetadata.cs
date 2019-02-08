@@ -7,7 +7,9 @@
 namespace Gov.Jag.Embc.Interfaces.Models
 {
     using Newtonsoft.Json;
-    using System.Linq;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// PicklistAttributeMetadata
@@ -27,10 +29,12 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the
         /// MicrosoftDynamicsCRMPicklistAttributeMetadata class.
         /// </summary>
-        public MicrosoftDynamicsCRMPicklistAttributeMetadata(string formulaDefinition = default(string), int? sourceTypeMask = default(int?))
+        public MicrosoftDynamicsCRMPicklistAttributeMetadata(string formulaDefinition = default(string), int? sourceTypeMask = default(int?), string parentPicklistLogicalName = default(string), IList<string> childPicklistLogicalNames = default(IList<string>))
         {
             FormulaDefinition = formulaDefinition;
             SourceTypeMask = sourceTypeMask;
+            ParentPicklistLogicalName = parentPicklistLogicalName;
+            ChildPicklistLogicalNames = childPicklistLogicalNames;
             CustomInit();
         }
 
@@ -48,6 +52,16 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// </summary>
         [JsonProperty(PropertyName = "SourceTypeMask")]
         public int? SourceTypeMask { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "ParentPicklistLogicalName")]
+        public string ParentPicklistLogicalName { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "ChildPicklistLogicalNames")]
+        [NotMapped] public IList<string> ChildPicklistLogicalNames { get; set; }
 
     }
 }

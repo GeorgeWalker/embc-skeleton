@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// savedquery
@@ -29,43 +29,43 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the MicrosoftDynamicsCRMsavedquery
         /// class.
         /// </summary>
-        public MicrosoftDynamicsCRMsavedquery(int? organizationtaborder = default(int?), int? statecode = default(int?), string _createdbyValue = default(string), bool? isuserdefined = default(bool?), string columnsetxml = default(string), MicrosoftDynamicsCRMBooleanManagedProperty canbedeleted = default(MicrosoftDynamicsCRMBooleanManagedProperty), int? querytype = default(int?), string conditionalformatting = default(string), string _modifiedbyValue = default(string), string queryapi = default(string), string advancedgroupby = default(string), string returnedtypecode = default(string), bool? isquickfindquery = default(bool?), string _organizationidValue = default(string), string solutionid = default(string), string name = default(string), MicrosoftDynamicsCRMBooleanManagedProperty iscustomizable = default(MicrosoftDynamicsCRMBooleanManagedProperty), System.DateTimeOffset? createdon = default(System.DateTimeOffset?), string layoutxml = default(string), string fetchxml = default(string), string description = default(string), long? versionnumber = default(long?), int? componentstate = default(int?), string _modifiedonbehalfbyValue = default(string), string savedqueryid = default(string), System.DateTimeOffset? overwritetime = default(System.DateTimeOffset?), string introducedversion = default(string), bool? iscustom = default(bool?), int? statuscode = default(int?), int? queryappusage = default(int?), string savedqueryidunique = default(string), string _createdonbehalfbyValue = default(string), System.DateTimeOffset? modifiedon = default(System.DateTimeOffset?), bool? isdefault = default(bool?), bool? ismanaged = default(bool?), MicrosoftDynamicsCRMsystemuser modifiedby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser createdonbehalfby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMorganization organizationid = default(MicrosoftDynamicsCRMorganization), MicrosoftDynamicsCRMsystemuser modifiedonbehalfby = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMsyncerror> savedQuerySyncErrors = default(IList<MicrosoftDynamicsCRMsyncerror>), IList<MicrosoftDynamicsCRMasyncoperation> savedQueryAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), IList<MicrosoftDynamicsCRMbulkdeletefailure> savedQueryBulkDeleteFailures = default(IList<MicrosoftDynamicsCRMbulkdeletefailure>), MicrosoftDynamicsCRMsystemuser createdby = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMmobileofflineprofileitem> lkMobileofflineprofileitemSavedquery = default(IList<MicrosoftDynamicsCRMmobileofflineprofileitem>))
+        public MicrosoftDynamicsCRMsavedquery(bool? ismanaged = default(bool?), long? versionnumber = default(long?), int? statecode = default(int?), string _createdbyValue = default(string), bool? isuserdefined = default(bool?), string columnsetxml = default(string), int? organizationtaborder = default(int?), bool? isdefault = default(bool?), int? querytype = default(int?), string conditionalformatting = default(string), string _modifiedbyValue = default(string), string queryapi = default(string), string advancedgroupby = default(string), string layoutxml = default(string), int? statuscode = default(int?), string solutionid = default(string), string _organizationidValue = default(string), string introducedversion = default(string), string fetchxml = default(string), System.DateTimeOffset? createdon = default(System.DateTimeOffset?), string savedqueryidunique = default(string), bool? isquickfindquery = default(bool?), string returnedtypecode = default(string), string name = default(string), string description = default(string), int? queryappusage = default(int?), int? componentstate = default(int?), string _modifiedonbehalfbyValue = default(string), string savedqueryid = default(string), System.DateTimeOffset? overwritetime = default(System.DateTimeOffset?), MicrosoftDynamicsCRMBooleanManagedProperty iscustomizable = default(MicrosoftDynamicsCRMBooleanManagedProperty), bool? iscustom = default(bool?), string _createdonbehalfbyValue = default(string), System.DateTimeOffset? modifiedon = default(System.DateTimeOffset?), MicrosoftDynamicsCRMBooleanManagedProperty canbedeleted = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMsystemuser modifiedby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser createdonbehalfby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMorganization organizationid = default(MicrosoftDynamicsCRMorganization), MicrosoftDynamicsCRMsystemuser modifiedonbehalfby = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMsyncerror> savedQuerySyncErrors = default(IList<MicrosoftDynamicsCRMsyncerror>), IList<MicrosoftDynamicsCRMasyncoperation> savedQueryAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), IList<MicrosoftDynamicsCRMbulkdeletefailure> savedQueryBulkDeleteFailures = default(IList<MicrosoftDynamicsCRMbulkdeletefailure>), MicrosoftDynamicsCRMsystemuser createdby = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMmobileofflineprofileitem> lkMobileofflineprofileitemSavedquery = default(IList<MicrosoftDynamicsCRMmobileofflineprofileitem>))
         {
-            Organizationtaborder = organizationtaborder;
+            Ismanaged = ismanaged;
+            Versionnumber = versionnumber;
             Statecode = statecode;
             this._createdbyValue = _createdbyValue;
             Isuserdefined = isuserdefined;
             Columnsetxml = columnsetxml;
-            Canbedeleted = canbedeleted;
+            Organizationtaborder = organizationtaborder;
+            Isdefault = isdefault;
             Querytype = querytype;
             Conditionalformatting = conditionalformatting;
             this._modifiedbyValue = _modifiedbyValue;
             Queryapi = queryapi;
             Advancedgroupby = advancedgroupby;
-            Returnedtypecode = returnedtypecode;
-            Isquickfindquery = isquickfindquery;
-            this._organizationidValue = _organizationidValue;
-            Solutionid = solutionid;
-            Name = name;
-            Iscustomizable = iscustomizable;
-            Createdon = createdon;
             Layoutxml = layoutxml;
+            Statuscode = statuscode;
+            Solutionid = solutionid;
+            this._organizationidValue = _organizationidValue;
+            Introducedversion = introducedversion;
             Fetchxml = fetchxml;
+            Createdon = createdon;
+            Savedqueryidunique = savedqueryidunique;
+            Isquickfindquery = isquickfindquery;
+            Returnedtypecode = returnedtypecode;
+            Name = name;
             Description = description;
-            Versionnumber = versionnumber;
+            Queryappusage = queryappusage;
             Componentstate = componentstate;
             this._modifiedonbehalfbyValue = _modifiedonbehalfbyValue;
             Savedqueryid = savedqueryid;
             Overwritetime = overwritetime;
-            Introducedversion = introducedversion;
+            Iscustomizable = iscustomizable;
             Iscustom = iscustom;
-            Statuscode = statuscode;
-            Queryappusage = queryappusage;
-            Savedqueryidunique = savedqueryidunique;
             this._createdonbehalfbyValue = _createdonbehalfbyValue;
             Modifiedon = modifiedon;
-            Isdefault = isdefault;
-            Ismanaged = ismanaged;
+            Canbedeleted = canbedeleted;
             Modifiedby = modifiedby;
             Createdonbehalfby = createdonbehalfby;
             Organizationid = organizationid;
@@ -85,8 +85,13 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "organizationtaborder")]
-        public int? Organizationtaborder { get; set; }
+        [JsonProperty(PropertyName = "ismanaged")]
+        public bool? Ismanaged { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "versionnumber")]
+        public long? Versionnumber { get; set; }
 
         /// <summary>
         /// </summary>
@@ -110,8 +115,13 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "canbedeleted")]
-        public MicrosoftDynamicsCRMBooleanManagedProperty Canbedeleted { get; set; }
+        [JsonProperty(PropertyName = "organizationtaborder")]
+        public int? Organizationtaborder { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "isdefault")]
+        public bool? Isdefault { get; set; }
 
         /// <summary>
         /// </summary>
@@ -140,18 +150,13 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "returnedtypecode")]
-        public string Returnedtypecode { get; set; }
+        [JsonProperty(PropertyName = "layoutxml")]
+        public string Layoutxml { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "isquickfindquery")]
-        public bool? Isquickfindquery { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_organizationid_value")]
-        public string _organizationidValue { get; set; }
+        [JsonProperty(PropertyName = "statuscode")]
+        public int? Statuscode { get; set; }
 
         /// <summary>
         /// </summary>
@@ -160,23 +165,13 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "name")]
-        public string Name { get; set; }
+        [JsonProperty(PropertyName = "_organizationid_value")]
+        public string _organizationidValue { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "iscustomizable")]
-        public MicrosoftDynamicsCRMBooleanManagedProperty Iscustomizable { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "createdon")]
-        public System.DateTimeOffset? Createdon { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "layoutxml")]
-        public string Layoutxml { get; set; }
+        [JsonProperty(PropertyName = "introducedversion")]
+        public string Introducedversion { get; set; }
 
         /// <summary>
         /// </summary>
@@ -185,13 +180,38 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "createdon")]
+        public System.DateTimeOffset? Createdon { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "savedqueryidunique")]
+        public string Savedqueryidunique { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "isquickfindquery")]
+        public bool? Isquickfindquery { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "returnedtypecode")]
+        public string Returnedtypecode { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "versionnumber")]
-        public long? Versionnumber { get; set; }
+        [JsonProperty(PropertyName = "queryappusage")]
+        public int? Queryappusage { get; set; }
 
         /// <summary>
         /// </summary>
@@ -215,28 +235,13 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "introducedversion")]
-        public string Introducedversion { get; set; }
+        [JsonProperty(PropertyName = "iscustomizable")]
+        public MicrosoftDynamicsCRMBooleanManagedProperty Iscustomizable { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "iscustom")]
         public bool? Iscustom { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "statuscode")]
-        public int? Statuscode { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "queryappusage")]
-        public int? Queryappusage { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "savedqueryidunique")]
-        public string Savedqueryidunique { get; set; }
 
         /// <summary>
         /// </summary>
@@ -250,13 +255,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "isdefault")]
-        public bool? Isdefault { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "ismanaged")]
-        public bool? Ismanaged { get; set; }
+        [JsonProperty(PropertyName = "canbedeleted")]
+        public MicrosoftDynamicsCRMBooleanManagedProperty Canbedeleted { get; set; }
 
         /// <summary>
         /// </summary>
@@ -281,17 +281,17 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "SavedQuery_SyncErrors")]
-        public IList<MicrosoftDynamicsCRMsyncerror> SavedQuerySyncErrors { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMsyncerror> SavedQuerySyncErrors { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "SavedQuery_AsyncOperations")]
-        public IList<MicrosoftDynamicsCRMasyncoperation> SavedQueryAsyncOperations { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMasyncoperation> SavedQueryAsyncOperations { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "SavedQuery_BulkDeleteFailures")]
-        public IList<MicrosoftDynamicsCRMbulkdeletefailure> SavedQueryBulkDeleteFailures { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMbulkdeletefailure> SavedQueryBulkDeleteFailures { get; set; }
 
         /// <summary>
         /// </summary>
@@ -301,7 +301,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "lk_mobileofflineprofileitem_savedquery")]
-        public IList<MicrosoftDynamicsCRMmobileofflineprofileitem> LkMobileofflineprofileitemSavedquery { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMmobileofflineprofileitem> LkMobileofflineprofileitemSavedquery { get; set; }
 
     }
 }

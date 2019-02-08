@@ -9,7 +9,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
+    
 
     /// <summary>
     /// productpricelevel
@@ -29,53 +30,58 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the
         /// MicrosoftDynamicsCRMproductpricelevel class.
         /// </summary>
-        public MicrosoftDynamicsCRMproductpricelevel(int? quantitysellingcode = default(int?), string processid = default(string), string stageid = default(string), int? roundingoptioncode = default(int?), object exchangerate = default(object), string _uomidValue = default(string), string productnumber = default(string), System.DateTimeOffset? overriddencreatedon = default(System.DateTimeOffset?), long? versionnumber = default(long?), string productpricelevelid = default(string), int? pricingmethodcode = default(int?), System.DateTimeOffset? modifiedon = default(System.DateTimeOffset?), string _discounttypeidValue = default(string), string _uomscheduleidValue = default(string), string _transactioncurrencyidValue = default(string), string organizationid = default(string), object amount = default(object), string _createdbyValue = default(string), string _productidValue = default(string), int? roundingpolicycode = default(int?), int? importsequencenumber = default(int?), string _modifiedbyValue = default(string), System.DateTimeOffset? createdon = default(System.DateTimeOffset?), string _createdonbehalfbyValue = default(string), object amountBase = default(object), string _modifiedonbehalfbyValue = default(string), string _pricelevelidValue = default(string), object percentage = default(object), object roundingoptionamount = default(object), object roundingoptionamountBase = default(object), string traversedpath = default(string), MicrosoftDynamicsCRMuom uomid = default(MicrosoftDynamicsCRMuom), IList<MicrosoftDynamicsCRMasyncoperation> productPriceLevelAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), MicrosoftDynamicsCRMsystemuser createdonbehalfby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMtransactioncurrency transactioncurrencyid = default(MicrosoftDynamicsCRMtransactioncurrency), IList<MicrosoftDynamicsCRMsyncerror> productPriceLevelSyncErrors = default(IList<MicrosoftDynamicsCRMsyncerror>), MicrosoftDynamicsCRMprocessstage stageidProcessstage = default(MicrosoftDynamicsCRMprocessstage), MicrosoftDynamicsCRMpricelevel pricelevelid = default(MicrosoftDynamicsCRMpricelevel), MicrosoftDynamicsCRMsystemuser modifiedonbehalfby = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMbulkdeletefailure> productPriceLevelBulkDeleteFailures = default(IList<MicrosoftDynamicsCRMbulkdeletefailure>), MicrosoftDynamicsCRMsystemuser modifiedby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMproduct productid = default(MicrosoftDynamicsCRMproduct), MicrosoftDynamicsCRMdiscounttype discounttypeid = default(MicrosoftDynamicsCRMdiscounttype), MicrosoftDynamicsCRMuomschedule uomscheduleid = default(MicrosoftDynamicsCRMuomschedule), MicrosoftDynamicsCRMsystemuser createdby = default(MicrosoftDynamicsCRMsystemuser))
+        public MicrosoftDynamicsCRMproductpricelevel(string productnumber = default(string), string _productidValue = default(string), string _createdbyValue = default(string), object roundingoptionamount = default(object), string _createdonbehalfbyValue = default(string), int? timezoneruleversionnumber = default(int?), string traversedpath = default(string), string productpricelevelid = default(string), string processid = default(string), string _discounttypeidValue = default(string), long? versionnumber = default(long?), object percentage = default(object), int? roundingoptioncode = default(int?), string _transactioncurrencyidValue = default(string), string _pricelevelidValue = default(string), string _modifiedbyValue = default(string), string _uomscheduleidValue = default(string), int? utcconversiontimezonecode = default(int?), string _uomidValue = default(string), object roundingoptionamountBase = default(object), int? pricingmethodcode = default(int?), string organizationid = default(string), object amountBase = default(object), object amount = default(object), int? quantitysellingcode = default(int?), string _modifiedonbehalfbyValue = default(string), int? importsequencenumber = default(int?), string stageid = default(string), System.DateTimeOffset? createdon = default(System.DateTimeOffset?), System.DateTimeOffset? modifiedon = default(System.DateTimeOffset?), int? roundingpolicycode = default(int?), System.DateTimeOffset? overriddencreatedon = default(System.DateTimeOffset?), object exchangerate = default(object), MicrosoftDynamicsCRMsystemuser createdby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser createdonbehalfby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser modifiedby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser modifiedonbehalfby = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMsyncerror> productPriceLevelSyncErrors = default(IList<MicrosoftDynamicsCRMsyncerror>), IList<MicrosoftDynamicsCRMasyncoperation> productPriceLevelAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), IList<MicrosoftDynamicsCRMmailboxtrackingfolder> productpricelevelMailboxTrackingFolders = default(IList<MicrosoftDynamicsCRMmailboxtrackingfolder>), IList<MicrosoftDynamicsCRMprocesssession> productPriceLevelProcessSessions = default(IList<MicrosoftDynamicsCRMprocesssession>), IList<MicrosoftDynamicsCRMbulkdeletefailure> productPriceLevelBulkDeleteFailures = default(IList<MicrosoftDynamicsCRMbulkdeletefailure>), IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> productpricelevelPrincipalObjectAttributeAccesses = default(IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess>), MicrosoftDynamicsCRMprocessstage stageidProcessstage = default(MicrosoftDynamicsCRMprocessstage), MicrosoftDynamicsCRMtransactioncurrency transactioncurrencyid = default(MicrosoftDynamicsCRMtransactioncurrency), MicrosoftDynamicsCRMpricelevel pricelevelid = default(MicrosoftDynamicsCRMpricelevel), MicrosoftDynamicsCRMproduct productid = default(MicrosoftDynamicsCRMproduct), MicrosoftDynamicsCRMuom uomid = default(MicrosoftDynamicsCRMuom), MicrosoftDynamicsCRMuomschedule uomscheduleid = default(MicrosoftDynamicsCRMuomschedule), MicrosoftDynamicsCRMdiscounttype discounttypeid = default(MicrosoftDynamicsCRMdiscounttype))
         {
-            Quantitysellingcode = quantitysellingcode;
-            Processid = processid;
-            Stageid = stageid;
-            Roundingoptioncode = roundingoptioncode;
-            Exchangerate = exchangerate;
-            this._uomidValue = _uomidValue;
             Productnumber = productnumber;
-            Overriddencreatedon = overriddencreatedon;
-            Versionnumber = versionnumber;
-            Productpricelevelid = productpricelevelid;
-            Pricingmethodcode = pricingmethodcode;
-            Modifiedon = modifiedon;
-            this._discounttypeidValue = _discounttypeidValue;
-            this._uomscheduleidValue = _uomscheduleidValue;
-            this._transactioncurrencyidValue = _transactioncurrencyidValue;
-            Organizationid = organizationid;
-            Amount = amount;
-            this._createdbyValue = _createdbyValue;
             this._productidValue = _productidValue;
-            Roundingpolicycode = roundingpolicycode;
-            Importsequencenumber = importsequencenumber;
-            this._modifiedbyValue = _modifiedbyValue;
-            Createdon = createdon;
-            this._createdonbehalfbyValue = _createdonbehalfbyValue;
-            AmountBase = amountBase;
-            this._modifiedonbehalfbyValue = _modifiedonbehalfbyValue;
-            this._pricelevelidValue = _pricelevelidValue;
-            Percentage = percentage;
+            this._createdbyValue = _createdbyValue;
             Roundingoptionamount = roundingoptionamount;
-            RoundingoptionamountBase = roundingoptionamountBase;
+            this._createdonbehalfbyValue = _createdonbehalfbyValue;
+            Timezoneruleversionnumber = timezoneruleversionnumber;
             Traversedpath = traversedpath;
-            Uomid = uomid;
-            ProductPriceLevelAsyncOperations = productPriceLevelAsyncOperations;
-            Createdonbehalfby = createdonbehalfby;
-            Transactioncurrencyid = transactioncurrencyid;
-            ProductPriceLevelSyncErrors = productPriceLevelSyncErrors;
-            StageidProcessstage = stageidProcessstage;
-            Pricelevelid = pricelevelid;
-            Modifiedonbehalfby = modifiedonbehalfby;
-            ProductPriceLevelBulkDeleteFailures = productPriceLevelBulkDeleteFailures;
-            Modifiedby = modifiedby;
-            Productid = productid;
-            Discounttypeid = discounttypeid;
-            Uomscheduleid = uomscheduleid;
+            Productpricelevelid = productpricelevelid;
+            Processid = processid;
+            this._discounttypeidValue = _discounttypeidValue;
+            Versionnumber = versionnumber;
+            Percentage = percentage;
+            Roundingoptioncode = roundingoptioncode;
+            this._transactioncurrencyidValue = _transactioncurrencyidValue;
+            this._pricelevelidValue = _pricelevelidValue;
+            this._modifiedbyValue = _modifiedbyValue;
+            this._uomscheduleidValue = _uomscheduleidValue;
+            Utcconversiontimezonecode = utcconversiontimezonecode;
+            this._uomidValue = _uomidValue;
+            RoundingoptionamountBase = roundingoptionamountBase;
+            Pricingmethodcode = pricingmethodcode;
+            Organizationid = organizationid;
+            AmountBase = amountBase;
+            Amount = amount;
+            Quantitysellingcode = quantitysellingcode;
+            this._modifiedonbehalfbyValue = _modifiedonbehalfbyValue;
+            Importsequencenumber = importsequencenumber;
+            Stageid = stageid;
+            Createdon = createdon;
+            Modifiedon = modifiedon;
+            Roundingpolicycode = roundingpolicycode;
+            Overriddencreatedon = overriddencreatedon;
+            Exchangerate = exchangerate;
             Createdby = createdby;
+            Createdonbehalfby = createdonbehalfby;
+            Modifiedby = modifiedby;
+            Modifiedonbehalfby = modifiedonbehalfby;
+            ProductPriceLevelSyncErrors = productPriceLevelSyncErrors;
+            ProductPriceLevelAsyncOperations = productPriceLevelAsyncOperations;
+            ProductpricelevelMailboxTrackingFolders = productpricelevelMailboxTrackingFolders;
+            ProductPriceLevelProcessSessions = productPriceLevelProcessSessions;
+            ProductPriceLevelBulkDeleteFailures = productPriceLevelBulkDeleteFailures;
+            ProductpricelevelPrincipalObjectAttributeAccesses = productpricelevelPrincipalObjectAttributeAccesses;
+            StageidProcessstage = stageidProcessstage;
+            Transactioncurrencyid = transactioncurrencyid;
+            Pricelevelid = pricelevelid;
+            Productid = productid;
+            Uomid = uomid;
+            Uomscheduleid = uomscheduleid;
+            Discounttypeid = discounttypeid;
             CustomInit();
         }
 
@@ -86,93 +92,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "quantitysellingcode")]
-        public int? Quantitysellingcode { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "processid")]
-        public string Processid { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "stageid")]
-        public string Stageid { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "roundingoptioncode")]
-        public int? Roundingoptioncode { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "exchangerate")]
-        public object Exchangerate { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_uomid_value")]
-        public string _uomidValue { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "productnumber")]
         public string Productnumber { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "overriddencreatedon")]
-        public System.DateTimeOffset? Overriddencreatedon { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "versionnumber")]
-        public long? Versionnumber { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "productpricelevelid")]
-        public string Productpricelevelid { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "pricingmethodcode")]
-        public int? Pricingmethodcode { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "modifiedon")]
-        public System.DateTimeOffset? Modifiedon { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_discounttypeid_value")]
-        public string _discounttypeidValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_uomscheduleid_value")]
-        public string _uomscheduleidValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_transactioncurrencyid_value")]
-        public string _transactioncurrencyidValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "organizationid")]
-        public string Organizationid { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "amount")]
-        public object Amount { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_createdby_value")]
-        public string _createdbyValue { get; set; }
 
         /// <summary>
         /// </summary>
@@ -181,23 +102,13 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "roundingpolicycode")]
-        public int? Roundingpolicycode { get; set; }
+        [JsonProperty(PropertyName = "_createdby_value")]
+        public string _createdbyValue { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "importsequencenumber")]
-        public int? Importsequencenumber { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_modifiedby_value")]
-        public string _modifiedbyValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "createdon")]
-        public System.DateTimeOffset? Createdon { get; set; }
+        [JsonProperty(PropertyName = "roundingoptionamount")]
+        [NotMapped] public object Roundingoptionamount { get; set; }
 
         /// <summary>
         /// </summary>
@@ -206,33 +117,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "amount_base")]
-        public object AmountBase { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_modifiedonbehalfby_value")]
-        public string _modifiedonbehalfbyValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_pricelevelid_value")]
-        public string _pricelevelidValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "percentage")]
-        public object Percentage { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "roundingoptionamount")]
-        public object Roundingoptionamount { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "roundingoptionamount_base")]
-        public object RoundingoptionamountBase { get; set; }
+        [JsonProperty(PropertyName = "timezoneruleversionnumber")]
+        public int? Timezoneruleversionnumber { get; set; }
 
         /// <summary>
         /// </summary>
@@ -241,13 +127,138 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "uomid")]
-        public MicrosoftDynamicsCRMuom Uomid { get; set; }
+        [JsonProperty(PropertyName = "productpricelevelid")]
+        public string Productpricelevelid { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "ProductPriceLevel_AsyncOperations")]
-        public IList<MicrosoftDynamicsCRMasyncoperation> ProductPriceLevelAsyncOperations { get; set; }
+        [JsonProperty(PropertyName = "processid")]
+        public string Processid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_discounttypeid_value")]
+        public string _discounttypeidValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "versionnumber")]
+        public long? Versionnumber { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "percentage")]
+        [NotMapped] public object Percentage { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "roundingoptioncode")]
+        public int? Roundingoptioncode { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_transactioncurrencyid_value")]
+        public string _transactioncurrencyidValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_pricelevelid_value")]
+        public string _pricelevelidValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_modifiedby_value")]
+        public string _modifiedbyValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_uomscheduleid_value")]
+        public string _uomscheduleidValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "utcconversiontimezonecode")]
+        public int? Utcconversiontimezonecode { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_uomid_value")]
+        public string _uomidValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "roundingoptionamount_base")]
+        [NotMapped] public object RoundingoptionamountBase { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "pricingmethodcode")]
+        public int? Pricingmethodcode { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "organizationid")]
+        public string Organizationid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "amount_base")]
+        [NotMapped] public object AmountBase { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "amount")]
+        [NotMapped] public object Amount { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "quantitysellingcode")]
+        public int? Quantitysellingcode { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_modifiedonbehalfby_value")]
+        public string _modifiedonbehalfbyValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "importsequencenumber")]
+        public int? Importsequencenumber { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "stageid")]
+        public string Stageid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "createdon")]
+        public System.DateTimeOffset? Createdon { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "modifiedon")]
+        public System.DateTimeOffset? Modifiedon { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "roundingpolicycode")]
+        public int? Roundingpolicycode { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "overriddencreatedon")]
+        public System.DateTimeOffset? Overriddencreatedon { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "exchangerate")]
+        [NotMapped] public object Exchangerate { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "createdby")]
+        public MicrosoftDynamicsCRMsystemuser Createdby { get; set; }
 
         /// <summary>
         /// </summary>
@@ -256,23 +267,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "transactioncurrencyid")]
-        public MicrosoftDynamicsCRMtransactioncurrency Transactioncurrencyid { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "ProductPriceLevel_SyncErrors")]
-        public IList<MicrosoftDynamicsCRMsyncerror> ProductPriceLevelSyncErrors { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "stageid_processstage")]
-        public MicrosoftDynamicsCRMprocessstage StageidProcessstage { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "pricelevelid")]
-        public MicrosoftDynamicsCRMpricelevel Pricelevelid { get; set; }
+        [JsonProperty(PropertyName = "modifiedby")]
+        public MicrosoftDynamicsCRMsystemuser Modifiedby { get; set; }
 
         /// <summary>
         /// </summary>
@@ -281,13 +277,48 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "ProductPriceLevel_BulkDeleteFailures")]
-        public IList<MicrosoftDynamicsCRMbulkdeletefailure> ProductPriceLevelBulkDeleteFailures { get; set; }
+        [JsonProperty(PropertyName = "ProductPriceLevel_SyncErrors")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMsyncerror> ProductPriceLevelSyncErrors { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "modifiedby")]
-        public MicrosoftDynamicsCRMsystemuser Modifiedby { get; set; }
+        [JsonProperty(PropertyName = "ProductPriceLevel_AsyncOperations")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMasyncoperation> ProductPriceLevelAsyncOperations { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "productpricelevel_MailboxTrackingFolders")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMmailboxtrackingfolder> ProductpricelevelMailboxTrackingFolders { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "ProductPriceLevel_ProcessSessions")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMprocesssession> ProductPriceLevelProcessSessions { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "ProductPriceLevel_BulkDeleteFailures")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbulkdeletefailure> ProductPriceLevelBulkDeleteFailures { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "productpricelevel_PrincipalObjectAttributeAccesses")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> ProductpricelevelPrincipalObjectAttributeAccesses { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "stageid_processstage")]
+        public MicrosoftDynamicsCRMprocessstage StageidProcessstage { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transactioncurrencyid")]
+        public MicrosoftDynamicsCRMtransactioncurrency Transactioncurrencyid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "pricelevelid")]
+        public MicrosoftDynamicsCRMpricelevel Pricelevelid { get; set; }
 
         /// <summary>
         /// </summary>
@@ -296,8 +327,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "discounttypeid")]
-        public MicrosoftDynamicsCRMdiscounttype Discounttypeid { get; set; }
+        [JsonProperty(PropertyName = "uomid")]
+        public MicrosoftDynamicsCRMuom Uomid { get; set; }
 
         /// <summary>
         /// </summary>
@@ -306,8 +337,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "createdby")]
-        public MicrosoftDynamicsCRMsystemuser Createdby { get; set; }
+        [JsonProperty(PropertyName = "discounttypeid")]
+        public MicrosoftDynamicsCRMdiscounttype Discounttypeid { get; set; }
 
     }
 }

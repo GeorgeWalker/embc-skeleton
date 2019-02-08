@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// resourcegroup
@@ -29,26 +29,32 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the MicrosoftDynamicsCRMresourcegroup
         /// class.
         /// </summary>
-        public MicrosoftDynamicsCRMresourcegroup(string resourcegroupid = default(string), string name = default(string), string _organizationidValue = default(string), long? versionnumber = default(long?), string _businessunitidValue = default(string), string objecttypecode = default(string), int? grouptypecode = default(int?), MicrosoftDynamicsCRMorganization organizationid = default(MicrosoftDynamicsCRMorganization), IList<MicrosoftDynamicsCRMconnection> resourcegroupConnections2 = default(IList<MicrosoftDynamicsCRMconnection>), IList<MicrosoftDynamicsCRMconnection> resourcegroupConnections1 = default(IList<MicrosoftDynamicsCRMconnection>), MicrosoftDynamicsCRMbusinessunit businessunitid = default(MicrosoftDynamicsCRMbusinessunit), MicrosoftDynamicsCRMconstraintbasedgroup resourcegroupidConstraintbasedgroup = default(MicrosoftDynamicsCRMconstraintbasedgroup), IList<MicrosoftDynamicsCRMbulkdeletefailure> resourceGroupBulkDeleteFailures = default(IList<MicrosoftDynamicsCRMbulkdeletefailure>), IList<MicrosoftDynamicsCRMduplicaterecord> resourceGroupDuplicateBaseRecord = default(IList<MicrosoftDynamicsCRMduplicaterecord>), MicrosoftDynamicsCRMteam resourcegroupidTeam = default(MicrosoftDynamicsCRMteam), IList<MicrosoftDynamicsCRMduplicaterecord> resourceGroupDuplicateMatchingRecord = default(IList<MicrosoftDynamicsCRMduplicaterecord>), IList<MicrosoftDynamicsCRMsyncerror> resourceGroupSyncErrors = default(IList<MicrosoftDynamicsCRMsyncerror>), IList<MicrosoftDynamicsCRMasyncoperation> resourceGroupAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>))
+        public MicrosoftDynamicsCRMresourcegroup(int? timezoneruleversionnumber = default(int?), string name = default(string), System.DateTimeOffset? overriddencreatedon = default(System.DateTimeOffset?), string _businessunitidValue = default(string), int? utcconversiontimezonecode = default(int?), string objecttypecode = default(string), int? importsequencenumber = default(int?), string _organizationidValue = default(string), long? versionnumber = default(long?), string resourcegroupid = default(string), int? grouptypecode = default(int?), MicrosoftDynamicsCRMbusinessunit businessunitid = default(MicrosoftDynamicsCRMbusinessunit), IList<MicrosoftDynamicsCRMsyncerror> resourceGroupSyncErrors = default(IList<MicrosoftDynamicsCRMsyncerror>), IList<MicrosoftDynamicsCRMasyncoperation> resourceGroupAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), IList<MicrosoftDynamicsCRMmailboxtrackingfolder> resourcegroupMailboxTrackingFolders = default(IList<MicrosoftDynamicsCRMmailboxtrackingfolder>), IList<MicrosoftDynamicsCRMbulkdeletefailure> resourceGroupBulkDeleteFailures = default(IList<MicrosoftDynamicsCRMbulkdeletefailure>), IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> resourcegroupPrincipalObjectAttributeAccesses = default(IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess>), IList<MicrosoftDynamicsCRMconnection> resourcegroupConnections1 = default(IList<MicrosoftDynamicsCRMconnection>), IList<MicrosoftDynamicsCRMconnection> resourcegroupConnections2 = default(IList<MicrosoftDynamicsCRMconnection>), MicrosoftDynamicsCRMconstraintbasedgroup resourcegroupidConstraintbasedgroup = default(MicrosoftDynamicsCRMconstraintbasedgroup), MicrosoftDynamicsCRMorganization organizationid = default(MicrosoftDynamicsCRMorganization), IList<MicrosoftDynamicsCRMduplicaterecord> resourceGroupDuplicateBaseRecord = default(IList<MicrosoftDynamicsCRMduplicaterecord>), IList<MicrosoftDynamicsCRMduplicaterecord> resourceGroupDuplicateMatchingRecord = default(IList<MicrosoftDynamicsCRMduplicaterecord>), MicrosoftDynamicsCRMteam resourcegroupidTeam = default(MicrosoftDynamicsCRMteam))
         {
-            Resourcegroupid = resourcegroupid;
+            Timezoneruleversionnumber = timezoneruleversionnumber;
             Name = name;
+            Overriddencreatedon = overriddencreatedon;
+            this._businessunitidValue = _businessunitidValue;
+            Utcconversiontimezonecode = utcconversiontimezonecode;
+            Objecttypecode = objecttypecode;
+            Importsequencenumber = importsequencenumber;
             this._organizationidValue = _organizationidValue;
             Versionnumber = versionnumber;
-            this._businessunitidValue = _businessunitidValue;
-            Objecttypecode = objecttypecode;
+            Resourcegroupid = resourcegroupid;
             Grouptypecode = grouptypecode;
-            Organizationid = organizationid;
-            ResourcegroupConnections2 = resourcegroupConnections2;
-            ResourcegroupConnections1 = resourcegroupConnections1;
             Businessunitid = businessunitid;
-            ResourcegroupidConstraintbasedgroup = resourcegroupidConstraintbasedgroup;
-            ResourceGroupBulkDeleteFailures = resourceGroupBulkDeleteFailures;
-            ResourceGroupDuplicateBaseRecord = resourceGroupDuplicateBaseRecord;
-            ResourcegroupidTeam = resourcegroupidTeam;
-            ResourceGroupDuplicateMatchingRecord = resourceGroupDuplicateMatchingRecord;
             ResourceGroupSyncErrors = resourceGroupSyncErrors;
             ResourceGroupAsyncOperations = resourceGroupAsyncOperations;
+            ResourcegroupMailboxTrackingFolders = resourcegroupMailboxTrackingFolders;
+            ResourceGroupBulkDeleteFailures = resourceGroupBulkDeleteFailures;
+            ResourcegroupPrincipalObjectAttributeAccesses = resourcegroupPrincipalObjectAttributeAccesses;
+            ResourcegroupConnections1 = resourcegroupConnections1;
+            ResourcegroupConnections2 = resourcegroupConnections2;
+            ResourcegroupidConstraintbasedgroup = resourcegroupidConstraintbasedgroup;
+            Organizationid = organizationid;
+            ResourceGroupDuplicateBaseRecord = resourceGroupDuplicateBaseRecord;
+            ResourceGroupDuplicateMatchingRecord = resourceGroupDuplicateMatchingRecord;
+            ResourcegroupidTeam = resourcegroupidTeam;
             CustomInit();
         }
 
@@ -59,13 +65,38 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "resourcegroupid")]
-        public string Resourcegroupid { get; set; }
+        [JsonProperty(PropertyName = "timezoneruleversionnumber")]
+        public int? Timezoneruleversionnumber { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "overriddencreatedon")]
+        public System.DateTimeOffset? Overriddencreatedon { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_businessunitid_value")]
+        public string _businessunitidValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "utcconversiontimezonecode")]
+        public int? Utcconversiontimezonecode { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "objecttypecode")]
+        public string Objecttypecode { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "importsequencenumber")]
+        public int? Importsequencenumber { get; set; }
 
         /// <summary>
         /// </summary>
@@ -79,13 +110,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "_businessunitid_value")]
-        public string _businessunitidValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "objecttypecode")]
-        public string Objecttypecode { get; set; }
+        [JsonProperty(PropertyName = "resourcegroupid")]
+        public string Resourcegroupid { get; set; }
 
         /// <summary>
         /// </summary>
@@ -94,23 +120,43 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "organizationid")]
-        public MicrosoftDynamicsCRMorganization Organizationid { get; set; }
+        [JsonProperty(PropertyName = "businessunitid")]
+        public MicrosoftDynamicsCRMbusinessunit Businessunitid { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "resourcegroup_connections2")]
-        public IList<MicrosoftDynamicsCRMconnection> ResourcegroupConnections2 { get; set; }
+        [JsonProperty(PropertyName = "ResourceGroup_SyncErrors")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMsyncerror> ResourceGroupSyncErrors { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "ResourceGroup_AsyncOperations")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMasyncoperation> ResourceGroupAsyncOperations { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "resourcegroup_MailboxTrackingFolders")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMmailboxtrackingfolder> ResourcegroupMailboxTrackingFolders { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "ResourceGroup_BulkDeleteFailures")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbulkdeletefailure> ResourceGroupBulkDeleteFailures { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "resourcegroup_PrincipalObjectAttributeAccesses")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> ResourcegroupPrincipalObjectAttributeAccesses { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "resourcegroup_connections1")]
-        public IList<MicrosoftDynamicsCRMconnection> ResourcegroupConnections1 { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMconnection> ResourcegroupConnections1 { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "businessunitid")]
-        public MicrosoftDynamicsCRMbusinessunit Businessunitid { get; set; }
+        [JsonProperty(PropertyName = "resourcegroup_connections2")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMconnection> ResourcegroupConnections2 { get; set; }
 
         /// <summary>
         /// </summary>
@@ -119,33 +165,23 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "ResourceGroup_BulkDeleteFailures")]
-        public IList<MicrosoftDynamicsCRMbulkdeletefailure> ResourceGroupBulkDeleteFailures { get; set; }
+        [JsonProperty(PropertyName = "organizationid")]
+        public MicrosoftDynamicsCRMorganization Organizationid { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "ResourceGroup_DuplicateBaseRecord")]
-        public IList<MicrosoftDynamicsCRMduplicaterecord> ResourceGroupDuplicateBaseRecord { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMduplicaterecord> ResourceGroupDuplicateBaseRecord { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "ResourceGroup_DuplicateMatchingRecord")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMduplicaterecord> ResourceGroupDuplicateMatchingRecord { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "resourcegroupid_team")]
         public MicrosoftDynamicsCRMteam ResourcegroupidTeam { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "ResourceGroup_DuplicateMatchingRecord")]
-        public IList<MicrosoftDynamicsCRMduplicaterecord> ResourceGroupDuplicateMatchingRecord { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "ResourceGroup_SyncErrors")]
-        public IList<MicrosoftDynamicsCRMsyncerror> ResourceGroupSyncErrors { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "ResourceGroup_AsyncOperations")]
-        public IList<MicrosoftDynamicsCRMasyncoperation> ResourceGroupAsyncOperations { get; set; }
 
     }
 }

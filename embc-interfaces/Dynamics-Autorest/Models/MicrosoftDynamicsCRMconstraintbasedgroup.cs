@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// constraintbasedgroup
@@ -29,35 +29,43 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the
         /// MicrosoftDynamicsCRMconstraintbasedgroup class.
         /// </summary>
-        public MicrosoftDynamicsCRMconstraintbasedgroup(string _createdonbehalfbyValue = default(string), System.DateTimeOffset? modifiedon = default(System.DateTimeOffset?), string _modifiedonbehalfbyValue = default(string), long? versionnumber = default(long?), string description = default(string), string _createdbyValue = default(string), int? grouptypecode = default(int?), string _organizationidValue = default(string), string name = default(string), string constraintbasedgroupid = default(string), System.DateTimeOffset? createdon = default(System.DateTimeOffset?), string _businessunitidValue = default(string), string _modifiedbyValue = default(string), string constraints = default(string), MicrosoftDynamicsCRMsystemuser modifiedonbehalfby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser createdby = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMresourcespec> constraintBasedGroupResourceSpecs = default(IList<MicrosoftDynamicsCRMresourcespec>), MicrosoftDynamicsCRMsystemuser businessunitidSystemuser = default(MicrosoftDynamicsCRMsystemuser), IList<MicrosoftDynamicsCRMresourcegroup> constraintbasedgroupResourceGroups = default(IList<MicrosoftDynamicsCRMresourcegroup>), IList<MicrosoftDynamicsCRMconnection> constraintbasedgroupConnections2 = default(IList<MicrosoftDynamicsCRMconnection>), MicrosoftDynamicsCRMsystemuser modifiedby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser createdonbehalfby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMbusinessunit businessunitidBusinessunit = default(MicrosoftDynamicsCRMbusinessunit), IList<MicrosoftDynamicsCRMconnection> constraintbasedgroupConnections1 = default(IList<MicrosoftDynamicsCRMconnection>), MicrosoftDynamicsCRMorganization organizationid = default(MicrosoftDynamicsCRMorganization), IList<MicrosoftDynamicsCRMbulkdeletefailure> constraintBasedGroupBulkDeleteFailures = default(IList<MicrosoftDynamicsCRMbulkdeletefailure>), IList<MicrosoftDynamicsCRMasyncoperation> constraintBasedGroupAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>))
+        public MicrosoftDynamicsCRMconstraintbasedgroup(string _modifiedonbehalfbyValue = default(string), int? grouptypecode = default(int?), System.DateTimeOffset? createdon = default(System.DateTimeOffset?), int? timezoneruleversionnumber = default(int?), string description = default(string), long? versionnumber = default(long?), string _organizationidValue = default(string), int? importsequencenumber = default(int?), System.DateTimeOffset? overriddencreatedon = default(System.DateTimeOffset?), string _businessunitidValue = default(string), string _modifiedbyValue = default(string), int? utcconversiontimezonecode = default(int?), string constraintbasedgroupid = default(string), string _createdbyValue = default(string), string name = default(string), string _createdonbehalfbyValue = default(string), string constraints = default(string), System.DateTimeOffset? modifiedon = default(System.DateTimeOffset?), MicrosoftDynamicsCRMsystemuser createdby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser createdonbehalfby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser modifiedby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser modifiedonbehalfby = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMbusinessunit businessunitidBusinessunit = default(MicrosoftDynamicsCRMbusinessunit), IList<MicrosoftDynamicsCRMsyncerror> constraintbasedgroupSyncErrors = default(IList<MicrosoftDynamicsCRMsyncerror>), IList<MicrosoftDynamicsCRMasyncoperation> constraintBasedGroupAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), IList<MicrosoftDynamicsCRMmailboxtrackingfolder> constraintbasedgroupMailboxTrackingFolders = default(IList<MicrosoftDynamicsCRMmailboxtrackingfolder>), IList<MicrosoftDynamicsCRMprocesssession> constraintBasedGroupProcessSessions = default(IList<MicrosoftDynamicsCRMprocesssession>), IList<MicrosoftDynamicsCRMbulkdeletefailure> constraintBasedGroupBulkDeleteFailures = default(IList<MicrosoftDynamicsCRMbulkdeletefailure>), IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> constraintbasedgroupPrincipalObjectAttributeAccesses = default(IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess>), IList<MicrosoftDynamicsCRMconnection> constraintbasedgroupConnections1 = default(IList<MicrosoftDynamicsCRMconnection>), IList<MicrosoftDynamicsCRMconnection> constraintbasedgroupConnections2 = default(IList<MicrosoftDynamicsCRMconnection>), IList<MicrosoftDynamicsCRMresourcegroup> constraintbasedgroupResourceGroups = default(IList<MicrosoftDynamicsCRMresourcegroup>), IList<MicrosoftDynamicsCRMresourcespec> constraintBasedGroupResourceSpecs = default(IList<MicrosoftDynamicsCRMresourcespec>), MicrosoftDynamicsCRMorganization organizationid = default(MicrosoftDynamicsCRMorganization), MicrosoftDynamicsCRMsystemuser businessunitidSystemuser = default(MicrosoftDynamicsCRMsystemuser))
         {
-            this._createdonbehalfbyValue = _createdonbehalfbyValue;
-            Modifiedon = modifiedon;
             this._modifiedonbehalfbyValue = _modifiedonbehalfbyValue;
-            Versionnumber = versionnumber;
-            Description = description;
-            this._createdbyValue = _createdbyValue;
             Grouptypecode = grouptypecode;
-            this._organizationidValue = _organizationidValue;
-            Name = name;
-            Constraintbasedgroupid = constraintbasedgroupid;
             Createdon = createdon;
+            Timezoneruleversionnumber = timezoneruleversionnumber;
+            Description = description;
+            Versionnumber = versionnumber;
+            this._organizationidValue = _organizationidValue;
+            Importsequencenumber = importsequencenumber;
+            Overriddencreatedon = overriddencreatedon;
             this._businessunitidValue = _businessunitidValue;
             this._modifiedbyValue = _modifiedbyValue;
+            Utcconversiontimezonecode = utcconversiontimezonecode;
+            Constraintbasedgroupid = constraintbasedgroupid;
+            this._createdbyValue = _createdbyValue;
+            Name = name;
+            this._createdonbehalfbyValue = _createdonbehalfbyValue;
             Constraints = constraints;
-            Modifiedonbehalfby = modifiedonbehalfby;
+            Modifiedon = modifiedon;
             Createdby = createdby;
-            ConstraintBasedGroupResourceSpecs = constraintBasedGroupResourceSpecs;
-            BusinessunitidSystemuser = businessunitidSystemuser;
-            ConstraintbasedgroupResourceGroups = constraintbasedgroupResourceGroups;
-            ConstraintbasedgroupConnections2 = constraintbasedgroupConnections2;
-            Modifiedby = modifiedby;
             Createdonbehalfby = createdonbehalfby;
+            Modifiedby = modifiedby;
+            Modifiedonbehalfby = modifiedonbehalfby;
             BusinessunitidBusinessunit = businessunitidBusinessunit;
-            ConstraintbasedgroupConnections1 = constraintbasedgroupConnections1;
-            Organizationid = organizationid;
-            ConstraintBasedGroupBulkDeleteFailures = constraintBasedGroupBulkDeleteFailures;
+            ConstraintbasedgroupSyncErrors = constraintbasedgroupSyncErrors;
             ConstraintBasedGroupAsyncOperations = constraintBasedGroupAsyncOperations;
+            ConstraintbasedgroupMailboxTrackingFolders = constraintbasedgroupMailboxTrackingFolders;
+            ConstraintBasedGroupProcessSessions = constraintBasedGroupProcessSessions;
+            ConstraintBasedGroupBulkDeleteFailures = constraintBasedGroupBulkDeleteFailures;
+            ConstraintbasedgroupPrincipalObjectAttributeAccesses = constraintbasedgroupPrincipalObjectAttributeAccesses;
+            ConstraintbasedgroupConnections1 = constraintbasedgroupConnections1;
+            ConstraintbasedgroupConnections2 = constraintbasedgroupConnections2;
+            ConstraintbasedgroupResourceGroups = constraintbasedgroupResourceGroups;
+            ConstraintBasedGroupResourceSpecs = constraintBasedGroupResourceSpecs;
+            Organizationid = organizationid;
+            BusinessunitidSystemuser = businessunitidSystemuser;
             CustomInit();
         }
 
@@ -68,33 +76,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "_createdonbehalfby_value")]
-        public string _createdonbehalfbyValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "modifiedon")]
-        public System.DateTimeOffset? Modifiedon { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "_modifiedonbehalfby_value")]
         public string _modifiedonbehalfbyValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "versionnumber")]
-        public long? Versionnumber { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "description")]
-        public string Description { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_createdby_value")]
-        public string _createdbyValue { get; set; }
 
         /// <summary>
         /// </summary>
@@ -103,23 +86,38 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "createdon")]
+        public System.DateTimeOffset? Createdon { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "timezoneruleversionnumber")]
+        public int? Timezoneruleversionnumber { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "versionnumber")]
+        public long? Versionnumber { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "_organizationid_value")]
         public string _organizationidValue { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "name")]
-        public string Name { get; set; }
+        [JsonProperty(PropertyName = "importsequencenumber")]
+        public int? Importsequencenumber { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "constraintbasedgroupid")]
-        public string Constraintbasedgroupid { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "createdon")]
-        public System.DateTimeOffset? Createdon { get; set; }
+        [JsonProperty(PropertyName = "overriddencreatedon")]
+        public System.DateTimeOffset? Overriddencreatedon { get; set; }
 
         /// <summary>
         /// </summary>
@@ -133,13 +131,38 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "utcconversiontimezonecode")]
+        public int? Utcconversiontimezonecode { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "constraintbasedgroupid")]
+        public string Constraintbasedgroupid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_createdby_value")]
+        public string _createdbyValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_createdonbehalfby_value")]
+        public string _createdonbehalfbyValue { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "constraints")]
         public string Constraints { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "modifiedonbehalfby")]
-        public MicrosoftDynamicsCRMsystemuser Modifiedonbehalfby { get; set; }
+        [JsonProperty(PropertyName = "modifiedon")]
+        public System.DateTimeOffset? Modifiedon { get; set; }
 
         /// <summary>
         /// </summary>
@@ -148,23 +171,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "constraint_based_group_resource_specs")]
-        public IList<MicrosoftDynamicsCRMresourcespec> ConstraintBasedGroupResourceSpecs { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "businessunitid_systemuser")]
-        public MicrosoftDynamicsCRMsystemuser BusinessunitidSystemuser { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "constraintbasedgroup_resource_groups")]
-        public IList<MicrosoftDynamicsCRMresourcegroup> ConstraintbasedgroupResourceGroups { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "constraintbasedgroup_connections2")]
-        public IList<MicrosoftDynamicsCRMconnection> ConstraintbasedgroupConnections2 { get; set; }
+        [JsonProperty(PropertyName = "createdonbehalfby")]
+        public MicrosoftDynamicsCRMsystemuser Createdonbehalfby { get; set; }
 
         /// <summary>
         /// </summary>
@@ -173,8 +181,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "createdonbehalfby")]
-        public MicrosoftDynamicsCRMsystemuser Createdonbehalfby { get; set; }
+        [JsonProperty(PropertyName = "modifiedonbehalfby")]
+        public MicrosoftDynamicsCRMsystemuser Modifiedonbehalfby { get; set; }
 
         /// <summary>
         /// </summary>
@@ -183,8 +191,53 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "constraintbasedgroup_SyncErrors")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMsyncerror> ConstraintbasedgroupSyncErrors { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "ConstraintBasedGroup_AsyncOperations")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMasyncoperation> ConstraintBasedGroupAsyncOperations { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "constraintbasedgroup_MailboxTrackingFolders")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMmailboxtrackingfolder> ConstraintbasedgroupMailboxTrackingFolders { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "ConstraintBasedGroup_ProcessSessions")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMprocesssession> ConstraintBasedGroupProcessSessions { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "ConstraintBasedGroup_BulkDeleteFailures")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbulkdeletefailure> ConstraintBasedGroupBulkDeleteFailures { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "constraintbasedgroup_PrincipalObjectAttributeAccesses")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> ConstraintbasedgroupPrincipalObjectAttributeAccesses { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "constraintbasedgroup_connections1")]
-        public IList<MicrosoftDynamicsCRMconnection> ConstraintbasedgroupConnections1 { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMconnection> ConstraintbasedgroupConnections1 { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "constraintbasedgroup_connections2")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMconnection> ConstraintbasedgroupConnections2 { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "constraintbasedgroup_resource_groups")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMresourcegroup> ConstraintbasedgroupResourceGroups { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "constraint_based_group_resource_specs")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMresourcespec> ConstraintBasedGroupResourceSpecs { get; set; }
 
         /// <summary>
         /// </summary>
@@ -193,13 +246,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "ConstraintBasedGroup_BulkDeleteFailures")]
-        public IList<MicrosoftDynamicsCRMbulkdeletefailure> ConstraintBasedGroupBulkDeleteFailures { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "ConstraintBasedGroup_AsyncOperations")]
-        public IList<MicrosoftDynamicsCRMasyncoperation> ConstraintBasedGroupAsyncOperations { get; set; }
+        [JsonProperty(PropertyName = "businessunitid_systemuser")]
+        public MicrosoftDynamicsCRMsystemuser BusinessunitidSystemuser { get; set; }
 
     }
 }

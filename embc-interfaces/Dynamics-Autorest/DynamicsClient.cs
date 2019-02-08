@@ -17,7 +17,7 @@ namespace Gov.Jag.Embc.Interfaces
 
     /// <summary>
     /// This OData service is located at
-    /// https://pillspressdev.api.crm3.dynamics.com/api/data/v8.2/
+    /// https://bcessdev.api.crm3.dynamics.com/api/data/v8.2/
     /// </summary>
     public partial class DynamicsClient : ServiceClient<DynamicsClient>, IDynamicsClient
     {
@@ -50,6 +50,41 @@ namespace Gov.Jag.Embc.Interfaces
         /// Gets the IContacts.
         /// </summary>
         public virtual IContacts Contacts { get; private set; }
+
+        /// <summary>
+        /// Gets the ICommunities.
+        /// </summary>
+        public virtual ICommunities Communities { get; private set; }
+
+        /// <summary>
+        /// Gets the IIncidenttasks.
+        /// </summary>
+        public virtual IIncidenttasks Incidenttasks { get; private set; }
+
+        /// <summary>
+        /// Gets the IRegions.
+        /// </summary>
+        public virtual IRegions Regions { get; private set; }
+
+        /// <summary>
+        /// Gets the IRegistrations.
+        /// </summary>
+        public virtual IRegistrations Registrations { get; private set; }
+
+        /// <summary>
+        /// Gets the IIncidents.
+        /// </summary>
+        public virtual IIncidents Incidents { get; private set; }
+
+        /// <summary>
+        /// Gets the IInvoices.
+        /// </summary>
+        public virtual IInvoices Invoices { get; private set; }
+
+        /// <summary>
+        /// Gets the ISharepointdocumentlocations.
+        /// </summary>
+        public virtual ISharepointdocumentlocations Sharepointdocumentlocations { get; private set; }
 
         /// <summary>
         /// Gets the ISharepointsites.
@@ -307,12 +342,19 @@ namespace Gov.Jag.Embc.Interfaces
         /// </summary>
         private void Initialize()
         {
-            Accounts = new Accounts(this);            
+            Accounts = new Accounts(this);
             Contacts = new Contacts(this);
+            Communities = new Communities(this);
+            Incidenttasks = new Incidenttasks(this);
+            Regions = new Regions(this);
+            Registrations = new Registrations(this);
+            Incidents = new Incidents(this);
+            Invoices = new Invoices(this);
+            Sharepointdocumentlocations = new Sharepointdocumentlocations(this);
             Sharepointsites = new Sharepointsites(this);
             Entitydefinitions = new Entitydefinitions(this);
             Globaloptionsetdefinitions = new Globaloptionsetdefinitions(this);
-            BaseUri = new System.Uri("https://pillspressdev.api.crm3.dynamics.com/api/data/v8.2");
+            BaseUri = new System.Uri("https://bcessdev.api.crm3.dynamics.com/api/data/v8.2");
             SerializationSettings = new JsonSerializerSettings
             {
                 Formatting = Newtonsoft.Json.Formatting.Indented,

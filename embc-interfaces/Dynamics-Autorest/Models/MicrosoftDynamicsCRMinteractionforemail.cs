@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// interactionforemail
@@ -29,38 +29,47 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the
         /// MicrosoftDynamicsCRMinteractionforemail class.
         /// </summary>
-        public MicrosoftDynamicsCRMinteractionforemail(string interactionrepliedby = default(string), string _owninguserValue = default(string), string _owneridValue = default(string), string _owningbusinessunitValue = default(string), int? timezoneruleversionnumber = default(int?), string interactedcomponenttext = default(string), string _modifiedbyValue = default(string), string _createdonbehalfbyValue = default(string), int? statuscode = default(int?), object exchangerate = default(object), long? versionnumber = default(long?), System.DateTimeOffset? createdon = default(System.DateTimeOffset?), int? statecode = default(int?), string interactionreplyid = default(string), string interactionuseragent = default(string), string name = default(string), string _owningteamValue = default(string), string emailactivityid = default(string), int? interactiontype = default(int?), string _transactioncurrencyidValue = default(string), int? importsequencenumber = default(int?), string interactionlocation = default(string), string _createdbyValue = default(string), System.DateTimeOffset? overriddencreatedon = default(System.DateTimeOffset?), System.DateTimeOffset? modifiedon = default(System.DateTimeOffset?), string emailinteractionreplyid = default(string), int? utcconversiontimezonecode = default(int?), string _modifiedonbehalfbyValue = default(string), string interactionforemailid = default(string), System.DateTimeOffset? emailinteractiontime = default(System.DateTimeOffset?), MicrosoftDynamicsCRMsystemuser createdbyname = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser createdonbehalfbyname = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser modifiedbyname = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser modifiedonbehalfbyname = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser owninguser = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMteam owningteam = default(MicrosoftDynamicsCRMteam), MicrosoftDynamicsCRMprincipal ownerid = default(MicrosoftDynamicsCRMprincipal), MicrosoftDynamicsCRMbusinessunit owningbusinessunit = default(MicrosoftDynamicsCRMbusinessunit), IList<MicrosoftDynamicsCRMactivitypointer> newInteractionforemailActivityPointers = default(IList<MicrosoftDynamicsCRMactivitypointer>), IList<MicrosoftDynamicsCRMasyncoperation> newInteractionforemailAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), MicrosoftDynamicsCRMtransactioncurrency transactioncurrencyid = default(MicrosoftDynamicsCRMtransactioncurrency))
+        public MicrosoftDynamicsCRMinteractionforemail(string emailactivityid = default(string), string _owningbusinessunitValue = default(string), string interactionreplyid = default(string), object exchangerate = default(object), string _owningteamValue = default(string), string _createdonbehalfbyValue = default(string), System.DateTimeOffset? modifiedon = default(System.DateTimeOffset?), string _owninguserValue = default(string), int? statecode = default(int?), string _modifiedonbehalfbyValue = default(string), string emailaddress = default(string), long? versionnumber = default(long?), string _createdbyValue = default(string), string interactionforemailid = default(string), string name = default(string), string emailinteractionreplyid = default(string), System.DateTimeOffset? overriddencreatedon = default(System.DateTimeOffset?), int? timezoneruleversionnumber = default(int?), System.DateTimeOffset? createdon = default(System.DateTimeOffset?), int? utcconversiontimezonecode = default(int?), string interactionrepliedby = default(string), string _owneridValue = default(string), int? importsequencenumber = default(int?), string interactionlocation = default(string), string interactedcomponenttext = default(string), System.DateTimeOffset? emailinteractiontime = default(System.DateTimeOffset?), string _transactioncurrencyidValue = default(string), int? statuscode = default(int?), string _modifiedbyValue = default(string), int? interactiontype = default(int?), string interactionpartyid = default(string), string interactionuseragent = default(string), IList<MicrosoftDynamicsCRMbulkoperation> interactionforemailBulkOperations = default(IList<MicrosoftDynamicsCRMbulkoperation>), IList<MicrosoftDynamicsCRMcampaignresponse> interactionforemailCampaignResponses = default(IList<MicrosoftDynamicsCRMcampaignresponse>), IList<MicrosoftDynamicsCRMincidentresolution> interactionforemailIncidentResolutions = default(IList<MicrosoftDynamicsCRMincidentresolution>), IList<MicrosoftDynamicsCRMserviceappointment> interactionforemailServiceAppointments = default(IList<MicrosoftDynamicsCRMserviceappointment>), IList<MicrosoftDynamicsCRMopportunityclose> interactionforemailOpportunityCloses = default(IList<MicrosoftDynamicsCRMopportunityclose>), IList<MicrosoftDynamicsCRMorderclose> interactionforemailOrderCloses = default(IList<MicrosoftDynamicsCRMorderclose>), IList<MicrosoftDynamicsCRMquoteclose> interactionforemailQuoteCloses = default(IList<MicrosoftDynamicsCRMquoteclose>), MicrosoftDynamicsCRMsystemuser createdbyname = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser createdonbehalfbyname = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser modifiedbyname = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser modifiedonbehalfbyname = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMsystemuser owninguser = default(MicrosoftDynamicsCRMsystemuser), MicrosoftDynamicsCRMteam owningteam = default(MicrosoftDynamicsCRMteam), MicrosoftDynamicsCRMprincipal ownerid = default(MicrosoftDynamicsCRMprincipal), MicrosoftDynamicsCRMbusinessunit owningbusinessunit = default(MicrosoftDynamicsCRMbusinessunit), IList<MicrosoftDynamicsCRMactivitypointer> newInteractionforemailActivityPointers = default(IList<MicrosoftDynamicsCRMactivitypointer>), IList<MicrosoftDynamicsCRMasyncoperation> newInteractionforemailAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), MicrosoftDynamicsCRMtransactioncurrency transactioncurrencyid = default(MicrosoftDynamicsCRMtransactioncurrency))
         {
-            Interactionrepliedby = interactionrepliedby;
-            this._owninguserValue = _owninguserValue;
-            this._owneridValue = _owneridValue;
-            this._owningbusinessunitValue = _owningbusinessunitValue;
-            Timezoneruleversionnumber = timezoneruleversionnumber;
-            Interactedcomponenttext = interactedcomponenttext;
-            this._modifiedbyValue = _modifiedbyValue;
-            this._createdonbehalfbyValue = _createdonbehalfbyValue;
-            Statuscode = statuscode;
-            Exchangerate = exchangerate;
-            Versionnumber = versionnumber;
-            Createdon = createdon;
-            Statecode = statecode;
-            Interactionreplyid = interactionreplyid;
-            Interactionuseragent = interactionuseragent;
-            Name = name;
-            this._owningteamValue = _owningteamValue;
             Emailactivityid = emailactivityid;
-            Interactiontype = interactiontype;
-            this._transactioncurrencyidValue = _transactioncurrencyidValue;
+            this._owningbusinessunitValue = _owningbusinessunitValue;
+            Interactionreplyid = interactionreplyid;
+            Exchangerate = exchangerate;
+            this._owningteamValue = _owningteamValue;
+            this._createdonbehalfbyValue = _createdonbehalfbyValue;
+            Modifiedon = modifiedon;
+            this._owninguserValue = _owninguserValue;
+            Statecode = statecode;
+            this._modifiedonbehalfbyValue = _modifiedonbehalfbyValue;
+            Emailaddress = emailaddress;
+            Versionnumber = versionnumber;
+            this._createdbyValue = _createdbyValue;
+            Interactionforemailid = interactionforemailid;
+            Name = name;
+            Emailinteractionreplyid = emailinteractionreplyid;
+            Overriddencreatedon = overriddencreatedon;
+            Timezoneruleversionnumber = timezoneruleversionnumber;
+            Createdon = createdon;
+            Utcconversiontimezonecode = utcconversiontimezonecode;
+            Interactionrepliedby = interactionrepliedby;
+            this._owneridValue = _owneridValue;
             Importsequencenumber = importsequencenumber;
             Interactionlocation = interactionlocation;
-            this._createdbyValue = _createdbyValue;
-            Overriddencreatedon = overriddencreatedon;
-            Modifiedon = modifiedon;
-            Emailinteractionreplyid = emailinteractionreplyid;
-            Utcconversiontimezonecode = utcconversiontimezonecode;
-            this._modifiedonbehalfbyValue = _modifiedonbehalfbyValue;
-            Interactionforemailid = interactionforemailid;
+            Interactedcomponenttext = interactedcomponenttext;
             Emailinteractiontime = emailinteractiontime;
+            this._transactioncurrencyidValue = _transactioncurrencyidValue;
+            Statuscode = statuscode;
+            this._modifiedbyValue = _modifiedbyValue;
+            Interactiontype = interactiontype;
+            Interactionpartyid = interactionpartyid;
+            Interactionuseragent = interactionuseragent;
+            InteractionforemailBulkOperations = interactionforemailBulkOperations;
+            InteractionforemailCampaignResponses = interactionforemailCampaignResponses;
+            InteractionforemailIncidentResolutions = interactionforemailIncidentResolutions;
+            InteractionforemailServiceAppointments = interactionforemailServiceAppointments;
+            InteractionforemailOpportunityCloses = interactionforemailOpportunityCloses;
+            InteractionforemailOrderCloses = interactionforemailOrderCloses;
+            InteractionforemailQuoteCloses = interactionforemailQuoteCloses;
             Createdbyname = createdbyname;
             Createdonbehalfbyname = createdonbehalfbyname;
             Modifiedbyname = modifiedbyname;
@@ -82,18 +91,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "interactionrepliedby")]
-        public string Interactionrepliedby { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_owninguser_value")]
-        public string _owninguserValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_ownerid_value")]
-        public string _owneridValue { get; set; }
+        [JsonProperty(PropertyName = "emailactivityid")]
+        public string Emailactivityid { get; set; }
 
         /// <summary>
         /// </summary>
@@ -102,63 +101,13 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "timezoneruleversionnumber")]
-        public int? Timezoneruleversionnumber { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "interactedcomponenttext")]
-        public string Interactedcomponenttext { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_modifiedby_value")]
-        public string _modifiedbyValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_createdonbehalfby_value")]
-        public string _createdonbehalfbyValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "statuscode")]
-        public int? Statuscode { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "exchangerate")]
-        public object Exchangerate { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "versionnumber")]
-        public long? Versionnumber { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "createdon")]
-        public System.DateTimeOffset? Createdon { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "statecode")]
-        public int? Statecode { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "interactionreplyid")]
         public string Interactionreplyid { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "interactionuseragent")]
-        public string Interactionuseragent { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "name")]
-        public string Name { get; set; }
+        [JsonProperty(PropertyName = "exchangerate")]
+        [NotMapped] public object Exchangerate { get; set; }
 
         /// <summary>
         /// </summary>
@@ -167,18 +116,88 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "emailactivityid")]
-        public string Emailactivityid { get; set; }
+        [JsonProperty(PropertyName = "_createdonbehalfby_value")]
+        public string _createdonbehalfbyValue { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "interactiontype")]
-        public int? Interactiontype { get; set; }
+        [JsonProperty(PropertyName = "modifiedon")]
+        public System.DateTimeOffset? Modifiedon { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "_transactioncurrencyid_value")]
-        public string _transactioncurrencyidValue { get; set; }
+        [JsonProperty(PropertyName = "_owninguser_value")]
+        public string _owninguserValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "statecode")]
+        public int? Statecode { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_modifiedonbehalfby_value")]
+        public string _modifiedonbehalfbyValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "emailaddress")]
+        public string Emailaddress { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "versionnumber")]
+        public long? Versionnumber { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_createdby_value")]
+        public string _createdbyValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "interactionforemailid")]
+        public string Interactionforemailid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "emailinteractionreplyid")]
+        public string Emailinteractionreplyid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "overriddencreatedon")]
+        public System.DateTimeOffset? Overriddencreatedon { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "timezoneruleversionnumber")]
+        public int? Timezoneruleversionnumber { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "createdon")]
+        public System.DateTimeOffset? Createdon { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "utcconversiontimezonecode")]
+        public int? Utcconversiontimezonecode { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "interactionrepliedby")]
+        public string Interactionrepliedby { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_ownerid_value")]
+        public string _owneridValue { get; set; }
 
         /// <summary>
         /// </summary>
@@ -192,43 +211,78 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "_createdby_value")]
-        public string _createdbyValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "overriddencreatedon")]
-        public System.DateTimeOffset? Overriddencreatedon { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "modifiedon")]
-        public System.DateTimeOffset? Modifiedon { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "emailinteractionreplyid")]
-        public string Emailinteractionreplyid { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "utcconversiontimezonecode")]
-        public int? Utcconversiontimezonecode { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "_modifiedonbehalfby_value")]
-        public string _modifiedonbehalfbyValue { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "interactionforemailid")]
-        public string Interactionforemailid { get; set; }
+        [JsonProperty(PropertyName = "interactedcomponenttext")]
+        public string Interactedcomponenttext { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "emailinteractiontime")]
         public System.DateTimeOffset? Emailinteractiontime { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_transactioncurrencyid_value")]
+        public string _transactioncurrencyidValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "statuscode")]
+        public int? Statuscode { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "_modifiedby_value")]
+        public string _modifiedbyValue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "interactiontype")]
+        public int? Interactiontype { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "interactionpartyid")]
+        public string Interactionpartyid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "interactionuseragent")]
+        public string Interactionuseragent { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "interactionforemail_BulkOperations")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbulkoperation> InteractionforemailBulkOperations { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "interactionforemail_CampaignResponses")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMcampaignresponse> InteractionforemailCampaignResponses { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "interactionforemail_IncidentResolutions")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMincidentresolution> InteractionforemailIncidentResolutions { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "interactionforemail_ServiceAppointments")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMserviceappointment> InteractionforemailServiceAppointments { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "interactionforemail_OpportunityCloses")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMopportunityclose> InteractionforemailOpportunityCloses { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "interactionforemail_OrderCloses")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMorderclose> InteractionforemailOrderCloses { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "interactionforemail_QuoteCloses")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMquoteclose> InteractionforemailQuoteCloses { get; set; }
 
         /// <summary>
         /// </summary>
@@ -273,12 +327,12 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "new_interactionforemail_ActivityPointers")]
-        public IList<MicrosoftDynamicsCRMactivitypointer> NewInteractionforemailActivityPointers { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMactivitypointer> NewInteractionforemailActivityPointers { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "new_interactionforemail_AsyncOperations")]
-        public IList<MicrosoftDynamicsCRMasyncoperation> NewInteractionforemailAsyncOperations { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMasyncoperation> NewInteractionforemailAsyncOperations { get; set; }
 
         /// <summary>
         /// </summary>

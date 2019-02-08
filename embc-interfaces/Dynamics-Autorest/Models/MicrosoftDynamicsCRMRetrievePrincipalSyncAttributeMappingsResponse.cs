@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// RetrievePrincipalSyncAttributeMappingsResponse
@@ -45,7 +45,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "AttributeMappings")]
-        public IList<MicrosoftDynamicsCRMAttributeMapping> AttributeMappings { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMAttributeMapping> AttributeMappings { get; set; }
 
     }
 }

@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// LinkEntity
@@ -30,7 +30,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// class.
         /// </summary>
         /// <param name="joinOperator">Possible values include: 'Inner',
-        /// 'LeftOuter', 'Natural'</param>
+        /// 'LeftOuter', 'Natural', 'MatchFirstRowUsingCrossApply', 'In',
+        /// 'Exists'</param>
         public MicrosoftDynamicsCRMLinkEntity(string linkFromAttributeName = default(string), string linkFromEntityName = default(string), string linkToEntityName = default(string), string linkToAttributeName = default(string), string joinOperator = default(string), MicrosoftDynamicsCRMFilterExpression linkCriteria = default(MicrosoftDynamicsCRMFilterExpression), IList<MicrosoftDynamicsCRMLinkEntity> linkEntities = default(IList<MicrosoftDynamicsCRMLinkEntity>), MicrosoftDynamicsCRMColumnSet columns = default(MicrosoftDynamicsCRMColumnSet), string entityAlias = default(string), IList<MicrosoftDynamicsCRMOrderExpression> orders = default(IList<MicrosoftDynamicsCRMOrderExpression>))
         {
             LinkFromAttributeName = linkFromAttributeName;
@@ -73,7 +74,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// Gets or sets possible values include: 'Inner', 'LeftOuter',
-        /// 'Natural'
+        /// 'Natural', 'MatchFirstRowUsingCrossApply', 'In', 'Exists'
         /// </summary>
         [JsonProperty(PropertyName = "JoinOperator")]
         public string JoinOperator { get; set; }
@@ -86,7 +87,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "LinkEntities")]
-        public IList<MicrosoftDynamicsCRMLinkEntity> LinkEntities { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMLinkEntity> LinkEntities { get; set; }
 
         /// <summary>
         /// </summary>
@@ -101,7 +102,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "Orders")]
-        public IList<MicrosoftDynamicsCRMOrderExpression> Orders { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMOrderExpression> Orders { get; set; }
 
     }
 }

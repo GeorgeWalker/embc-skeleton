@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// OptionSetMetadata
@@ -29,9 +29,10 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the
         /// MicrosoftDynamicsCRMOptionSetMetadata class.
         /// </summary>
-        public MicrosoftDynamicsCRMOptionSetMetadata(IList<MicrosoftDynamicsCRMOptionMetadata> options = default(IList<MicrosoftDynamicsCRMOptionMetadata>))
+        public MicrosoftDynamicsCRMOptionSetMetadata(IList<MicrosoftDynamicsCRMOptionMetadata> options = default(IList<MicrosoftDynamicsCRMOptionMetadata>), string parentOptionSetName = default(string))
         {
             Options = options;
+            ParentOptionSetName = parentOptionSetName;
             CustomInit();
         }
 
@@ -43,7 +44,12 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "Options")]
-        public IList<MicrosoftDynamicsCRMOptionMetadata> Options { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMOptionMetadata> Options { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "ParentOptionSetName")]
+        public string ParentOptionSetName { get; set; }
 
     }
 }

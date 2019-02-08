@@ -7,7 +7,9 @@
 namespace Gov.Jag.Embc.Interfaces.Models
 {
     using Newtonsoft.Json;
-    using System.Linq;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// incidentknowledgebaserecord
@@ -27,12 +29,20 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the
         /// MicrosoftDynamicsCRMincidentknowledgebaserecord class.
         /// </summary>
-        public MicrosoftDynamicsCRMincidentknowledgebaserecord(string knowledgebaserecordid = default(string), string incidentid = default(string), long? versionnumber = default(long?), string incidentknowledgebaserecordid = default(string))
+        public MicrosoftDynamicsCRMincidentknowledgebaserecord(int? importsequencenumber = default(int?), int? utcconversiontimezonecode = default(int?), string incidentknowledgebaserecordid = default(string), long? versionnumber = default(long?), int? timezoneruleversionnumber = default(int?), string knowledgebaserecordid = default(string), string incidentid = default(string), System.DateTimeOffset? overriddencreatedon = default(System.DateTimeOffset?), IList<MicrosoftDynamicsCRMasyncoperation> incidentknowledgebaserecordAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), IList<MicrosoftDynamicsCRMmailboxtrackingfolder> incidentknowledgebaserecordMailboxTrackingFolders = default(IList<MicrosoftDynamicsCRMmailboxtrackingfolder>), IList<MicrosoftDynamicsCRMbulkdeletefailure> incidentknowledgebaserecordBulkDeleteFailures = default(IList<MicrosoftDynamicsCRMbulkdeletefailure>), IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> incidentknowledgebaserecordPrincipalObjectAttributeAccesses = default(IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess>))
         {
+            Importsequencenumber = importsequencenumber;
+            Utcconversiontimezonecode = utcconversiontimezonecode;
+            Incidentknowledgebaserecordid = incidentknowledgebaserecordid;
+            Versionnumber = versionnumber;
+            Timezoneruleversionnumber = timezoneruleversionnumber;
             Knowledgebaserecordid = knowledgebaserecordid;
             Incidentid = incidentid;
-            Versionnumber = versionnumber;
-            Incidentknowledgebaserecordid = incidentknowledgebaserecordid;
+            Overriddencreatedon = overriddencreatedon;
+            IncidentknowledgebaserecordAsyncOperations = incidentknowledgebaserecordAsyncOperations;
+            IncidentknowledgebaserecordMailboxTrackingFolders = incidentknowledgebaserecordMailboxTrackingFolders;
+            IncidentknowledgebaserecordBulkDeleteFailures = incidentknowledgebaserecordBulkDeleteFailures;
+            IncidentknowledgebaserecordPrincipalObjectAttributeAccesses = incidentknowledgebaserecordPrincipalObjectAttributeAccesses;
             CustomInit();
         }
 
@@ -40,6 +50,31 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// An initialization method that performs custom operations like setting defaults
         /// </summary>
         partial void CustomInit();
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "importsequencenumber")]
+        public int? Importsequencenumber { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "utcconversiontimezonecode")]
+        public int? Utcconversiontimezonecode { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "incidentknowledgebaserecordid")]
+        public string Incidentknowledgebaserecordid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "versionnumber")]
+        public long? Versionnumber { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "timezoneruleversionnumber")]
+        public int? Timezoneruleversionnumber { get; set; }
 
         /// <summary>
         /// </summary>
@@ -53,13 +88,28 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "versionnumber")]
-        public long? Versionnumber { get; set; }
+        [JsonProperty(PropertyName = "overriddencreatedon")]
+        public System.DateTimeOffset? Overriddencreatedon { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "incidentknowledgebaserecordid")]
-        public string Incidentknowledgebaserecordid { get; set; }
+        [JsonProperty(PropertyName = "incidentknowledgebaserecord_AsyncOperations")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMasyncoperation> IncidentknowledgebaserecordAsyncOperations { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "incidentknowledgebaserecord_MailboxTrackingFolders")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMmailboxtrackingfolder> IncidentknowledgebaserecordMailboxTrackingFolders { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "incidentknowledgebaserecord_BulkDeleteFailures")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbulkdeletefailure> IncidentknowledgebaserecordBulkDeleteFailures { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "incidentknowledgebaserecord_PrincipalObjectAttributeAccesses")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> IncidentknowledgebaserecordPrincipalObjectAttributeAccesses { get; set; }
 
     }
 }

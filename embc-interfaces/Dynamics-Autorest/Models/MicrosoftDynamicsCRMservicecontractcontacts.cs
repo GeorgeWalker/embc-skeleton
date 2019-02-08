@@ -7,7 +7,9 @@
 namespace Gov.Jag.Embc.Interfaces.Models
 {
     using Newtonsoft.Json;
-    using System.Linq;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// servicecontractcontacts
@@ -27,13 +29,21 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the
         /// MicrosoftDynamicsCRMservicecontractcontacts class.
         /// </summary>
-        public MicrosoftDynamicsCRMservicecontractcontacts(int? servicelevel = default(int?), string contactid = default(string), string servicecontractcontactid = default(string), long? versionnumber = default(long?), string contractid = default(string))
+        public MicrosoftDynamicsCRMservicecontractcontacts(int? servicelevel = default(int?), int? importsequencenumber = default(int?), int? timezoneruleversionnumber = default(int?), string contactid = default(string), long? versionnumber = default(long?), int? utcconversiontimezonecode = default(int?), string contractid = default(string), System.DateTimeOffset? overriddencreatedon = default(System.DateTimeOffset?), string servicecontractcontactid = default(string), IList<MicrosoftDynamicsCRMasyncoperation> servicecontractcontactsAsyncOperations = default(IList<MicrosoftDynamicsCRMasyncoperation>), IList<MicrosoftDynamicsCRMmailboxtrackingfolder> servicecontractcontactsMailboxTrackingFolders = default(IList<MicrosoftDynamicsCRMmailboxtrackingfolder>), IList<MicrosoftDynamicsCRMbulkdeletefailure> servicecontractcontactsBulkDeleteFailures = default(IList<MicrosoftDynamicsCRMbulkdeletefailure>), IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> servicecontractcontactsPrincipalObjectAttributeAccesses = default(IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess>))
         {
             Servicelevel = servicelevel;
+            Importsequencenumber = importsequencenumber;
+            Timezoneruleversionnumber = timezoneruleversionnumber;
             Contactid = contactid;
-            Servicecontractcontactid = servicecontractcontactid;
             Versionnumber = versionnumber;
+            Utcconversiontimezonecode = utcconversiontimezonecode;
             Contractid = contractid;
+            Overriddencreatedon = overriddencreatedon;
+            Servicecontractcontactid = servicecontractcontactid;
+            ServicecontractcontactsAsyncOperations = servicecontractcontactsAsyncOperations;
+            ServicecontractcontactsMailboxTrackingFolders = servicecontractcontactsMailboxTrackingFolders;
+            ServicecontractcontactsBulkDeleteFailures = servicecontractcontactsBulkDeleteFailures;
+            ServicecontractcontactsPrincipalObjectAttributeAccesses = servicecontractcontactsPrincipalObjectAttributeAccesses;
             CustomInit();
         }
 
@@ -49,13 +59,18 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "contactid")]
-        public string Contactid { get; set; }
+        [JsonProperty(PropertyName = "importsequencenumber")]
+        public int? Importsequencenumber { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "servicecontractcontactid")]
-        public string Servicecontractcontactid { get; set; }
+        [JsonProperty(PropertyName = "timezoneruleversionnumber")]
+        public int? Timezoneruleversionnumber { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "contactid")]
+        public string Contactid { get; set; }
 
         /// <summary>
         /// </summary>
@@ -64,8 +79,43 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "utcconversiontimezonecode")]
+        public int? Utcconversiontimezonecode { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "contractid")]
         public string Contractid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "overriddencreatedon")]
+        public System.DateTimeOffset? Overriddencreatedon { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "servicecontractcontactid")]
+        public string Servicecontractcontactid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "servicecontractcontacts_AsyncOperations")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMasyncoperation> ServicecontractcontactsAsyncOperations { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "servicecontractcontacts_MailboxTrackingFolders")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMmailboxtrackingfolder> ServicecontractcontactsMailboxTrackingFolders { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "servicecontractcontacts_BulkDeleteFailures")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMbulkdeletefailure> ServicecontractcontactsBulkDeleteFailures { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "servicecontractcontacts_PrincipalObjectAttributeAccesses")]
+        [NotMapped] public IList<MicrosoftDynamicsCRMprincipalobjectattributeaccess> ServicecontractcontactsPrincipalObjectAttributeAccesses { get; set; }
 
     }
 }

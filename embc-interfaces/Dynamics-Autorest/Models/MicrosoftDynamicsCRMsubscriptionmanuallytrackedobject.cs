@@ -7,7 +7,7 @@
 namespace Gov.Jag.Embc.Interfaces.Models
 {
     using Newtonsoft.Json;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// subscriptionmanuallytrackedobject
@@ -27,14 +27,14 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the
         /// MicrosoftDynamicsCRMsubscriptionmanuallytrackedobject class.
         /// </summary>
-        public MicrosoftDynamicsCRMsubscriptionmanuallytrackedobject(long? versionnumber = default(long?), string subscriptionmanuallytrackedobjectid = default(string), string subscriptionid = default(string), string objecttypecode = default(string), bool? track = default(bool?), string objectid = default(string))
+        public MicrosoftDynamicsCRMsubscriptionmanuallytrackedobject(string subscriptionid = default(string), long? versionnumber = default(long?), bool? track = default(bool?), string objectid = default(string), string objecttypecode = default(string), string subscriptionmanuallytrackedobjectid = default(string))
         {
-            Versionnumber = versionnumber;
-            Subscriptionmanuallytrackedobjectid = subscriptionmanuallytrackedobjectid;
             Subscriptionid = subscriptionid;
-            Objecttypecode = objecttypecode;
+            Versionnumber = versionnumber;
             Track = track;
             Objectid = objectid;
+            Objecttypecode = objecttypecode;
+            Subscriptionmanuallytrackedobjectid = subscriptionmanuallytrackedobjectid;
             CustomInit();
         }
 
@@ -45,23 +45,13 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "versionnumber")]
-        public long? Versionnumber { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "subscriptionmanuallytrackedobjectid")]
-        public string Subscriptionmanuallytrackedobjectid { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "subscriptionid")]
         public string Subscriptionid { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "objecttypecode")]
-        public string Objecttypecode { get; set; }
+        [JsonProperty(PropertyName = "versionnumber")]
+        public long? Versionnumber { get; set; }
 
         /// <summary>
         /// </summary>
@@ -72,6 +62,16 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// </summary>
         [JsonProperty(PropertyName = "objectid")]
         public string Objectid { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "objecttypecode")]
+        public string Objecttypecode { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "subscriptionmanuallytrackedobjectid")]
+        public string Subscriptionmanuallytrackedobjectid { get; set; }
 
     }
 }

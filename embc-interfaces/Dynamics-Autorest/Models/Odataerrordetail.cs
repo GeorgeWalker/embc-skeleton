@@ -8,7 +8,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
 {
     using Microsoft.Rest;
     using Newtonsoft.Json;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     public partial class Odataerrordetail
     {

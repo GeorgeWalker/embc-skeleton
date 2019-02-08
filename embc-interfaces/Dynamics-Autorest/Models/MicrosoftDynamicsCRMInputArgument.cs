@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// InputArgument
@@ -29,7 +29,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// Initializes a new instance of the MicrosoftDynamicsCRMInputArgument
         /// class.
         /// </summary>
-        public MicrosoftDynamicsCRMInputArgument(int? count = default(int?), bool? isReadOnly = default(bool?), IList<string> keys = default(IList<string>), IList<object> values = default(IList<object>))
+        public MicrosoftDynamicsCRMInputArgument(int? count = default(int?), bool? isReadOnly = default(bool?), IList<string> keys = default(IList<string>), IList<MicrosoftDynamicsCRMObject> values = default(IList<MicrosoftDynamicsCRMObject>))
         {
             Count = count;
             IsReadOnly = isReadOnly;
@@ -56,12 +56,12 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "Keys")]
-        public IList<string> Keys { get; set; }
+        [NotMapped] public IList<string> Keys { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "Values")]
-        public IList<object> Values { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMObject> Values { get; set; }
 
     }
 }

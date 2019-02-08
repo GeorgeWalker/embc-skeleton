@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// AppointmentRequest
@@ -86,12 +86,12 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "AppointmentsToIgnore")]
-        public IList<MicrosoftDynamicsCRMAppointmentsToIgnore> AppointmentsToIgnore { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMAppointmentsToIgnore> AppointmentsToIgnore { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "RequiredResources")]
-        public IList<MicrosoftDynamicsCRMRequiredResource> RequiredResources { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMRequiredResource> RequiredResources { get; set; }
 
         /// <summary>
         /// </summary>
@@ -121,12 +121,12 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "Constraints")]
-        public IList<MicrosoftDynamicsCRMConstraintRelation> Constraints { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMConstraintRelation> Constraints { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "Objectives")]
-        public IList<MicrosoftDynamicsCRMObjectiveRelation> Objectives { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMObjectiveRelation> Objectives { get; set; }
 
         /// <summary>
         /// Gets or sets possible values include: 'Forward', 'Backward'
@@ -142,7 +142,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "Sites")]
-        public IList<string> Sites { get; set; }
+        [NotMapped] public IList<string> Sites { get; set; }
 
     }
 }

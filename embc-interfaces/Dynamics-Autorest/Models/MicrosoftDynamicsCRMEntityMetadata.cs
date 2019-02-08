@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// EntityMetadata
@@ -32,7 +32,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <param name="ownershipType">Possible values include: 'None',
         /// 'UserOwned', 'TeamOwned', 'BusinessOwned', 'OrganizationOwned',
         /// 'BusinessParented'</param>
-        public MicrosoftDynamicsCRMEntityMetadata(int? activityTypeMask = default(int?), bool? autoRouteToOwnerQueue = default(bool?), bool? canTriggerWorkflow = default(bool?), MicrosoftDynamicsCRMLabel description = default(MicrosoftDynamicsCRMLabel), MicrosoftDynamicsCRMLabel displayCollectionName = default(MicrosoftDynamicsCRMLabel), MicrosoftDynamicsCRMLabel displayName = default(MicrosoftDynamicsCRMLabel), bool? entityHelpUrlEnabled = default(bool?), string entityHelpUrl = default(string), bool? isDocumentManagementEnabled = default(bool?), bool? isOneNoteIntegrationEnabled = default(bool?), bool? isInteractionCentricEnabled = default(bool?), bool? isKnowledgeManagementEnabled = default(bool?), bool? isSLAEnabled = default(bool?), bool? isBPFEntity = default(bool?), bool? isDocumentRecommendationsEnabled = default(bool?), bool? autoCreateAccessTeams = default(bool?), bool? isActivity = default(bool?), bool? isActivityParty = default(bool?), MicrosoftDynamicsCRMBooleanManagedProperty isAuditEnabled = default(MicrosoftDynamicsCRMBooleanManagedProperty), bool? isAvailableOffline = default(bool?), bool? isChildEntity = default(bool?), bool? isAIRUpdated = default(bool?), MicrosoftDynamicsCRMBooleanManagedProperty isValidForQueue = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty isConnectionsEnabled = default(MicrosoftDynamicsCRMBooleanManagedProperty), string iconLargeName = default(string), string iconMediumName = default(string), string iconSmallName = default(string), bool? isCustomEntity = default(bool?), bool? isBusinessProcessEnabled = default(bool?), MicrosoftDynamicsCRMBooleanManagedProperty isCustomizable = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty isRenameable = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty isMappable = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty isDuplicateDetectionEnabled = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty canCreateAttributes = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty canCreateForms = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty canCreateViews = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty canCreateCharts = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty canBeRelatedEntityInRelationship = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty canBePrimaryEntityInRelationship = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty canBeInManyToMany = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty canEnableSyncToExternalSearchIndex = default(MicrosoftDynamicsCRMBooleanManagedProperty), bool? syncToExternalSearchIndex = default(bool?), MicrosoftDynamicsCRMBooleanManagedProperty canModifyAdditionalSettings = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty canChangeHierarchicalRelationship = default(MicrosoftDynamicsCRMBooleanManagedProperty), bool? isOptimisticConcurrencyEnabled = default(bool?), bool? changeTrackingEnabled = default(bool?), MicrosoftDynamicsCRMBooleanManagedProperty canChangeTrackingBeEnabled = default(MicrosoftDynamicsCRMBooleanManagedProperty), bool? isImportable = default(bool?), bool? isIntersect = default(bool?), MicrosoftDynamicsCRMBooleanManagedProperty isMailMergeEnabled = default(MicrosoftDynamicsCRMBooleanManagedProperty), bool? isManaged = default(bool?), bool? isEnabledForCharts = default(bool?), bool? isEnabledForTrace = default(bool?), bool? isValidForAdvancedFind = default(bool?), MicrosoftDynamicsCRMBooleanManagedProperty isVisibleInMobile = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty isVisibleInMobileClient = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty isReadOnlyInMobileClient = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty isOfflineInMobileClient = default(MicrosoftDynamicsCRMBooleanManagedProperty), int? daysSinceRecordLastModified = default(int?), string mobileOfflineFilters = default(string), bool? isReadingPaneEnabled = default(bool?), bool? isQuickCreateEnabled = default(bool?), string logicalName = default(string), int? objectTypeCode = default(int?), string ownershipType = default(string), string primaryNameAttribute = default(string), string primaryImageAttribute = default(string), string primaryIdAttribute = default(string), IList<MicrosoftDynamicsCRMSecurityPrivilegeMetadata> privileges = default(IList<MicrosoftDynamicsCRMSecurityPrivilegeMetadata>), string recurrenceBaseEntityLogicalName = default(string), string reportViewName = default(string), string schemaName = default(string), string introducedVersion = default(string), bool? isStateModelAware = default(bool?), bool? enforceStateTransitions = default(bool?), string entityColor = default(string), string logicalCollectionName = default(string), string collectionSchemaName = default(string), string entitySetName = default(string), bool? isEnabledForExternalChannels = default(bool?), bool? isPrivate = default(bool?), bool? usesBusinessDataLabelTable = default(bool?), bool? isLogicalEntity = default(bool?), bool? hasActivities = default(bool?), bool? hasNotes = default(bool?), bool? hasFeedback = default(bool?), IList<MicrosoftDynamicsCRMAttributeMetadata> attributes = default(IList<MicrosoftDynamicsCRMAttributeMetadata>), IList<MicrosoftDynamicsCRMManyToManyRelationshipMetadata> manyToManyRelationships = default(IList<MicrosoftDynamicsCRMManyToManyRelationshipMetadata>), IList<MicrosoftDynamicsCRMOneToManyRelationshipMetadata> manyToOneRelationships = default(IList<MicrosoftDynamicsCRMOneToManyRelationshipMetadata>), IList<MicrosoftDynamicsCRMOneToManyRelationshipMetadata> oneToManyRelationships = default(IList<MicrosoftDynamicsCRMOneToManyRelationshipMetadata>), IList<MicrosoftDynamicsCRMEntityKeyMetadata> keys = default(IList<MicrosoftDynamicsCRMEntityKeyMetadata>))
+        public MicrosoftDynamicsCRMEntityMetadata(int? activityTypeMask = default(int?), bool? autoRouteToOwnerQueue = default(bool?), bool? canTriggerWorkflow = default(bool?), MicrosoftDynamicsCRMLabel description = default(MicrosoftDynamicsCRMLabel), MicrosoftDynamicsCRMLabel displayCollectionName = default(MicrosoftDynamicsCRMLabel), MicrosoftDynamicsCRMLabel displayName = default(MicrosoftDynamicsCRMLabel), bool? entityHelpUrlEnabled = default(bool?), string entityHelpUrl = default(string), bool? isDocumentManagementEnabled = default(bool?), bool? isOneNoteIntegrationEnabled = default(bool?), bool? isInteractionCentricEnabled = default(bool?), bool? isKnowledgeManagementEnabled = default(bool?), bool? isSLAEnabled = default(bool?), bool? isBPFEntity = default(bool?), bool? isDocumentRecommendationsEnabled = default(bool?), bool? isMSTeamsIntegrationEnabled = default(bool?), string dataProviderId = default(string), string dataSourceId = default(string), bool? autoCreateAccessTeams = default(bool?), bool? isActivity = default(bool?), bool? isActivityParty = default(bool?), MicrosoftDynamicsCRMBooleanManagedProperty isAuditEnabled = default(MicrosoftDynamicsCRMBooleanManagedProperty), bool? isAvailableOffline = default(bool?), bool? isChildEntity = default(bool?), bool? isAIRUpdated = default(bool?), MicrosoftDynamicsCRMBooleanManagedProperty isValidForQueue = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty isConnectionsEnabled = default(MicrosoftDynamicsCRMBooleanManagedProperty), string iconLargeName = default(string), string iconMediumName = default(string), string iconSmallName = default(string), string iconVectorName = default(string), bool? isCustomEntity = default(bool?), bool? isBusinessProcessEnabled = default(bool?), MicrosoftDynamicsCRMBooleanManagedProperty isCustomizable = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty isRenameable = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty isMappable = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty isDuplicateDetectionEnabled = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty canCreateAttributes = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty canCreateForms = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty canCreateViews = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty canCreateCharts = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty canBeRelatedEntityInRelationship = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty canBePrimaryEntityInRelationship = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty canBeInManyToMany = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty canBeInCustomEntityAssociation = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty canEnableSyncToExternalSearchIndex = default(MicrosoftDynamicsCRMBooleanManagedProperty), bool? syncToExternalSearchIndex = default(bool?), MicrosoftDynamicsCRMBooleanManagedProperty canModifyAdditionalSettings = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty canChangeHierarchicalRelationship = default(MicrosoftDynamicsCRMBooleanManagedProperty), bool? isOptimisticConcurrencyEnabled = default(bool?), bool? changeTrackingEnabled = default(bool?), MicrosoftDynamicsCRMBooleanManagedProperty canChangeTrackingBeEnabled = default(MicrosoftDynamicsCRMBooleanManagedProperty), bool? isImportable = default(bool?), bool? isIntersect = default(bool?), MicrosoftDynamicsCRMBooleanManagedProperty isMailMergeEnabled = default(MicrosoftDynamicsCRMBooleanManagedProperty), bool? isManaged = default(bool?), bool? isEnabledForCharts = default(bool?), bool? isEnabledForTrace = default(bool?), bool? isValidForAdvancedFind = default(bool?), MicrosoftDynamicsCRMBooleanManagedProperty isVisibleInMobile = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty isVisibleInMobileClient = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty isReadOnlyInMobileClient = default(MicrosoftDynamicsCRMBooleanManagedProperty), MicrosoftDynamicsCRMBooleanManagedProperty isOfflineInMobileClient = default(MicrosoftDynamicsCRMBooleanManagedProperty), int? daysSinceRecordLastModified = default(int?), string mobileOfflineFilters = default(string), bool? isReadingPaneEnabled = default(bool?), bool? isQuickCreateEnabled = default(bool?), string logicalName = default(string), int? objectTypeCode = default(int?), string ownershipType = default(string), string primaryNameAttribute = default(string), string primaryImageAttribute = default(string), string primaryIdAttribute = default(string), IList<MicrosoftDynamicsCRMSecurityPrivilegeMetadata> privileges = default(IList<MicrosoftDynamicsCRMSecurityPrivilegeMetadata>), string recurrenceBaseEntityLogicalName = default(string), string reportViewName = default(string), string schemaName = default(string), string introducedVersion = default(string), bool? isStateModelAware = default(bool?), bool? enforceStateTransitions = default(bool?), string externalName = default(string), string entityColor = default(string), string logicalCollectionName = default(string), string externalCollectionName = default(string), string collectionSchemaName = default(string), string entitySetName = default(string), bool? isEnabledForExternalChannels = default(bool?), bool? isPrivate = default(bool?), bool? usesBusinessDataLabelTable = default(bool?), bool? isLogicalEntity = default(bool?), bool? hasNotes = default(bool?), bool? hasActivities = default(bool?), bool? hasFeedback = default(bool?), IList<MicrosoftDynamicsCRMAttributeMetadata> attributes = default(IList<MicrosoftDynamicsCRMAttributeMetadata>), IList<MicrosoftDynamicsCRMManyToManyRelationshipMetadata> manyToManyRelationships = default(IList<MicrosoftDynamicsCRMManyToManyRelationshipMetadata>), IList<MicrosoftDynamicsCRMOneToManyRelationshipMetadata> manyToOneRelationships = default(IList<MicrosoftDynamicsCRMOneToManyRelationshipMetadata>), IList<MicrosoftDynamicsCRMOneToManyRelationshipMetadata> oneToManyRelationships = default(IList<MicrosoftDynamicsCRMOneToManyRelationshipMetadata>), IList<MicrosoftDynamicsCRMEntityKeyMetadata> keys = default(IList<MicrosoftDynamicsCRMEntityKeyMetadata>))
         {
             ActivityTypeMask = activityTypeMask;
             AutoRouteToOwnerQueue = autoRouteToOwnerQueue;
@@ -49,6 +49,9 @@ namespace Gov.Jag.Embc.Interfaces.Models
             IsSLAEnabled = isSLAEnabled;
             IsBPFEntity = isBPFEntity;
             IsDocumentRecommendationsEnabled = isDocumentRecommendationsEnabled;
+            IsMSTeamsIntegrationEnabled = isMSTeamsIntegrationEnabled;
+            DataProviderId = dataProviderId;
+            DataSourceId = dataSourceId;
             AutoCreateAccessTeams = autoCreateAccessTeams;
             IsActivity = isActivity;
             IsActivityParty = isActivityParty;
@@ -61,6 +64,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
             IconLargeName = iconLargeName;
             IconMediumName = iconMediumName;
             IconSmallName = iconSmallName;
+            IconVectorName = iconVectorName;
             IsCustomEntity = isCustomEntity;
             IsBusinessProcessEnabled = isBusinessProcessEnabled;
             IsCustomizable = isCustomizable;
@@ -74,6 +78,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
             CanBeRelatedEntityInRelationship = canBeRelatedEntityInRelationship;
             CanBePrimaryEntityInRelationship = canBePrimaryEntityInRelationship;
             CanBeInManyToMany = canBeInManyToMany;
+            CanBeInCustomEntityAssociation = canBeInCustomEntityAssociation;
             CanEnableSyncToExternalSearchIndex = canEnableSyncToExternalSearchIndex;
             SyncToExternalSearchIndex = syncToExternalSearchIndex;
             CanModifyAdditionalSettings = canModifyAdditionalSettings;
@@ -109,16 +114,18 @@ namespace Gov.Jag.Embc.Interfaces.Models
             IntroducedVersion = introducedVersion;
             IsStateModelAware = isStateModelAware;
             EnforceStateTransitions = enforceStateTransitions;
+            ExternalName = externalName;
             EntityColor = entityColor;
             LogicalCollectionName = logicalCollectionName;
+            ExternalCollectionName = externalCollectionName;
             CollectionSchemaName = collectionSchemaName;
             EntitySetName = entitySetName;
             IsEnabledForExternalChannels = isEnabledForExternalChannels;
             IsPrivate = isPrivate;
             UsesBusinessDataLabelTable = usesBusinessDataLabelTable;
             IsLogicalEntity = isLogicalEntity;
-            HasActivities = hasActivities;
             HasNotes = hasNotes;
+            HasActivities = hasActivities;
             HasFeedback = hasFeedback;
             Attributes = attributes;
             ManyToManyRelationships = manyToManyRelationships;
@@ -210,6 +217,21 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "IsMSTeamsIntegrationEnabled")]
+        public bool? IsMSTeamsIntegrationEnabled { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "DataProviderId")]
+        public string DataProviderId { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "DataSourceId")]
+        public string DataSourceId { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "AutoCreateAccessTeams")]
         public bool? AutoCreateAccessTeams { get; set; }
 
@@ -267,6 +289,11 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// </summary>
         [JsonProperty(PropertyName = "IconSmallName")]
         public string IconSmallName { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "IconVectorName")]
+        public string IconVectorName { get; set; }
 
         /// <summary>
         /// </summary>
@@ -332,6 +359,11 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// </summary>
         [JsonProperty(PropertyName = "CanBeInManyToMany")]
         public MicrosoftDynamicsCRMBooleanManagedProperty CanBeInManyToMany { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "CanBeInCustomEntityAssociation")]
+        public MicrosoftDynamicsCRMBooleanManagedProperty CanBeInCustomEntityAssociation { get; set; }
 
         /// <summary>
         /// </summary>
@@ -479,7 +511,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "Privileges")]
-        public IList<MicrosoftDynamicsCRMSecurityPrivilegeMetadata> Privileges { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMSecurityPrivilegeMetadata> Privileges { get; set; }
 
         /// <summary>
         /// </summary>
@@ -513,6 +545,11 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "ExternalName")]
+        public string ExternalName { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "EntityColor")]
         public string EntityColor { get; set; }
 
@@ -520,6 +557,11 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// </summary>
         [JsonProperty(PropertyName = "LogicalCollectionName")]
         public string LogicalCollectionName { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "ExternalCollectionName")]
+        public string ExternalCollectionName { get; set; }
 
         /// <summary>
         /// </summary>
@@ -553,13 +595,13 @@ namespace Gov.Jag.Embc.Interfaces.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "HasActivities")]
-        public bool? HasActivities { get; set; }
+        [JsonProperty(PropertyName = "HasNotes")]
+        public bool? HasNotes { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "HasNotes")]
-        public bool? HasNotes { get; set; }
+        [JsonProperty(PropertyName = "HasActivities")]
+        public bool? HasActivities { get; set; }
 
         /// <summary>
         /// </summary>
@@ -569,27 +611,27 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "Attributes")]
-        public IList<MicrosoftDynamicsCRMAttributeMetadata> Attributes { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMAttributeMetadata> Attributes { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "ManyToManyRelationships")]
-        public IList<MicrosoftDynamicsCRMManyToManyRelationshipMetadata> ManyToManyRelationships { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMManyToManyRelationshipMetadata> ManyToManyRelationships { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "ManyToOneRelationships")]
-        public IList<MicrosoftDynamicsCRMOneToManyRelationshipMetadata> ManyToOneRelationships { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMOneToManyRelationshipMetadata> ManyToOneRelationships { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "OneToManyRelationships")]
-        public IList<MicrosoftDynamicsCRMOneToManyRelationshipMetadata> OneToManyRelationships { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMOneToManyRelationshipMetadata> OneToManyRelationships { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "Keys")]
-        public IList<MicrosoftDynamicsCRMEntityKeyMetadata> Keys { get; set; }
+        [NotMapped] public IList<MicrosoftDynamicsCRMEntityKeyMetadata> Keys { get; set; }
 
     }
 }

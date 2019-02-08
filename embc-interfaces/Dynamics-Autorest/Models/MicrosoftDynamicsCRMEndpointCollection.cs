@@ -9,7 +9,7 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// EndpointCollection
@@ -56,12 +56,12 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "Keys")]
-        public IList<string> Keys { get; set; }
+        [NotMapped] public IList<string> Keys { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "Values")]
-        public IList<string> Values { get; set; }
+        [NotMapped] public IList<string> Values { get; set; }
 
     }
 }

@@ -10,7 +10,8 @@ namespace Gov.Jag.Embc.Interfaces.Models
     using Newtonsoft.Json;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Linq; using System.ComponentModel.DataAnnotations.Schema;
+    
 
     public partial class Odataerrormain
     {
@@ -60,13 +61,13 @@ namespace Gov.Jag.Embc.Interfaces.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "details")]
-        public IList<Odataerrordetail> Details { get; set; }
+        [NotMapped] public IList<Odataerrordetail> Details { get; set; }
 
         /// <summary>
         /// Gets or sets the structure of this object is service-specific
         /// </summary>
         [JsonProperty(PropertyName = "innererror")]
-        public object Innererror { get; set; }
+        [NotMapped] public object Innererror { get; set; }
 
         /// <summary>
         /// Validate the object.
