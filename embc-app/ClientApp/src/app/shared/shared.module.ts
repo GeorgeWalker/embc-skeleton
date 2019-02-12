@@ -1,13 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NotSupportedComponent } from './components/not-supported/not-supported.component';
+import { WarningBannerComponent } from './components/warning-banner/warning-banner.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
-    NotSupportedComponent
+    WarningBannerComponent,
+    HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    WarningBannerComponent,
+    HeaderComponent,
+    FooterComponent,
   ]
 })
 export class SharedModule { }

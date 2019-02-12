@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NotSupportedComponent } from './not-supported.component';
+import { WarningBannerComponent } from './warning-banner.component';
 
-describe('NotSupportedComponent', () => {
-  let component: NotSupportedComponent;
-  let fixture: ComponentFixture<NotSupportedComponent>;
+describe('WarningBannerComponent', () => {
+  let component: WarningBannerComponent;
+  let fixture: ComponentFixture<WarningBannerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NotSupportedComponent ]
+      declarations: [ WarningBannerComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NotSupportedComponent);
+    fixture = TestBed.createComponent(WarningBannerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
