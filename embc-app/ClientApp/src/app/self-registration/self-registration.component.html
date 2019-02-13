@@ -1,0 +1,36 @@
+<div class="form-wrapper" style="position: relative;">
+  <div class="row">
+    <div class="col-lg-8 col-sm-12">
+      <h2 class="step">STEP 1</h2>
+      <h1 style="margin-top: 0">Register as an Evacuee</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia suscipit ligula sit amet pulvinar.
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean efficitur et arcu
+        a fringilla.</p>
+
+      <h3 class="blue-header">EVACUEE INFORMATION</h3>
+      <router-outlet></router-outlet>
+    </div>
+
+    <div class="col-lg-4 col-sm-12">
+      <!-- TODO: Refactor into a common component Stepper -->
+      <section class="step" style="display: block; background-color: #F1F4FA">
+        <h3 class="blue-header">EVACUEE PROFILE</h3>
+        <section style="padding-top: 15px; padding-bottom: 20px;">
+          <mat-vertical-stepper [linear]="true" #stepper>
+            <ng-template matStepperIcon="edit">
+              <i class="fas fa-check"></i>
+            </ng-template>
+            <ng-template matStepperIcon="number">
+            </ng-template>
+            <mat-step label="STEP 1: Evacuee Information"></mat-step>
+            <mat-step label="STEP 2: Evacuee Contact Details"></mat-step>
+            <mat-step label="STEP 3: Summary"></mat-step>
+          </mat-vertical-stepper>
+        </section>
+      </section>
+
+      <!-- TODO: Refactor into a common component SideBox -->
+      <app-side-box title="Important Notice for Evacuees"></app-side-box>
+    </div>
+  </div>
+</div>
