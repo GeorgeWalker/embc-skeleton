@@ -4,15 +4,18 @@ import { MaterialModule } from './material.module';
 import { WarningBannerComponent } from './components/warning-banner/warning-banner.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SideBoxComponent } from './components/side-box/side-box.component';
 
 @NgModule({
   declarations: [
     WarningBannerComponent,
     HeaderComponent,
     FooterComponent,
+    SideBoxComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MaterialModule,
   ],
   exports: [
     // modules
@@ -23,6 +26,7 @@ import { FooterComponent } from './components/footer/footer.component';
     WarningBannerComponent,
     HeaderComponent,
     FooterComponent,
+    SideBoxComponent,
   ]
 })
 export class SharedModule { }
