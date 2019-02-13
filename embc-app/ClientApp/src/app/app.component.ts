@@ -19,4 +19,16 @@ export class AppComponent  implements OnInit {
   get versionInfo(): any {
     return null;
   }
+
+  get isAuthenticated(): boolean {
+    return this.currentUser != undefined;
+  }
+
+  get isNewUser(): boolean {
+    return this.isAuthenticated && this.currentUser.isNewUser === true;
+  }
+
+  get isReturningUser(): boolean {
+    return this.isAuthenticated && this.currentUser.isNewUser === false;
+  }
 }
