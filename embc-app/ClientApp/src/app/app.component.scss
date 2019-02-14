@@ -26,14 +26,6 @@ $bootstrap-sass-asset-helper: true;
     padding-bottom: 3px;
 }
 
-.sign {
-    color: #ffffff;
-    background-color: none;
-    float: right;
-    padding-top: 20px;
-    font-size: 17px;
-}
-
 .app-outer {
     display: flex;
     flex-flow: column nowrap;
@@ -203,11 +195,6 @@ a:active {
     font-weight: 400
 }
 
-.signin {
-    color: #fff;
-    font-size: 16px;
-}
-
 /* Sidebar Styles */
 
 .sidebar-wrapper {
@@ -286,10 +273,6 @@ a:active {
     padding-bottom: 0 !important;
     padding-top: 0 !important;
     cursor: pointer;
-}
-
-.sign-container {
-    padding-right: 15px;
 }
 
 .not-supported-browser {

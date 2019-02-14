@@ -1,17 +1,72 @@
 <div class="form-wrapper" style="position: relative;">
   <div class="row">
-    <div class="col-lg-8 col-sm-12">
+    <div class="col-md-8 col-sm-12">
       <h2 class="step">STEP 1</h2>
       <h1 style="margin-top: 0">Register as an Evacuee</h1>
+
+      <!-- TODO: Refactor this OUT. TEMPORARY -->
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia suscipit ligula sit amet pulvinar.
         Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean efficitur et arcu
         a fringilla.</p>
 
-      <h3 class="blue-header">EVACUEE INFORMATION</h3>
+      <div class="feature-block">
+        <h3>Restriction<span style="color:#CC0000;">*</span></h3>
+        <p>Concerned family
+          and friends may inquire about you and your family because of the emergency. We would like to provide these
+          people with some information about you. May we disclose your location and the contact information for you
+          and your family members?</p>
+        <div class="radio-button">
+          <input type="radio" value="yes" name="restriction">
+          <label><span>&nbsp;Yes</span></label>
+        </div>
+        <div class="radio-button">
+          <input type="radio" value="no" name="restriction">
+          <label><span>&nbsp;No</span></label>
+        </div>
+      </div>
+
+      <h3 class="blue-header">FAMILY REPRESENTATIVE</h3>
+      <section class="padded-section">
+        <div class="form-field">
+          <div class="form-label">
+            <label>Last Name<span style="color:#CC0000;">*</span></label>
+          </div>
+          <input type="text" value="" style="width: 500px; height: 40px;color: #666;text-align: left;">
+        </div>
+        <div class="form-field">
+          <div class="form-label">
+            <label>First Name<span style="color:#CC0000;">*</span></label>
+          </div>
+          <input type="text" value="" style="width: 500px; height: 40px;color: #666;text-align: left;">
+        </div>
+        <p>More form fields go here...</p>
+      </section>
+
+      <h3 class="blue-header">EVACUEE FAMILY INFORMATION</h3>
+      Form fields go here...
+      <div class="radio-button">
+        <input type="radio" value="yes" name="restriction">
+        <label><span>&nbsp;Yes</span></label>
+      </div>
+      <div class="radio-button">
+        <input type="radio" value="no" name="restriction">
+        <label><span>&nbsp;No</span></label>
+      </div>
+
+      <h3 class="blue-header">PRIMARY RESIDENCE & CONTACT DETAILS</h3>
+
+      <h3 class="blue-header">MAILING ADDRESS</h3>
+
+      <div>
+        <a href="">Cancel &amp; Close</a>
+        <button style="float: right" class="btn btn-primary">NEXT</button>
+      </div>
+      <!-- TODO: Refactor this OUT. TEMPORARY -->
+
       <router-outlet></router-outlet>
     </div>
 
-    <div class="col-lg-4 col-sm-12">
+    <div class="col-md-3 col-sm-12">
       <!-- TODO: Refactor into a common component Stepper -->
       <section class="step" style="display: block; background-color: #F1F4FA">
         <h3 class="blue-header">EVACUEE PROFILE</h3>
@@ -29,8 +84,30 @@
         </section>
       </section>
 
-      <!-- TODO: Refactor into a common component SideBox -->
-      <app-side-box title="Important Notice for Evacuees"></app-side-box>
+      <app-side-box title="Important Notice for Evacuees">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis porttitor scelerisque. Proin blandit
+          suscipit ultrices. Proin dictum libero eget justo rhoncus sollicitudin.
+        </p>
+        <app-side-box-actions>
+          <button class="btn btn-primary" routerLink="/">Learn More</button>
+        </app-side-box-actions>
+      </app-side-box>
+
+      <app-side-box title="Useful Links & Information" icon="list">
+        <p>What you need to know about:</p>
+        <ul class="arrow">
+          <li><a
+              href="https://www2.gov.bc.ca/gov/content/employment-business/business/pill-press/pill-press-waiver-holder#ap"
+              target="blank">Link 1</a></li>
+          <li><a
+              href="https://www2.gov.bc.ca/gov/content/employment-business/business/pill-press/pill-press-controlled-equipment#enp"
+              target="blank">Link 2</a></li>
+          <li><a
+              href="https://www2.gov.bc.ca/gov/content/employment-business/business/pill-press/pill-press-authorized-owner#btl"
+              target="blank">Link 3</a></li>
+        </ul>
+      </app-side-box>
     </div>
   </div>
 </div>

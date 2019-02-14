@@ -1,11 +1,11 @@
+@import '~src/assets/styles/defaults.scss';
+
 $container-width: auto; // 775px
-$card-width: auto; // 400px;
-$card-color: #f1f4fa;
 
 // ==> cards
-.card-picture {
+.picture-card {
   max-width: $card-width;
-  background-color: $card-color;
+  background-color: $card-body-bg;
   padding-bottom: 48px;
 }
 

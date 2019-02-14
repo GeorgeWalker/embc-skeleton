@@ -1,20 +1,39 @@
+@import "~src/assets/styles/defaults.scss";
+
 .side-box {
-  max-width: 400px;
+  overflow: auto;
   margin-top: 40px;
-  margin-bottom: 30px;
-  padding: 45px;
-  background-color: rgba(56, 89, 138, 1);
-  border-bottom: 3px solid #fcba19 !important;
-  h2,
-  p {
-      color: white;
+  margin-bottom: 20px;
+  padding: 30px;
+  padding-top: 20px;
+  color: $side-box-color;
+  background-color: $side-box-bg;
+  border-bottom: 2px solid $gold;
+  border-radius: 0;
+
+  .round-icon-material {
+    height: 48px;
+    width: 48px;
+    border-radius: 48px;
+    background-color: #7596C8;
+    text-align: center;
+    display: inline-block;
+    padding-top: 12px;
   }
-  h2 {
-      font-size: 22px;
-      margin-top: 0;
-      margin-bottom: 30px;
+}
+
+// angular material overrides
+:host ::ng-deep .side-box {
+  * {
+    color: $side-box-color;
   }
+
   .btn {
-      background-color: #003366;
+    background-color: $bg-dark;
+  }
+
+  .mat-card-header-text {
+    margin: 0;
+    padding-left: 10px;
   }
 }

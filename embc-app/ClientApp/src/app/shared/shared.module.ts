@@ -4,7 +4,7 @@ import { MaterialModule } from './material.module';
 import { WarningBannerComponent } from './components/warning-banner/warning-banner.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { SideBoxComponent } from './components/side-box/side-box.component';
+import { SideBoxComponent, SideBoxActions } from './components/side-box/side-box.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +12,7 @@ import { SideBoxComponent } from './components/side-box/side-box.component';
     HeaderComponent,
     FooterComponent,
     SideBoxComponent,
+    SideBoxActions
   ],
   imports: [
     CommonModule,
@@ -27,6 +28,7 @@ import { SideBoxComponent } from './components/side-box/side-box.component';
     HeaderComponent,
     FooterComponent,
     SideBoxComponent,
+    SideBoxActions,
   ]
 })
 export class SharedModule { }

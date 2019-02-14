@@ -1,15 +1,16 @@
-<section class="side-box">
-  <section style="display: flex">
-    <button mat-fab class="fab-button mat-elevation-z0">
-      <mat-icon class="icon" aria-label="description icon">description</mat-icon>
-    </button>
-    <h2 [textContent]="title"></h2>
-  </section>
-  <p style="padding-top: 30px;">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis porttitor scelerisque. Proin blandit
-    suscipit ultrices. Proin dictum libero eget justo rhoncus sollicitudin.
-  </p>
-  <div style="float: right;">
-    <button class="btn btn-primary" routerLink="" tabindex="3">Learn More</button>
-  </div>
-</section>
+<mat-card class="side-box">
+  <mat-card-header>
+    <h2 mat-card-avatar class="round-icon-material">
+      <mat-icon class="icon" aria-label="description icon">{{icon}}</mat-icon>
+    </h2>
+    <mat-card-title>
+      <h2>{{title}}</h2>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <ng-content></ng-content>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <ng-content select="app-side-box-actions"></ng-content>
+  </mat-card-actions>
+</mat-card>

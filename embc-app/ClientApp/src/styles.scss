@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'assets/styles/defaults.scss';
 
-/* Controls Survey styles */
-
+// Angular Material - define custom theme
 @import '~@angular/material/theming';
 @import "~mygovbc-bootstrap-theme/dist/mygovbc-bootstrap-theme.min.css";
 @include mat-core();
@@ -11,13 +11,18 @@ $warn: mat-palette($mat-red, 500);
 $theme: mat-light-theme($primary, $accent, $warn);
 @include angular-material-theme($theme);
 
+// Angular Material - define custom typography (i.e. no Roboto font)
+$custom-typography: mat-typography-config(
+  $font-family: 'Myriad-Pro, Calibri, Arial, sans-serif'
+);
+@include angular-material-typography($custom-typography);
+
 html {
-  background: #f2f2f2;
+  background: #fff;
 }
 
 body {
   color: #494949;
-  background: #f2f2f2;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font: MyriadWebPro, Calibri, Arial, "sans serif";
