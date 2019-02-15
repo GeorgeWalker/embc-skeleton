@@ -1,7 +1,14 @@
-import { SelfRegistrationComponent } from './self-registration/self-registration.component';
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
 import { HomeComponent } from './home/home.component';
+import {
+  SelfRegistrationComponent,
+  SelfRegistrationOneComponent,
+  SelfRegistrationTwoComponent,
+  SelfRegistrationThreeComponent,
+  SelfRegistrationFourComponent,
+} from './self-registration';
 
 const routes: Routes = [
   {
@@ -10,7 +17,30 @@ const routes: Routes = [
   },
   {
     path: 'self-registration',
-    component: SelfRegistrationComponent
+    component: SelfRegistrationComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'step-1',
+        pathMatch: 'full'
+      },
+      {
+        path: 'step-1',
+        component: SelfRegistrationOneComponent
+      },
+      {
+        path: 'step-2',
+        component: SelfRegistrationTwoComponent
+      },
+      {
+        path: 'step-3',
+        component: SelfRegistrationThreeComponent
+      },
+      {
+        path: 'step-4',
+        component: SelfRegistrationFourComponent
+      },
+    ]
   },
 ];
 

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { MaterialModule } from './material.module';
 import { WarningBannerComponent } from './components/warning-banner/warning-banner.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -16,11 +18,15 @@ import { SideBoxComponent, SideBoxActions } from './components/side-box/side-box
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     MaterialModule,
   ],
   exports: [
     // modules
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     MaterialModule,
 
     // components, pipes, etc

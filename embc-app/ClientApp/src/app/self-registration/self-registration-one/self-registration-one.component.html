@@ -1,0 +1,67 @@
+<div [formGroup]="form">
+  <h2 class="step">STEP 1</h2>
+  <h1 style="margin-top: 0">Register as an Evacuee</h1>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia suscipit ligula sit amet pulvinar.
+    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean efficitur et arcu
+    a fringilla.</p>
+
+  <div class="feature-block">
+    <h3>Restriction<span style="color:#CC0000;">*</span></h3>
+    <p>Concerned family
+      and friends may inquire about you and your family because of the emergency. We would like to provide these
+      people with some information about you. May we disclose your location and the contact information for you
+      and your family members?</p>
+    <div class="radio-button">
+      <input type="radio" value="yes" name="restriction">
+      <label><span>&nbsp;Yes</span></label>
+    </div>
+    <div class="radio-button">
+      <input type="radio" value="no" name="restriction">
+      <label><span>&nbsp;No</span></label>
+    </div>
+  </div>
+
+  <h3 class="blue-header">FAMILY REPRESENTATIVE</h3>
+  <section class="padded-section" formGroupName="familyRepresentative">
+    <div class="form-field">
+      <div class="form-label">
+        <label>Last Name<span style="color:#CC0000;">*</span></label>
+      </div>
+      <input type="text" formControlName="lastName" style="width: 500px; height: 40px;color: #666;text-align: left;">
+    </div>
+    <div class="form-field">
+      <div class="form-label">
+        <label>First Name<span style="color:#CC0000;">*</span></label>
+      </div>
+      <input type="text" formControlName="firstName" style="width: 500px; height: 40px;color: #666;text-align: left;">
+    </div>
+    <p>More form fields go here...</p>
+  </section>
+
+  <h3 class="blue-header">EVACUEE FAMILY INFORMATION</h3>
+  <section class="padded-section" formGroupName="familyInformation">
+    Form fields go here...
+    <div class="radio-button">
+      <input type="radio" value="yes" name="restriction">
+      <label><span>&nbsp;Yes</span></label>
+    </div>
+    <div class="radio-button">
+      <input type="radio" value="no" name="restriction">
+      <label><span>&nbsp;No</span></label>
+    </div>
+  </section>
+
+  <h3 class="blue-header">PRIMARY RESIDENCE & CONTACT DETAILS</h3>
+  <section class="padded-section" formGroupName="contactDetails">
+  </section>
+
+  <h3 class="blue-header">MAILING ADDRESS</h3>
+  <section class="padded-section" formGroupName="mailingAddress">
+  </section>
+
+  <div>
+    <a href="">Cancel &amp; Close</a>
+    <button style="float: right" class="btn btn-primary" (click)="next()">NEXT</button>
+  </div>
+</div>
