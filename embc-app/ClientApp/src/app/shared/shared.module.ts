@@ -7,6 +7,7 @@ import { WarningBannerComponent } from './components/warning-banner/warning-bann
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SideBoxComponent, SideBoxActions } from './components/side-box/side-box.component';
+import { FormFieldComponent } from './components/form-field/form-field.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SideBoxComponent, SideBoxActions } from './components/side-box/side-box
     HeaderComponent,
     FooterComponent,
     SideBoxComponent,
-    SideBoxActions
+    SideBoxActions,
+    FormFieldComponent,
   ],
   imports: [
     CommonModule,
@@ -35,6 +37,7 @@ import { SideBoxComponent, SideBoxActions } from './components/side-box/side-box
     FooterComponent,
     SideBoxComponent,
     SideBoxActions,
+    FormFieldComponent,
   ]
 })
 export class SharedModule { }
