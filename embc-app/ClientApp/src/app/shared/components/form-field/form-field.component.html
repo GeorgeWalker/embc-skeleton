@@ -1,12 +1,8 @@
 <section class="form-field">
   <div class="row">
-    <div class="col-8">
-      <div class="form-field-label" [ngClass]="{'required': required}">
-        <ng-content select="label"></ng-content><span *ngIf="required" class="required-marker">*</span>
-      </div>
-      <div class="form-field-control">
-        <ng-content></ng-content>
-      </div>
+    <div class="form-group col-8">
+      <ng-content select="label"></ng-content><span *ngIf="required" class="required-marker">*</span>
+      <ng-content></ng-content>
     </div>
     <div class="col-2">
       <span *ngIf="!valid && showChevrons">

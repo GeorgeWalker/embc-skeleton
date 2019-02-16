@@ -55,9 +55,13 @@ export class SelfRegistrationOneComponent implements OnInit {
         firstName: [familyRepresentative.firstName, Validators.required],
         lastName: [familyRepresentative.lastName, Validators.required],
         gender: [familyRepresentative.gender],
+        initial: [familyRepresentative.initial],
+        nickname: [familyRepresentative.nickname],
+        age: [familyRepresentative.age],
       }),
       familyInformation: this.fb.group({}),
       contactDetails: this.fb.group({}),
+      primaryResidence: this.fb.group({}),
       mailingAddress: this.fb.group({}),
     });
   }

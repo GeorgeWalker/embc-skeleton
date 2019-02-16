@@ -6,28 +6,24 @@
   margin-top: 5px;
 }
 
-.form-field {
-  margin-bottom: 15px;
-  &-label {
-    &.required {
-      .required-marker {
-        color: #d8292f;
-        font-weight: 700;
-      }
-    }
-  }
+.required-marker {
+  color: #d8292f;
+  font-weight: 700;
 }
 
-::ng-deep .form-field {
-  &-control {
-    input {
-      &[type="text"] {
-        height: 40px;
-        width: 100%;
-        max-width: 500px;
-        color: #666;
-        text-align: left;
-      }
-    }
-  }
-}
+// ::ng-deep .form-field {
+//   &-control {
+//     input {
+//       &[type="text"] {
+//         height: 40px;
+//         width: 100%;
+//         max-width: 500px;
+//         color: #666;
+//         text-align: left;
+//       }
+//     }
+//     select {
+//       height: 40px;
+//     }
+//   }
+// }

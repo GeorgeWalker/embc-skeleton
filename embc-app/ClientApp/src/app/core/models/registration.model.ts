@@ -3,6 +3,7 @@ export class Registration {
   familyRepresentative;
   familyInformation;
   contactDetails;
+  primaryResidence;
   mailingAddress;
   additionalInformation;
   requireSupports: boolean;

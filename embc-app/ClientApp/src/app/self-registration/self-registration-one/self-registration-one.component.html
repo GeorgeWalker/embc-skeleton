@@ -24,40 +24,123 @@
 
   <h3 class="blue-header">FAMILY REPRESENTATIVE</h3>
   <section class="padded-section" formGroupName="familyRepresentative">
-    <div class="form-field">
-      <div class="form-label">
-        <label>Last Name<span style="color:#CC0000;">*</span></label>
-      </div>
-      <input type="text" formControlName="lastName" style="width: 500px; height: 40px;color: #666;text-align: left;">
-    </div>
-    <div class="form-field">
-      <div class="form-label">
-        <label>First Name<span style="color:#CC0000;">*</span></label>
-      </div>
-      <input type="text" formControlName="firstName" style="width: 500px; height: 40px;color: #666;text-align: left;">
-    </div>
-    <p>More form fields go here...</p>
+    <app-form-field required="true">
+      <label>Last Name</label>
+      <input class="form-control" type="text" formControlName="lastName">
+    </app-form-field>
+    <app-form-field required="true">
+      <label>First Name</label>
+      <input class="form-control" type="text" formControlName="firstName">
+    </app-form-field>
+    <app-form-field>
+      <label>Initial</label>
+      <input class="form-control" type="text" formControlName="initial">
+    </app-form-field>
+    <app-form-field>
+      <label>Nickname</label>
+      <input class="form-control" type="text" formControlName="nickname">
+    </app-form-field>
+    <app-form-field required="true">
+      <label>Gender</label>
+      <select class="form-control" formControlName="gender">
+        <option label="Please select--" selected></option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+    </app-form-field>
+    <app-form-field required="true">
+      <label>Age</label>
+      <select class="form-control" formControlName="age">
+        <option label="Please select--" selected></option>
+        <option value="1">1</option>
+        <option disabled>...</option>
+        <option value="35">35</option>
+        <option disabled>...</option>
+        <option value="110">110</option>
+      </select>
+    </app-form-field>
   </section>
 
   <h3 class="blue-header">EVACUEE FAMILY INFORMATION</h3>
   <section class="padded-section" formGroupName="familyInformation">
-    Form fields go here...
-    <div class="radio-button">
-      <input type="radio" value="yes" name="restriction">
-      <label><span>&nbsp;Yes</span></label>
-    </div>
-    <div class="radio-button">
-      <input type="radio" value="no" name="restriction">
-      <label><span>&nbsp;No</span></label>
+    Are you registering immediate family members who live in the same household with you?
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="register-household" value="yes">
+        <label class="form-check-label">Yes</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="register-household" value="defer">
+        <label class="form-check-label">Yes, but I'd like to register them when I get to the
+          Reception Center</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="register-household" value="no">
+        <label class="form-check-label">No</label>
+      </div>
     </div>
   </section>
 
   <h3 class="blue-header">PRIMARY RESIDENCE & CONTACT DETAILS</h3>
-  <section class="padded-section" formGroupName="contactDetails">
+  <section class="padded-section">
+    <div formGroupName="primaryResidence">
+      <app-form-field required="true">
+        <label>Apt/Suite/Building Number &amp; Street Address</label>
+        <input class="form-control" type="text">
+      </app-form-field>
+      <div class="row">
+        <app-form-field class="col-md-6">
+          <label>Community</label>
+          <input class="form-control" type="text">
+        </app-form-field>
+        <app-form-field class="col-md-3" required="true">
+          <label>Province </label>
+          <input class="form-control" type="text">
+        </app-form-field>
+        <app-form-field class="col-md-3" required="true">
+          <label>Postal Code</label>
+          <input class="form-control" type="text">
+        </app-form-field>
+      </div>
+      <div class="row">
+        <app-form-field class="col-md-3" required="true">
+          <label>Country</label>
+          <input class="form-control" type="text">
+        </app-form-field>
+      </div>
+      <div class="row">
+        <app-form-field class="col-md-6">
+          <label>Telephone / Mobile Number (10 digits)</label>
+          <input class="form-control" type="text">
+        </app-form-field>
+        <app-form-field class="col-md-6">
+          <label>Alternate Telephone / Mobile Number</label>
+          <input class="form-control" type="text">
+        </app-form-field>
+      </div>
+      <div class="row">
+        <app-form-field class="col-md-8" required="true">
+          <label>Email Address</label>
+          <input class="form-control" type="text">
+        </app-form-field>
+      </div>
+    </div>
   </section>
 
   <h3 class="blue-header">MAILING ADDRESS</h3>
   <section class="padded-section" formGroupName="mailingAddress">
+      Is your mailing address different from your primary residence?
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="alt-mailing-address" value="yes">
+          <label class="form-check-label">Yes</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="alt-mailing-address" value="no">
+          <label class="form-check-label">No</label>
+        </div>
+      </div>
   </section>
 
   <div>
