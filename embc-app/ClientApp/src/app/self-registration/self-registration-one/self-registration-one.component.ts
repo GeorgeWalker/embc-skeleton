@@ -45,9 +45,6 @@ export class SelfRegistrationOneComponent implements OnInit {
   initForm(registration: Registration) {
     const {
       familyRepresentative,
-      familyInformation,
-      contactDetails,
-      mailingAddress,
     } = registration;
 
     this.form = this.fb.group({
@@ -58,6 +55,10 @@ export class SelfRegistrationOneComponent implements OnInit {
         initial: [familyRepresentative.initial],
         nickname: [familyRepresentative.nickname],
         age: [familyRepresentative.age],
+        primaryResidence: this.fb.group({
+          province: [familyRepresentative.primaryResidence.province],
+          country: [familyRepresentative.primaryResidence.country],
+        }),
       }),
       familyInformation: this.fb.group({}),
       contactDetails: this.fb.group({}),
