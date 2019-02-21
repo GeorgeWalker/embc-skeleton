@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SideBoxComponent, SideBoxActions } from './components/side-box/side-box.component';
 import { FormFieldComponent } from './components/form-field/form-field.component';
+import { AddressFormGroupComponent } from './components/address-form-group/address-form-group.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FormFieldComponent } from './components/form-field/form-field.component
     SideBoxComponent,
     SideBoxActions,
     FormFieldComponent,
+    AddressFormGroupComponent,
   ],
   imports: [
     CommonModule,
@@ -38,6 +40,7 @@ import { FormFieldComponent } from './components/form-field/form-field.component
     SideBoxComponent,
     SideBoxActions,
     FormFieldComponent,
+    AddressFormGroupComponent,
   ]
 })
 export class SharedModule { }
