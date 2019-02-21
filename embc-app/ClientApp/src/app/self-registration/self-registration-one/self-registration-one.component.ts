@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { FormBuilder, Validators, FormGroup, FormControl, FormArray } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Store } from '@ngrx/store';
 
@@ -33,7 +33,7 @@ export class SelfRegistrationOneComponent implements OnInit {
       });
   }
 
-  fetch(): any {
+  fetch() {
     return this.store.select(state => state.registration);
   }
 
@@ -45,9 +45,11 @@ export class SelfRegistrationOneComponent implements OnInit {
   initForm(registration: Registration) {
     const {
       familyRepresentative,
+      familyMembers,
     } = registration;
 
     this.form = this.fb.group({
+      isRestricted: this.fb.control(''),
       familyRepresentative: this.fb.group({
         firstName: [familyRepresentative.firstName, Validators.required],
         lastName: [familyRepresentative.lastName, Validators.required],
@@ -55,21 +57,90 @@ export class SelfRegistrationOneComponent implements OnInit {
         initial: [familyRepresentative.initial],
         nickname: [familyRepresentative.nickname],
         age: [familyRepresentative.age],
-        primaryResidence: this.fb.group({
-          province: [familyRepresentative.primaryResidence.province],
-          country: [familyRepresentative.primaryResidence.country],
-        }),
       }),
-      familyInformation: this.fb.group({}),
-      contactDetails: this.fb.group({}),
-      primaryResidence: this.fb.group({}),
-      mailingAddress: this.fb.group({}),
+      isRegisteringFamilyMembers: this.fb.control(undefined),
+      familyMembers: this.fb.array([]),
+      contactDetails: this.fb.group({
+        phoneNumber: [''],
+        phoneNumberAlt: [''],
+        email: [''],
+      }),
+      primaryResidence: this.fb.group({
+        addressLine1: [''],
+        community: [''],
+        postalCode: [''],
+        province: [familyRepresentative.primaryResidence.province],
+        country: [familyRepresentative.primaryResidence.country],
+      }),
+      hasMailingAddress: this.fb.control(''),
+      mailingAddress: this.fb.group({
+        addressLine1: [''],
+        community: [''],
+        postalCode: [''],
+        province: [''],
+        country: [''],
+      }),
     });
   }
 
   handleFormChanges() {
     // TODO: Register any value change listeners here...
     // this.form.get('someField').valueChanges.subscribe(...)
+    this.isRegisteringFamilyMembers.valueChanges.subscribe((value: number) => {
+      if (value === 1) {
+        this.addFamilyMember();
+      } else {
+        this.clearFamilyMembers();
+      }
+    });
+  }
+
+  get isRegisteringFamilyMembers() {
+    return this.form.get('isRegisteringFamilyMembers');
+  }
+
+  get familyMembers() {
+    return this.form.get('familyMembers') as FormArray;
+  }
+
+  get showFamilyMembers() {
+    // return this.form.get('isRegisteringFamilyMembers').value === 1;
+    return this.familyMembers.length > 0;
+  }
+
+  addFamilyMember() {
+    this.familyMembers.push(this.fb.group({
+      relationshipToEvacuee: [''],
+      sameLastNameAsEvacuee: [true],
+      firstName: [''],
+      lastName: [''],
+      initial: [''],
+      gender: [''],
+      age: [undefined],
+    }));
+  }
+
+  clearFamilyMembers() {
+    this.clear(this.familyMembers);
+  }
+  // TODO: Refactor into utils method
+  private clear(formArray: FormArray) {
+    while (formArray.length !== 0) {
+      formArray.removeAt(0);
+    }
+  }
+
+  get primaryResidence() {
+    return this.form.get('primaryResidence') as FormGroup;
+  }
+
+  get mailingAddress() {
+    return this.form.get('mailingAddress') as FormGroup;
+  }
+
+  // show/hide toggles
+  get showMailingAddress() {
+    return this.form.get('hasMailingAddress').value === true;
   }
 
   next() {
