@@ -29,6 +29,7 @@ export class SelfRegistrationOneComponent implements OnInit {
       .subscribe(state => {
         this.registration = state;
         this.initForm(state);
+        this.addFamilyMember();  // TEST
         this.handleFormChanges();
       });
   }
