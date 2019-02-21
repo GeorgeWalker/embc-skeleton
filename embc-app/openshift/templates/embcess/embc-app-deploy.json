@@ -67,70 +67,7 @@
                   {
                     "name": "ASPNETCORE_ENVIRONMENT",
                     "value": "${ASPNETCORE_ENVIRONMENT}"
-                  },
-                  {
-                    "name": "DB_USER",
-                    "valueFrom": {
-                      "secretKeyRef": {
-                        "key": "database-user",
-                        "name": "${DATABASE_SERVICE_NAME}"
-                      }
-                    }
-                  },
-                  {
-                    "name": "DB_PASSWORD",
-                    "valueFrom": {
-                      "secretKeyRef": {
-                        "key": "database-password",
-                        "name": "${DATABASE_SERVICE_NAME}"
-                      }
-                    }
-                  },
-                  {
-                    "name": "DB_ADMIN_PASSWORD",
-                    "valueFrom": {
-                      "secretKeyRef": {
-                        "key": "database-admin-password",
-                        "name": "${DATABASE_SERVICE_NAME}"
-                      }
-                    }
-                  },
-                  {
-                    "name": "DB_DATABASE",
-                    "valueFrom": {
-                      "secretKeyRef": {
-                        "key": "database-name",
-                        "name": "${DATABASE_SERVICE_NAME}"
-                      }
-                    }
-                  },
-                  {
-                    "name": "DATABASE_SERVICE_NAME",
-                    "valueFrom": {
-                      "secretKeyRef": {
-                        "key": "database-service-name",
-                        "name": "${SECRET_RESOURCE_NAME}"
-                      }
-                    }
-                  },
-                  {
-                    "name": "DYNAMICS_NATIVE_ODATA_URI",
-                    "valueFrom": {
-                      "secretKeyRef": {
-                        "key": "dynamics-native-odata-uri",
-                        "name": "${SECRET_RESOURCE_NAME}"
-                      }
-                    }
-                  },
-                  {
-                    "name": "PathBase",
-                    "valueFrom": {
-                      "secretKeyRef": {
-                        "key": "base-path",
-                        "name": "${SECRET_RESOURCE_NAME}"
-                      }
-                    }
-                  },
+                  },                                
                   {
                     "name": "SMTP_HOST",
                     "valueFrom": {
@@ -169,60 +106,8 @@
                   },
                   {
                     "name": "BASE_URI",
-                    "valueFrom": {
-                      "secretKeyRef": {
-                        "key": "base-uri",
-                        "name": "${SECRET_RESOURCE_NAME}"
-                      }
-                    }
-                  },
-                  {
-                    "name": "SHAREPOINT_SERVER_APPID_URI",
-                    "valueFrom": {
-                      "secretKeyRef": {
-                        "key": "sharepoint-server-appid-uri",
-                        "name": "${SECRET_RESOURCE_NAME}"
-                      }
-                    }
-                  },
-                  {
-                    "name": "SHAREPOINT_WEBNAME",
-                    "value": "${SHAREPOINT_WEBNAME}"
-                  },
-                  {
-                    "name": "SHAREPOINT_AAD_TENANTID",
-                    "value": "${SHAREPOINT_AAD_TENANTID}"
-                  },
-                  {
-                    "name": "SHAREPOINT_CLIENT_ID",
-                    "value": "${SHAREPOINT_CLIENT_ID}"
-                  },
-                  {
-                    "name": "SHAREPOINT_CERTIFICATE_PASSWORD",
-                    "value": "${SHAREPOINT_CERTIFICATE_PASSWORD}"
-                  },
-                  {
-                    "name": "SHAREPOINT_CERTIFICATE_FILENAME",
-                    "value": "${SHAREPOINT_CERTIFICATE_FILENAME}"
-                  },
-                  {
-                    "name": "REDIS_SERVER",
-                    "valueFrom": {
-                      "secretKeyRef": {
-                        "key": "redis-server",
-                        "name": "${SECRET_RESOURCE_NAME}"
-                      }
-                    }
-                  },
-                  {
-                    "name": "DYNAMICS_ODATA_URI",
-                    "valueFrom": {
-                      "secretKeyRef": {
-                        "key": "dynamics-odata-uri",
-                        "name": "${SECRET_RESOURCE_NAME}"
-                      }
-                    }
-                  },
+                    "value": "embcess"
+                  },                  
                   {
                     "name": "BCEID_SERVICE_SVCID",
                     "valueFrom": {
@@ -259,76 +144,14 @@
                       }
                     }
                   },
-                  {
-                    "name": "BCEP_SERVICE_URL",
-                    "valueFrom": {
-                      "secretKeyRef": {
-                        "key": "bcep-service-url",
-                        "name": "${SECRET_RESOURCE_NAME}"
-                      }
-                    }
-                  },
-                  {
-                    "name": "BCEP_MERCHANT_ID",
-                    "valueFrom": {
-                      "secretKeyRef": {
-                        "key": "bcep-merchant-id",
-                        "name": "${SECRET_RESOURCE_NAME}"
-                      }
-                    }
-                  },
-                  {
-                    "name": "BCEP_HASH_KEY",
-                    "valueFrom": {
-                      "secretKeyRef": {
-                        "key": "bcep-hash-key",
-                        "name": "${SECRET_RESOURCE_NAME}"
-                      }
-                    }
-                  },
-                  {
-                    "name": "BCEP_CONF_PATH",
-                    "valueFrom": {
-                      "secretKeyRef": {
-                        "key": "bcep-conf-path",
-                        "name": "${SECRET_RESOURCE_NAME}"
-                      }
-                    }
-                  },
-                  {
-                    "name": "SHAREPOINT_ODATA_URI",
-                    "valueFrom": {
-                      "secretKeyRef": {
-                        "key": "sharepoint-odata-uri",
-                        "name": "${SECRET_RESOURCE_NAME}"
-                      }
-                    }
-                  },
-                  {
-                    "name": "SHAREPOINT_NATIVE_BASE_URI",
-                    "valueFrom": {
-                      "secretKeyRef": {
-                        "key": "sharepoint-native-base-uri",
-                        "name": "${SECRET_RESOURCE_NAME}"
-                      }
-                    }
-                  },
+				  {
+					"name":"BASE_PATH",
+					"value":"${BASE_PATH}"
+				  },
                   {
                     "name": "SITEMINDER_LOGOUT_URL",
                     "value": "${SITEMINDER_LOGOUT_URL}"
-                  },
-                  {
-                    "name": "PDF_SERVICE_BASE_URI",
-                    "value": "${PDF_SERVICE_BASE_URI}"
-                  },
-                  {
-                    "name": "PDF_JWT_TOKEN",
-                    "value": "${PDF_JWT_TOKEN}"
-                  },
-                  {
-                    "name": "BCEP_CONF_PATH_WORKER",
-                    "value": "${BCEP_CONF_PATH_WORKER}"
-                  }
+                  }                  
                 ],
                 "resources": {
                   "limits": {
@@ -433,7 +256,7 @@
         }
       },
       "spec": {
-        "host": "${SITEMINDER_APPLICATION_DOMAIN}",
+        "host": "${NAME}-${NAME}.pathfinder.bcgov",
         "port": {
           "targetPort": "8080-tcp"
         },
@@ -486,21 +309,21 @@
       "displayName": "Name",
       "description": "The name assigned to all of the resources defined in this template.",
       "required": true,
-      "value": "pill-press"
+      "value": "embcess"
     },
     {
       "name": "SOURCE_IMAGE_NAME",
       "displayName": "Source Image Name",
       "description": "The name of the image to use for this resource.",
       "required": true,
-      "value": "pill-press"
+      "value": "embcess"
     },
     {
       "name": "IMAGE_NAMESPACE",
       "displayName": "Image Namespace",
       "description": "The namespace of the OpenShift project containing the imagestream for the application.",
       "required": true,
-      "value": "rqnyx8-dev"
+      "value": "jhnamn-tools"
     },
     {
       "name": "TAG_NAME",
@@ -544,30 +367,30 @@
       "description": "The endpoint used for SiteMinder routed access to the application.",
       "displayName": "SiteMinder Application Domain",
       "name": "SITEMINDER_APPLICATION_DOMAIN",
-      "value": "pill-press-dev.pathfinder.bcgov"
+      "value": "embcess-dev.pathfinder.bcgov"
     },
     {
       "description": "The exposed hostname that will route to the service, e.g., myappname.pathfinder.gov.bc.ca, if left blank a value will be defaulted.",
       "displayName": "Application Domain",
       "name": "APPLICATION_DOMAIN",
-      "value": "pill-press-dev.pathfinder.gov.bc.ca"
+      "value": "embcess-dev.pathfinder.gov.bc.ca"
     },
     {
       "description": "Webname for Sharepoint, e.g., pill pressdev, if left blank a value will be defaulted.",
       "displayName": "Sharepoint Webname",
       "name": "SHAREPOINT_WEBNAME",
       "required": false,
-      "value": "pill-press"
+      "value": "embcess"
     },
     {
       "description": "Sharepoint Tenant ID and Dynamics Tenant ID, e.g., bcgovtrial.onmicrosoft.com, if left blank a value will be defaulted.",
       "displayName": "AAD Tennant ID",
       "name": "SHAREPOINT_AAD_TENANTID",
       "required": false,
-      "value": "bcgovtrial.onmicrosoft.com"
+      "value": ""
     },
     {
-      "description": "Sharepoint Clien ID",
+      "description": "Sharepoint Client ID",
       "displayName": "Sharepoint Client ID",
       "name": "SHAREPOINT_CLIENT_ID",
       "required": false
@@ -583,7 +406,7 @@
       "displayName": "Sharepoint Certificate Filename",
       "name": "SHAREPOINT_CERTIFICATE_FILENAME",
       "required": false,
-      "value": "/sharepointcert/BCGovTrial.pfx"
+      "value": ""
     },
     {
       "description": "Boolean that shows login, e.g., true, if left blank a value will be defaulted.",
@@ -591,21 +414,7 @@
       "name": "SHOW_LOGIN",
       "required": true,
       "value": "true"
-    },
-    {
-      "description": "Boolean that shows CARLA Lite, e.g., false, if left blank a value will be defaulted.",
-      "displayName": "Is lite version",
-      "name": "IS_LITE_VERSION",
-      "required": true,
-      "value": "false"
-    },
-    {
-      "description": "Boolean that shows Dashboard Lite for CARLA lite, e.g., false, if left blank a value will be defaulted.",
-      "displayName": "Dashboard lite",
-      "name": "DASHBOARD_LITE",
-      "required": true,
-      "value": "false"
-    },
+    },    
     {
       "name": "DATABASE_SERVICE_NAME",
       "displayName": "Database service name",
@@ -617,7 +426,14 @@
       "displayName": "Secret resource name",
       "description": "Secret resource name",
       "required": true,
-      "value": "pill-press"
+      "value": "embcess"
+    },
+	{
+      "name": "BASE_PATH",
+      "displayName": "",
+      "description": "",
+      "required": true,
+      "value": "embcess"
     },
     {
       "name": "SITEMINDER_LOGOUT_URL",
@@ -639,14 +455,7 @@
       "description": "JWT for PDF service.",
       "required": true,
       "value": ""
-    },
-    {
-      "name": "BCEP_CONF_PATH_WORKER",
-      "displayName": "Path to BCEP Conf",
-      "description": "Path to BCEP Conf, e.g., /worker-registration/payment-confirmation, if left blank a value will be defaulted.",
-      "required": true,
-      "value": "/worker-registration/payment-confirmation"
-    },
+    },    
     {
       "name": "KEY_RING_DIRECTORY",
       "displayName": "Key Ring Directory",

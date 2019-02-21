@@ -100,14 +100,14 @@
       "displayName": "Name",
       "description": "The name assigned to all of the resources defined in this template.",
       "required": true,
-      "value": "pill-press"
+      "value": "embcess"
     },
     {
       "name": "GIT_REPO_URL",
       "displayName": "Git Repo URL",
       "description": "The URL to your GIT repo.",
       "required": true,
-      "value": "https://github.com/bcgov/jag-pill-press-registry"
+      "value": "https://github.com/bcgov/embcess"
     },
     {
       "name": "GIT_REF",
