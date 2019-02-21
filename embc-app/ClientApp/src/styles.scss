@@ -214,6 +214,11 @@ hr {
   color: #d8292f
 }
 
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
 .form-wrapper {
   padding-left: 50px;
   padding-right: 30px;
