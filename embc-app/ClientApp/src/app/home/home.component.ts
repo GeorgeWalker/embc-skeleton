@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -11,9 +10,8 @@ export class HomeComponent implements OnInit {
   window = window;
   busy: Subscription;
 
-  constructor(private titleService: Title) { }
+  constructor() { }
 
   ngOnInit() {
-    this.titleService.setTitle('Home - Victim Services');
   }
 }

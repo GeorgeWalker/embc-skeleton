@@ -1,3 +1,16 @@
+@import '~src/styles/defaults.scss';
+
+$container-width: auto; // 775px
+
+// ==> cards
+.picture-card {
+  max-width: $card-width;
+  background-color: $card-body-bg;
+  padding-bottom: 48px;
+}
+
+// ==> home
+
 .home-margins {
     max-width: 1200px;
     padding-left: 30px;
@@ -16,7 +29,7 @@ p {
 }
 
 .home-header {
-    max-width: 775px;
+    max-width: $container-width;
 }
 
 .home-header-wrapper {
@@ -26,7 +39,7 @@ p {
 .home-body {
     background-color: rgba(255, 255, 255, 1);
     padding-top: 60px;
-    max-width: 775px;
+    max-width: $container-width;
     display: flex;
 }
 
@@ -36,27 +49,6 @@ p {
     h2 {
         font-weight: 400;
         font-size: 36px;
-    }
-}
-
-.side-box {
-    max-width: 400px;
-    margin-top: 40px;
-    margin-bottom: 30px;
-    padding: 45px;
-    background-color: rgba(56, 89, 138, 1);
-    border-bottom: 3px solid #fcba19 !important;
-    h2,
-    p {
-        color: white;
-    }
-    h2 {
-        font-size: 22px;
-        margin-top: 0;
-        margin-bottom: 30px;
-    }
-    .btn {
-        background-color: #003366;
     }
 }
 
