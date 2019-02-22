@@ -39,11 +39,11 @@ const initialState: Registration = {
   supportServicesRequested: {}
 };
 
-export const registrationReducer = (state = initialState, action: Actions) => {
+export function registrationReducer(state = initialState, action: Actions) {
   switch (action.type) {
     case UPDATE_REGISTRATION:
       return { ...state, ...action.payload };
     default:
       return state;
   }
-};
+}
