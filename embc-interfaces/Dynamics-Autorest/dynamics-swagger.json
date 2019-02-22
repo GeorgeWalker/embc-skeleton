@@ -75473,7 +75473,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "x-nullable": true
+            "nullable": true
           }
         },
         "AttributeId": {
@@ -75733,7 +75733,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "x-nullable": true
+            "nullable": true
           }
         }
       }
@@ -75746,7 +75746,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "x-nullable": true
+            "nullable": true
           }
         }
       }
@@ -75789,7 +75789,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "x-nullable": true
+            "nullable": true
           }
         }
       }
@@ -75802,7 +75802,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "x-nullable": true
+            "nullable": true
           }
         }
       }
@@ -75815,7 +75815,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "x-nullable": true
+            "nullable": true
           }
         }
       }
@@ -75943,7 +75943,7 @@
           "type": "array",
           "items": {
             "type": "integer",
-            "x-nullable": true
+            "nullable": true
           }
         }
       }
@@ -75994,7 +75994,7 @@
           "type": "array",
           "items": {
             "type": "integer",
-            "x-nullable": true
+            "nullable": true
           }
         }
       }
@@ -76053,7 +76053,7 @@
           "type": "array",
           "items": {
             "type": "integer",
-            "x-nullable": true
+            "nullable": true
           }
         }
       }
@@ -76206,7 +76206,7 @@
           "type": "array",
           "items": {
             "type": "integer",
-            "x-nullable": true
+            "nullable": true
           }
         }
       }
@@ -77387,7 +77387,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "x-nullable": true
+            "nullable": true
           }
         },
         "IsCustomizable": {
@@ -77535,7 +77535,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "x-nullable": true
+            "nullable": true
           }
         },
         "Format": {
@@ -77748,7 +77748,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "x-nullable": true
+            "nullable": true
           }
         }
       }
@@ -77832,7 +77832,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "x-nullable": true
+            "nullable": true
           }
         }
       }
@@ -78002,7 +78002,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "x-nullable": true
+            "nullable": true
           }
         }
       }
@@ -78015,7 +78015,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "x-nullable": true
+            "nullable": true
           }
         },
         "ResourceId": {
@@ -78111,7 +78111,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "x-nullable": true
+            "nullable": true
           }
         },
         "AttributeCrmDisplayName": {
@@ -78374,7 +78374,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "x-nullable": true
+            "nullable": true
           }
         }
       }
@@ -78951,7 +78951,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "x-nullable": true
+            "nullable": true
           }
         },
         "Format": {
@@ -79239,7 +79239,7 @@
           "type": "array",
           "items": {
             "type": "integer",
-            "x-nullable": true
+            "nullable": true
           }
         },
         "MissingLabelBehavior": {
@@ -79337,7 +79337,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "x-nullable": true
+            "nullable": true
           }
         }
       }
@@ -79398,7 +79398,7 @@
           "type": "array",
           "items": {
             "type": "integer",
-            "x-nullable": true
+            "nullable": true
           }
         },
         "MetadataId": {
@@ -80030,7 +80030,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "x-nullable": true
+            "nullable": true
           }
         },
         "IsCustomizable": {
@@ -80589,7 +80589,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "x-nullable": true
+            "nullable": true
           }
         },
         "Values": {
@@ -80836,7 +80836,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "x-nullable": true
+            "nullable": true
           }
         },
         "GetDefault": {
@@ -80854,7 +80854,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "x-nullable": true
+            "nullable": true
           }
         },
         "AppId": {
@@ -81009,7 +81009,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "x-nullable": true
+            "nullable": true
           }
         }
       }
@@ -81026,7 +81026,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "x-nullable": true
+            "nullable": true
           }
         },
         "EntityAlias": {
@@ -81381,14 +81381,14 @@
           "type": "array",
           "items": {
             "type": "string",
-            "x-nullable": true
+            "nullable": true
           }
         },
         "dashboardIds": {
           "type": "array",
           "items": {
             "type": "string",
-            "x-nullable": true
+            "nullable": true
           }
         },
         "appEntityInfo": {
@@ -81411,7 +81411,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "x-nullable": true
+            "nullable": true
           }
         },
         "Forms": {
@@ -81484,7 +81484,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "x-nullable": true
+            "nullable": true
           }
         }
       }
@@ -81747,7 +81747,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "x-nullable": true
+            "nullable": true
           }
         },
         "IsRangeBased": {
@@ -81993,7 +81993,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "x-nullable": true
+            "nullable": true
           }
         }
       }
@@ -82006,7 +82006,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "x-nullable": true
+            "nullable": true
           }
         }
       }
