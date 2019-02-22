@@ -20,8 +20,8 @@
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.1.5" />
     <PackageReference Include="Microsoft.AspNetCore.HealthChecks" Version="1.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="2.1.1" />
+    
     <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="2.1.1" />
-    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="2.1.2" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
     <PackageReference Include="Microsoft.NETCore.TestHost" Version="2.0.8" />
     <PackageReference Include="NWebsec.AspNetCore.Middleware" Version="2.0.0" />
@@ -68,8 +68,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\embc-interfaces\BCeID\BCeID.csproj" />
-    <ProjectReference Include="..\embc-interfaces\Dynamics-Autorest\DynamicsAutorest.csproj" />
-    <ProjectReference Include="..\embc-interfaces\SharePoint\SharePoint.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Contexts\ODataClient.tt">

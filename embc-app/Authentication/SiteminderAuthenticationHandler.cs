@@ -218,6 +218,8 @@ namespace Gov.Jag.Embc.Public.Authentication
         /// <returns></returns>
         protected override async Task<AuthenticateResult> HandleAuthenticateAsync()
         {
+            ClaimsPrincipal principal = new ClaimsPrincipal();
+            /*
             // get siteminder headers
             _logger.LogDebug("Parsing the HTTP headers for SiteMinder authentication credential");
 
@@ -226,10 +228,9 @@ namespace Gov.Jag.Embc.Public.Authentication
             bool isBCSCDeveloperLogin = false;
             try
             {
-                ClaimsPrincipal principal;
+                
                 HttpContext context = Request.HttpContext;
-                IDynamicsClient _dynamicsClient = (IDynamicsClient)context.RequestServices.GetService(typeof(IDynamicsClient));
-
+                
                 IHostingEnvironment hostingEnv = (IHostingEnvironment)context.RequestServices.GetService(typeof(IHostingEnvironment));
 
                 UserSettings userSettings = new UserSettings();
@@ -384,7 +385,7 @@ namespace Gov.Jag.Embc.Public.Authentication
                 }
                 else // DEV user, setup a fake session and SiteMinder headers.
                 {
-                    if (isDeveloperLogin && _dynamicsClient != null)
+                    if (isDeveloperLogin )
                     {
                         _logger.LogError("Generating a Development user");
                         userSettings.BusinessLegalName = devCompanyId + " BusinessProfileName";
@@ -583,6 +584,10 @@ namespace Gov.Jag.Embc.Public.Authentication
                 Console.WriteLine(exception);
                 throw;
             }
+            */
+            return AuthenticateResult.Success(new AuthenticationTicket(principal, null, Options.Scheme));
         }
+
+        
     }
 }

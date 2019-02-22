@@ -158,62 +158,6 @@ namespace Gov.Jag.Embc.Public
 
             
 
-            services.AddTransient(new Func<IServiceProvider, IDynamicsClient>((serviceProvider) =>
-            {
-
-                ServiceClientCredentials serviceClientCredentials = null;
-
-                if (string.IsNullOrEmpty(ssgUsername) || string.IsNullOrEmpty(ssgPassword))
-                {
-                    var authenticationContext = new AuthenticationContext(
-                    "https://login.windows.net/" + aadTenantId);
-                    ClientCredential clientCredential = new ClientCredential(clientId, clientKey);
-                    var task = authenticationContext.AcquireTokenAsync(serverAppIdUri, clientCredential);
-                    task.Wait();
-                    authenticationResult = task.Result;
-                    string token = authenticationResult.CreateAuthorizationHeader().Substring("Bearer ".Length);
-                    serviceClientCredentials = new TokenCredentials(token);
-                }
-                else
-                {
-                    serviceClientCredentials = new BasicAuthenticationCredentials()
-                    {
-                        UserName = ssgUsername,
-                        Password = ssgPassword
-                    };
-                }
-
-                IDynamicsClient client = new DynamicsClient(new Uri(Configuration["DYNAMICS_ODATA_URI"]), serviceClientCredentials);
-
-
-                // set the native client URI
-                if (string.IsNullOrEmpty(Configuration["DYNAMICS_NATIVE_ODATA_URI"]))
-                {
-                    client.NativeBaseUri = new Uri(Configuration["DYNAMICS_ODATA_URI"]);
-                }
-                else
-                {
-                    client.NativeBaseUri = new Uri(Configuration["DYNAMICS_NATIVE_ODATA_URI"]);
-                }
-
-                return client;
-            }));
-
-            // add SharePoint.
-
-            string sharePointServerAppIdUri = Configuration["SHAREPOINT_SERVER_APPID_URI"];
-            string sharePointOdataUri = Configuration["SHAREPOINT_ODATA_URI"];
-            string sharePointWebname = Configuration["SHAREPOINT_WEBNAME"];
-            string sharePointAadTenantId = Configuration["SHAREPOINT_AAD_TENANTID"];
-            string sharePointClientId = Configuration["SHAREPOINT_CLIENT_ID"];
-            string sharePointCertFileName = Configuration["SHAREPOINT_CERTIFICATE_FILENAME"];
-            string sharePointCertPassword = Configuration["SHAREPOINT_CERTIFICATE_PASSWORD"];
-            string sharePointNativeBaseURI = Configuration["SHAREPOINT_NATIVE_BASE_URI"];
-            if (! string.IsNullOrEmpty(sharePointOdataUri))
-            {
-                services.AddTransient<SharePointFileManager>(_ => new SharePointFileManager(sharePointServerAppIdUri, sharePointOdataUri, sharePointWebname, sharePointAadTenantId, sharePointClientId, sharePointCertFileName, sharePointCertPassword, ssgUsername, ssgPassword, sharePointNativeBaseURI));
-            }
-            
 
             // add BCeID Web Services
 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Gov.Jag.Embc.Interfaces;
-using Gov.Jag.Embc.Interfaces.Models;
+
 using Gov.Jag.Embc.Public.Authentication;
 using Gov.Jag.Embc.Public.Models;
 using Gov.Jag.Embc.Public.Utils;
@@ -28,16 +28,16 @@ namespace Gov.Jag.Embc.Public.Controllers
         private readonly SiteMinderAuthOptions _options = new SiteMinderAuthOptions();
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly ILogger _logger;
-        private readonly IDynamicsClient _dynamicsClient;
+        
         const string BUSINESS_PROFILE_PAGE = "business-profile";
 
-        public LoginController(IConfiguration configuration, IDynamicsClient dynamicsClient, IHostingEnvironment env, IHttpContextAccessor httpContextAccessor, ILoggerFactory loggerFactory)
+        public LoginController(IConfiguration configuration, IHostingEnvironment env, IHttpContextAccessor httpContextAccessor, ILoggerFactory loggerFactory)
         {
             Configuration = configuration;
             _env = env;
             _httpContextAccessor = httpContextAccessor;
             _logger = loggerFactory.CreateLogger(typeof(LoginController));
-            this._dynamicsClient = dynamicsClient;
+            
         }
 
         [HttpGet]
@@ -103,13 +103,7 @@ namespace Gov.Jag.Embc.Public.Controllers
             if (userSettings.AccountId != null && userSettings.AccountId.Length > 0)
             {
                 var accountId = GuidUtility.SanitizeGuidString(userSettings.AccountId);
-                MicrosoftDynamicsCRMaccount account = _dynamicsClient.GetAccountById(new Guid(accountId));
-                _logger.LogDebug(LoggingEvents.HttpGet, "Dynamics Account: " + JsonConvert.SerializeObject(account));
 
-                if (account == null)
-                {
-                    isSubmitted = account.BcgovSubmitteddate != null;
-                }
             }
 
             return isSubmitted;

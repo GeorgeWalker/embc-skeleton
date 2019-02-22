@@ -441,21 +441,7 @@
       "description": "Siteminder logout URL, e.g., https://logon.gov.bc.ca/clp-cgi/logoff.cgi, if left blank a value will be defaulted. Note this url is for prod and should be changed for dev and test.",
       "required": true,
       "value": "https://logon.gov.bc.ca/clp-cgi/logoff.cgi"
-    },
-    {
-      "name": "PDF_SERVICE_BASE_URI",
-      "displayName": "URI to PDF Service",
-      "description": "URI to PDF Service, e.g., http://pdf-service:8080, if left blank a value will be defaulted.",
-      "required": true,
-      "value": "http://pdf-service:8080"
-    },
-    {
-      "name": "PDF_JWT_TOKEN",
-      "displayName": "JWT for PDF service",
-      "description": "JWT for PDF service.",
-      "required": true,
-      "value": ""
-    },    
+    },   
     {
       "name": "KEY_RING_DIRECTORY",
       "displayName": "Key Ring Directory",

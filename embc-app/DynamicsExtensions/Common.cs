@@ -7,12 +7,7 @@ namespace Gov.Jag.Embc.Interfaces
     public static class CommonDynamicsExtensions
     {
 
-        public static string GetEntityURI(this IDynamicsClient client, string entityType, string id)
-        {
-            string result = "";
-            result = client.NativeBaseUri + entityType + "(" + id.Trim() + ")";
-            return result;
-        }
+        
 
         /// <summary>
         /// Convert a Dynamics attribute to boolean
