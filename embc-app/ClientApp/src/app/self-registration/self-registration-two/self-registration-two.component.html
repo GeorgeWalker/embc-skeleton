@@ -22,7 +22,16 @@
 <h3 class="blue-header">NEXT STEPS</h3>
 ...
 
-<div>
-  <a href="">Cancel &amp; Close</a>
-  <button style="float: right" class="btn btn-primary">NEXT</button>
+<div class="mt-5 space-between">
+  <section>
+    <a [routerLink]="">
+      <i class="far fa-trash-alt" style="margin-right: 5px"></i>Cancel &amp; Close
+    </a>
+  </section>
+  <section>
+    <!-- <button class="btn btn-secondary" style="margin-right: 10px"
+      routerLink="/equipment-notification/source/{{equipmentId}}">BACK
+      TO STEP 4</button> -->
+    <button class="btn btn-primary" (click)="next()">NEXT</button>
+  </section>
 </div>
