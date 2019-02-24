@@ -1,43 +1,44 @@
-<h2 class="step">STEP 2</h2>
-<h1 style="margin-top: 0">Register as an Evacuee</h1>
+<div [formGroup]="form">
+  <h2 class="step">STEP 2</h2>
+  <h1 style="margin-top: 0">Register as an Evacuee</h1>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia suscipit ligula sit amet pulvinar.
-  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean efficitur et arcu
-  a fringilla.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia suscipit ligula sit amet pulvinar.
+    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean efficitur et arcu
+    a fringilla.</p>
 
-<h3 class="blue-header">ADDITIONAL INFORMATION</h3>
-<section class="padded-section">
-  Do you have any dietary requirements?
-  <div class="radio-button">
-    <input type="radio" value="yes" name="restriction">
-    <label><span>&nbsp;Yes</span></label>
-  </div>
-  <div class="radio-button">
-    <input type="radio" value="no" name="restriction">
-    <label><span>&nbsp;No</span></label>
-  </div>
-
-</section>
-
-<h3 class="blue-header">NEXT STEPS</h3>
-...
-
-<div class="mt-5 space-between">
-  <section>
-    <a [routerLink]="">
-      <i class="far fa-trash-alt" style="margin-right: 5px"></i>Cancel &amp; Close
-    </a>
+  <h3 class="blue-header">ADDITIONAL INFORMATION</h3>
+  <section class="padded-section">
+    Do you have any dietary requirements?
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" [value]="true" formControlName="dietaryRequirements">
+        <label class="form-check-label">Yes</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" [value]="false" formControlName="dietaryRequirements">
+        <label class="form-check-label">No</label>
+      </div>
+    </div>
   </section>
-  <section>
-    <!-- <button class="btn btn-secondary" style="margin-right: 10px"
+
+  <h3 class="blue-header">NEXT STEPS</h3>
+  ...
+
+  <div class="mt-5 space-between">
+    <section>
+      <a [routerLink]="">
+        <i class="far fa-trash-alt" style="margin-right: 5px"></i>Cancel &amp; Close
+      </a>
+    </section>
+    <section>
+      <!-- <button class="btn btn-secondary" style="margin-right: 10px"
       routerLink="/equipment-notification/source/{{equipmentId}}">BACK
       TO STEP 4</button> -->
-    <button class="btn btn-primary" (click)="next()">NEXT</button>
-  </section>
+      <button class="btn btn-primary" (click)="next()">NEXT</button>
+    </section>
+  </div>
 </div>
 
 <div class="mt-5">
-  <pre>
-    {{ this.registration | json }}
-  </pre>
+  <pre>{{ this.registration | json }}</pre>
 </div>

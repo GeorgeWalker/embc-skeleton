@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, Validators, FormGroup, FormControl, FormArray } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Store } from '@ngrx/store';
@@ -6,6 +6,7 @@ import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/store/app-state';
 import { UpdateRegistration } from "src/app/store/actions/registration.action";
 import { Registration } from 'src/app/core/models';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-self-registration-one',
@@ -14,7 +15,8 @@ import { Registration } from 'src/app/core/models';
 })
 export class SelfRegistrationOneComponent implements OnInit {
   form: FormGroup;
-  private registration: Registration;
+  registration: Registration;
+  private sub: Subscription;
 
   constructor(
     private store: Store<AppState>,
@@ -38,49 +40,16 @@ export class SelfRegistrationOneComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getInitialState()
+    this.sub = this.getInitialState()
       .subscribe(registration => {
         this.initForm(registration);
         this.handleFormChanges();
       });
+    this.sub.unsubscribe();
   }
 
   getInitialState() {
     return this.store.select(state => state.registration);
-  }
-
-  onSave() {
-    const form = this.form.value;
-    const state = this.registration;
-
-    const newState: Registration = {
-      ...state,
-      ...{
-        isRestricted: form.isRestricted,
-        isRegisteringFamilyMembers: form.isRegisteringFamilyMembers,
-        familyMembers: [...form.familyMembers],
-        familyRepresentative: {
-          firstName: form.familyRepresentative.firstName,
-          lastName: form.familyRepresentative.lastName,
-          nickname: form.familyRepresentative.nickname,
-          initials: form.familyRepresentative.initials,
-          gender: form.familyRepresentative.gender,
-          dob: form.familyRepresentative.dob,
-          profile: {
-            phoneNumber: form.phoneNumber,
-            phoneNumberAlt: form.phoneNumberAlt,
-            email: form.email,
-            primaryResidence: { ...form.primaryResidence },
-            mailingAddress: form.hasMailingAddress ? { ...form.mailingAddress } : undefined,
-          },
-          isEvacuee: true,
-          isVolunteer: false,
-          isFamilyMember: false,
-        },
-      }
-    };
-
-    this.store.dispatch(new UpdateRegistration(newState));
   }
 
   initForm(state: Registration) {
@@ -134,6 +103,40 @@ export class SelfRegistrationOneComponent implements OnInit {
         this.clearFamilyMembers();
       }
     });
+  }
+
+  onSave() {
+    const form = this.form.value;
+    const state = this.registration;
+
+    const newState: Registration = {
+      ...state,
+      ...{
+        isRestricted: form.isRestricted,
+        isRegisteringFamilyMembers: form.isRegisteringFamilyMembers,
+        familyMembers: [...form.familyMembers],
+        familyRepresentative: {
+          firstName: form.familyRepresentative.firstName,
+          lastName: form.familyRepresentative.lastName,
+          nickname: form.familyRepresentative.nickname,
+          initials: form.familyRepresentative.initials,
+          gender: form.familyRepresentative.gender,
+          dob: form.familyRepresentative.dob,
+          profile: {
+            phoneNumber: form.phoneNumber,
+            phoneNumberAlt: form.phoneNumberAlt,
+            email: form.email,
+            primaryResidence: { ...form.primaryResidence },
+            mailingAddress: form.hasMailingAddress ? { ...form.mailingAddress } : undefined,
+          },
+          isEvacuee: true,
+          isVolunteer: false,
+          isFamilyMember: false,
+        },
+      }
+    };
+
+    this.store.dispatch(new UpdateRegistration(newState));
   }
 
   addFamilyMember() {

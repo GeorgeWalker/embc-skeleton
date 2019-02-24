@@ -4,6 +4,7 @@ import { AppState } from 'src/app/store/app-state';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Registration } from 'src/app/core/models';
+import { UpdateRegistration } from 'src/app/store/actions/registration.action';
 
 @Component({
   selector: 'app-self-registration-two',
@@ -21,28 +22,55 @@ export class SelfRegistrationTwoComponent implements OnInit {
     private route: ActivatedRoute
   ) { }
 
+  // Shortcuts for this.form.get(...)
+  // get mailingAddress() { return this.form.get('mailingAddress') as FormGroup; }
+
+  // TODO: Form UI logic; i.e. show additional form fields when a checkbox is checked
+  get ui() {
+    return {};
+  }
+
   ngOnInit() {
-    this.fetch()
-      .subscribe(state => {
-        this.registration = state;
-        this.initForm(state);
+    const sub = this.getInitialState()
+      .subscribe(registration => {
+        this.initForm(registration);
         this.handleFormChanges();
       });
+    sub.unsubscribe();
   }
 
-  initForm(state: Registration): any {
-    // throw new Error('Method not implemented.');
-  }
-
-  handleFormChanges(): any {
-    // throw new Error('Method not implemented.');
-  }
-
-  fetch() {
+  getInitialState() {
     return this.store.select(state => state.registration);
   }
 
+  initForm(state: Registration) {
+    this.registration = state;
+
+    this.form = this.fb.group({
+      dietaryRequirements: [],
+
+    });
+  }
+
+  handleFormChanges() {
+    // TODO: Register any value change listeners here...
+    // this.form.get('someField').valueChanges.subscribe(...)
+  }
+
+  onSave() {
+    const form = this.form.value;
+    const state = this.registration;
+
+    const newState: Registration = {
+      ...state,
+      ...{}
+    };
+
+    this.store.dispatch(new UpdateRegistration(newState));
+  }
+
   next() {
+    this.onSave();
     this.router.navigate(['../step-3'], { relativeTo: this.route });
   }
 }
