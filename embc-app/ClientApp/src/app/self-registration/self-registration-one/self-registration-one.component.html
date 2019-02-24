@@ -138,7 +138,7 @@
   <section class="padded-section">
     <app-address-form-group [parent]="primaryResidence">
     </app-address-form-group>
-    <section formGroupName="contactDetails">
+    <section>
       <div class="row">
         <app-form-field class="col-md-6">
           <label>Telephone / Mobile Number (10 digits)</label>
@@ -193,7 +193,5 @@
 </div>
 
 <div class="mt-5">
-  <pre>
-    {{ this.form.value | json }}
-  </pre>
+  <pre>{{ this.form.value | json }}</pre>
 </div>

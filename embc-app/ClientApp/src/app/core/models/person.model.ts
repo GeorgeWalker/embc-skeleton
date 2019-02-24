@@ -14,7 +14,7 @@ export interface Person {
 
   // TODO: ????
 
-  isFamilyMember?: boolean;
   isEvacuee?: boolean;
   isVolunteer?: boolean;
+  isFamilyMember?: boolean;
 }

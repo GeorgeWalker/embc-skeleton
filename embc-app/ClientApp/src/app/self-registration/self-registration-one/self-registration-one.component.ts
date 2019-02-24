@@ -28,7 +28,6 @@ export class SelfRegistrationOneComponent implements OnInit {
   get familyMembers() { return this.form.get('familyMembers') as FormArray; }
   get primaryResidence() { return this.form.get('primaryResidence') as FormGroup; }
   get mailingAddress() { return this.form.get('mailingAddress') as FormGroup; }
-  get showMailingAddress() { return this.form.get('hasMailingAddress').value === true; }
 
   // Form UI logic; i.e. show additional form fields when a checkbox is checked
   get ui() {
@@ -58,36 +57,26 @@ export class SelfRegistrationOneComponent implements OnInit {
       ...state,
       ...{
         isRestricted: form.isRestricted,
-        familyRepresentative: {
-          ...state.familyRepresentative,
-          ...{
-            lastName: form.familyRepresentative.lastName,
-            firstName: form.familyRepresentative.firstName,
-            initial: form.familyRepresentative.initial,
-            nickname: form.familyRepresentative.nickname,
-            gender: form.familyRepresentative.gender,
-            phoneNumber: form.contactDetails.phoneNumber,
-            phoneNumberAlt: form.contactDetails.phoneNumberAlt,
-            email: form.contactDetails.email,
-            primaryResidence: {
-              addressLine1: form.primaryResidence.addressLine1,
-              community: form.primaryResidence.community,
-              province: form.primaryResidence.province,
-              postalCode: form.primaryResidence.postalCode,
-              country: form.primaryResidence.country,
-            },
-            mailingAddress: {
-              addressLine1: form.mailingAddress.addressLine1,
-              community: form.mailingAddress.community,
-              province: form.mailingAddress.province,
-              postalCode: form.mailingAddress.postalCode,
-              country: form.mailingAddress.country,
-            },
-          }
-        },
         isRegisteringFamilyMembers: form.isRegisteringFamilyMembers,
-        familyMembers: form.familyMembers,
-
+        familyMembers: [...form.familyMembers],
+        familyRepresentative: {
+          firstName: form.familyRepresentative.firstName,
+          lastName: form.familyRepresentative.lastName,
+          nickname: form.familyRepresentative.nickname,
+          initials: form.familyRepresentative.initials,
+          gender: form.familyRepresentative.gender,
+          dob: form.familyRepresentative.dob,
+          profile: {
+            phoneNumber: form.phoneNumber,
+            phoneNumberAlt: form.phoneNumberAlt,
+            email: form.email,
+            primaryResidence: { ...form.primaryResidence },
+            mailingAddress: form.hasMailingAddress ? { ...form.mailingAddress } : undefined,
+          },
+          isEvacuee: true,
+          isVolunteer: false,
+          isFamilyMember: false,
+        },
       }
     };
 
@@ -103,19 +92,18 @@ export class SelfRegistrationOneComponent implements OnInit {
       familyRepresentative: this.fb.group({
         firstName: [state.familyRepresentative.firstName, Validators.required],
         lastName: [state.familyRepresentative.lastName, Validators.required],
-        gender: [state.familyRepresentative.gender],
-        initials: [state.familyRepresentative.initials],
         nickname: [state.familyRepresentative.nickname],
+        initials: [state.familyRepresentative.initials],
+        gender: [state.familyRepresentative.gender],
         dob: [state.familyRepresentative.dob],
       }),
 
       isRegisteringFamilyMembers: this.fb.control(state.isRegisteringFamilyMembers),
       familyMembers: this.fb.array(state.familyMembers),
-      contactDetails: this.fb.group({
-        phoneNumber: [''],
-        phoneNumberAlt: [''],
-        email: [''],
-      }),
+
+      phoneNumber: [state.familyRepresentative.profile.phoneNumber],
+      phoneNumberAlt: [state.familyRepresentative.profile.phoneNumberAlt],
+      email: [state.familyRepresentative.profile.email],
 
       primaryResidence: this.fb.group({
         addressLine1: [state.familyRepresentative.profile.primaryResidence.addressLine1],
@@ -125,13 +113,13 @@ export class SelfRegistrationOneComponent implements OnInit {
         country: [state.familyRepresentative.profile.primaryResidence.country],
       }),
 
-      hasMailingAddress: this.fb.control(''),
+      hasMailingAddress: this.fb.control(null),
       mailingAddress: this.fb.group({
-        addressLine1: [''],
-        community: [''],
-        postalCode: [''],
-        province: [''],
-        country: [''],
+        addressLine1: [state.familyRepresentative.profile.mailingAddress.addressLine1],
+        community: [state.familyRepresentative.profile.mailingAddress.community],
+        postalCode: [state.familyRepresentative.profile.mailingAddress.postalCode],
+        province: [state.familyRepresentative.profile.mailingAddress.province],
+        country: [state.familyRepresentative.profile.mailingAddress.country],
       }),
     });
   }
@@ -154,9 +142,9 @@ export class SelfRegistrationOneComponent implements OnInit {
       sameLastNameAsEvacuee: [true],
       firstName: [''],
       lastName: [''],
-      initial: [''],
+      initials: [''],
       gender: [undefined],
-      age: [undefined],
+      dob: [undefined],
     }));
   }
 
