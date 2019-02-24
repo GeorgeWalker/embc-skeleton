@@ -39,7 +39,7 @@
     <div class="row">
       <app-form-field class="col-md-3">
         <label>Initial</label>
-        <input class="form-control" type="text" formControlName="initial">
+        <input class="form-control" type="text" formControlName="initials">
       </app-form-field>
       <app-form-field class="col-md-5">
         <label>Nickname</label>
@@ -47,25 +47,18 @@
       </app-form-field>
     </div>
     <div class="row">
-      <app-form-field class="col-md-4" required="true">
+      <app-form-field class="col-md-2" required="true">
         <label>Gender</label>
         <select class="form-control" formControlName="gender">
-          <option label="Please select--" selected></option>
+          <option [ngValue]="null">Please select--</option>
           <option value="male">Male</option>
           <option value="female">Female</option>
           <option value="other">Other</option>
         </select>
       </app-form-field>
-      <app-form-field class="col-md-2" required="true">
-        <label>Age</label>
-        <select class="form-control" formControlName="age">
-          <option label="Please select--" selected></option>
-          <option value="1">1</option>
-          <option disabled>...</option>
-          <option value="35">35</option>
-          <option disabled>...</option>
-          <option value="110">110</option>
-        </select>
+      <app-form-field class="col-md-3" required="true">
+        <label>Date of Birth</label>
+        <input class="form-control" type="date" formControlName="dob">
       </app-form-field>
     </div>
   </section>
@@ -88,7 +81,7 @@
         <label class="form-check-label">No</label>
       </div>
     </div>
-    <div *ngIf="showFamilyMembers" class="feature-block">
+    <div *ngIf="ui.showFamilyMembers()" class="feature-block">
       <div class="family-members__list" formArrayName="familyMembers">
         <div class="family-members__item" *ngFor="let m of familyMembers.controls; index as i;" [formGroupName]="i">
           <!-- TODO: Refactor into sub-component -->
@@ -97,6 +90,10 @@
               <label>Last Name</label>
               <input class="form-control" type="text" formControlName="lastName">
             </app-form-field>
+            <div class="form-check col-md-6">
+              <input class="form-check-input" type="checkbox" formControlName="sameLastNameAsEvacuee" [value]="true">
+              <label class="form-check-label">Same as main applicant</label>
+            </div>
           </div>
           <div class="row">
             <app-form-field class="col-md-6" required="true">
@@ -105,7 +102,7 @@
             </app-form-field>
             <app-form-field class="col-md-3">
               <label>Initial</label>
-              <input class="form-control" type="text" formControlName="initial">
+              <input class="form-control" type="text" formControlName="initials">
             </app-form-field>
           </div>
           <div class="row">
@@ -113,25 +110,18 @@
               <label>Relationship</label>
               <input class="form-control" type="text" formControlName="relationshipToEvacuee">
             </app-form-field>
-            <app-form-field class="col-md-4" required="true">
+            <app-form-field class="col-md-2" required="true">
               <label>Gender</label>
               <select class="form-control" formControlName="gender">
-                <option label="Please select--" selected></option>
+                <option [ngValue]="null">Please select--</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
                 <option value="other">Other</option>
               </select>
             </app-form-field>
-            <app-form-field class="col-md-2" required="true">
-              <label>Age</label>
-              <select class="form-control" formControlName="age">
-                <option label="Please select--" selected></option>
-                <option value="1">1</option>
-                <option disabled>...</option>
-                <option value="35">35</option>
-                <option disabled>...</option>
-                <option value="110">110</option>
-              </select>
+            <app-form-field class="col-md-3" required="true">
+              <label>Date of Birth</label>
+              <input class="form-control" type="date" formControlName="dob">
             </app-form-field>
           </div>
         </div>
@@ -181,7 +171,7 @@
         <label class="form-check-label">No</label>
       </div>
     </div>
-    <div *ngIf="showMailingAddress" class="feature-block">
+    <div *ngIf="ui.showMailingAddress()" class="feature-block">
       <app-address-form-group [parent]="mailingAddress">
       </app-address-form-group>
     </div>
@@ -200,4 +190,10 @@
       <button class="btn btn-primary" (click)="next()">NEXT</button>
     </section>
   </div>
+</div>
+
+<div class="mt-5">
+  <pre>
+    {{ this.form.value | json }}
+  </pre>
 </div>

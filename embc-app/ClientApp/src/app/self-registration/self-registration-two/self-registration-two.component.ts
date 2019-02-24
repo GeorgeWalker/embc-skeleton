@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/store/app-state';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Registration } from 'src/app/core/models';
 
 @Component({
   selector: 'app-self-registration-two',
@@ -10,6 +11,8 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./self-registration-two.component.scss']
 })
 export class SelfRegistrationTwoComponent implements OnInit {
+  form: FormGroup;
+  registration: Registration;
 
   constructor(
     private store: Store<AppState>,
@@ -19,6 +22,24 @@ export class SelfRegistrationTwoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.fetch()
+      .subscribe(state => {
+        this.registration = state;
+        this.initForm(state);
+        this.handleFormChanges();
+      });
+  }
+
+  initForm(state: Registration): any {
+    // throw new Error('Method not implemented.');
+  }
+
+  handleFormChanges(): any {
+    // throw new Error('Method not implemented.');
+  }
+
+  fetch() {
+    return this.store.select(state => state.registration);
   }
 
   next() {
