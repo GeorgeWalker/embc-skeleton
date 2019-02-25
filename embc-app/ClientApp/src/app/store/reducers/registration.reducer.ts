@@ -37,9 +37,9 @@ const initialState: Registration = {
   interviewerLastNameInitial: null,
   startDate: null,
   endDate: null,
-  specialNeeds: null,
+  specialNeeds: {},
   isSupportRequired: false,
-  supportServicesRequested: {}
+  requestedSupportServices: {}
 };
 
 export function registrationReducer(state = initialState, action: RegistrationAction) {

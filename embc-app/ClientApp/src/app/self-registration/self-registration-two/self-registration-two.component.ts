@@ -66,7 +66,7 @@ export class SelfRegistrationTwoComponent implements OnInit {
       hasPets: [],
       hasInsurance: [],
       isSupportRequired: [],
-      servicesRequested: this.buildServices(),
+      requestedSupportServices: this.buildServices(),
     });
   }
 

@@ -15,7 +15,7 @@ export interface Registration {
   startDate: any; // datetime
   endDate?: any; // datetime
 
-  specialNeeds;
+  specialNeeds: {};
   isSupportRequired: boolean;
-  servicesRequested: {};
+  requestedSupportServices: {};
 }
