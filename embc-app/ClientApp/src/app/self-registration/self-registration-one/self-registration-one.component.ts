@@ -94,7 +94,6 @@ export class SelfRegistrationOneComponent implements OnInit {
 
   handleFormChanges() {
     // TODO: Register any value change listeners here...
-    // this.form.get('someField').valueChanges.subscribe(...)
     this.isRegisteringFamilyMembers.valueChanges.subscribe((value: number) => {
       if (value === 1) {
         this.addFamilyMember();

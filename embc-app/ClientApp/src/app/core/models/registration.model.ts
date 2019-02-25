@@ -17,5 +17,5 @@ export interface Registration {
 
   specialNeeds;
   isSupportRequired: boolean;
-  supportServicesRequested: {};
+  servicesRequested: {};
 }

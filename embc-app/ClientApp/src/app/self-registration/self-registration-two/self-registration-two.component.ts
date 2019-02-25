@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { first } from "rxjs/operators";
@@ -17,6 +17,15 @@ export class SelfRegistrationTwoComponent implements OnInit {
   form: FormGroup;
   registration: Registration;
 
+  // TODO: Fetch this from backend API (when available). This is a controlled list (lookup table)
+  servicesLookup = [
+    { id: 1, name: 'Food' },
+    { id: 2, name: 'Clothing' },
+    { id: 3, name: 'Accommodation' },
+    { id: 4, name: 'Incidentals' },
+    { id: 5, name: 'Transportation' },
+  ];
+
   constructor(
     private store: Store<AppState>,
     private fb: FormBuilder,
@@ -25,20 +34,23 @@ export class SelfRegistrationTwoComponent implements OnInit {
   ) { }
 
   // Shortcuts for this.form.get(...)
-  // get mailingAddress() { return this.form.get('mailingAddress') as FormGroup; }
+  get isSupportRequired() { return this.form.get('isSupportRequired') }
+  get servicesRequested() { return this.form.get('servicesRequested') as FormArray; }
 
   // TODO: Form UI logic; i.e. show additional form fields when a checkbox is checked
   get ui() {
-    return {};
+    return {
+      showAvailableServices: () => { return this.form.get('isSupportRequired').value === true; },
+    };
   }
 
   ngOnInit() {
-    const sub = this.getInitialState()
+    this.getInitialState()
+      .pipe(first())
       .subscribe(registration => {
         this.initForm(registration);
         this.handleFormChanges();
       });
-    sub.unsubscribe();
   }
 
   getInitialState() {
@@ -49,14 +61,33 @@ export class SelfRegistrationTwoComponent implements OnInit {
     this.registration = state;
 
     this.form = this.fb.group({
-      dietaryRequirements: [],
-
+      hasDietaryRequirements: [],
+      isTakingMedication: [],
+      hasPets: [],
+      hasInsurance: [],
+      isSupportRequired: [],
+      servicesRequested: this.buildServices(),
     });
   }
 
   handleFormChanges() {
     // TODO: Register any value change listeners here...
-    // this.form.get('someField').valueChanges.subscribe(...)
+    this.isSupportRequired.valueChanges.subscribe((value: boolean) => {
+      if (!value) {
+        this.resetServices();
+      }
+    });
+  }
+
+  buildServices(): FormArray {
+    // all checkboxes are unchecked by default...
+    const arr = this.servicesLookup.map(x => this.fb.control(false));
+    return this.fb.array(arr);
+  }
+
+  resetServices(): void {
+    // TODO:
+    alert('reset checkbox group');
   }
 
   onSave() {
