@@ -35,7 +35,7 @@ export class SelfRegistrationTwoComponent implements OnInit {
 
   // Shortcuts for this.form.get(...)
   get isSupportRequired() { return this.form.get('isSupportRequired') }
-  get servicesRequested() { return this.form.get('servicesRequested') as FormArray; }
+  get requestedSupportServices() { return this.form.get('requestedSupportServices') as FormArray; }
 
   // TODO: Form UI logic; i.e. show additional form fields when a checkbox is checked
   get ui() {
@@ -66,7 +66,7 @@ export class SelfRegistrationTwoComponent implements OnInit {
       hasPets: [],
       hasInsurance: [],
       isSupportRequired: [],
-      requestedSupportServices: this.buildServices(),
+      requestedSupportServices: this.buildSupportServices(),
     });
   }
 
@@ -74,20 +74,21 @@ export class SelfRegistrationTwoComponent implements OnInit {
     // TODO: Register any value change listeners here...
     this.isSupportRequired.valueChanges.subscribe((value: boolean) => {
       if (!value) {
-        this.resetServices();
+        this.resetSupportServices();
       }
     });
   }
 
-  buildServices(): FormArray {
+  // TODO: refactor form-array into sub-component <support-services [parent]="form" .../>
+  buildSupportServices(): FormArray {
     // all checkboxes are unchecked by default...
     const arr = this.servicesLookup.map(x => this.fb.control(false));
     return this.fb.array(arr);
   }
 
-  resetServices(): void {
-    // TODO:
-    alert('reset checkbox group');
+  resetSupportServices(): void {
+    const checkboxes = this.requestedSupportServices.controls;
+    checkboxes.forEach(cb => cb.setValue(false));
   }
 
   onSave() {

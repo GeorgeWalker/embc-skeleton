@@ -79,8 +79,9 @@
       </div>
     </div>
     <div *ngIf="ui.showAvailableServices()" class="feature-block">
-      <div class="support-services__list" formArrayName="servicesRequested">
-        <div class="support-services__item" *ngFor="let cb of servicesRequested.controls; index as i;">
+      <p>Check the following that applies:</p>
+      <div class="support-services__list padded-section" formArrayName="requestedSupportServices">
+        <div class="support-services__item" *ngFor="let cb of requestedSupportServices.controls; index as i;">
           <!-- TODO: Refactor into sub-component -->
           <div class="row">
             <div class="form-check col-md-6">
