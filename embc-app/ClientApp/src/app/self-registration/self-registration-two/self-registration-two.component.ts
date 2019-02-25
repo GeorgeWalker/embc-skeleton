@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { AppState } from 'src/app/store/app-state';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { first } from "rxjs/operators";
+
+import { AppState } from 'src/app/store/app-state';
 import { Registration } from 'src/app/core/models';
 import { UpdateRegistration } from 'src/app/store/actions/registration.action';
 

@@ -2,11 +2,11 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, Validators, FormGroup, FormControl, FormArray } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Store } from '@ngrx/store';
+import { first } from "rxjs/operators";
 
 import { AppState } from 'src/app/store/app-state';
 import { UpdateRegistration } from "src/app/store/actions/registration.action";
 import { Registration } from 'src/app/core/models';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-self-registration-one',
@@ -16,7 +16,6 @@ import { Subscription } from 'rxjs';
 export class SelfRegistrationOneComponent implements OnInit {
   form: FormGroup;
   registration: Registration;
-  private sub: Subscription;
 
   constructor(
     private store: Store<AppState>,
@@ -40,12 +39,12 @@ export class SelfRegistrationOneComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.sub = this.getInitialState()
+    this.getInitialState()
+      .pipe(first())
       .subscribe(registration => {
         this.initForm(registration);
         this.handleFormChanges();
       });
-    this.sub.unsubscribe();
   }
 
   getInitialState() {
