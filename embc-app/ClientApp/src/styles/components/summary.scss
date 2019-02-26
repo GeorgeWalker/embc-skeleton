@@ -1,30 +1,58 @@
+@import '../defaults.scss';
+@import '../mixins.scss';
+
 .summary {
-  .primary-row {
-    margin: 0;
-    font-weight: 400;
-    margin-bottom: 5px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background: $summary-bg;
 
-    > .col, > [class*=col-] {
-      padding: 5px;
-      background-color: #e1e8f2;
+  > li {
+    @include clearfix();
+    background: $summary-row-bg;
 
-      + .col, + [class*=col-] {
-        margin-left: 5px;
-      }
+    &:nth-child(even) {
+      background: $summary-alt-row-bg;
+    }
+
+    + li {
+      margin-top: 5px;
     }
   }
 
-  .alt-row {
-    margin: 0;
-    font-weight: normal;
-    margin-bottom: 5px;
-
-    > .col, > [class*=col-] {
+  span {
+    &.name {
+      float: left;
+      display: block;
       padding: 5px;
-      background-color: #f1f4fa;
+      margin-right: -5px;
+      border-right: 5px solid $summary-bg;
+      font-weight: 600;
+      width: 40%;
+    }
 
-      + .col, + [class*=col-] {
-        margin-left: 5px;
+    &.value {
+      float: left;
+      display: block;
+      padding: 5px;
+      border-left: 5px solid $summary-bg;
+      width: 59%;
+
+      ul {
+        margin: 0;
+        padding: 0;
+        overflow: visible;
+        list-style-type: none;
+
+        li {
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+
+        li:hover {
+            overflow: visible;
+        }
       }
     }
   }
