@@ -54,7 +54,7 @@ namespace Gov.Jag.Embc.Public.ViewModels
         PublicCorporation = 931490003
     }
 
-    public class Account
+    public class Organisation
     {
         public string id { get; set; } // Guid
 
@@ -94,8 +94,8 @@ namespace Gov.Jag.Embc.Public.ViewModels
         public bool? foippaconsent { get; set; } //dynamics = address2_postalcode
         public bool? declarationofcorrectinformation { get; set; } //dynamics = address2_postalcode
         
-        public ViewModels.Contact additionalContact { get; set; }
-        public ViewModels.Contact primaryContact { get; set; }
+        public ViewModels.Person additionalContact { get; set; }
+        public ViewModels.Person primaryContact { get; set; }
 
         //public ViewModels.CustomAddress physicalAddress { get; set; }
         //public ViewModels.CustomAddress mailingAddress { get; set; }

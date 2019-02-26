@@ -8,7 +8,7 @@ namespace Gov.Jag.Embc.Public.ViewModels
 
     
 
-    public class Contact
+    public class Person
     {
         public string id { get; set; }
 

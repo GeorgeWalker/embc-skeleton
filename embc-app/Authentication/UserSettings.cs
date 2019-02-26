@@ -44,7 +44,7 @@ namespace Gov.Jag.Embc.Public.Authentication
         /// <summary>
         /// Worker qualification requires new contact info.
         /// </summary>
-        public ViewModels.Contact NewContact { get; set; }
+        public ViewModels.Person NewContact { get; set; }
 
         
 

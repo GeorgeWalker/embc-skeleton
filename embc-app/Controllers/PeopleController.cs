@@ -53,7 +53,7 @@ namespace Gov.Jag.Embc.Public.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update([FromBody] ViewModels.Contact item, string id)
+        public async Task<IActionResult> Update([FromBody] ViewModels.Person item, string id)
         {
             if (id != null && item.id != null && id != item.id)
             {
@@ -72,7 +72,7 @@ namespace Gov.Jag.Embc.Public.Controllers
         /// <param name="viewModel"></param>
         /// <returns></returns>
         [HttpPost()]
-        public async Task<IActionResult> Create([FromBody] ViewModels.Contact item)
+        public async Task<IActionResult> Create([FromBody] ViewModels.Person item)
         {
             return Json(null);
         }
